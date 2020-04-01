@@ -104,6 +104,7 @@ $(window).ready(function() {
       arrows: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      waitForAnimate: false,
       speed: 1000,
       infinite: true,
       draggable: true,
