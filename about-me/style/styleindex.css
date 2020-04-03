@@ -1590,6 +1590,23 @@ body {
   padding: 10px 10px;
   text-decoration: none;
   color: #8993ad;
+  position: relative;
+}
+
+.footer__menu_item::before  {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #8993ad;
+  transform: scaleX(0);
+  transition: all .2s linear;
+}
+
+.footer__menu_item:hover:before  {
+  transform: scaleX(1);
 }
 
 .footer__phone_mail  {
