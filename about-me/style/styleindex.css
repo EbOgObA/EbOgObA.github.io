@@ -1587,7 +1587,7 @@ body {
 .footer__menu_item  {
   font-family: "Roboto Regular", sans-serif;
   font-size: 18px;
-  padding: 10px 10px;
+  margin: 10px 10px;
   text-decoration: none;
   color: #8993ad;
   position: relative;
