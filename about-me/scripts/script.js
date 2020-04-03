@@ -21,25 +21,6 @@ $(window).ready(function() {
 
 
 
-  //E-mail Ajax Send
-$("form").submit(function() { //Change
-	let th = $(this);
-	$.ajax({
-		type: "POST",
-		url: "mail.php", //Change
-		data: th.serialize()
-	}).done(function() {
-		alert("Thank you!");
-		setTimeout(function() {
-			// Done Functions
-			th.trigger("reset");
-		}, 1000);
-	});
-	return false;
-});
-
-
-
   // Бургер
   $('.burger').on('click', function(){
     $(this).toggleClass('active');
@@ -104,6 +85,23 @@ $("form").submit(function() { //Change
   $('.button__out').on('click', function (e) {
     e.preventDefault();
   });
+
+  //E-mail Ajax Send
+$("form").submit(function() { //Change
+  let th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "mail.php", //Change
+    data: th.serialize()
+  }).done(function() {
+    alert("Thank you!");
+    setTimeout(function() {
+      // Done Functions
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
 
   // Якоря
   $(".anchors").on("click","a", function (event) {
