@@ -1,6 +1,6 @@
 
 
-$(function () {
+$(window).ready(function() {
 
   //  preloader
   function preloader() {
@@ -18,6 +18,25 @@ $(function () {
     });
   }
   preloader();
+
+
+
+  //E-mail Ajax Send
+$("form").submit(function() { //Change
+	let th = $(this);
+	$.ajax({
+		type: "POST",
+		url: "mail.php", //Change
+		data: th.serialize()
+	}).done(function() {
+		alert("Thank you!");
+		setTimeout(function() {
+			// Done Functions
+			th.trigger("reset");
+		}, 1000);
+	});
+	return false;
+});
 
 
 
@@ -54,7 +73,7 @@ $(function () {
         i = matrix.lastIndexOf(val.substr(-1));
         i < matrix.length && matrix != this.placeholder ? i++ : i = matrix.indexOf("_");
         setCursorPosition(i, this)
-      }
+    }
       window.addEventListener("DOMContentLoaded", function() {
         var input = document.querySelector(".popup__input");
         input.addEventListener("input", mask, false);
@@ -62,29 +81,24 @@ $(function () {
         setCursorPosition(3, input);
       });
 
-
-
-
   // Заказать звонок
-    $(".request-call").on('click', function() {
-      $('main, header').css('filter' , 'blur(5px)');
+    $(".request-call").on('click', function(e) {
+      e.preventDefault();
+      $(".popup-wrapper").fadeIn();
       $('body').css('overflow', 'hidden');
-      $(".popup").fadeIn();
     });
-    $(".footer__request-call").on('click', function() {
-      $('main, header').css('filter', 'blur(5px)');
+    $(".footer__request-call").on('click', function(e) {
+      e.preventDefault();
+      $(".popup-wrapper").fadeIn();
       $('body').css('overflow', 'hidden');
-      $(".popup").fadeIn();
     });
-    $('.popup__close').on('click', function() {
-      $('main, header').css('filter', 'blur(0)');
+    $('.popup__btn-close').on('click', function() {
+      $(".popup-wrapper").fadeOut();
       $('body').css('overflow', 'auto');
-      $(".popup").fadeOut();
     });
-    $('.popup__bgc').on('click', function() {
-      $('main, header').css('filter', 'blur(0)');
+    $('.overlay').on('click', function() {
+      $(".popup-wrapper").fadeOut();
       $('body').css('overflow', 'auto');
-      $(".popup").fadeOut();
     });
 
   $('.button__out').on('click', function (e) {
@@ -98,7 +112,6 @@ $(function () {
           top = $(id).offset().top;
       $('body,html').animate({scrollTop: top}, 1500);
   });
-
 
   // Подключаем слайдера
     $('.slider').slick({

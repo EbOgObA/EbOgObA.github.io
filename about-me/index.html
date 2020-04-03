@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style/styleindex.css">
 
     <!-- Подключение FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
@@ -38,24 +38,52 @@
     </div>
 
     <!-- Всплывающая форма при нажатии на кнопку Заказать звонок -->
-    <div class="popup">
-      <div class="popup__bgc"></div>
-      <div class="popup__box">
-        <span class="popup__close"></span>
-        <span class="popup__text">
-          Оставьте свой номер телефона и я вам перезвоню
-        </span>
-        <form class="popup__form" method="post" action="https://echo.htmlacademy.ru/">
-          <input class="popup__input phone"
-                 name="phone"
-                 type="tel"
-                 maxlength="50"
-                 autofocus="autofocus"
-                 required="required"
-                 value=""
-                 pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
-          <button class="popup__btn" type="submit" name="button">Отправить</button>
-        </form>
+    <div class="popup-wrapper">
+      <div class="overlay"></div>
+      <div class="popup__container">
+        <div class="popup__content">
+          <span class="popup__content-title">Оставьте свои контактные данные</span>
+          <p class="form-label">Заполните форму и я свяжусь с Вами.</p>
+          <!-- Форма -->
+          <form class="popup__form" action="php/mail.php" method="post">
+
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="Site Name">
+            <input type="hidden" name="admin_email" value="dmitry_musaev@mail.ru">
+            <input type="hidden" name="form_subject" value="Вызов мастера по замерам">
+
+
+            <div class="popup__form-item-box">
+              <input class="popup__form-item" type="text" name="Name" value="" placeholder="*Ваше имя" required>
+            </div>
+            <div class="popup__form-item-box">
+              <input class="popup__form-item"
+                     name="Phone"
+                     type="tel"
+                     placeholder="*Телефон"
+                     maxlength="50"
+                     autofocus="autofocus"
+                     required="required"
+                     value=""
+                     pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
+            </div>
+            <div class="popup__form-item-box">
+              <input class="popup__form-item" type="email" name="email" value="" placeholder="*Ваш e-mail" required>
+            </div>
+            <div class="popup__form-box-button">
+              <input class="popup__form-button" type="submit" name="Form-button" value="Отправить заявку">
+            </div>
+          </form>
+
+          <p class="popup__note">Все поля обязательны для заполнения</p>
+          <p class="popup__note">
+            Нажимая на кнопку, вы даете  согласие на обработку своих персональных данных
+            <a href="confidentiality.html" class="terms-use">Пользовательское соглашение</a>
+          </p>
+        </div>
+        <div class="popup__btn-close">
+          &#128938;
+        </div>
       </div>
     </div>
 
@@ -292,7 +320,7 @@
 
           <div class="social__net">
             <a href="#" class="footer__request-call">
-              <span>Заказать звонок</span>
+              Заказать звонок
             </a>
             <address>
               <ul class="net">
