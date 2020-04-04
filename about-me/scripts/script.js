@@ -20,6 +20,24 @@ $(window).ready(function() {
   preloader();
 
 
+  // Кнопка возврата в начало страницы
+  function backToTop() {
+    let button = $('.back-to-top');
+    $(window).on('scroll', () => {
+      if ($(this).scrollTop() >= 200)  {
+        button.fadeIn();
+      } else {
+        button.fadeOut();
+      }
+    });
+
+    button.on('click', (e) => {
+      e.preventDefault();
+      $('html').animate({scrollTop: 0}, 2000);
+    });
+  }
+  backToTop();
+
 
   // Бургер
   $('.burger').on('click', function(){
