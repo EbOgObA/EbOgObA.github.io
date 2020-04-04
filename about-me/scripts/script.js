@@ -165,10 +165,6 @@ $("form").submit(function() { //Change
     $('.share-button').on('click',function(){
       $(this).addClass('open');
     });
-    $(".share-items").draggable({
-      axis: "x",
-      containment : ".share-items-wrapper"
-    });
     $(".share-item").on('click',function(e){
       e.preventDefault();
       $('.share-button').addClass('shared');

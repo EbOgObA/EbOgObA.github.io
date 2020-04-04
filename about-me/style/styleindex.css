@@ -1632,7 +1632,14 @@ body {
 
 .anchors  {
   list-style: none;
-}
+  flex-grow: 1;
+}  @media (max-width: 450px) {
+    .anchors  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 
 .footer__menu li {
   margin: 20px 0;
@@ -1647,22 +1654,25 @@ body {
     }
     .footer__menu li {
       margin: 10px 0;
-      font-size: 15px;
     }
     .footer__menu ul {
       display: flex;
-      width: 100%;
     }
   }
 
 .footer__menu_item  {
   font-family: "Roboto Regular", sans-serif;
   font-size: 18px;
-  margin: 10px 10px;
+  margin: 0 15px 0 0;
   text-decoration: none;
   color: #8993ad;
   position: relative;
+  white-space: pre;
 }
+
+/* .footer__menu_item:first-child  {
+  margin: 0 15px 0 0;
+} */
 
 .footer__menu_item::before  {
   content: "";
@@ -1759,8 +1769,8 @@ body {
 
 .share-button{
   position:relative;
-  height:36px;
-  width:135px;
+  height:40px;
+  width:210px;
   background:#ff8f5a ;
   border-radius:20px;
   overflow:hidden;
@@ -1833,6 +1843,11 @@ body {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   transition: 500ms ease all;
 }
+
+.share-item:hover  {
+  color:#ff8f5a;
+}
+
 .share-item:active{
   background:#eb4c89;
   transition: 50ms ease all;
@@ -1862,10 +1877,10 @@ margin-left:3px;
 .share-items {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 4px;
   height: 100%;
-  padding: 3px 0;
-  width: 201px;
+  padding: 5px 0;
+  width: 210px;
 }
 .share-items-wrapper{
   position: absolute;
@@ -1873,8 +1888,6 @@ margin-left:3px;
   left: 0;
   height: 100%;
   width : 267px;
-  left: 50%;
-  margin-left:-133.5px;
 }
 .shared .share-item{
   transform :translateY(200px);
