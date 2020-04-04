@@ -445,6 +445,67 @@ body {
       }
 
 
+
+
+
+/* Кнопка возврата в начало страницы */
+.back-to-top  {
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #ff4e2e;
+  z-index: 90;
+  display: none;
+}
+
+.back-to-top:hover,
+.back-to-top:focus  {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+  outline: none;
+  -webkit-transition: -webkit-filter .5s linear;
+  transition: -webkit-filter .5s linear;
+  -o-transition: filter .5s linear;
+  transition: filter .5s linear;
+  transition: filter .5s linear, -webkit-filter .5s linear;
+}
+
+.back-to-top::before,
+.back-to-top::after  {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.back-to-top::before  {
+  width: 5px;
+  height: 25px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: #fff;
+}
+
+.back-to-top::after  {
+  width: 15px;
+  height: 15px;
+  -webkit-transform:  translate(-50%, -50%) rotate(45deg);
+      -ms-transform:  translate(-50%, -50%) rotate(45deg);
+          transform:  translate(-50%, -50%) rotate(45deg);
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+}
+
+
+
+
   /* Всплывающая форма при нажатии на кнопку Заказать звонок */
   .popup-wrapper  {
     position: fixed;
