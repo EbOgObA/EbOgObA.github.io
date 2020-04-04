@@ -24,7 +24,7 @@ $(window).ready(function() {
   function backToTop() {
     let button = $('.back-to-top');
     $(window).on('scroll', () => {
-      if ($(this).scrollTop() >= 200)  {
+      if ($(this).scrollTop() >= 100)  {
         button.fadeIn();
       } else {
         button.fadeOut();
