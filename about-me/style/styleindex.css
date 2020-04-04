@@ -1625,7 +1625,7 @@ body {
   }
   @media (max-width: 450px) {
     .container__footer_fixed  {
-      height: 430px;
+      height: 360px;
       display: block;
     }
   }
