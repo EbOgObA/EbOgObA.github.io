@@ -26,4 +26,15 @@ $(function () {
     $('.header-nav').slideToggle();
   });
 
+  $('.faq-list__item-button').on('click', function() {
+    $(this).children('.faq-tab').toggleClass('active');
+    $(this).next('.faq-list__desc').slideToggle();
+  });
+
+
+
+
+
+
+
 });

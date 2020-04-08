@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSGO.RUN</title>
+
+    <!-- Подключаем CSS файл -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <!-- Подключаем favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- JQUERY -->
+    <script src="script/jquery-3.4.1.js"></script>
+    <!-- JQUERY UI -->
+    <script src="script/jquery-ui.js"></script>
+    <!-- СКРИПТЫ -->
+    <script src="script/script.js"></script>
+    <!-- Подключение иконок FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ef844c3a38.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="body">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="img/loading.gif" alt="preloader" class="preloader-img">
+    </div>
+
+    <header class="header">
+      <div class="fixed-container">
+        <div class="menu-burger">
+          <div class="hambergerIcon"></div>
+        </div>
+        <a href="#" class="header-logo"></a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__list-item">
+              <a href="indexru.html" class="header-nav__list-item_link current">
+                <i class="fas fa-home"></i>
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="header-nav__list-item">
+              <a href="helpru.html" class="header-nav__list-item_link" id="current">
+                <i class="fas fa-headset"></i>
+                <span>Поддержка</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__lang-nav">
+          <img src="img/ru.svg" alt="lang ru" class="header__lang-img">
+          <div class="lang-option__container">
+           <ul class="lang-option">
+             <li class="lang-option__item">
+              <a href="indexen.html" class="lang-option__item-link">
+                <img src="img/en.svg" alt="">
+                ENGLISH
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexes.html" class="lang-option__item-link">
+                <img src="img/es.svg" alt="">
+                Español
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexde.html" class="lang-option__item-link">
+                <img src="img/de.svg" alt="">
+                DEUTSCH
+              </a>
+             </li>
+           </ul>
+          </div>
+        </div>
+        <div class="header-account">
+          <a href="#" class="button-login">
+            <span class="button-login__text">Войти через Steam</span>
+            <i class="fab fa-steam"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__fixed-container">
+        <div class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="agreementru.html">пользовательское соглашение</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" id="main-current">часто задаваемые вопросы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="faq">
+          <ul class="faq-list">
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  советы для хорошей игры
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Наш сайт очень требователен к хорошему и стабильному интернет соеденению, также нужен современный браузер. Рекомендуем:<br>
+                  1. Использовать браузеры Google Chrome / Opera <br>
+                  2. Отключать видео/трансляции на ютубе/twitch итд <br>
+                  3. Отключать онлайн музыку <br>
+                  4. Отключать демонстрацию экрана в Discord / Skype. <br>
+                  Все это повышает ваш пинг, и из за этого могут быть лаги/задержки.
+                </p>
+                <p>
+                  Рекомендуем также записывать игру на сайте в случае, если вы наблюдаете какие-либо лаги. В будущем запись можно будет предъявить для того, чтобы рассмотрели заявку на возврат.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  мультиатаки
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  На&nbsp;нашем сайте запрещено использование нескольких аккаунтов сразу. Одна из&nbsp;причин&nbsp;&mdash; это способ забрать промо коды у&nbsp;других людей, а&nbsp;также использовать бонусные программы для увеличения личного дохода. За&nbsp;использование нескольких аккаунтов могут применяться некоторые меры: блокировка промокодов, изъятие вещей, закрытие выводов
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Почему при выводе скин возвращается в инвентарь?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Возможно в&nbsp;данный момент на&nbsp;маркете нет нужного предмета, в&nbsp;этом случае выберите другой предмет или подождите его появления. <br>
+                  Также не&nbsp;забудьте проверить доступность трейдов на&nbsp;Вашем аккаунте.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Почему я не могу использовать промокод?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  На&nbsp;нашем сайте ЗАПРЕЩЕНО ИМЕТЬ ДВА И&nbsp;БОЛЕЕ АККАУНТА- за&nbsp;это доступ к&nbsp;промокодам закрывается. <br>
+                  Если у&nbsp;вас только один аккаунт, то, вероятнее всего, вы&nbsp;уже использовали сегодня промокод либо его лимит был исчерпан. <br>
+                  Также промокоды могут быть заблокированы по&nbsp;усмотрению администриации за&nbsp;слив промокодов в&nbsp;чат
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Почему не пришли деньги на баланс?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Подождите 5-30&nbsp;минут, если проблема не&nbsp;решается, обратитесь в&nbsp;поддержку.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Как обменять баланс на предмет?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Нажмите кнопку &laquo;Обменять&raquo; в&nbsp;левом нижнем углу экрана.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Как пополнить баланс?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Пополнить баланс можно с&nbsp;помощью кнопки &laquo;Пополнить&raquo;, которая находится вверху Вашего экрана, рядом с&nbsp;текущим балансом
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  У вашего сайта есть группа ВКонтакте?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Да, у нас есть <a href="#" class="faq-list__desc-link">группа Вконтакте</a>
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Где взять промо-код?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Промо-коды публикуются&nbsp;в <a href="#" class="faq-list__desc-link">нашей группе ВКонтакте &laquo;CSGO.RUN&raquo;</a>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

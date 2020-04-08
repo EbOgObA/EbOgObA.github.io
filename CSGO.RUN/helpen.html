@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSGO.RUN</title>
+
+    <!-- Подключаем CSS файл -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <!-- Подключаем favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- JQUERY -->
+    <script src="script/jquery-3.4.1.js"></script>
+    <!-- JQUERY UI -->
+    <script src="script/jquery-ui.js"></script>
+    <!-- СКРИПТЫ -->
+    <script src="script/script.js"></script>
+    <!-- Подключение иконок FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ef844c3a38.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="body">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="img/loading.gif" alt="preloader" class="preloader-img">
+    </div>
+
+    <header class="header">
+      <div class="fixed-container">
+        <div class="menu-burger">
+          <div class="hambergerIcon"></div>
+        </div>
+        <a href="#" class="header-logo"></a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__list-item">
+              <a href="indexen.html" class="header-nav__list-item_link current">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="header-nav__list-item">
+              <a href="helpen.html" class="header-nav__list-item_link" id="current">
+                <i class="fas fa-headset"></i>
+                <span>Support</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__lang-nav">
+          <img src="img/en.svg" alt="lang en" class="header__lang-img">
+          <div class="lang-option__container">
+           <ul class="lang-option">
+             <li class="lang-option__item">
+              <a href="indexru.html" class="lang-option__item-link">
+                <img src="img/ru.svg" alt="lang ru">
+                RUSSIAN
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexes.html" class="lang-option__item-link">
+                <img src="img/es.svg" alt="lang es">
+                Español
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexde.html" class="lang-option__item-link">
+                <img src="img/de.svg" alt="lang de">
+                DEUTSCH
+              </a>
+             </li>
+           </ul>
+          </div>
+        </div>
+        <div class="header-account">
+          <a href="#" class="button-login">
+            <span class="button-login__text">Log in Steam</span>
+            <i class="fab fa-steam"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__fixed-container">
+        <div class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="agreementen.html">Terms of Service</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="helpen.html" id="main-current">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="faq">
+          <ul class="faq-list">
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Tips for a&nbsp;good game
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Our site is&nbsp;very demanding to&nbsp;a&nbsp;good and stable Internet connection, as&nbsp;well as&nbsp;need a&nbsp;modern browser. Recommend:<br>
+                  1. Use Google Chrome&nbsp;/ Opera browsers <br>
+                  2. Disable video&nbsp;/ broadcasts on&nbsp;YouTube&nbsp;/ Twitch <br>
+                  3. Turn off online music <br>
+                  4. To&nbsp;turn off the broadcast screen Discord&nbsp;/ Skype. <br>
+                  All this increases your ping, and there may be&nbsp;lags
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Multi-accounts
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  It&nbsp;is&nbsp;not allowed, if&nbsp;you use more than 1&nbsp;account at&nbsp;the same time as&nbsp;it&nbsp;is&nbsp;the way you steal promos for other people. For the use of&nbsp;multiple accounts, some measures may be&nbsp;applied: blocking promotional codes, seizing things.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Why skins are being returned to&nbsp;my&nbsp;inventory while withdrawing?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Probably, your item can not be&nbsp;found at&nbsp;the market, so&nbsp;choose it&nbsp;to&nbsp;another or&nbsp;wait if&nbsp;it&nbsp;appears.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Why i&nbsp;can&rsquo;t use a&nbsp;promo?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  You MUST NOT use two or&nbsp;more accounts on&nbsp;our site. If&nbsp;you do&nbsp;promo codes are blocked for you, but the other functions are still available.
+                  If&nbsp;you have only one account, basically, you have already used a&nbsp;promo or&nbsp;the limit has been reached.
+                  Also promo codes can be&nbsp;blocked if&nbsp;you send promos in&nbsp;the chat.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Why the money that i&rsquo;ve deposited wasn&rsquo;t sent to&nbsp;my&nbsp;balance?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Please, wait for 5-30&nbsp;minutes, if&nbsp;the problem is&nbsp;not solved, contact support
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  How to&nbsp;get an&nbsp;item using my&nbsp;balance?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Press the button &laquo;Exchange&raquo; at&nbsp;the bottom left
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  How to&nbsp;refill the balance?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  You can refill your balance by&nbsp;pressing &laquo;Deposit&raquo; at&nbsp;the top right.
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Do&nbsp;you have any social groups?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Yes, we have  <a href="#" class="faq-list__desc-link">VK Group</a> and&nbsp;FB group, where you can find promos and giveaways
+                </p>
+              </div>
+            </li>
+            <li class="faq-list__item">
+              <div class="faq-list__item-button">
+                <div class="faq-list__item-text">
+                  Promo code?
+                </div>
+                <button type="button" name="button" class="faq-tab"></button>
+              </div>
+              <div class="faq-list__desc">
+                <p>
+                  Promo codes are posted in&nbsp;our&nbsp;VK group and&nbsp;FB group
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>

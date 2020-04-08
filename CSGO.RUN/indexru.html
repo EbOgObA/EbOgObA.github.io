@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSGO.RUN</title>
+
+    <!-- Подключаем CSS файл -->
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <!-- Подключаем favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- JQUERY -->
+    <script src="script/jquery-3.4.1.js"></script>
+    <!-- JQUERY UI -->
+    <script src="script/jquery-ui.js"></script>
+    <!-- СКРИПТЫ -->
+    <script src="script/script.js"></script>
+    <!-- Подключение иконок FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/ef844c3a38.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="body">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <img src="img/loading.gif" alt="preloader" class="preloader-img">
+    </div>
+
+    <header class="header">
+      <div class="fixed-container">
+        <div class="menu-burger">
+          <div class="hambergerIcon"></div>
+        </div>
+        <a href="#" class="header-logo"></a>
+        <nav class="header-nav">
+          <ul class="header-nav__list">
+            <li class="header-nav__list-item">
+              <a href="indexru.html" class="header-nav__list-item_link current" id="current">
+                <i class="fas fa-home"></i>
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="header-nav__list-item">
+              <a href="helpru.html" class="header-nav__list-item_link">
+                <i class="fas fa-headset"></i>
+                <span>Поддержка</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__lang-nav">
+          <img src="img/ru.svg" alt="lang ru" class="header__lang-img">
+          <div class="lang-option__container">
+           <ul class="lang-option">
+             <li class="lang-option__item">
+              <a href="indexen.html" class="lang-option__item-link">
+                <img src="img/en.svg" alt="">
+                ENGLISH
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexes.html" class="lang-option__item-link">
+                <img src="img/es.svg" alt="">
+                Español
+              </a>
+             </li>
+             <li class="lang-option__item">
+              <a href="indexde.html" class="lang-option__item-link">
+                <img src="img/de.svg" alt="">
+                DEUTSCH
+              </a>
+             </li>
+           </ul>
+          </div>
+        </div>
+        <div class="header-account">
+          <a href="#" class="button-login">
+            <span class="button-login__text">Войти через Steam</span>
+            <i class="fab fa-steam"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__fixed-container main__fixed">
+        <div class="main-wrapper">
+          <div class="home-left">
+            <div class="graph-wrapper">
+              <canvas id="canvas" width="100%" height="138px"></canvas>
+              <div class="graph-labels">
+                <div class="graph-labels__item labels__item1">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">2,40x</span>
+                  </a>
+                </div>
+                <div class="graph-labels__item labels__item2">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">9.29x</span>
+                  </a>
+                </div>
+                <div class="graph-labels__item labels__item3">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">1.18x</span>
+                  </a>
+                </div>
+                <div class="graph-labels__item labels__item4">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">5.22x</span>
+                  </a>
+                </div>
+                <div class="graph-labels__item labels__item5 ">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">1.06x</span>
+                  </a>
+                </div>
+                <div class="graph-labels__item labels__item6">
+                  <a href="#" class="graph-label">
+                    <span class="ratio-button">29.33x</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cases">
+              <div class="cases-header">
+                <div class="cases-stats">
+                  <div class="cases-stats__row">
+                    Баланс:
+                    <b>0.00</b>
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="cases-stats__row">
+                    Выбрано:
+                    <b>0.00</b>
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                </div>
+                <label class="cases-checkbox">
+                  <input type="checkbox" hidden>
+                  <span></span>
+                  Выбрать все
+                </label>
+              </div>
+              <div class="cases-list cases-empty">
+                <span class="cases-empty__text">Вы не авторизованы</span>
+              </div>
+              <div class="cases-controls">
+                <button class="btn btn-green" type="button" name="button">Обменять</button>
+                <button class="btn" type="button" name="button">Получить</button>
+              </div>
+            </div>
+          </div>
+          <div class="home-middle">
+            <div class="round-inform">
+              <div class="notice-block notice-block__error">
+                Вы не авторизованы
+                <button class="notice-block__close"></button>
+              </div>
+              <div class="round-inform__bet">
+                <div class="round-inform__bet-loading">
+                  <span>Ожидание предметов</span>
+                </div>
+              </div>
+              <div class="round-inform__controls">
+                <div class="round-inform__controls-title">
+                  Информация:
+                </div>
+                <div class="round-inform__controls-count">
+                  <b class="count">0.00</b>
+                  <i class="fas fa-angle-double-right"></i>
+                  <b class="count">0.00</b>
+                </div>
+                <div class="round-inform__controls-form">
+                  <form class="controls-form" action="index.html" method="post">
+                    <input class="field-input" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="5" name="text" value="">
+                    <button class="controls-form__btn" type="button" name="button">
+                      Начать
+                      <b>0.00</b>
+                    </button>
+                  </form>
+                </div>
+                <div class="round-inform__controls-form">
+                  <span>
+                    Авто-вывод
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="round-stats">
+              <div class="round-stats__title">
+                Статистика раунда:
+              </div>
+              <ul class="round-stats__list">
+                <li class="round-stats__list-item">
+                  <img src="img/account.png" alt="#">
+                  <span>Участников:</span>
+                  <b>100</b>
+                </li>
+                <li class="round-stats__list-item">
+                  <img src="img/money.png" alt="#">
+                  <span>Участвует:</span>
+                  <b>100</b>
+                </li>
+                <li class="round-stats__list-item">
+                  <img src="img/gun.png" alt="#">
+                  <span>Скинов:</span>
+                  <b>100</b>
+                </li>
+              </ul>
+            </div>
+            <div class="round-list">
+              <ul>
+                <li class="round-item">
+                  <a href="#" class="round-item__photo">
+                    <img src="img/avatar.png" alt="avatar">
+                  </a>
+                  <ul class="round-item__cases">
+                    <li>
+                      <img src="img/medium.png" alt="#">
+                    </li>
+                  </ul>
+                  <div class="round-item__price">
+                    9.80
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="status-label">
+                    Участвует
+                  </div>
+                  <div class="round-item__selected">
+                    <div class="round-item__selected-photo">
+                    </div>
+                    <div class="round-item__selected-price">
+                    </div>
+                  </div>
+                </li>
+                <li class="round-item round-item__green">
+                  <a href="#" class="round-item__photo">
+                    <img src="img/avatar.png" alt="avatar">
+                  </a>
+                  <ul class="round-item__cases">
+                    <li>
+                      <img src="img/medium.png" alt="#">
+                    </li>
+                  </ul>
+                  <div class="round-item__price">
+                    9.80
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="status-label status-label__green">
+                    2.80x
+                  </div>
+                  <div class="round-item__selected">
+                    <div class="round-item__selected-photo">
+                      <img src="img/knife.png" alt="">
+                    </div>
+                    <div class="round-item__selected-price">
+                      146.51
+                      <i class="fas fa-dollar-sign"></i>
+                    </div>
+                  </div>
+                </li>
+                <li class="round-item round-item__red">
+                  <a href="#" class="round-item__photo">
+                    <img src="img/avatar.png" alt="avatar">
+                  </a>
+                  <ul class="round-item__cases">
+                    <li>
+                      <img src="img/medium.png" alt="#">
+                    </li>
+                  </ul>
+                  <div class="round-item__price">
+                    9.80
+                    <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="status-label status-label__red">
+                    2.80x
+                  </div>
+                  <div class="round-item__selected">
+                    <div class="round-item__selected-photo">
+                      <img src="img/knife.png" alt="">
+                    </div>
+                    <div class="round-item__selected-price">
+                      146.51
+                      <i class="fas fa-dollar-sign"></i>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank">Пользовательское соглашение</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+</html>
