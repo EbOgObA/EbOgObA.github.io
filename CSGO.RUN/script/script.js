@@ -12,7 +12,7 @@ $(function () {
           parseInt(p.css('--duration')) * 1000
         );
 
-      }, 0);
+      }, 1000);
     });
   }
   preloader();
