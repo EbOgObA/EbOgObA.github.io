@@ -1192,7 +1192,6 @@ input::-webkit-inner-spin-button {
   background-position: 50%;
   background-repeat: no-repeat;
   height: calc(100vh - 17.62rem);
-  overflow: auto;
 }
   @media (max-width: 1024px) {
     .round-list  {
