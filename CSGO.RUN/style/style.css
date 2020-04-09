@@ -707,26 +707,34 @@ body {
   }
 
 .home-left  {
+  width: 25%;
   min-width: 350px;
   background-color: #1e212f;
 }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .home-left  {
-      min-width: 320px;
+      width: 100%;
     }
   }
+    @media (max-width: 768px) {
+      .home-left  {
+        min-width: 320px;
+      }
+    }
 
 
 .graph-wrapper  {
   padding: 0.5rem 1rem 1.5rem 1rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
   @media (max-width: 1024px) {
     .graph-wrapper  {
       padding: 2rem 1rem 1.5rem 1rem;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -948,7 +956,7 @@ body {
   margin-left: 0.25rem;
 }
 
-.cases-stats .fa-dollar-sign  {
+.cases-stats em  {
   color: #14caf7;
   margin-left: 0.1rem;
 }
@@ -1086,14 +1094,19 @@ input[type="checkbox"]:checked+span:before {
 
 
 .home-middle  {
-  width: 100%;
+  width: 75%;
   padding: 0 0.5rem 0 0;
 }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .home-middle {
-      padding: 0;
+      width: 100%;
     }
   }
+    @media (max-width: 768px) {
+      .home-middle {
+        padding: 0;
+      }
+    }
 
 
 .round-inform  {
@@ -1621,8 +1634,8 @@ background-image:url('../img/arrows-down.png')
     }
   }
 
-.round-item__price .fa-dollar-sign,
-.round-item__selected-price .fa-dollar-sign  {
+.round-item__price em,
+.round-item__selected-price em  {
   font-size: 0.6rem;
   color: #1ebbf3;
   margin-left: 0.2rem;
