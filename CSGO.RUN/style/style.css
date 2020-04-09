@@ -916,7 +916,6 @@ input[type="checkbox"]:checked+span:before {
   @media (max-width: 768px) {
     .home-middle {
       padding: 0;
-      height: 100vh;
     }
   }
 
