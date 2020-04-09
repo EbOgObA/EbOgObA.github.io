@@ -1212,6 +1212,52 @@ input::-webkit-inner-spin-button {
   height: calc(100vh - 17.62rem);
 }
 
+
+.noty-message {
+  margin-bottom: 0.46875rem;
+  border-radius: 0.23rem;
+  background-image: -webkit-gradient(linear,left bottom,left top,from(#736efe),to(#5efce8));
+  background-image: linear-gradient(0deg,#736efe,#5efce8);
+  font-size: 0.5625rem;
+  padding: .28125rem 1.64rem .28125rem 4.6875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 2.34375rem;
+}
+  @media (max-width: 768px) {
+    .noty-message  {
+      font-size: 0.5rem;
+    }
+  }
+
+.noty-message:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0.6rem;
+    bottom: 0;
+    width: 3.98rem;
+    background-size: contain;
+}
+
+.noty-message__vk:before {
+    background: url('../img/noty-vk.png') 50% 50% no-repeat;
+}
+
+.noty-message__sale  {
+  background-image: -webkit-gradient(linear,left bottom,left top,from(#e55b5c),to(#df8f66));
+  background-image: linear-gradient(0deg,#e55b5c,#df8f66);
+}
+
+.noty-message__sale:before {
+    background: url('../img/noty-sale.png') 50% 50% no-repeat;
+}
+
+
+
 .round-item  {
   background-color: #1d202e;
   padding: 0 0.5625rem;
@@ -1236,7 +1282,6 @@ input::-webkit-inner-spin-button {
   border-color: #69eda5;
   box-shadow: inset 0 0 1.6875rem rgba(18,224,125,.7);
   background-image: url('../img/arrows-top.png');
-  font-size:
 }
 
 .round-item__red {
@@ -1270,7 +1315,6 @@ background-image:url('../img/arrows-down.png')
   flex-shrink: 0;
   position: relative;
   list-style: none;
-  overflow: auto;
 }
   @media (max-width: 768px) {
     .round-item__cases  {
