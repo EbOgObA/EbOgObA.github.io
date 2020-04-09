@@ -913,6 +913,11 @@ input[type="checkbox"]:checked+span:before {
   width: 100%;
   padding: 0 0.5rem 0 0;
 }
+  @media (max-width: 768px) {
+    .home-middle {
+      padding: 0;
+    }
+  }
 
 
 .round-inform  {
@@ -932,7 +937,7 @@ input[type="checkbox"]:checked+span:before {
         flex-direction: column;
         align-items: center;
         margin: 0 0 0.5rem 0;
-        height: calc(100vh - 20.3rem);
+        height: 330px;
         padding-top: 0;
       }
     }
@@ -1188,7 +1193,7 @@ input[type="checkbox"]:checked+span:before {
     @media (max-width: 768px) {
       .round-list  {
         height: calc(100vh - 25.6rem);
-        padding: 0 0.5 0 0.6rem;
+        padding: 0 0.2rem 0 0.6rem;
       }
     }
 
