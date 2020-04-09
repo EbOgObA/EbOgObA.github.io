@@ -1191,10 +1191,11 @@ input::-webkit-inner-spin-button {
   background-position: 50%;
   background-repeat: no-repeat;
   height: calc(100vh - 17.62rem);
+  overflow: auto;
 }
   @media (max-width: 1024px) {
     .round-list  {
-      height: calc(100vh - 15.5rem);
+      height: auto;
       padding: 0 0.75rem 0 0.85rem;
     }
   }
@@ -1208,6 +1209,7 @@ input::-webkit-inner-spin-button {
 .round-list>ul {
   background: #212536;
   list-style: none;
+  height: calc(100vh - 17.62rem);
 }
 
 .round-item  {
