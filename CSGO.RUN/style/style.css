@@ -761,11 +761,10 @@ body {
 
 .graph-animationbox  {
   background: #2b3848;
-  width: 100%;
+  width: 320px;
   height: 160px;
   border-radius: 5px;
   position: relative;
-
 }
 
 .graph-fall  {
@@ -895,7 +894,7 @@ body {
 
 .coefficient-box  {
   position: absolute;
-  width: 120px;
+  width: 90px;
   height: 75px;
   top: 50%;
   left: 50%;
@@ -959,15 +958,15 @@ body {
   from {
   }
   to {
-    -webkit-transform: translate(0px, -750px);
-            transform: translate(0px, -750px);
+    -webkit-transform: translate(0px, -300px);
+            transform: translate(0px, -300px);
   }
 }
 
 
 .coefficient-count1  {
-  -webkit-animation: countCoef1 20s steps(10, end) 1 forwards;
-          animation: countCoef1 20s steps(10, end) 1 forwards;
+  -webkit-animation: countCoef1 20s steps(4, end) 1 forwards;
+          animation: countCoef1 20s steps(4, end) 1 forwards;
 }
 
 .coefficient-count2  {
@@ -996,7 +995,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 75px;
-  width: 30px;
+  width: 22px;
   text-shadow: 0 5px 10px #000;
 }
 
