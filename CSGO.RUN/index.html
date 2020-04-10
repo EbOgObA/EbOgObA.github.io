@@ -247,6 +247,13 @@
                   Выбрать все
                 </label>
               </div>
+              <div class="cases__form-box">
+                <form class="cases__form" action="index.html" method="post">
+                  <input class="cases__form-box_input" type="number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="text" value="">
+                  <button class="button-select" type="button" name="button">Выбрать</button>
+                  <button class="button-takeoff" type="button" name="button">Снять</button>
+                </form>
+              </div>
               <div class="cases-list cases-empty">
                 <span class="cases-empty__text">Вы не авторизованы</span>
               </div>

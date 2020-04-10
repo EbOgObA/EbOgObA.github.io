@@ -1415,14 +1415,9 @@ body {
           flex-direction: column;
   height: calc(100vh - 278px);
 }
-  @media (max-width: 1024px) {
-    .cases  {
-      height: calc(100vh - 406px);
-    }
-  }
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .cases  {
-        height: calc(100vh - 294px);
+        height: calc(100vh - 304px);
       }
     }
 
@@ -1499,6 +1494,82 @@ input[type="checkbox"]:checked+span:before {
           transform:rotateZ(45deg);
   margin:-6px 3px;
   pointer-events:none;
+}
+
+
+
+.cases__form  {
+  padding-bottom: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+}
+
+.cases__form .cases__form-box_input  {
+  width: calc(45% - 0.2rem);
+  text-align: center;
+  height: 1.96875rem;
+  background-color: #212536;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.cases__form-box_input:focus  {
+  background-color: #212536;
+}
+
+.button-select  {
+  width: calc(25% - 0.2rem);
+  font-weight: 600;
+  font-size: 0.6rem;
+  color: #fff;
+  background: url('../img/btn-green.png') 50% 50% no-repeat;
+  border: none;
+  line-height: 1.5rem;
+  background-size: cover;
+  /* padding: 0 0.5625em; */
+  text-shadow: -1px 0 0.16rem rgba(44,29,110,.75);
+  border-radius: .25rem;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-select:active {
+  transform: scale(0.98);
+}
+
+.button-takeoff  {
+  width: calc(25% - 0.2rem);
+  font-weight: 600;
+  font-size: 0.6rem;
+  color: #fff;
+  background: url('../img/btn-purple.png') 50% 50% no-repeat;
+  border: none;
+  line-height: 1.5rem;
+  background-size: cover;
+  /* padding: 0 0.5625em; */
+  text-shadow: -1px 0 0.16rem rgba(44,29,110,.75);
+  border-radius: .25rem;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-takeoff:active {
+  transform: scale(0.98);
 }
 
 .cases-list  {
@@ -1839,7 +1910,7 @@ input::-webkit-inner-spin-button {
   font-weight: 600;
   font-size: 0.8rem;
   color: #fff;
-  background:  url('../img/btn-purple.png') 50% 50% no-repeat;
+  background:  url('../img/btn-green.png') 50% 50% no-repeat;
   border: none;
   line-height: 1.96875rem;
   background-size: cover;
