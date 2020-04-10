@@ -387,7 +387,7 @@ body {
   background-color: rgba(52,56,83,.9);
   border-radius: 0 0 0.5rem 0.5rem;
   display: none;
-  z-index: 100;
+  z-index: 1000;
 }
   @media (max-width: 768px) {
     .lang-option__container  {
@@ -743,7 +743,7 @@ body {
 }
   @media (max-width: 1024px) {
     .graph-wrapper  {
-      padding: 2rem 1rem 1.5rem 1rem;
+      padding: 4rem 1rem 1.5rem 1rem;
       display: -webkit-box;
       display: -ms-flexbox;
       -webkit-box-orient: vertical;
@@ -757,7 +757,7 @@ body {
   }
     @media (max-width: 768px) {
       .graph-wrapper  {
-        padding: 2rem 0 1.5rem 0;
+        padding: 4rem 0 1.5rem 0;
       }
     }
 
@@ -1419,7 +1419,7 @@ body {
 }
     @media (max-width: 1024px) {
       .cases  {
-        height: calc(100vh - 304px);
+        height: 100%;
       }
     }
 
@@ -1595,6 +1595,11 @@ input[type="checkbox"]:checked+span:before {
   padding: 0.25rem;
   height: 100%;
 }
+  @media (max-width: 1024px) {
+    .cases-list  {
+      display: none;
+    }
+  }
 
 .cases-empty__text  {
   opacity: .3;
@@ -1615,6 +1620,11 @@ input[type="checkbox"]:checked+span:before {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+  @media (max-width: 1024px){
+    .cases-controls  {
+      display: none;
+    }
+  }
 
 .cases-controls .btn  {
   width: calc(50% - 0.3rem);
@@ -1737,6 +1747,12 @@ input[type="checkbox"]:checked+span:before {
   cursor: pointer;
 }
 
+.notice-block__message  {
+  background-image: linear-gradient(90deg,#21588f,#2b6aa8 47%,#21588f);
+  top: 30px;
+  z-index: 90;
+}
+
 .notice-block__close:hover.notice-block__close::before,
 .notice-block__close:hover.notice-block__close::after  {
   -webkit-transition: all .2s linear;
@@ -1839,7 +1855,7 @@ input[type="checkbox"]:checked+span:before {
   width: 40%;
   color: hsla(0,0%,100%,.2);
   font-weight: 400;
-  padding: 1.125rem 0.84375rem 1.125rem 0;
+  padding: 1.125rem 2rem 1.125rem 0;
 }
   @media (max-width: 768px) {
     .round-inform__controls  {
@@ -2007,10 +2023,9 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
 }
 
-.round-stats__list-item:nth-child(3) img{
-  -webkit-transform: scale(-1, 1);
-      -ms-transform: scale(-1, 1);
-          transform: scale(-1, 1);
+.round-stats__list-item:nth-child(2) img{
+ width: 16px;
+ height: 16px;
 }
 
 .round-list  {
@@ -2190,6 +2205,17 @@ background-image:url('../img/arrows-down.png')
   -o-object-position: center;
      object-position: center;
 }
+
+.round-item__cases span {
+  font-size: 1rem;
+  color: #fff;
+}
+  @media (max-width: 768px) {
+    .round-item__cases span  {
+      font-size: 0.5rem;
+    }
+  }
+
 
 .round-item__price  {
   width: 40%;

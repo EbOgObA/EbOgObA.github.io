@@ -62,20 +62,6 @@ $(function () {
 
 
 
-  // setInterval(function() {
-  //   $(".timer").show();
-  //   setTimeout(function () {
-  //     $(".timer").hide();
-  //     $(".coefficient-box").show();
-  //     $(".chart").show();
-  //       setTimeout(function() {
-  //         $(".coefficient-box").hide();
-  //         $(".chart").hide();
-  //       }, 16000);
-  //   }, 12000);
-  //  },0, 10000);
-
-
 
   $('.header__lang-nav').on('click', function() {
     $('.lang-option__container').slideToggle();
