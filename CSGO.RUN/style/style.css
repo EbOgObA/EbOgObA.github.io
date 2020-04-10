@@ -2,6 +2,8 @@
 
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @font-face {
     font-family: 'TT Lakes';
     src: url('../fonts/TTLakes/TTLakes-Medium.eot');
@@ -1184,8 +1186,8 @@ body {
   left:-320px;
   -webkit-animation: topLineMove 5s linear infinite;
           animation: topLineMove 5s linear infinite;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: -o-linear-gradient(right, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
+  background: -webkit-gradient(linear, right top, left top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: linear-gradient(-90deg, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
 }
 
@@ -1196,8 +1198,8 @@ body {
   right: 0px;
   -webkit-animation: rightLineMove 5s linear 1.75s infinite;
           animation: rightLineMove 5s linear 1.75s infinite;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: -o-linear-gradient(bottom, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: linear-gradient(0deg, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
 }
 
@@ -1208,8 +1210,8 @@ body {
   right: -320px;
   -webkit-animation: bottomLineMove 5s linear 2.6s infinite;
           animation: bottomLineMove 5s linear 2.6s infinite;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: -o-linear-gradient(left, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: linear-gradient(90deg, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
 }
 
@@ -1220,8 +1222,8 @@ body {
   left: 0px;
   -webkit-animation: leftLineMove 5s linear 4.2s infinite;
           animation: leftLineMove 5s linear 4.2s infinite;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: -o-linear-gradient(top, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 165, 195, 1)), to(rgba(0, 165, 195, 0)));
   background: linear-gradient(180deg, rgba(0, 165, 195, 1), rgba(0, 165, 195, 0));
 }
 
@@ -1547,7 +1549,9 @@ input[type="checkbox"]:checked+span:before {
 }
 
 .button-select:active {
-  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .button-takeoff  {
@@ -1569,7 +1573,9 @@ input[type="checkbox"]:checked+span:before {
 }
 
 .button-takeoff:active {
-  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .cases-list  {
