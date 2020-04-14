@@ -79,15 +79,6 @@ $(document).ready(function() {
     }).done(function() {
       setTimeout(function() {
         // Done Functions
-        $('.chat-main__track').append(`<div class="chat-main__bot-user">
-                                         <div class="bot-user__img">
-                                           <img src="images/DSC_4719.png" alt="#">
-                                         </div>
-                                         <div class="bot-user__text">
-                                           <span>Спасибо! Ближайший освободившийся оператор свяжется с вами в&nbsp;течение 10 минут.</span>
-                                         </div>
-                                       </div>`);
-        $('.prompt-questions__item').val("");
         th.trigger("reset");
       }, 1000);
     });
@@ -126,7 +117,7 @@ $(document).ready(function() {
 
   setTimeout(function () {
     $('.chat-prompt').fadeIn(500);
-  }, 5000);
+  }, 4000);
   // Закрытие всплывающей подсказки
   $('.chat-prompt__close').on('click', function () {
     $('.chat-prompt').fadeOut();
@@ -172,19 +163,19 @@ $(document).ready(function() {
     }
   });
 
-
-    // $('.main-form__item input[type="submit"]').on('click', function() {
-    //   $('.chat-main__track').append(`<div class="chat-main__bot-user">
-    //                                    <div class="bot-user__img">
-    //                                      <img src="images/DSC_4719.png" alt="#">
-    //                                    </div>
-    //                                    <div class="bot-user__text">
-    //                                      <span>Спасибо! Ближайший освободившийся оператор свяжется с вами в&nbsp;течение 10 минут.</span>
-    //                                    </div>
-    //                                  </div>`);
-    //   $('.prompt-questions__item').val("");
-    // });
-
+    $('.main-form__item input[type="submit"]').on('click', function() {
+      if ( $('.main-form__item input[type="mail"]').val().length !== 0) {
+      $('.chat-main__track').append(`<div class="chat-main__bot-user">
+                                       <div class="bot-user__img">
+                                         <img src="images/DSC_4719.png" alt="#">
+                                       </div>
+                                       <div class="bot-user__text">
+                                         <span>Спасибо! Ближайший освободившийся оператор свяжется с вами в&nbsp;течение 10 минут.</span>
+                                       </div>
+                                     </div>`);
+        $('.prompt-questions__item').val("");
+      }
+    });
 });
 
 //Блок кода который ниже отвечает за то что и самый верхний блок кода(за стрелку в верхнем центральном блоке для прокрутки страницы чучуть ниже). Он сейчас закоментирован потому что не нужно чтобы он работал. Он на екстренный случай если верхний по каким то причинам станет не рабочий. Тогда верхний можна будет удалить, а этот просто розкоментировать.
