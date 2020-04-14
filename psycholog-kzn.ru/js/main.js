@@ -68,21 +68,114 @@ $(document).ready(function() {
     $(".js-a3").toggleClass("active-footer");
   });
 
+
+  //E-mail Ajax Send
+  $(".main-form").submit(function() { //Change
+    let th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
+
+
+
+
+
+
+  // Функция добавления формы
+  function addForm() {
+    $('.chat-main__track').append(`<p class="introduce-yourself">Представьтесь в чате</p>
+                            <div class="main-form__container">
+                              <form class="main-form" action="mail.php" method="post">
+                                <!-- Hidden Required Fields -->
+                                <input type="hidden" name="project_name" value="psycholog-kzn.ru">
+                                <input type="hidden" name="admin_email" value="info@psycholog-kzn.ru">
+                                <input type="hidden" name="form_subject" value="Вопрос в чате">
+                                <div class="main-form__item">
+                                  <input type="text" name="name" autocomplete="name" placeholder="Ваше имя" title="Ваше имя" value="">
+                                </div>
+                                <div class="main-form__item">
+                                  <input type="tel" name="phone" autocomplete="phone" placeholder="Ваше имя" title="Ваш телефон" value="">
+                                </div>
+                                <div class="main-form__item">
+                                  <input type="mail" name="mail" autocomplete="mail" placeholder="Ваш e-mail*" required="required" title="В e-mail" value="">
+                                </div>
+                                <div class="main-form__item">
+                                  <input type="submit" name="submit" value="Отправить">
+                                </div>
+                              </form>
+                            </div>`);
+  }
+
+  setTimeout(function () {
+    $('.chat-prompt').fadeIn(500);
+  }, 5000);
+  // Закрытие всплывающей подсказки
+  $('.chat-prompt__close').on('click', function () {
+    $('.chat-prompt').fadeOut();
+  });
+  // Нажатие на пульсирующую кнопку
   $('.pulse-wrapper').on('click', function () {
+    $('.chat-prompt').hide();
     $(this).fadeOut();
     $('.chat-wrapper').fadeIn();
   });
+  // Закрытие чата
   $('.chat__button-close').on('click', function () {
     $('.pulse-wrapper').fadeIn();
     $('.chat-wrapper').fadeOut();
   });
+
+
+  $('.questions__item1').on('click', function() {
+    let message = $('.questions__item1').val();
+    $('.prompt-questions__container').hide();
+    $('.chat-main__track').append(`<div class="chat-message__user">${message}</div>`);
+    setTimeout(addForm, 2000);
+  });
+  $('.questions__item2').on('click', function() {
+    let message = $('.questions__item2').val();
+    $('.prompt-questions__container').hide();
+    $('.chat-main__track').append(`<div class="chat-message__user">${message}</div>`);
+    setTimeout(addForm, 2000);
+  });
+  $('.questions__item3').on('click', function() {
+    let message = $('.questions__item3').val();
+    $('.prompt-questions__container').hide();
+    $('.chat-main__track').append(`<div class="chat-message__user">${message}</div>`);
+    setTimeout(addForm, 2000);
+  });
   $('.chat-footer__send').on('click', function () {
     let text = $('.inputFieald').val();
+
     if (text.length !== 0) {
-      $('.chat-main').append(`<div class="chat-message__user">${text}</div>`);
+      $('.chat-main__track').append(`<div class="chat-message__user">${text}</div>`);
       $('.inputFieald').val("");
+      setTimeout(addForm, 1000);
     }
   });
+
+  if ( $('.main-form__item input[type="mail"]').val().length !== 0) {
+    $('.main-form__item input[type="submit"]').on('click', function functionName() {
+      $('.chat-main__track').append(`<div class="chat-main__bot-user">
+                                       <div class="bot-user__img">
+                                         <img src="images/DSC_4719.png" alt="#">
+                                       </div>
+                                       <div class="bot-user__text">
+                                         <span>Спасибо! Ближайший освободившийся оператор свяжется с вами в&nbsp;течение 10 минут.</span>
+                                       </div>
+                                     </div>`);
+      $('.prompt-questions__item').val("");
+    });
+  }
 });
 
 //Блок кода который ниже отвечает за то что и самый верхний блок кода(за стрелку в верхнем центральном блоке для прокрутки страницы чучуть ниже). Он сейчас закоментирован потому что не нужно чтобы он работал. Он на екстренный случай если верхний по каким то причинам станет не рабочий. Тогда верхний можна будет удалить, а этот просто розкоментировать.

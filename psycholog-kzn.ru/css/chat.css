@@ -45,12 +45,92 @@
   padding: 10px;
   color: #fff;
   font-size: 15px;
-  overflow-y: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   flex-flow: column;
 }
+
+.chat-main__track  {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-flow: column;
+}
+
+.chat-main__bot-user  {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: 0 0 15px 0;
+}
+
+.bot-user__img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px 0 0;
+}
+
+.bot-user__text   {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #000;
+  max-width: 250px;
+  position: relative;
+}
+
+.bot-user__text::before  {
+  content: "Диляра";
+  position: absolute;
+  top: -17px;
+  left: 10px;
+  font-size: 12px;
+  color: #a4a4a4;
+}
+
+.prompt-questions__container  {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.prompt-questions__item  {
+  color: #2200b5;
+  border: 1px solid #2200b5;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transition: all .1s linear;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+}
+
+.questions__item1  {
+  width: 120px;
+}
+
+.questions__item2 {
+  width: 155px;
+}
+
+.questions__item3 {
+  width: 180px;
+}
+
+.prompt-questions__item:hover {
+  transition: all .1s linear;
+  color: #fff;
+  background-color: #2200b5;
+}
+
 
 .chat-message__user  {
   align-self: flex-end;
@@ -156,7 +236,152 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.introduce-yourself  {
+  padding: 0 0 15px 0;
+  color: #697582;
+  display: flex;
+  justify-content: center;
+}
 
+.main-form__container  {
+  border-radius: 20px;
+  margin: 0 10px 15px 10px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,.08), 0 0 1px 0 rgba(0,0,0,.22), inset 0 2px 0 0 #18c139;
+}
+
+.main-form__item  {
+  font-family: Arial,sans-serif;
+  padding-bottom: 15px;
+}
+
+.main-form__item  input {
+  color: #000;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #a4a4a4;
+  user-select: text;
+  line-height: normal;
+  padding: 0 10px;
+  height: 40px;
+  width: 100%;
+  outline: none;
+}
+
+.main-form__item  input:hover,
+.main-form__item  input:focus {
+    border-bottom: 1px solid #18c139;
+}
+
+.main-form__item  input[type="submit"]  {
+  border: none;
+  background: #18c139;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s linear;
+}
+
+.main-form__item  input[type="submit"]:hover {
+  transition: all .2s linear;
+  background: #008D39;
+}
+
+
+
+
+
+.chat-prompt  {
+  width: 300px;
+  height: auto;
+  background-color: #afc8fc;
+  position: fixed;
+  right: 125px;
+  bottom: 65px;
+  display: none;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 100;
+  border: 2px solid #91b5ff;
+}
+
+.chat-prompt::after  {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  background-color: #afc8fc;
+  transform: rotate(45deg);
+  border-right: 2px solid #91b5ff;
+  border-top: 2px solid #91b5ff;
+  z-index: 101;
+}
+
+.chat-prompt__close  {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+.chat-prompt__close:hover  {
+  transition: all .2s linear;
+  opacity: 1;
+  box-shadow: 0 0 5px #fff;
+}
+
+.chat-prompt__close::after,
+.chat-prompt__close::before  {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  width: 15px;
+  height: 2px;
+  background: #fff;
+}
+
+.chat-prompt__close::before  {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.chat-prompt__close::after  {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.chat-prompt__img-box  {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.chat-prompt__img-box span {
+  font-size: 14px;
+  margin: 0 0 0 10px;
+}
+
+.chat-prompt__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.chat-prompt__text  {
+  font-size: 16px;
+  margin: 5px 0 5px 40px;
+  color: #29406d;
+  font-weight: bold;
+}
 
 
 

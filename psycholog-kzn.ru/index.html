@@ -1480,15 +1480,43 @@
         <div class="chat-header__title">Напишите ваше сообщение</div>
         <div class="chat-header__p">Операторы онлайн!</div>
       </div>
-      <div class="chat-main"></div>
+      <div class="chat-main">
+        <div class="chat-main__track">
+          <div class="chat-main__bot-user">
+            <div class="bot-user__img">
+              <img src="images/DSC_4719.png" alt="#">
+            </div>
+            <div class="bot-user__text">
+              <span>Здравствуйте! Я могу вам чем-то помочь?</span>
+            </div>
+          </div>
+          <div class="prompt-questions__container">
+            <input class="prompt-questions__item questions__item1" readonly value="Здравствуйте!">
+            <input class="prompt-questions__item questions__item2" readonly value="Мне нужна помощь">
+            <input class="prompt-questions__item questions__item3" readonly value="Вы можете мне помочь?">
+          </div>
+        </div>
+      </div>
       <div class="chat-footer">
         <div class="chat-footer__text-box">
-          <textarea class="inputFieald" maxlength="1000" autocomplete="false" placeholder="Введите сообщение" name="name"></textarea>
+          <textarea class="inputFieald" maxlength="1000" autocomplete="false" placeholder="Введите сообщение" autofocus name="name"></textarea>
         </div>
         <div class="chat-footer__send"></div>
       </div>
       <div class="chat__button-close"></div>
     </div>
+
+    <!-- Всплываающая подсказка -->
+    <!-- <div class="chat-prompt">
+      <div class="chat-prompt__close"></div>
+      <div class="chat-prompt__img-box">
+        <img class="chat-prompt__img" src="images/DSC_4719.png" alt="#">
+        <span>Диляра&nbsp;Кропачева</span>
+      </div>
+      <div class="chat-prompt__text">
+        Могу ли я чем то помочь?
+      </div>
+    </div> -->
 
     <!-- ПУЛЬСИРУЮЩАЯ КНОПКА ДЛЯ ВЫЗОВА ЧАТ-ФОРМЫ -->
     <div class="pulse-wrapper">
