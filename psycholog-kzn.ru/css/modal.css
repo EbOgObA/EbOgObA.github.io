@@ -1,0 +1,270 @@
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -400%;
+  left: 0;
+  z-index: 30;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.overlay.active {
+  top: 0;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 150;
+}
+
+.close-btn::after,
+.close-btn::before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  right: -5px;
+  top: 20px;
+  z-index: 80;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close-btn:hover::after,
+.close-btn:hover::before {
+  -webkit-box-shadow: 0 0 4px 1px #fff;
+  box-shadow: 0 0 4px 1px #fff;
+}
+
+.close-btn::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close-btn::before {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.modal__close-btn {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 60;
+}
+
+.modal {
+  position: relative;
+  width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 100;
+  cursor: default;
+}
+
+.modal-logo {
+  height: 40%;
+  background-position: 100% 20%;
+  background-size: cover;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.modal-wrapper {
+  padding: 20px 40px;
+}
+.modal-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.modal-input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid #29406d;
+  border-radius: 5px;
+  padding: 20px 15px;
+  margin-top: 25px;
+  font-size: 16px;
+  color: #29406d;
+}
+
+.modal-wrapper button {
+  background: #de004a;
+  border: none;
+  width: 220px;
+  height: 60px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 3px;
+  outline: none;
+}
+
+button#close {
+  background: #29406d;
+}
+
+.modal-wrapper button:hover {
+  background: #ff0000;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+/* ---- */
+
+/* --ВТОРОЕ ОКНО С ФОРМОЙ */
+.overlay2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -400%;
+  left: 0;
+  z-index: 30;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.overlay2.active {
+  top: 0;
+}
+
+/* --ТРЕТЬЕ ОКНО С ФОРМОЙ-- */
+.overlay3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -400%;
+  left: 0;
+  z-index: 30;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+.overlay3.active {
+  top: 0;
+}
+
+.overlay2 .modal-logo,
+.overlay3 .modal-logo {
+  height: 30%;
+  background-position: 100% 20%;
+  background-size: cover;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+/* --АДАПТИВ ДЛЯ МОДАЛЬНЫХ ОКОН-- */
+@media (max-width: 500px) {
+  .overlay2,
+  .overlay3,
+  .overlay {
+    height: 100%;
+  }
+  .modal__close-btn {
+    height: 100%;
+  }
+  .modal {
+    height: 100%;
+  }
+
+  .modal-input {
+    margin-top: 15px;
+    padding: 10px 15px;
+  }
+
+  .footer-check {
+    margin: 10px 0;
+  }
+
+  .modal-logo {
+    height: 30%;
+  }
+
+  .modal-wrapper {
+    padding: 10px 15px;
+  }
+
+  /* --при клике в модалке на input изображение скрывается-- */
+  .overlay2 .modal-logo.active-input,
+  .overlay3 .modal-logo.active-input,
+  .active-input {
+    height: 0%;
+  }
+
+  /* --при клике в модалке на input кнопка закрытия модалки (крестик) уменшается и меняет цвет-- */
+  .active-close_btn::after,
+  .active-close_btn::before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #29406d;
+    position: absolute;
+    right: -25px;
+    top: -10px;
+    z-index: 80;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+}
+@media (max-width: 400px) {
+  .overlay2,
+  .overlay3,
+  .overlay {
+    height: 100%;
+  }
+  .modal__close-btn {
+    height: 100%;
+  }
+  .modal {
+    height: 100%;
+  }
+
+  .modal-logo {
+    height: 30%;
+  }
+
+  .modal-wrapper button {
+    width: 49%;
+    height: 40px;
+  }
+
+  /* --при клике в модалке на input изображение скрывается-- */
+  .overlay2 .modal-logo.active-input,
+  .overlay3 .modal-logo.active-input,
+  .active-input {
+    height: 0%;
+  }
+}

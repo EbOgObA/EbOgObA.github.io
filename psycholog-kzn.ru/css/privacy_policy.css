@@ -1,0 +1,35 @@
+.privacy-policy {
+  padding: 130px 15px 50px;
+}
+.privacy-policy-title {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+p {
+  margin: 5px 0 0;
+}
+
+div > ol > li {
+  margin-bottom: 40px;
+}
+
+div > ol > li > ol > li {
+  margin-top: 10px;
+}
+
+.mini-descr {
+  line-height: 25px;
+  font-weight: 400;
+}
+
+@media (max-width: 960px) {
+  .privacy-policy {
+    padding: 80px 15px 10px;
+  }
+
+  .privacy-policy-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

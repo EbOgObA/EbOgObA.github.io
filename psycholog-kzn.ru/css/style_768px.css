@@ -1,0 +1,527 @@
+@media (max-width: 768px) {
+  /* ----ФИКСИРОВАННАЯ ШАПКА САЙТА--- */
+  .header {
+    max-width: 100%;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .header::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(252, 252, 252, 0.99);
+    -webkit-box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 0 4px 1px rgba(0, 0, 0, 0.5);
+    z-index: 50;
+  }
+
+  .header-container {
+    max-width: 100%;
+  }
+
+  .header-wrapper {
+    max-width: 100%;
+  }
+
+  .header-wrapper__logo {
+    position: relative;
+    z-index: 60;
+  }
+
+  .header-wrapper__logo:hover {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .header-contacts {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    z-index: 50;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: space-around;
+    -ms-flex-align: space-around;
+    align-items: space-around;
+    text-align: left;
+    font-size: 12px;
+    color: #000;
+  }
+
+  .header-contacts a {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    color: #000;
+    width: 110px;
+    text-decoration: underline;
+  }
+
+  .header-contacts a::before {
+    display: none;
+  }
+
+  .header-contacts a:hover::before {
+    opacity: 1;
+  }
+
+  .header-burger__btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 30px;
+    height: 20px;
+    z-index: 60;
+    cursor: pointer;
+  }
+
+  .header-burger__btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #29406d;
+    left: 0;
+    top: 9px;
+  }
+
+  .header-burger__btn::before,
+  .header-burger__btn:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #29406d;
+    right: 0;
+  }
+
+  .header-burger__btn::before {
+    top: 0;
+  }
+  .header-burger__btn:after {
+    bottom: 0;
+  }
+
+  .header-wrapper__items {
+    position: fixed;
+    top: -150%;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background: #29406d;
+    z-index: 10;
+    padding: 60px 0 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
+  }
+
+  .header-wrapper__items.active-menu {
+    top: 0;
+  }
+
+  .header-wrapper__items a {
+    padding: 3px 0 4px 0;
+    border: 2px solid transparent;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .header-wrapper__items a:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  /* ---КОНЕЦ ШАПКИ САЙТА---- */
+
+  /* ---БЛОК ВСТУП С КАРТИНКОЙ--- */
+
+  .introduction-descr {
+    font-size: 20px;
+    max-width: 300px;
+    line-height: 30px;
+  }
+
+  .consult-btn a {
+    padding: 20px 20px;
+    margin-top: 70px;
+  }
+
+  .introducation-down-arrow {
+    display: block;
+    width: 64px;
+    height: 34px;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+  }
+
+  @-webkit-keyframes "arrow" {
+    0% {
+      bottom: 10%;
+    }
+    100% {
+      bottom: 8%;
+    }
+  }
+
+  .introducation-down-arrow::after {
+    left: -3px;
+  }
+
+  .introducation-down-arrow::before {
+    right: -3px;
+  }
+
+  /* ----КОНЕЦ БЛОКА ВСТУП С КАРТИНКОЙ---- */
+
+  /* ---БЛОК 'КАКИЕ ПРОБЛЕМЫ Я ПОМОГАЮ РЕШАТЬ'-- */
+
+  .problems {
+    padding: 50px 0 10px;
+  }
+
+  .problems-items {
+    margin-top: 60px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 30px;
+    font-weight: 800;
+  }
+
+  .descr {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+  }
+
+  /* --КОНЕЦ БЛОКА 'КАКИЕ ПРОБЛЕМЫ Я ПОМОГАЮ РЕШАТЬ'--- */
+
+  /* ---БЛОК ПЕРВЫЕ ПРИЗНАКИ--- */
+
+  /* --КОНЕЦ БЛОКА ПЕРВЫЕ ПРИЗНАКИ-- */
+
+  /* -БЛОК ЧТОБЫ ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦЫЮ- */
+  .free-consult {
+    padding: 100px 0 50px;
+  }
+  .free-consult-title {
+    font-size: 42px;
+    font-weight: 600;
+  }
+  .free-consult-descr {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 80px auto 0px;
+  }
+  /* -КОНЕЦ БЛОКА ЗАПИСИ НА КОНСУЛЬТАЦЫЮ- */
+
+  /* --БЛОК 'МОИ ПРИНЦИПЫ'-- */
+  .principles {
+    padding: 50px 0 0;
+  }
+
+  .principles-items {
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+      ),
+      url(../images/principles__logo.jpg) no-repeat;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/principles__logo.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../images/principles__logo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .principles-img {
+    display: none;
+  }
+  /* --КОНЕЦ БЛОКА 'МОИ ПРИНЦИПЫ'-- */
+
+  /* --БЛОК 'МЕТОДЫ КОТОРЫЕ Я ИСПОЛЬЗУЮ'-- */
+  .methods {
+    padding: 50px 0 0;
+  }
+
+  .methods-title {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .methods-descr {
+    padding: 30px 0 50px;
+  }
+
+  .methods-lists {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  /* --КОНЕЦ БЛОКА 'МЕТОДЫ КОТОРЫЕ Я ИСПОЛЬЗУЮ'-- */
+
+  /* --БЛОК 'РЕАЛЬНИЫЕ ПОСЛЕДСТВИЯ И РЕЗУЛЬТАТЫ'-- */
+  .advantages {
+    padding: 50px 0 55px;
+  }
+
+  .advantages-title {
+    margin-bottom: 50px;
+  }
+
+  .advantages-items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .advntgs1,
+  .advntgs2 {
+    position: absolute;
+    background: rgba(41, 64, 109, 0.6);
+  }
+
+  .advntgs1 {
+    z-index: 3;
+  }
+
+  .advntgs2 {
+    bottom: 0px;
+    z-index: 10;
+  }
+
+  .img {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  /* --КОНЕЦ БЛОКА 'РЕАЛЬНИЫЕ ПОСЛЕДСТВИЯ И РЕЗУЛЬТАТЫ'-- */
+
+  /* --БЛОК 'КАК МЫ БУДЕМ ДОБИВАТСЯ РЕЗУЛЬТАТА-- */
+  .result {
+    padding: 50px 0 30px;
+  }
+
+  .tit-1::before,
+  .tit-2::before,
+  .tit-3::before,
+  .tit-4::before {
+    display: none;
+  }
+
+  .descr-1::after,
+  .descr-2::after,
+  .descr-3::after,
+  .descr-4::after {
+    display: none;
+  }
+  /* --КОНЕЦ БЛОКА 'КАК МЫ БУДЕМ ДОБИВАТСЯ РЕЗУЛЬТАТА'-- */
+
+  /* --БЛОК 'ВИДЫ КОНСУЛЬТАЦЫЙ И ЦЕНЫ'-- */
+  .price {
+    padding: 100px 0 60px;
+  }
+
+  .price-title {
+    margin-bottom: 60px;
+  }
+
+  .price-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  /* --КОНЕЦ БЛОКА 'ВИДЫ КОНСУЛЬТАЦЫЙ И ЦЕНЫ'-- */
+
+  /* --БЛОК 'ЧАСТЫЕ ВОПРОСЫ'-- */
+  /* --КОНЕЦ БЛОКА 'ЧАСТЫЕ ВОПРОСЫ'-- */
+
+  /* --БЛОК 'СТАТИСТИКА'-- */
+  .statistics-background {
+    padding: 60px 0;
+  }
+
+  .statistics-items__item {
+    max-width: 200px;
+  }
+
+  .statistics-items__item--title {
+    font-size: 30px;
+  }
+  /* --КОНЕЦ БЛОКА 'СТАТИСТИКА'-- */
+
+  /* --БЛОК 'ОТЗЫВЫ КЛИЕНТОВ'-- */
+  .reviews {
+    padding: 60px 0 0;
+  }
+
+  .rewiews-title {
+    margin-bottom: 50px;
+  }
+
+  .rewiews-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .rewiews__item img {
+    position: absolute;
+    width: 50px;
+    top: 6px;
+    left: 395px;
+  }
+
+  #descr-adapt {
+    display: none;
+  }
+
+  .rewiews__item {
+    width: 600px;
+    padding: 30px 20px 30px;
+    margin-bottom: 40px;
+  }
+  /* --КОНЕЦ БЛОКА 'ОТЗЫВЫ КЛИЕНТОВ'-- */
+
+  /* --БЛОК 'КОНТАКТЫ С КАРТОЙ'-- */
+  .map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .map-map {
+    width: 100%;
+    height: 300px;
+  }
+
+  .map-contacts {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .map-contacts__title {
+    margin-bottom: 10px;
+  }
+  /* --КОНЕЦ БЛОКА 'КОНТАКТЫ С КАРТОЙ'-- */
+
+  /* --БЛОК 'ЗАПОЛНИТЕ ПРОСТУЮ ФОРМУ'-- */
+  .footer-form {
+    height: 100%;
+  }
+
+  .footer-form-wrapper {
+    width: 100%;
+    padding: 50px 50px;
+  }
+
+  .footer-form__title {
+    font-weight: 600;
+    font-size: 25px;
+  }
+
+  .footer-form-img {
+    display: none;
+  }
+  /* --КОНЕЦ БЛОКА 'ЗАПОЛНИТЕ ПРОСТУЮ ФОРМУ'-- */
+
+  /* --БЛОК 'FOOTER'-- */
+  .footer {
+    padding: 30px 0;
+  }
+  .footer-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .footer__item {
+    max-width: 260px;
+  }
+
+  .footer__item + .footer__item {
+    padding-top: 5px;
+    margin-left: 10px;
+  }
+
+  .footer__item a {
+    font-size: 12px;
+  }
+
+  .footer__item--logo img {
+    width: 200px;
+  }
+
+  .footer__item--descr {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .footer__item--title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  /* --КОНЕЦ БЛОКА 'FOOTER'-- */
+}

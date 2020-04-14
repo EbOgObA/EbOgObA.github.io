@@ -1,0 +1,234 @@
+.chat-wrapper  {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+  width: 350px;
+  z-index: 50;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 0 30px #000;
+  display: none;
+}
+
+.chat-header  {
+  background: url('../images/bush.png') 0 0;
+  background-size: cover;
+  width: 100%;
+  height: 60px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 30px;
+  cursor: pointer;
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chat-header__title  {
+  font-family: Arial,sans-serif;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 38px;
+  line-height: 18px;
+  font-weight: bold;
+}
+
+.chat-header__p  {
+  font-size: 14px;
+}
+
+.chat-main  {
+  height: 320px;
+  background-color: #fff;
+  position: relative;
+  padding: 10px;
+  color: #fff;
+  font-size: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-flow: column;
+}
+
+.chat-message__user  {
+  align-self: flex-end;
+  max-width: 250px;
+  height: auto;
+  padding: 10px;
+  background: #18c139;
+  border-radius: 10px;
+  line-height: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.chat-footer  {
+  height: 85px;
+  border-top: 1px solid #d8dee3;
+  background-color: #fff;
+  position: relative;
+}
+
+.inputFieald  {
+  height: 75px!important;
+  font-size: 15px!important;
+  color: #29406d;
+  padding: 18px 58px 0 16px!important;
+  max-width: 100%;
+  min-width: 100%;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.chat-footer__send  {
+  width: 34px;
+  height: 34px;
+  background: #fff url() 0 0 no-repeat;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  right: 15px;
+  cursor: pointer;
+  transition: all .2s linear;
+  background: #00CE53 url('../images/send.png') 55% 50% no-repeat;
+}
+
+.chat-footer__send:hover  {
+  transition: all .2s linear;
+  background: #008D39 url('../images/send.png') 55% 50% no-repeat;;
+}
+
+.inputFieald::-webkit-scrollbar  {
+  width: 10px;
+  cursor: default;
+}
+
+.inputFieald::-webkit-scrollbar-track  {
+  background: #fff;
+}
+
+.inputFieald::-webkit-scrollbar-thumb  {
+  background: #d4d4d4;
+  border-radius: 2.5px;
+  cursor: default;
+}
+
+.chat__button-close  {
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.7;
+  transition: all .2s linear;
+  cursor: pointer;
+}
+
+.chat__button-close:hover  {
+  transition: all .2s linear;
+  opacity: 1;
+}
+
+.chat__button-close::before,
+.chat__button-close::after  {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 51%;
+  width: 15px;
+  height: 2px;
+  background: #000;
+}
+
+.chat__button-close::before  {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.chat__button-close::after  {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+
+
+
+.pulse-wrapper  {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+}
+
+.pulse  {
+  width: 60px;
+  height: 60px;
+  background-color: #5cc2e2;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.pulse-message  {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+  animation: pulse-message 1s ease-in-out infinite;
+}
+
+.pulse:hover .pulse-message  {
+  animation: none;
+}
+
+@keyframes pulse-message {
+  0%, 100%  {
+    transition: all 1s ease-in-out;
+    transform: rotate(-15deg);
+  }
+  50%  {
+    transition: all 1s ease-in-out;
+    transform: rotate(15deg);
+  }
+}
+
+.pulse:hover::before,
+.pulse:hover::after  {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  border: 1px solid #29aee3;
+  animation: pulse 1.5s linear infinite;
+  opacity: 0;
+}
+
+.pulse:hover::after  {
+  animation-delay: .5s;
+}
+
+@keyframes pulse {
+  0%  {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50%  {
+    opacity: 1;
+  }
+  100%  {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
