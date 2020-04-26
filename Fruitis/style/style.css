@@ -263,16 +263,45 @@ body {
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
   color: #000;
-  padding: 0.5rem;
+  padding: 0.6rem;
   font-size: 1.2rem;
-  font-weight: bold;
   transition: all .2s linear;
+  position: relative;
+}
+
+.header-nav .nav-item .nav-item__anchors::before,
+.header-nav .nav-item .nav-item__anchors::after {
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: #000;
+}
+
+.header-nav .nav-item .nav-item__anchors::before {
+    border-width: 2px 0 2px 0;
+    transform:  scaleX(0);
+  }
+
+.header-nav .nav-item .nav-item__anchors::after {
+  border-width: 0 2px 0 2px;
+  transform:  scaleY(0);
+}
+
+.header-nav .nav-item .nav-item__anchors:hover:before,
+.header-nav .nav-item .nav-item__anchors:hover:after {
+  transform:  scale(1, 1);
 }
 
 .header-nav .nav-item .nav-item__anchors:hover {
-  background-color: #fff;
+  background-color: #F1C34A;
   transition: all .2s linear;
   border-radius: 10px;
+  /* font-weight: bold; */
 }
   @media (max-width: 768px) {
     .header-nav .nav-item .nav-item__anchors:hover{
