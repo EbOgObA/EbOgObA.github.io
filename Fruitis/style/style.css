@@ -110,7 +110,7 @@ body {
   right: 0;
   left: 0;
   /* opacity: 0.85; */
-  background: #e4d7b8;
+  background: url('../img/grass.png');
   box-shadow: 0 0 10px #000;
   z-index: -1;
 }
@@ -249,8 +249,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #dfc78e;
-      opacity: 0.8;
+      background: #99a748;
       transition: all .5s linear;
       cursor: pointer;
       border-top: 1px solid #000;
@@ -266,8 +265,8 @@ body {
 
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
-  color: #000;
-  padding: 0.6rem;
+  color: #fff;
+  padding: 0.5rem;
   font-size: 1.2rem;
   transition: all .2s linear;
   position: relative;
@@ -287,12 +286,12 @@ body {
 }
 
 .header-nav .nav-item .nav-item__anchors::before {
-  border-width: 1px 0 1px 0;
+  border-width: 2px 0 2px 0;
   transform:  scaleX(0);
 }
 
 .header-nav .nav-item .nav-item__anchors::after {
-  border-width: 0 1px 0 1px;
+  border-width: 0 2px 0 2px;
   transform:  scaleY(0);
 }
 
@@ -302,11 +301,14 @@ body {
 }
 
 .header-nav .nav-item .nav-item__anchors:hover {
-  background-color: #dfc78e;
+  background-color: #99a748;
   transition: all .2s linear;
-  border-radius: 10px;
-  /* font-weight: bold; */
 }
+  @media (max-width: 1024px) {
+    .header-nav .nav-item .nav-item__anchors {
+      font-size: 1rem;
+    }
+  }
   @media (max-width: 768px) {
     .header-nav .nav-item .nav-item__anchors {
       font-size: 1.5rem;
@@ -325,24 +327,13 @@ body {
 /* frontSide */
 .frontSide  {
   height: 100vh;
-  background:  url('../img/background.png') 50% 100% no-repeat;
+  padding: 0 1rem;
+  background:  url('../img/2979380.png') 50% 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
-
-/* .frontSide img {
-  width: 100%;
-  /* min-width: 1920px; */
-  height: calc(100vh - 80px);
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-} */
 
 .frontSide::after {
   content: "";
@@ -354,35 +345,39 @@ body {
   height: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  background: #fff;
+  background: #99a748;
+  box-shadow: 0 0 20px #000;
 }
 
 .frontSide__box  {
-  padding: 0 1rem;
+  padding: 1rem;
   max-width: 30rem;
-  position: relative;
-}
-
-.frontSide__box-overlay  {
-  opacity: 0.8;
-  background: #e4d7b8;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: 5rem;
-}
-
-.frontSide__box-content {
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  /* background:  url('../img/white-wall.jpg') 50% 0%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px #000;
 }
+  @media (max-width: 1024px) {
+    .frontSide__box  {
+      background:  url('../img/white-wall.jpg') 50% 0%;
+    }
+  }
+  @media (max-width: 768px) {
+    .frontSide__box  {
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+  }
 
-.frontSide__box-content h1 {
+.frontSide__box h1 {
   font-size: 2.5rem;
   line-height: 3.3125rem;
   color: #2d2d2d;
@@ -391,16 +386,22 @@ body {
   text-shadow: 5px 5px 5px #fff;
 }
 
-.frontSide__box-content p {
+.frontSide__box p {
   font-size: 1.375rem;
   padding: 0;
   margin: 1rem auto 0 auto;
   line-height: 2rem;
   text-align: center;
   text-shadow: 5px 5px 5px #fff;
+  color: #000;
 }
+  @media (max-width: 1024px) {
+    .frontSide__box p {
+      color: #bf8561;
+    }
+  }
 
-.frontSide__box-content a {
+.frontSide__box a {
   box-shadow: 0 3px 20px rgba(0,0,0,.77);
   padding: 1rem 1.9rem;
   margin: 1rem 0 0 0;
@@ -410,12 +411,12 @@ body {
   border: 0;
   color: #000;
   text-shadow: 0 1px 1px rgba(0,0,0,.22);
-  background: #F1C34A;
+  background: #eddbb5;
   transition: all .5s linear;
   border: 2px solid #000;
 }
 
-.frontSide__box-content a:hover {
+.frontSide__box a:hover {
   box-shadow: none;
   transition: all .5s linear;
 }
