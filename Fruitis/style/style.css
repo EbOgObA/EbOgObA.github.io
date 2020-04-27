@@ -335,18 +335,30 @@ body {
   overflow: hidden;
 }
 
-.frontSide::after {
-  content: "";
+@keyframes moveArrowDown {
+  from {
+    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 45% no-repeat;
+  }
+  to {
+    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 65% no-repeat;
+  }
+}
+
+.arrow-down {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100px;
-  height: 50px;
+  width: 82px;
+  height: 41px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  background: #99a748;
   box-shadow: 0 0 20px #000;
+  background: url('../img/thin-arrowheads-pointing-down.png') 50% 60% no-repeat;
+  background-size: 35%;
+  animation: moveArrowDown .5s linear infinite alternate ;
+  cursor: pointer;
+  font-size: 0;
 }
 
 .frontSide__box  {
@@ -419,4 +431,128 @@ body {
 .frontSide__box a:hover {
   box-shadow: none;
   transition: all .5s linear;
+}
+
+
+
+
+
+/* Section About Us */
+.about-us  {
+  padding: 2rem 0 0 0;
+  background: #F2EBD1;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-us .container-fixed {
+  position: relative;
+  z-index: 2;
+}
+
+.about-us__content  {
+  margin: 0 auto;
+  max-width: 38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.about-us__content_title  {
+  font-size: 2rem;
+  margin: 0 0 3.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about-us__content_title span {
+  color: #eddbb5;
+  text-shadow: 2px 0 5px #000;
+}
+
+.about-us__content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0 0 2rem;
+}
+
+.animated-fruit__box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+@keyframes animatedFruits {
+  from {
+    top: -50%;
+  }
+  to {
+    top: 110%;
+  }
+}
+
+@keyframes spinFruits {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animated-fruits  {
+  position: absolute;
+}
+  @media (max-width: 768px) {
+    .animated-fruits {
+      display: none;
+    }
+  }
+
+.carrot {
+  right: 10%;
+  top: -50%;
+    animation: animatedFruits 4s linear 2s infinite,
+             spinFruits 2s linear infinite ;
+}
+
+.broccoli {
+  right: 25%;
+  top: -50%;
+    animation: animatedFruits 8s linear 1s infinite,
+             spinFruits 3s linear infinite ;
+}
+
+.banana  {
+  right: 40%;
+  top: -50%;
+    animation: animatedFruits 6s linear 3s infinite,
+             spinFruits 4s linear infinite ;
+}
+
+.beet {
+  left: 10%;
+  top: -50%;
+    animation: animatedFruits 4s linear 1s infinite,
+             spinFruits 5s linear infinite ;
+}
+
+.eggplant  {
+  left: 25%;
+  top: -50%;
+    animation: animatedFruits 8s linear 3s infinite,
+             spinFruits 3s linear infinite ;
+}
+
+.apple  {
+  left: 40%;
+  top: -50%;
+    animation: animatedFruits 6s linear 2s infinite,
+             spinFruits 3s linear infinite ;
 }
