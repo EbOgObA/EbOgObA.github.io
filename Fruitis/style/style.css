@@ -151,7 +151,7 @@ body {
   top: 50%;
   left: 50%;
   border-radius: 50px;
-  background-color: #F2EBD1;
+  background-color: #F2EBD1 !important;
   -webkit-transform: translate(-50%,-50%) rotate(0deg);
       -ms-transform: translate(-50%,-50%) rotate(0deg);
           transform: translate(-50%,-50%) rotate(0deg);
@@ -282,7 +282,7 @@ body {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      background: #99a748;
+      background: #99a748 !important;
       -webkit-transition: all .5s linear;
       -o-transition: all .5s linear;
       transition: all .5s linear;
@@ -302,7 +302,7 @@ body {
 
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
-  color: #fff;
+  color: #fff !important;;
   padding: 0.5rem;
   font-size: 1.2rem;
   -webkit-transition: all .2s linear;
@@ -416,7 +416,7 @@ body {
   border-top-right-radius: 50px;
   -webkit-box-shadow: 0 0 20px #000;
           box-shadow: 0 0 20px #000;
-  background: url('../img/thin-arrowheads-pointing-down.png') 50% 60% no-repeat;
+  background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 60% no-repeat;
   background-size: 35%;
   -webkit-animation: moveArrowDown .5s linear infinite alternate ;
           animation: moveArrowDown .5s linear infinite alternate ;
@@ -468,7 +468,7 @@ body {
 .frontSide__box_title {
   font-size: 2.5rem;
   line-height: 3.3125rem;
-  color: #2d2d2d;
+  color: #2d2d2d !important;
   font-weight: bold;
   text-align: center;
   text-shadow: 5px 5px 5px #fff;
@@ -498,13 +498,13 @@ body {
   text-decoration: none;
   font-weight: bold;
   border: 0;
-  color: #000;
+  color: #000 !important;
   text-shadow: 0 1px 1px rgba(0,0,0,.22);
-  background: #eddbb5;
+  background: #eddbb5 !important;
   -webkit-transition: all .5s linear;
   -o-transition: all .5s linear;
   transition: all .5s linear;
-  border: 2px solid #000;
+  border: 2px solid #000 !important;
 }
 
 .frontSide__box a:hover {
@@ -522,7 +522,7 @@ body {
 /* Section About Us */
 .about-us  {
   padding: 2rem 0 0 0;
-  background: #F2EBD1;
+  background: #F2EBD1 !important;
   position: relative;
   overflow: hidden;
 }
