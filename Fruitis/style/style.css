@@ -775,6 +775,11 @@ body {
   text-decoration: none;
   width: 30px;
 }
+  @media (min-width: 769px) {
+    .serial-number {
+      display: none;
+    }
+  }
 
 
 
