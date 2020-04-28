@@ -458,7 +458,6 @@ body {
   }
     @media (max-height: 425px) {
       .frontSide__box {
-        top: 60%;
         height: 50vh;
       }
     }
