@@ -55,6 +55,7 @@
 
 :root {
   font-size: 1em;
+  box-sizing: border-box;
 }
   @media (max-width: 768px) {
     :root {
@@ -356,11 +357,6 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear;
 }
-  @media (max-width: 1024px) {
-    .header-nav .nav-item .nav-item__anchors {
-      font-size: 1rem;
-    }
-  }
   @media (max-width: 768px) {
     .header-nav .nav-item .nav-item__anchors {
       font-size: 1.5rem;
@@ -459,7 +455,7 @@ body {
     @media (max-height: 425px) {
       .frontSide__box {
         height: 50vh;
-        top: 55%;
+        top: 58%;
       }
     }
 
@@ -473,7 +469,7 @@ body {
 }
   @media (max-height: 425px) {
     .frontSide__box_title {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       line-height: 1.3rem;
       margin: 0 0 0.5rem 0;
     }
@@ -496,8 +492,8 @@ body {
   }
     @media (max-height: 425px) {
       .frontSide__box p {
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 1.25rem;
+        line-height: 1.3rem;
       }
     }
 
@@ -541,7 +537,6 @@ body {
   padding: 2rem 0 0 0;
   background: #F2EBD1 ;
   position: relative;
-  overflow: hidden;
 }
 
 .about-us .container-fixed {
@@ -571,7 +566,7 @@ body {
 
 .about-us__content_title  {
   font-size: 2rem;
-  margin: 0 0 3.75rem;
+  margin: 0 0 2.75rem;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -594,6 +589,7 @@ body {
   top: 0;
   bottom: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 @-webkit-keyframes animatedFruits {
@@ -698,3 +694,189 @@ body {
             animation: animatedFruits 6s linear 2s infinite,
              spinFruits 3s linear infinite ;
 }
+
+
+
+
+
+
+/* Our Services */
+.our-services  {
+  padding: 2rem 0;
+  background: url('../img/grass.jpg');
+}
+
+.our-services .container-fixed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-services__title  {
+  font-size: 2rem;
+  margin: 0 0 3.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 0 5px #000;
+}
+
+.our-services__img  {
+  width: 100%;
+  height: auto;
+}
+
+.our-services__box  {
+  display: flex;
+}
+  @media (max-width: 768px) {
+    .our-services__box  {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+.services-item  {
+  width: 25%;
+  color: #fff;
+  text-shadow: 2px 0 5px #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 1rem 0.5rem 0;
+}
+  @media (max-width: 768px) {
+    .services-item  {
+      padding: 1rem 0.25rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      width: 80%;
+      text-align: left;
+    }
+  }
+
+.serial-number  {
+  margin: 0 1rem 0 0;
+  background: none repeat scroll 0 0 #cb2127;
+  border: 3px solid #e5dadb;
+  border-radius: 100%;
+  color: #fff;
+  display: block;
+  float: left;
+  font-family: "museo-slab",sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+}
+
+
+
+
+
+.suppliers  {
+  background: #F2EBD1;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.suppliers .container-fixed  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.suppliers__title  {
+  font-size: 2rem;
+  margin: 0 0 3.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 0 5px #000;
+}
+
+.suppliers-box__item  {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.suppliers-box__item img {
+  width: 5rem;
+  height: auto;
+  opacity: 0.6;
+  transition: opacity .5s linear;
+  cursor: pointer;
+}
+  @media (max-width: 425px) {
+    .suppliers-box__item img {
+      opacity: 1;
+    }
+  }
+
+.suppliers-box__item img:hover {
+  transition: opacity .5s linear;
+  opacity: 1;
+}
+
+.slider  {
+  width: 100%;
+  position: relative;
+  min-width: 0;
+}
+
+.slick-list  {
+  overflow: hidden;
+}
+
+.slick-track  {
+  display: flex;
+  width: 100%;
+}
+
+.slick-arrow {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 35%;
+  z-index: 10;
+  font-size: 0;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s linear;
+  opacity: 0.4;
+}
+
+.slick-arrow:hover {
+  transition: all .2s linear;
+  opacity: 1;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url('../img/back.png') 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  background: url('../img/next.png') 50% 50% no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+//
