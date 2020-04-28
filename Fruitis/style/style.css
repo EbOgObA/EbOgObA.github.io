@@ -784,7 +784,7 @@ body {
 
 
 
-
+/* Suppliers */
 .suppliers  {
   background: #F2EBD1;
   padding: 2rem 0;
@@ -881,6 +881,25 @@ body {
 
 
 
+
+
+.contacts  {
+
+}
+
+.contacts .container-fixed  {
+  display: flex;
+  padding: 0;
+}
+
+.form-box  {
+  width: 50vw;
+}
+
+.map {
+  width: 50vw;
+  height: 500px;
+}
 
 
 

@@ -38,7 +38,7 @@
                 <a href="#Suppliers" class="nav-item__anchors">Suppliers</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-item__anchors">Contacts</a>
+                <a href="#Contacts" class="nav-item__anchors">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -147,6 +147,36 @@
 
 
 
+    <!-- Contacts -->
+    <section class="contacts" id="Contacts">
+      <div class="container-fixed">
+        <div class="form-box">
+
+        </div>
+        <div class="map" id="map">
+
+        </div>
+      </div>
+    </section>
+
+
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        var uluru = {lat: 22.3526632, lng: 113.987614};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu7E34ggsio7TgRrSYEFgRbTrjfJQsshE&callback=initMap">
+    </script>
     <!-- JQUERY -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Animate JS -->
