@@ -151,7 +151,7 @@ body {
   top: 50%;
   left: 50%;
   border-radius: 50px;
-  background-color: #F2EBD1 !important;
+  background-color: #F2EBD1 ;
   -webkit-transform: translate(-50%,-50%) rotate(0deg);
       -ms-transform: translate(-50%,-50%) rotate(0deg);
           transform: translate(-50%,-50%) rotate(0deg);
@@ -264,6 +264,7 @@ body {
       top: 6rem;
       width: 100vw;
       z-index: 100;
+      overflow: auto;
     }
   }
 
@@ -282,7 +283,7 @@ body {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      background: #99a748 !important;
+      background: #99a748 ;
       -webkit-transition: all .5s linear;
       -o-transition: all .5s linear;
       transition: all .5s linear;
@@ -302,7 +303,7 @@ body {
 
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
-  color: #fff !important;;
+  color: #fff ;;
   padding: 0.5rem;
   font-size: 1.2rem;
   -webkit-transition: all .2s linear;
@@ -455,15 +456,27 @@ body {
               transform: translate(50%, -50%);
     }
   }
+    @media (max-height: 425px) {
+      .frontSide__box {
+        top: 60%;
+      }
+    }
 
 .frontSide__box_title {
   font-size: 2.5rem;
   line-height: 3.3125rem;
-  color: #2d2d2d !important;
+  color: #2d2d2d;
   font-weight: bold;
   text-align: center;
   text-shadow: 5px 5px 5px #fff;
 }
+  @media (max-height: 425px) {
+    .frontSide__box_title {
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      margin: 0 0 0.5rem 0;
+    }
+  }
 
 .frontSide__box p {
   font-size: 1.375rem;
@@ -477,8 +490,15 @@ body {
   @media (max-width: 1024px) {
     .frontSide__box p {
       color: #bf8561;
+      margin: 0.5rem auto 0 auto;
     }
   }
+    @media (max-height: 425px) {
+      .frontSide__box p {
+        font-size: 1rem;
+        line-height: 1rem;
+      }
+    }
 
 .frontSide__box a {
   -webkit-box-shadow: 0 3px 20px rgba(0,0,0,.77);
@@ -489,14 +509,19 @@ body {
   text-decoration: none;
   font-weight: bold;
   border: 0;
-  color: #000 !important;
+  color: #000;
   text-shadow: 0 1px 1px rgba(0,0,0,.22);
-  background: #eddbb5 !important;
+  background: #eddbb5 ;
   -webkit-transition: all .5s linear;
   -o-transition: all .5s linear;
   transition: all .5s linear;
-  border: 2px solid #000 !important;
+  border: 2px solid #000;
 }
+  @media (max-height: 425px) {
+    .frontSide__box a {
+      padding: 0.5rem 1rem;
+    }
+  }
 
 .frontSide__box a:hover {
   -webkit-box-shadow: none;
@@ -513,7 +538,7 @@ body {
 /* Section About Us */
 .about-us  {
   padding: 2rem 0 0 0;
-  background: #F2EBD1 !important;
+  background: #F2EBD1 ;
   position: relative;
   overflow: hidden;
 }
