@@ -387,19 +387,10 @@ body {
 
 @-webkit-keyframes moveArrowDown {
   from {
-    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 45% no-repeat;
+    background: #99a748 url('../img/arrow.png') 50% 45% no-repeat;
   }
   to {
-    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 65% no-repeat;
-  }
-}
-
-@keyframes moveArrowDown {
-  from {
-    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 45% no-repeat;
-  }
-  to {
-    background: #99a748 url('../img/thin-arrowheads-pointing-down.png') 50% 65% no-repeat;
+    background: #99a748 url('../img/arrow.png') 50% 65% no-repeat;
   }
 }
 
