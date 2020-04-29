@@ -379,7 +379,6 @@ body {
   height: calc(100vh - 5rem);
   padding: 0 1rem;
   background:  url('../img/267923-P55Y39-481.jpg') 0% 50% no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   position: relative;
   overflow: hidden;
