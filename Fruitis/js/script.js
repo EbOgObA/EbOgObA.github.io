@@ -17,16 +17,42 @@ $(".nav-item__anchors").on("click", function (event) {
 
 // Animate scroll
 $(".about-us__content p").animated("fadeInUp");
-$('.our-services__img').animated("bounceInDown");
+$('.manufactures-overlay').animated("flipInY");
+$('.contacts-item').animated("flipInX");
 $('.services-item').animated("flipInY");
-// $('.suppliers-box__item').animated("flipInY");
-
 
 // Suppliers SLIDER
 $('.suppliers-box').slick({
   arrows: true,
   slidesToShow: 5,
-  slidesToScroll: 1,
+  slidesToScroll: 2,
+  speed: 1000,
+  infinite: true,
+  draggable: true,
+  lazyLoad: 'ondemand',
+  swipe: true,
+  touchThreshold: 5,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        arrows: false,
+        slidesToShow: 3,
+      }
+    },{
+      breakpoint: 425,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+      }
+    }
+  ]
+});
+
+$('.manufactures-box').slick({
+  arrows: false,
+  slidesToShow: 5,
+  slidesToScroll: 2,
   speed: 1000,
   infinite: true,
   draggable: true,
