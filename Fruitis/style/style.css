@@ -303,6 +303,12 @@ body {
       transition: all .3s linear;
     }
   }
+    @media (max-height: 425px) {
+      .header-nav .nav-item  {
+        height: calc(25vh - 1.5rem);
+        padding: 0;
+      }
+    }
 
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
@@ -463,8 +469,7 @@ body {
   }
     @media (max-height: 425px) {
       .frontSide__box {
-        height: 50vh;
-        top: 58%;
+        top: 45%;
       }
     }
 
