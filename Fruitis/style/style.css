@@ -314,13 +314,13 @@ body {
   text-decoration: none;
   color: #fff;
   padding: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
   position: relative;
-  text-shadow: 0 0 8px #000;
-  
+  font-weight: bold;
+  text-shadow: 0 0 5px #000;
 }
 
 .header-nav .nav-item .nav-item__anchors::before,
