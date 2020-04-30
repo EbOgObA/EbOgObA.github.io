@@ -115,7 +115,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  /* opacity: 0.85; */
+  opacity: 0.85;
   background: url('../img/grass.jpg');
   -webkit-box-shadow: 0 0 10px #000;
           box-shadow: 0 0 10px #000;
@@ -312,13 +312,15 @@ body {
 
 .header-nav .nav-item .nav-item__anchors  {
   text-decoration: none;
-  color: #fff ;;
+  color: #fff;
   padding: 0.5rem;
   font-size: 1.2rem;
   -webkit-transition: all .2s linear;
   -o-transition: all .2s linear;
   transition: all .2s linear;
   position: relative;
+  text-shadow: 0 0 8px #000;
+  
 }
 
 .header-nav .nav-item .nav-item__anchors::before,
