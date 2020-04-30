@@ -1,6 +1,4 @@
 
-
-
 // Burger Button
 $(".menu-burger").on('click',function(){
   $(this).find(".hambergerIcon").toggleClass("open");
@@ -29,7 +27,7 @@ $('.suppliers-box').slick({
   speed: 1000,
   infinite: true,
   draggable: true,
-  lazyLoad: 'ondemand',
+  lazyLoad: 'progressive',
   swipe: true,
   touchThreshold: 5,
   responsive: [
@@ -49,6 +47,7 @@ $('.suppliers-box').slick({
   ]
 });
 
+// Manufactures SLIDER
 $('.manufactures-box').slick({
   arrows: false,
   slidesToShow: 5,
@@ -56,7 +55,7 @@ $('.manufactures-box').slick({
   speed: 1000,
   infinite: true,
   draggable: true,
-  lazyLoad: 'ondemand',
+  lazyLoad: 'progressive',
   swipe: true,
   touchThreshold: 5,
   responsive: [

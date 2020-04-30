@@ -1,5 +1,4 @@
 
-
 /* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
@@ -86,9 +85,7 @@ body {
 
 
 
-
-
-/* Header */
+/* HEADER */
 .header {
   position: fixed;
   z-index: 1000;
@@ -170,10 +167,10 @@ body {
   content:"";
   position: absolute;
   height: inherit;
+  width: 50%;
   border-radius: inherit;
   background-color: inherit;
   margin: auto;
-  width: 50%;
   -webkit-transition: all ease 0.5s;
   -o-transition: all ease 0.5s;
   transition: all ease 0.5s;
@@ -383,7 +380,7 @@ body {
 
 
 
-/* frontSide */
+/* FRONTSIDE */
 .frontSide  {
   margin: 5rem 0 0 0;
   height: calc(100vh - 5rem);
@@ -437,8 +434,8 @@ body {
   padding: 2rem;
   max-width: 30rem;
   position: absolute;
-  top: 50%;
-  right: 5%;
+  top: 50% !important;
+  right: 5% !important;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -462,8 +459,8 @@ body {
 }
   @media (max-width: 768px) {
     .frontSide__box  {
-      top: 50%;
-      right: 50%;
+      top: 50% !important;
+      right: 50% !important;
       -webkit-transform: translate(50%, -50%);
           -ms-transform: translate(50%, -50%);
               transform: translate(50%, -50%);
@@ -471,7 +468,7 @@ body {
   }
     @media (max-height: 425px) {
       .frontSide__box {
-        top: 45%;
+        top: 45% !important;
       }
     }
 
@@ -546,9 +543,7 @@ body {
 
 
 
-
-
-/* Section About Us */
+/* SECTION ABOUT US */
 .about-us  {
   padding: 2rem 0 0 0;
   background: #d4e4d3 ;
@@ -714,10 +709,7 @@ body {
 
 
 
-
-
-
-/* Our Services */
+/* OUR SERVICES */
 .our-services  {
   padding: 2rem 2rem 22rem;
   background: #96be9a url('../img/service-untrak.svg') 50% 95% no-repeat;
@@ -806,28 +798,28 @@ body {
       grid-template-rows: repeat(3, 1fr);
     }
     .our-services__box > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
     }
     .our-services__box > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
+      -ms-grid-row: 1;
+      -ms-grid-column: 3;
     }
     .our-services__box > *:nth-child(3) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
+      -ms-grid-row: 3;
+      -ms-grid-column: 1;
     }
     .our-services__box > *:nth-child(4) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
+      -ms-grid-row: 3;
+      -ms-grid-column: 3;
     }
     .our-services__box > *:nth-child(5) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
+      -ms-grid-row: 5;
+      -ms-grid-column: 1;
     }
     .our-services__box > *:nth-child(6) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
+      -ms-grid-row: 5;
+      -ms-grid-column: 3;
     }
   }
     @media (max-width: 768px) {
@@ -838,28 +830,28 @@ body {
         grid-template-rows: repeat(6, 1fr);
       }
       .our-services__box > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
       }
       .our-services__box > *:nth-child(2) {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
       }
       .our-services__box > *:nth-child(3) {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
       }
       .our-services__box > *:nth-child(4) {
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
+        -ms-grid-row: 7;
+        -ms-grid-column: 1;
       }
       .our-services__box > *:nth-child(5) {
-    -ms-grid-row: 9;
-    -ms-grid-column: 1;
+        -ms-grid-row: 9;
+        -ms-grid-column: 1;
       }
       .our-services__box > *:nth-child(6) {
-    -ms-grid-row: 11;
-    -ms-grid-column: 1;
+        -ms-grid-row: 11;
+        -ms-grid-column: 1;
       }
     }
 
@@ -921,7 +913,8 @@ body {
 }
 
 
-/* Suppliers */
+
+/* SUPPLIERS */
 .suppliers  {
   background: #d4e4d3;
   padding: 2rem 0 4rem 0;
@@ -1077,8 +1070,7 @@ body {
 
 
 
-
-
+/* CONTACTS */
 .contacts  {
   background: #96be9a;
   position: relative;
@@ -1150,16 +1142,14 @@ body {
   width: 33.3333333%;
 }
   @media (max-width: 768px) {
+    .contacts-item {
+      width: 100%;
+    }
     .contacts-item img {
       width: 32px;
       height: 32px;
     }
   }
-    @media (max-width: 768px) {
-      .contacts-item {
-        width: 100%;
-      }
-    }
 
 .contacts-item a {
   text-decoration: none;
@@ -1246,7 +1236,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
   @media (max-width: 768px) {
     .form-box form {
       padding: 4rem 2rem;
@@ -1337,6 +1326,8 @@ body {
   }
 
 
+
+/* FOOTER */
 .footer {
   background: url('../img/grass.jpg');
   padding: 2rem 0;

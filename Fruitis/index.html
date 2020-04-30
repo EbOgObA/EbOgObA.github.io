@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/style.min.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css" disabled>
     <!-- Animate CSS -->
     <link rel="stylesheet" type="text/css" href="style/animate.css">
-    <title>FreshPlanet</title>
+    <title>Fresh Planet</title>
   </head>
   <body>
 
@@ -16,9 +17,11 @@
       <div class="container-fixed">
         <div class="header-overlay"></div>
         <div class="header-main">
+          <!-- Burger Button -->
           <div class="menu-burger">
             <div class="hambergerIcon"></div>
           </div>
+          <!-- Logo -->
           <div class="logo-box">
             <a href="#">
               <img src="img/apple1.png" alt="Logo FreshFruit">
@@ -34,9 +37,6 @@
               <li class="nav-item">
                 <a href="#OurServices" class="nav-item__anchors">Our services</a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="#Logistics" class="nav-item__anchors">Logistics</a>
-              </li> -->
               <li class="nav-item">
                 <a href="#Suppliers" class="nav-item__anchors">Suppliers</a>
               </li>
@@ -48,6 +48,8 @@
         </div>
       </div>
     </header>
+
+
 
     <!-- Central Section -->
     <section class="frontSide">
@@ -63,6 +65,8 @@
       <a class="arrow-down nav-item__anchors" href="#AboutUs"></a>
     </section>
 
+
+
     <!-- About Us -->
     <section class="about-us" id="AboutUs">
       <div class="container-fixed">
@@ -72,6 +76,7 @@
           <p>We&nbsp;pioneered the short supply chain so&nbsp;you can experience fresh food at&nbsp;its finest. Food comes to&nbsp;us straight from the source and is&nbsp;delivered to&nbsp;your door at&nbsp;peak freshness in&nbsp;just a&nbsp;few days. That&rsquo;s less handling by&nbsp;middlemen&mdash;and it&nbsp;puts more money in&nbsp;the bank for local farmers and skilled artisans.</p>
         </div>
       </div>
+      <!-- Animated Fruit Background-->
       <div class="animated-fruit__box">
         <img class="animated-fruits carrot" src="img/carrot.png" alt="#">
         <img class="animated-fruits broccoli" src="img/broccoli.png" alt="#">
@@ -131,59 +136,65 @@
       </div>
     </section>
 
+
+
     <!-- Suppliers -->
     <section class="suppliers" id="Suppliers">
       <div class="container-fixed">
+
+        <!-- Suppliers slider -->
         <h2 class="suppliers__title">Our Suppliers</h2>
         <div class="suppliers-box slider">
           <div class="suppliers-box__item">
-            <img src="img/6_non-gmo-logo-C6974763A2-seeklogo.com.png" alt="NON-GMO">
+            <img data-lazy="img/6_non-gmo-logo-C6974763A2-seeklogo.com.jpg" alt="NON-GMO">
           </div>
           <div class="suppliers-box__item">
-            <img src="img/8_KOSHER_2.jpeg" alt="KOSHER">
+            <img data-lazy="img/8_KOSHER_2.jpg" alt="KOSHER">
           </div>
           <div class="suppliers-box__item">
-            <img src="img/11_Imo.jpg" alt="Imo">
+            <img data-lazy="img/11_Imo.jpg" alt="Imo">
           </div>
           <div class="suppliers-box__item">
-            <img src="img/12_logo-1-1.png" alt="#">
+            <img data-lazy="img/12_logo-1-1.jpg" alt="#">
           </div>
           <div class="suppliers-box__item">
-            <img src="img/euroleaf-logo.jpg" alt="euroleaf">
+            <img data-lazy="img/euroleaf-logo.jpg" alt="euroleaf">
           </div>
           <div class="suppliers-box__item">
-            <img src="img/usda-160x160.png" alt="USDA">
+            <img data-lazy="img/usda-160x160.jpg" alt="USDA">
           </div>
         </div>
 
+        <!-- Manufactures slider -->
         <h2 class="manufactures__title">manufactures</h2>
         <div class="manufactures-box slider">
           <div class="manufactures-item">
             <div class="manufactures-overlay">
-              <img src="img/manufacture1.png" alt="#">
+              <img data-lazy="img/manufacture1.jpg" alt="#">
             </div>
           </div>
           <div class="manufactures-item">
             <div class="manufactures-overlay">
-              <img src="img/manufacture2.jpg" alt="#">
+              <img data-lazy="img/manufacture2.jpg" alt="#">
             </div>
           </div>
           <div class="manufactures-item">
             <div class="manufactures-overlay">
-              <img src="img/manufacture3.jpg" alt="#">
+              <img data-lazy="img/manufacture3.jpg" alt="#">
             </div>
           </div>
           <div class="manufactures-item">
             <div class="manufactures-overlay">
-              <img src="img/manufacture4.png" alt="#">
+              <img data-lazy="img/manufacture4.jpg" alt="#">
             </div>
           </div>
           <div class="manufactures-item">
             <div class="manufactures-overlay">
-              <img src="img/manufacture5.jpg" alt="#">
+              <img data-lazy="img/manufacture5.jpg" alt="#">
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -208,6 +219,7 @@
           </div>
         </div>
       </div>
+      <!-- Form and location -->
       <div class="location">
         <div class="form-container">
           <div class="form-box">
@@ -216,7 +228,7 @@
               <input type="hidden" name="project_name" value="Site Name">
               <input type="hidden" name="admin_email" value="mail">
               <input type="hidden" name="form_subject" value="">
-
+              <!-- Input Fields -->
               <input type="text" name="Name" placeholder="Name" value="">
               <input type="email" name="Email" placeholder="Email" value="">
               <input type="text" name="Company" placeholder="Company" value="">
@@ -229,14 +241,15 @@
       </div>
     </section>
 
-
-
     <!-- Footer -->
     <footer class="footer">
       <p>© 2020 FreshPlanet Company</p>
     </footer>
 
 
+
+
+    <!-- Google Map -->
     <script>
       // Initialize and add the map
       function initMap() {
@@ -251,6 +264,7 @@
         });
       }
     </script>
+    <!-- Google Map API -->
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu7E34ggsio7TgRrSYEFgRbTrjfJQsshE&callback=initMap">
     </script>
@@ -264,6 +278,6 @@
     <!-- jQuery Masked Input -->
     <script src="js/jquery.maskedinput.min.js"></script>
     <!-- Main script -->
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
