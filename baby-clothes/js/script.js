@@ -20,16 +20,16 @@ $('.arrow-down').on('click', function (event) {
 
 // Animate scroll
 $('.greeting-text').animated('bounceInLeft');
-$('.greeting__content.get-catalog').animated('bounceInLeft');
-$('.how-works__item').animated('bounceInLeft');
+$('.get-catalog').animated('bounceInRight');
 $('.about__text > p').animated('bounceInUp');
-$('.contacts-pointer').animated('bounceInUp');
+$('.bestsellers__item').animated('flipInY');
 $('.problems__img-box').animated('bounceInUp');
 $('.problems__item > p').animated('zoomIn');
-$('.bestsellers__item').animated('flipInY');
-$('.supplier-img').animated('flipInY');
 $('.services__item').animated('flipInY');
+$('.how-works__item').animated('bounceInLeft');
+$('.supplier-img').animated('flipInY');
 $('.contacts__content').animated('flipInY');
+$('.contacts-pointer').animated('bounceInUp');
 
 
 
