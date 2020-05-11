@@ -21,7 +21,7 @@ $('.arrow-down').on('click', function (event) {
 // Animate scroll
 $('.greeting-text').animated('bounceInLeft');
 $('.get-catalog').animated('bounceInRight');
-$('.about__text > p').animated('bounceInUp');
+$('.about__p').animated('bounceInUp');
 $('.bestsellers__item').animated('flipInY');
 $('.problems__img-box').animated('bounceInUp');
 $('.problems__item > p').animated('zoomIn');
