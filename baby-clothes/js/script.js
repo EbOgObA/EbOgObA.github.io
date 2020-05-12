@@ -25,7 +25,6 @@ $('.about__p').animated('bounceInUp');
 $('.bestsellers__item').animated('flipInY');
 $('.problems__img-box').animated('bounceInUp');
 $('.problems__item > p').animated('zoomIn');
-$('.services__item').animated('flipInY');
 $('.how-works__item').animated('bounceInLeft');
 $('.supplier-img').animated('flipInY');
 $('.contacts__content').animated('flipInY');

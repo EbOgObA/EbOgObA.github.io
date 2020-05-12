@@ -77,8 +77,8 @@ a {
     text-align: center;
     font-size: 2rem;
     line-height: 1.2;
-    text-shadow: 1px 1px 3px #000;
-    color: #fff;
+    text-shadow: 1px 1px 3px #c49200;
+    color: #5c4100;
 }
 
 .slick-list {
@@ -425,10 +425,10 @@ a {
 .greeting-text {
     font-size: 4vw;
     line-height: 1.2;
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px #000;
     margin: 0 0 3rem 0;
     text-align: center;
-    color: #204c72;
+    color: #fffc00;
     font-weight: bold;
 }
     @media (min-width: 1920px) {
