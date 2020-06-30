@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,700&display-swap&subset=cyrillic-ext");
 
 @import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular&display-swap&subset=cyrillic-ext");
@@ -663,6 +665,32 @@ textarea.input {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+::-webkit-scrollbar {
+  /* 1 - скроллбар */
+  width: 10px;
+  background-color: none;
+}
+
+::-webkit-scrollbar-button {
+  /* 2 - кнопка */
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  /* 3 - трек */
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 - видимая часть трека */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 5 - ползунок */
+  border-radius: 5px;
+  background-color: #bb9c66;
+  cursor: pointer;
 }
 
 .main-slider {
