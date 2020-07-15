@@ -8,6 +8,8 @@ $(document).ready(function () {
         webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
     }
 
+    // =======================================================================================================================
+
     // TEST WEBP
     testWebP(function (support) {
         if (support == true) {
@@ -16,6 +18,60 @@ $(document).ready(function () {
             document.querySelector('body').classList.add('no-webp');
         }
     });
+
+    // =======================================================================================================================
+    // function findVideos() {
+    //     let videos = document.querySelectorAll('.video');
+
+    //     for (let i = 0; i < videos.length; i++) {
+    //         setupVideo(videos[i]);
+    //     }
+    // }
+
+    // function setupVideo(video) {
+    //     let link = video.querySelector('.video__link');
+    //     let media = video.querySelector('.video__media');
+    //     let button = video.querySelector('.video__button');
+    //     let id = parseMediaURL(media);
+
+    //     video.addEventListener('click', () => {
+    //         let iframe = createIframe(id);
+
+    //         link.remove();
+    //         button.remove();
+    //         video.appendChild(iframe);
+    //     });
+
+    //     link.removeAttribute('href');
+    //     video.classList.add('video_enabled');
+    // }
+
+    // function parseMediaURL(media) {
+    //     let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+    //     let url = media.src;
+    //     let match = url.match(regexp);
+
+    //     return match[1];
+    // }
+
+    // function createIframe(id) {
+    //     let iframe = document.createElement('iframe');
+
+    //     iframe.setAttribute('allowfullscreen', '');
+    //     iframe.setAttribute('src', generateURL(id));
+    //     iframe.classList.add('video__media');
+
+    //     return iframe;
+    // }
+
+    // function generateURL(id) {
+    //     let query = '?rel=0&showinfo=0&autoplay=1';
+
+    //     return 'https://www.youtube.com/embed/' + id + query;
+    // }
+
+    // findVideos();
+    // =======================================================================================================================
 
     //SLIDERS
     if ($('.pay-item__slider').length > 0) {
@@ -39,6 +95,111 @@ $(document).ready(function () {
             // }]
         });
     }
+
+    // =======================================================================================================================
+    var $counter = $('#counter');
+    var $fill = $('.bar .fill');
+    function setBar() {
+        $fill.css("width", $counter.val() + "%");
+    }
+    $counter.on('input', setBar);
+    setBar();
+    // setTimeout(init2slider('id11', 'id66btw', 'id66btn'), 0);
+
+    // function init2slider(idX, btwX, btn1X) {
+    //     var slider = document.getElementById(idX);
+    //     var between = document.getElementById(btwX);
+    //     var button1 = document.getElementById(btn1X);
+    // var button2 = document.getElementById(btn2X);
+
+    //     button1.onmousedown = function (evt) {
+    //         var sliderCoords = getCoords(slider);
+    // var betweenCoords = getCoords(between);
+    //         var buttonCoords1 = getCoords(button1);
+    // var buttonCoords2 = getCoords(button2);
+    // var shiftX2 = evt.pageX - buttonCoords2.left;
+    //         var shiftX1 = evt.pageX - buttonCoords1.left;
+
+    //         document.onmousemove = function (evt) {
+    //             var left1 = evt.pageX - shiftX1 - sliderCoords.left;
+    //             var right1 = slider.offsetWidth - button1.offsetWidth;
+    //             if (left1 < 0) left1 = 0;
+    //             if (left1 > right1) left1 = right1;
+    //             button1.style.marginLeft = left1 + 'px';
+
+    //             shiftX2 = evt.pageX - buttonCoords2.left;
+    //             var left2 = evt.pageX - shiftX2 - sliderCoords.left;
+    //             var right2 = slider.offsetWidth - button2.offsetWidth;
+
+    //             if (left1 > left2) {
+    //                 between.style.width = (left1 - left2) + 'px';
+    //                 between.style.marginLeft = left2 + 'px';
+    //             }
+    //             else {
+    //                 between.style.width = (left2 - left1) + 'px';
+    //                 between.style.marginLeft = left1 + 'px';
+    //             }
+
+    //         };
+    //         document.onmouseup = function () {
+    //             document.onmousemove = document.onmouseup = null;
+    //         };
+    //         return false;
+    //     };
+
+    //     button2.onmousedown = function (evt) {
+    //         var sliderCoords = getCoords(slider);
+    //         var betweenCoords = getCoords(between);
+    //         var buttonCoords1 = getCoords(button1);
+    //         var buttonCoords2 = getCoords(button2);
+    //         var shiftX2 = evt.pageX - buttonCoords2.left;
+    //         var shiftX1 = evt.pageX - buttonCoords1.left;
+
+    //         document.onmousemove = function (evt) {
+    //             var left2 = evt.pageX - shiftX2 - sliderCoords.left;
+    //             var right2 = slider.offsetWidth - button2.offsetWidth;
+    //             if (left2 < 0) left2 = 0;
+    //             if (left2 > right2) left2 = right2;
+    //             button2.style.marginLeft = left2 + 'px';
+
+    //             shiftX1 = evt.pageX - buttonCoords1.left;
+    //             var left1 = evt.pageX - shiftX1 - sliderCoords.left;
+    //             var right1 = slider.offsetWidth - button1.offsetWidth;
+
+    //             if (left1 > left2) {
+    //                 between.style.width = (left1 - left2) + 'px';
+    //                 between.style.marginLeft = left2 + 'px';
+    //             }
+    //             else {
+    //                 between.style.width = (left2 - left1) + 'px';
+    //                 between.style.marginLeft = left1 + 'px';
+    //             }
+
+    //         };
+    //         document.onmouseup = function () {
+    //             document.onmousemove = document.onmouseup = null;
+    //         };
+    //         return false;
+    //     };
+
+    //     button1.ondragstart = function () {
+    //         return false;
+    //     };
+    //     button2.ondragstart = function () {
+    //         return false;
+    //     };
+
+    //     function getCoords(elem) {
+    //         var box = elem.getBoundingClientRect();
+    //         return {
+    //             top: box.top + pageYOffset,
+    //             left: box.left + pageXOffset
+    //         };
+    //     }
+
+    // }
+
+    // =======================================================================================================================
 
     var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
     if (isMobile.any()) { }
@@ -112,7 +273,7 @@ $(document).ready(function () {
 
         history.pushState('', '', window.location.href.split('#')[0]);
     }
-    $('.popup-close,.popup__close').click(function (event) {
+    $('.popup-close,.popup__close,.btn-cancel').click(function (event) {
         popupClose();
         return false;
     });
@@ -291,6 +452,8 @@ $(document).ready(function () {
         });
     }
 
+    // =======================================================================================================================
+
     // IBG
     function ibg() {
         let ibg = document.querySelectorAll(".ibg");
@@ -301,6 +464,8 @@ $(document).ready(function () {
         }
     }
     ibg();
+
+    // =======================================================================================================================
 
     // BURGER
     let iconMenu = document.querySelector(".icon-menu");
@@ -314,19 +479,23 @@ $(document).ready(function () {
         });
     }
 
-    $('.item')
-        .on('mouseenter', function (e) {
-            let parentOffset = $(this).offset(),
-                relX = e.pageX - parentOffset.left,
-                relY = e.pageY - parentOffset.top;
-            $(this).find('.item__overlay').css({ top: relY, left: relX })
-        })
-        .on('mouseout', function (e) {
-            let parentOffset = $(this).offset(),
-                relX = e.pageX - parentOffset.left,
-                relY = e.pageY - parentOffset.top;
-            $(this).find('.item__overlay').css({ top: relY, left: relX })
-        });
+    // =======================================================================================================================
+
+    // $('.item')
+    //     .on('mouseenter', function (e) {
+    //         let parentOffset = $(this).offset(),
+    //             relX = e.pageX - parentOffset.left,
+    //             relY = e.pageY - parentOffset.top;
+    //         $(this).find('.item__overlay').css({ top: relY, left: relX })
+    //     })
+    //     .on('mouseout', function (e) {
+    //         let parentOffset = $(this).offset(),
+    //             relX = e.pageX - parentOffset.left,
+    //             relY = e.pageY - parentOffset.top;
+    //         $(this).find('.item__overlay').css({ top: relY, left: relX })
+    //     });
+
+    // =======================================================================================================================
 
     //FORMS
     function forms() {
