@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -15,9 +15,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Bold";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -161,6 +161,7 @@ h6 {
   width: 100%;
   height: 80px;
   background-color: #1c2f47;
+  box-shadow: 0 0px 10px #000;
 }
 
 .header__container {
@@ -177,10 +178,42 @@ h6 {
   margin: -8px 0px 0px 0px;
 }
 
+.header__translate {
+  flex: 1 1 auto;
+  text-align: right;
+  padding: 0px 20px 0px 0px;
+}
+
+.header__translate-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  max-width: 100px;
+  min-width: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.header__translate-select:hover,
+.header__translate-select:focus {
+  font-size: 16px;
+  color: #69bac2;
+}
+
+.header__translate-select option {
+  color: #000;
+}
+
 .header__login-btn {
+  padding: 0px 20px 0px 0px;
   position: relative;
   display: inline-block;
   width: 145px;
+  min-width: 100px;
   height: 53px;
   background-color: transparent;
   border-radius: 5px;
@@ -191,6 +224,7 @@ h6 {
   text-transform: uppercase;
   line-height: 51px;
   letter-spacing: 1.5px;
+  white-space: nowrap;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   box-shadow: #69bac2 0 0px 0px 2px inset;
 }
@@ -214,6 +248,8 @@ h6 {
 }
 
 .footer__tagline {
+  position: relative;
+  z-index: 1;
   margin: 0px 0px 26px 0px;
   font-family: 'Montserrat-Bold';
   font-size: 48px;
@@ -230,6 +266,8 @@ h6 {
 }
 
 .footer__btn {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   width: 266px;
   height: 66px;
@@ -316,6 +354,11 @@ h6 {
   color: #fff;
 }
 
+.footer-bottom__column {
+  position: relative;
+  z-index: 1;
+}
+
 .footer-bottom__column:nth-child(3) {
   margin: 0 50px;
 }
@@ -343,10 +386,15 @@ h6 {
   color: #fff;
 }
 
+.footer-bottom__mail-link:hover,
+.footer-bottom__mail-link:focus {
+  text-decoration: underline;
+}
+
 .footer-bottom__mail-link img {
   display: inline-block;
   width: 15px;
-  margin: 0px 10px 0px 0px;
+  margin: 2px 10px 0px 0px;
 }
 
 .ibg {
@@ -416,6 +464,34 @@ h6 {
   font-family: 'Montserrat-Bold';
   color: #4a4848;
   letter-spacing: 1px;
+}
+
+a.gflag {
+  vertical-align: middle;
+  font-size: 16px;
+  padding: 1px 0;
+  background-repeat: no-repeat;
+  background-image: url(//gtranslate.net/flags/16.png);
+}
+
+#goog-gt-tt {
+  display: none !important;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+#google_translate_element2 {
+  display: none !important;
 }
 
 .main {
@@ -842,7 +918,7 @@ h6 {
 }
 
 .works__image {
-  padding: 215px 0 0 190px;
+  padding: 215px 0 0 0px;
   margin: 0px 0px 47px 0px;
 }
 
@@ -1036,6 +1112,11 @@ h6 {
   cursor: pointer;
 }
 
+.item-choose__label-text {
+  position: relative;
+  z-index: 1;
+}
+
 .item-choose__label_green {
   background-color: #78d445;
 }
@@ -1169,7 +1250,7 @@ h6 {
 .currency-pay_card .item-choose__label img {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -15px;
 }
 
 .currency-pay__item {
@@ -1796,6 +1877,11 @@ h6 {
 }
 
 .pay-item_card {
+  height: 100%;
+  display: flex;
+  font-size: 0;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0px 0px 0px 0px !important;
   background-color: #f1f8fb;
 }
@@ -2086,6 +2172,11 @@ h6 {
 .slide__item:focus {
   border: 2px solid #00c1ca;
   background-color: #1e293a;
+}
+
+.slide__item img {
+  max-width: 50px;
+  max-height: 40px;
 }
 
 .slide__item-text {
@@ -2614,15 +2705,24 @@ h6 {
 }
 
 .recepient__item-name {
+  max-width: 400px;
   margin: 0px 0px 8px 0px;
   color: #b2a1a7;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .recepient__item-value {
+  max-width: 400px;
   color: #0d283f;
   font-size: 22px;
+  height: 25px;
   letter-spacing: 3px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .recepient__btn {
@@ -2837,7 +2937,10 @@ h6 {
   }
 
   .recepient__item-value {
+    padding: 0px 50px 0px 0px;
+    max-width: 100%;
     font-size: 18px;
+    height: 20px;
   }
 
   .recepient__btn {
@@ -2892,7 +2995,9 @@ h6 {
   }
 
   .footer__image {
-    display: none;
+    width: 50%;
+    left: 25%;
+    transform: translate(-50%, 0px);
   }
 
   .footer-top__container {
@@ -3404,7 +3509,7 @@ h6 {
 
 @media (max-width: 670px) {
   .pay-item .slick-slider .slick-arrow {
-    display: none;
+    display: none !important;
   }
 
   .slide__item:hover,
@@ -3605,11 +3710,9 @@ h6 {
   }
 
   .recepient__item-value {
-    white-space: nowrap;
-    overflow: hidden;
+    padding: 0px 10px 0px 0px;
     font-size: 14px;
     height: 16px;
-    text-overflow: ellipsis;
   }
 
   .recepient__btn {
@@ -3626,6 +3729,26 @@ h6 {
 }
 
 @media (max-width: 425px) {
+  .header__login-btn span {
+    padding: 0px 0px 0px 0px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background: url("../img/header-btn-decor.png") 50% 50%/cover no-repeat;
+  }
+
+  .header__login-btn {
+    font-size: 0;
+    border-radius: 50%;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .footer__image {
+    display: none;
+  }
+
   .major__link {
     height: 40px;
     line-height: 40px;

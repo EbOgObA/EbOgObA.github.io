@@ -86,7 +86,77 @@
         <header class="header">
             <div class="container header__container">
                 <div class="header__logo">
-                    <a href="#"><img src="img/logo.png" alt="Logo"></a>
+                    <a href="#" title="16Bit.game"><img src="img/logo.png" alt="Logo"></a>
+                </div>
+                <div class="header__translate">
+                    <!-- <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl"
+                        style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16"
+                            width="16" alt="English" /></a>
+                    <a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl"
+                        style="background-position:-500px -200px;"><img src="//gtranslate.net/flags/blank.png"
+                            height="16" width="16" alt="Russian" /></a> -->
+                    <select class="header__translate-select" id="select-lang" onchange="doGTranslate(this);">
+                        <!-- <option value="">Select Language</option> -->
+                        <option value="en|af">Afrikaans</option>
+                        <option value="en|sq">Albanian</option>
+                        <option value="en|ar">Arabic</option>
+                        <option value="en|hy">Armenian</option>
+                        <option value="en|az">Azerbaijani</option>
+                        <option value="en|eu">Basque</option>
+                        <option value="en|be">Belarusian</option>
+                        <option value="en|bg">Bulgarian</option>
+                        <option value="en|ca">Catalan</option>
+                        <option value="en|zh-CN">Chinese (Simplified)</option>
+                        <option value="en|zh-TW">Chinese (Traditional)</option>
+                        <option value="en|hr">Croatian</option>
+                        <option value="en|cs">Czech</option>
+                        <option value="en|da">Danish</option>
+                        <option value="en|nl">Dutch</option>
+                        <option value="en|en" selected>English</option>
+                        <option value="en|et">Estonian</option>
+                        <option value="en|tl">Filipino</option>
+                        <option value="en|fi">Finnish</option>
+                        <option value="en|fr">French</option>
+                        <option value="en|gl">Galician</option>
+                        <option value="en|ka">Georgian</option>
+                        <option value="en|de">German</option>
+                        <option value="en|el">Greek</option>
+                        <option value="en|ht">Haitian Creole</option>
+                        <option value="en|iw">Hebrew</option>
+                        <option value="en|hi">Hindi</option>
+                        <option value="en|hu">Hungarian</option>
+                        <option value="en|is">Icelandic</option>
+                        <option value="en|id">Indonesian</option>
+                        <option value="en|ga">Irish</option>
+                        <option value="en|it">Italian</option>
+                        <option value="en|ja">Japanese</option>
+                        <option value="en|ko">Korean</option>
+                        <option value="en|lv">Latvian</option>
+                        <option value="en|lt">Lithuanian</option>
+                        <option value="en|mk">Macedonian</option>
+                        <option value="en|ms">Malay</option>
+                        <option value="en|mt">Maltese</option>
+                        <option value="en|no">Norwegian</option>
+                        <option value="en|fa">Persian</option>
+                        <option value="en|pl">Polish</option>
+                        <option value="en|pt">Portuguese</option>
+                        <option value="en|ro">Romanian</option>
+                        <option value="en|ru">Russian</option>
+                        <option value="en|sr">Serbian</option>
+                        <option value="en|sk">Slovak</option>
+                        <option value="en|sl">Slovenian</option>
+                        <option value="en|es">Spanish</option>
+                        <option value="en|sw">Swahili</option>
+                        <option value="en|sv">Swedish</option>
+                        <option value="en|th">Thai</option>
+                        <option value="en|tr">Turkish</option>
+                        <option value="en|uk">Ukrainian</option>
+                        <option value="en|ur">Urdu</option>
+                        <option value="en|vi">Vietnamese</option>
+                        <option value="en|cy">Welsh</option>
+                        <option value="en|yi">Yiddish</option>
+                    </select>
+                    <div id="google_translate_element2"></div>
                 </div>
                 <a href="#message" class="header__login-btn pl">
                     <span></span>
@@ -109,7 +179,7 @@
                             right and carefully.
                             <b>EOS&nbsp;address:</b> <a href="#">popcornmaker</a>
                             is an account of the smartcontract which creating a new EOS
-                            accounts, <b>MEMO</b> it’s <a href="#">your ID</a>.
+                            accounts, <b>MEMO</b> it’s <a href="#">your&nbsp;ID</a>.
                         </span>
                     </div>
                 </div>
@@ -155,28 +225,28 @@
                                     <!-- <DELETE> -->
                                     <div class="pay-item__slider-item slide">
                                         <a class="slide__item" href="#">
-                                            <img src="img/icon-EOS.png" alt="#">
+                                            <img src="img/03_working_24px/eos/eos.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title"></p> -->
                                                 <p class="text-item__desc">EOS</p>
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/bitcoin-icon.png" alt="#">
+                                            <img src="img/03_working_24px/btc/btc.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <p class="text-item__title">BTC</p>
                                                 <p class="text-item__desc">Bitcoin</p>
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/icon-crypto.png" alt="#">
+                                            <img src="img/03_working_24px/eth/eth.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <p class="text-item__title">ETH</p>
                                                 <p class="text-item__desc">Ethereum</p>
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/bincane-icon.png" alt="#">
+                                            <img src="img/03_working_24px/bnb/bnb.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
                                                 <p class="text-item__desc">Bincane</p>
@@ -190,7 +260,7 @@
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/litecoin-icon.png" alt="#">
+                                            <img src="img/03_working_24px/ltc/ltc.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
                                                 <p class="text-item__desc">Litecoin</p>
@@ -204,14 +274,14 @@
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/dash-icon.png" alt="#">
+                                            <img src="img/03_working_24px/dash/dash.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
                                                 <p class="text-item__desc">Dash</p>
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/tether-icon.png" alt="#">
+                                            <img src="img/03_working_24px/tusd/tusd.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
                                                 <p class="text-item__desc">Tether</p>
@@ -220,66 +290,586 @@
                                     </div>
                                     <div class="pay-item__slider-item slide">
                                         <a class="slide__item" href="#">
-                                            <img src="img/icon-EOS.png" alt="#">
+                                            <img src="img/03_working_24px/ada/ada.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title"></p> -->
-                                                <p class="text-item__desc">EOS</p>
+                                                <!-- <p class="text-item__desc">EOS</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/bitcoin-icon.png" alt="#">
+                                            <img src="img/03_working_24px/adx/adx.svg" alt="#">
                                             <div class="slide__item-text text-item">
-                                                <p class="text-item__title">BTC</p>
-                                                <p class="text-item__desc">Bitcoin</p>
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/icon-crypto.png" alt="#">
-                                            <div class="slide__item-text text-item">
-                                                <p class="text-item__title">ETH</p>
-                                                <p class="text-item__desc">Ethereum</p>
-                                            </div>
-                                        </a>
-                                        <a class="slide__item" href="#">
-                                            <img src="img/bincane-icon.png" alt="#">
+                                            <img src="img/03_working_24px/ae/ae.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Bincane</p>
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/ripple-icon.png" alt="#">
+                                            <img src="img/03_working_24px/agi/agi.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Ripple</p>
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/litecoin-icon.png" alt="#">
+                                            <img src="img/03_working_24px/aion/aion.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Litecoin</p>
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/monero-icon.png" alt="#">
+                                            <img src="img/03_working_24px/amb/amb.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Monero</p>
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/dash-icon.png" alt="#">
+                                            <img src="img/03_working_24px/ardr/ardr.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Dash</p>
+                                                <!-- <p class="text-item__desc">Monero</p> -->
                                             </div>
                                         </a>
                                         <a class="slide__item" href="#">
-                                            <img src="img/tether-icon.png" alt="#">
+                                            <img src="img/03_working_24px/ark/ark.svg" alt="#">
                                             <div class="slide__item-text text-item">
                                                 <!-- <p class="text-item__title">ETH</p> -->
-                                                <p class="text-item__desc">Tether</p>
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/arn/arn.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/ast/ast.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/atom/atom.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/aud/aud.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/band/band.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bat/bat.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bcd/bcd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bch/bch.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/beam/beam.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/blz/blz.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bnb/bnb.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bnbmainnet/bnbmainnet.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bnt/bnt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bqx/bqx.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/brd/brd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/bsv/bsv.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/btg/btg.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/btt/btt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/busd/busd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/cad/cad.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/celr/celr.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/chf/chf.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/clo/clo.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/cmt/cmt-1.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/cnd/cnd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/cro/cro.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/cvc/cvc.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/czk/czk.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dai/dai.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dcr/dcr.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dgb/dgb.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dgd/dgd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dkk/dkk.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dlt/dlt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dnt/dnt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/dock/dock.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/doge/doge.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/elf/elf.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/eng/eng.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/enj/enj.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/etc/etc.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/eur/eur.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/evx/evx.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/fet/fet.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/fun/fun.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/gas/gas.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/gbp/gbp.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/gnt/gnt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/go/go.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/grs/grs.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/gto/gto.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/hbar/hbar.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/hc/hc.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/hot/hot.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/ht/ht.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/huf/huf.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/husd/husd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/icx/icx.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/ils/ils.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/iost/iost.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/iota/iota.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/jpy/jpy.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/kan/kan.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/kmd/kmd.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="pay-item__slider-item slide">
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/knc/knc.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title"></p> -->
+                                                <!-- <p class="text-item__desc">EOS</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/krw/krw.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">BTC</p> -->
+                                                <!-- <p class="text-item__desc">Bitcoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/lend/lend.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ethereum</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/link/link.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Bincane</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/loom/loom.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Ripple</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/lrc/lrc.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Litecoin</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/lsk/lsk.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Monero</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/lun/lun.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Dash</p> -->
+                                            </div>
+                                        </a>
+                                        <a class="slide__item" href="#">
+                                            <img src="img/03_working_24px/lxt/lxt.svg" alt="#">
+                                            <div class="slide__item-text text-item">
+                                                <!-- <p class="text-item__title">ETH</p> -->
+                                                <!-- <p class="text-item__desc">Tether</p> -->
                                             </div>
                                         </a>
                                     </div>
