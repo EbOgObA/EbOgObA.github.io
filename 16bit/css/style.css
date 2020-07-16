@@ -1801,6 +1801,7 @@ body {
 .payment {
   padding: 113px 0;
   margin: 80px 0px 0px 0px;
+  background-color: #fff;
 }
 
 .payment__container {
@@ -2510,6 +2511,10 @@ body {
   color: #fff;
 }
 
+.invoice-info__item-name {
+  white-space: nowrap;
+}
+
 .invoice-info__item-copy {
   margin: 0px 0px 0px 10px;
   cursor: pointer;
@@ -2990,15 +2995,10 @@ body {
   .partners__title {
     margin: 0px 0px 45px 0px;
   }
-}
-
-@media (max-width: 1180px) {
-  .payment__container {
-    padding: 0 100px;
-  }
 
   .payment__title {
     margin: 0px 0px 30px 0px;
+    color: #fff;
   }
 
   .payment__warning {
@@ -3013,6 +3013,20 @@ body {
     padding: 15px 50px;
     line-height: 1.2;
     letter-spacing: 1.5px;
+  }
+
+  .payment__copyright-bottom a {
+    color: #fff;
+  }
+
+  .payment {
+    background-color: #322e47;
+  }
+}
+
+@media (max-width: 1180px) {
+  .payment__container {
+    padding: 0 100px;
   }
 
   .payment__content {
@@ -3580,6 +3594,15 @@ body {
     font-size: 14px;
   }
 
+  .payment__warning-title span {
+    font-size: 20px;
+  }
+
+  .payment__warning-title {
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+
   .payment__warning-text {
     padding: 15px 20px;
   }
@@ -3807,8 +3830,6 @@ body {
 
   .invoice-info__item-top {
     position: relative;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .invoice-info__item-top img {
@@ -3818,14 +3839,15 @@ body {
     transform: translate(0, -50%);
   }
 
-  .invoice-info__item-name {
-    margin: 0px 0px 10px 0px;
+  .invoice-info__item-value {
+    height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .invoice-info__item-bottom {
     position: relative;
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 0px 30px 0px 0px;
   }
 
   .invoice-info__item-bottom img {
@@ -3998,6 +4020,10 @@ body {
     height: 15px;
     background: url("../img/copy-icon.png") 0 0/cover no-repeat transparent;
     margin: 0px 0px 0px 5px;
+  }
+
+  .payment__warning-title span {
+    font-size: 16px;
   }
 
   .text-item__title {
