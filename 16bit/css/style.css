@@ -176,6 +176,7 @@ h6 {
 
 .header__logo {
   margin: -8px 0px 0px 0px;
+  width: 153px;
 }
 
 .header__translate {
@@ -243,7 +244,7 @@ h6 {
   width: 15px;
   height: 15px;
   transform: translate(0, -50%);
-  background: url("../img/header-btn-decor.png") 90% 50%/cover no-repeat;
+  background: url("../img/logout.svg") 90% 50%/cover no-repeat;
   border-radius: 50%;
 }
 
@@ -3254,7 +3255,7 @@ body {
   }
 
   .header__logo img {
-    height: 33px;
+    width: 100px;
   }
 
   .header__login-btn span {
