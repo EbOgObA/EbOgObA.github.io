@@ -89,10 +89,12 @@ $(document).ready(function () {
             //appendArrows:$('.mainslider-arrows .container'),
             nextArrow: '<button type="button" class="slick-next"></button>',
             prevArrow: '<button type="button" class="slick-prev"></button>',
-            // responsive: [{
-            //     breakpoint: 768,
-            //     settings: {}
-            // }]
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    centerMode: false,
+                }
+            }]
         });
     }
 
@@ -104,100 +106,14 @@ $(document).ready(function () {
     }
     $counter.on('input', setBar);
     setBar();
-    // setTimeout(init2slider('id11', 'id66btw', 'id66btn'), 0);
 
-    // function init2slider(idX, btwX, btn1X) {
-    //     var slider = document.getElementById(idX);
-    //     var between = document.getElementById(btwX);
-    //     var button1 = document.getElementById(btn1X);
-    // var button2 = document.getElementById(btn2X);
+    // =======================================================================================================================
 
-    //     button1.onmousedown = function (evt) {
-    //         var sliderCoords = getCoords(slider);
-    // var betweenCoords = getCoords(between);
-    //         var buttonCoords1 = getCoords(button1);
-    // var buttonCoords2 = getCoords(button2);
-    // var shiftX2 = evt.pageX - buttonCoords2.left;
-    //         var shiftX1 = evt.pageX - buttonCoords1.left;
-
-    //         document.onmousemove = function (evt) {
-    //             var left1 = evt.pageX - shiftX1 - sliderCoords.left;
-    //             var right1 = slider.offsetWidth - button1.offsetWidth;
-    //             if (left1 < 0) left1 = 0;
-    //             if (left1 > right1) left1 = right1;
-    //             button1.style.marginLeft = left1 + 'px';
-
-    //             shiftX2 = evt.pageX - buttonCoords2.left;
-    //             var left2 = evt.pageX - shiftX2 - sliderCoords.left;
-    //             var right2 = slider.offsetWidth - button2.offsetWidth;
-
-    //             if (left1 > left2) {
-    //                 between.style.width = (left1 - left2) + 'px';
-    //                 between.style.marginLeft = left2 + 'px';
-    //             }
-    //             else {
-    //                 between.style.width = (left2 - left1) + 'px';
-    //                 between.style.marginLeft = left1 + 'px';
-    //             }
-
-    //         };
-    //         document.onmouseup = function () {
-    //             document.onmousemove = document.onmouseup = null;
-    //         };
-    //         return false;
-    //     };
-
-    //     button2.onmousedown = function (evt) {
-    //         var sliderCoords = getCoords(slider);
-    //         var betweenCoords = getCoords(between);
-    //         var buttonCoords1 = getCoords(button1);
-    //         var buttonCoords2 = getCoords(button2);
-    //         var shiftX2 = evt.pageX - buttonCoords2.left;
-    //         var shiftX1 = evt.pageX - buttonCoords1.left;
-
-    //         document.onmousemove = function (evt) {
-    //             var left2 = evt.pageX - shiftX2 - sliderCoords.left;
-    //             var right2 = slider.offsetWidth - button2.offsetWidth;
-    //             if (left2 < 0) left2 = 0;
-    //             if (left2 > right2) left2 = right2;
-    //             button2.style.marginLeft = left2 + 'px';
-
-    //             shiftX1 = evt.pageX - buttonCoords1.left;
-    //             var left1 = evt.pageX - shiftX1 - sliderCoords.left;
-    //             var right1 = slider.offsetWidth - button1.offsetWidth;
-
-    //             if (left1 > left2) {
-    //                 between.style.width = (left1 - left2) + 'px';
-    //                 between.style.marginLeft = left2 + 'px';
-    //             }
-    //             else {
-    //                 between.style.width = (left2 - left1) + 'px';
-    //                 between.style.marginLeft = left1 + 'px';
-    //             }
-
-    //         };
-    //         document.onmouseup = function () {
-    //             document.onmousemove = document.onmouseup = null;
-    //         };
-    //         return false;
-    //     };
-
-    //     button1.ondragstart = function () {
-    //         return false;
-    //     };
-    //     button2.ondragstart = function () {
-    //         return false;
-    //     };
-
-    //     function getCoords(elem) {
-    //         var box = elem.getBoundingClientRect();
-    //         return {
-    //             top: box.top + pageYOffset,
-    //             left: box.left + pageXOffset
-    //         };
-    //     }
-
-    // }
+    if ($('.message').val() !== "" && $('.email').val() !== "") {
+        $('.form-franchise__btn').addClass('active');
+    } else {
+        $('.form-franchise__btn').removeClass('active');
+    }
 
     // =======================================================================================================================
 
