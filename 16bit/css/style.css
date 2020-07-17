@@ -2016,6 +2016,7 @@ body {
   font-size: 0;
   align-items: center;
   font-size: 18px;
+  white-space: nowrap;
 }
 
 .payment__copyright-bottom a {
