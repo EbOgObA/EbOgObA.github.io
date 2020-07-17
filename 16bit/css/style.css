@@ -236,6 +236,11 @@ h6 {
   box-shadow: #69bac2 0 80px 0px 2px inset;
 }
 
+.header__login-btn:hover span svg .cls-1,
+.header__login-btn:focus span svg .cls-1 {
+  fill: #1c2f47;
+}
+
 .header__login-btn span {
   position: absolute;
   padding: 0px 5px 0px 0px;
@@ -244,8 +249,14 @@ h6 {
   width: 15px;
   height: 15px;
   transform: translate(0, -50%);
-  background: url("../img/logout.svg") 90% 50%/cover no-repeat;
   border-radius: 50%;
+}
+
+.header__login-btn span svg {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0, -50%);
 }
 
 .footer__tagline {
@@ -272,6 +283,7 @@ h6 {
   display: inline-block;
   width: 266px;
   height: 66px;
+  background-color: rgba(112, 198, 102, 0.5);
   border-radius: 5px;
   color: #70c666;
   line-height: 68px;
@@ -586,8 +598,9 @@ body {
   display: inline-block;
   width: 283px;
   height: 66px;
+  background-image: linear-gradient(90deg, rgba(219, 112, 84, 0.75), rgba(220, 72, 116, 0.75));
   border-radius: 5px;
-  color: #dc4874;
+  color: #fff;
   font-family: 'Montserrat','Arial',sans-serif;
   font-size: 18px;
   line-height: 66px;
@@ -735,6 +748,7 @@ body {
   background-color: transparent;
   font-size: 18px;
   line-height: 66px;
+  background-color: rgba(112, 198, 102, 0.3);
   color: #70c666;
   transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -893,11 +907,12 @@ body {
   display: inline-block;
   width: 100%;
   height: 67px;
+  background-color: rgba(16, 158, 0, 0.3);
   border-radius: 5px;
   font-size: 18px;
   font-family: 'Montserrat','Arial',sans-serif;
   text-transform: uppercase;
-  color: #70c666;
+  color: #109800;
   line-height: 67px;
   text-align: center;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -1115,8 +1130,9 @@ body {
   height: 60px;
   line-height: 60px;
   text-align: center;
+  background-color: rgba(112, 198, 102, 0.3);
   font-size: 18px;
-  color: #70c666;
+  color: #109800;
   border-radius: 10px;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   box-shadow: #70c666 0 0px 0px 2px inset;
@@ -1451,9 +1467,10 @@ body {
   width: 100%;
   max-width: 300px;
   height: 60px;
+  background-color: rgba(48, 213, 200, 0.3);
   border-radius: 10px;
   line-height: 60px;
-  color: #30D5C8;
+  color: #2faba1;
   text-align: center;
   text-transform: uppercase;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -1725,13 +1742,20 @@ body {
   width: 100%;
   max-width: 300px;
   height: 62px;
-  border: 2px solid #7dd15d;
   border-radius: 10px;
   background-color: transparent;
-  color: #121f38;
+  color: #7dd15d;
   font-size: 18px;
   line-height: 56px;
   text-transform: uppercase;
+  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  box-shadow: #7dd15d 0 0px 0px 2px inset;
+}
+
+.body-keys__btn:hover,
+.body-keys__btn:focus {
+  color: #fff;
+  box-shadow: #7dd15d 0 80px 0px 2px inset;
 }
 
 .body-keys__btn img {
@@ -1856,6 +1880,101 @@ body {
 .payment__warning-text a:hover,
 .payment__warning-text a:focus {
   text-decoration: underline;
+}
+
+.payment__tabs {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.payment__tabs-title {
+  width: 100%;
+  margin: 0px 0px 35px 0px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.payment__tabs-title b {
+  color: #6abcc4;
+}
+
+.payment__tabs-item {
+  position: relative;
+  padding: 50px;
+  display: flex;
+  font-size: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.payment__tabs-item.active {
+  transform: scale(0.98);
+  border: 3px solid #6abcc4;
+}
+
+.payment__tabs-item-crypto {
+  background-color: #4e6284;
+  box-shadow: inset 0 0 15px #1e293a;
+  color: #fff;
+}
+
+.payment__tabs-item-crypto.active {
+  box-shadow: inset 0 0 15px #1e293a;
+}
+
+.payment__tabs-item-card {
+  background-color: #c6d4d9;
+  color: #4a4848;
+}
+
+.payment__tabs-item-card.active {
+  box-shadow: inset 0 0 15px #1e293a;
+}
+
+.payment .tabs__caption {
+  height: 126px;
+  display: flex;
+  font-size: 0;
+  align-items: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.payment .tabs__caption li {
+  width: 100%;
+  margin: 0 21px;
+}
+
+.payment .tabs__img-eos {
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  top: -20px;
+}
+
+.payment .tabs__img-crypto {
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
+}
+
+.payment .tabs__img-card {
+  width: 75px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0px, -50%);
 }
 
 .payment__content {
@@ -2424,11 +2543,11 @@ body {
   margin: 35px auto 0px auto;
   width: 100%;
   max-width: 470px;
+  background-color: rgba(48, 213, 200, 0.3);
   color: #30D5C8;
   font-size: 24px;
   text-transform: uppercase;
   border-radius: 15px;
-  background-color: #1e283a;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   box-shadow: #30D5C8 0 0px 0px 2px inset;
 }
@@ -2842,6 +2961,20 @@ body {
   transform: scale(0.98);
 }
 
+@media (min-width: 1185px) {
+  .payment__tabs {
+    display: none;
+  }
+
+  .payment__tabs-title {
+    display: none;
+  }
+
+  .payment .tabs__caption {
+    display: none;
+  }
+}
+
 @media (max-width: 1220px) {
   .footer__image {
     width: 60%;
@@ -2995,6 +3128,10 @@ body {
     margin: 0px 0px 45px 0px;
   }
 
+  .partners {
+    padding: 0px 0 75px 0;
+  }
+
   .payment__title {
     margin: 0px 0px 30px 0px;
     color: #fff;
@@ -3014,18 +3151,12 @@ body {
     letter-spacing: 1.5px;
   }
 
-  .payment__copyright-bottom a {
-    color: #fff;
+  .payment .tabs__content {
+    display: none;
   }
 
-  .payment {
-    background-color: #322e47;
-  }
-}
-
-@media (max-width: 1180px) {
-  .payment__container {
-    padding: 0 100px;
+  .payment .tabs__content.active {
+    display: block;
   }
 
   .payment__content {
@@ -3033,7 +3164,33 @@ body {
   }
 
   .payment__content-column:last-child {
-    margin: 30px 21px 0px;
+    margin: 0px 21px 0px;
+  }
+
+  .payment__copyright-bottom a::after {
+    background-color: #fff;
+  }
+
+  .payment__copyright-bottom a {
+    color: #fff;
+  }
+
+  .payment {
+    background-color: #322e47;
+  }
+
+  .pay-item__content-slider {
+    max-width: 100%;
+  }
+
+  .credit-card__info-img {
+    padding: 0 30% 40px 30%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .payment__container {
+    padding: 0 100px;
   }
 
   .payment {
@@ -3051,10 +3208,6 @@ body {
 
   .pay-item__content-search {
     padding: 20px 50px;
-  }
-
-  .pay-item__content-slider {
-    max-width: 100%;
   }
 
   .pay-item__content-counter {
@@ -3075,10 +3228,6 @@ body {
 
   .card-credit__text-title {
     margin: 0px 0px 7px 0px;
-  }
-
-  .credit-card__info-img {
-    padding: 0 30% 40px 30%;
   }
 
   .instructions-card__video {
@@ -3253,6 +3402,10 @@ body {
 
   .partners {
     padding: 0px 0 60px 0;
+  }
+
+  .payment__tabs-item {
+    padding: 50px 100px 50px 25px;
   }
 }
 
@@ -3606,6 +3759,19 @@ body {
     padding: 15px 20px;
   }
 
+  .payment__tabs {
+    padding: 10px;
+  }
+
+  .payment__tabs-item {
+    font-size: 24px;
+    padding: 50px 100px 50px 25px;
+  }
+
+  .payment .tabs__caption li {
+    margin: 0 10px;
+  }
+
   .payment {
     margin: 60px 0px 0px 0px;
   }
@@ -3768,6 +3934,35 @@ body {
 
   .works__image-text-3 {
     top: 44%;
+  }
+
+  .payment__tabs-title {
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .payment__tabs-item {
+    font-size: 20px;
+    padding: 30px 65px 30px 15px;
+  }
+
+  .payment .tabs__caption {
+    height: 80px;
+  }
+
+  .payment .tabs__img-eos {
+    width: 30px;
+    top: -10px;
+  }
+
+  .payment .tabs__img-crypto {
+    width: 30px;
+    bottom: -10px;
+  }
+
+  .payment .tabs__img-card {
+    width: 45px;
+    right: 10px;
   }
 
   .payment__copyright {
@@ -4023,6 +4218,11 @@ body {
 
   .payment__warning-title span {
     font-size: 16px;
+  }
+
+  .payment__tabs-item {
+    font-size: 16px;
+    padding: 30px 100px 30px 15px;
   }
 
   .text-item__title {
