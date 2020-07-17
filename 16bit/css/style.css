@@ -3398,7 +3398,7 @@ body {
   }
 
   .image-text__box {
-    width: 30%;
+    width: 33.5%;
   }
 
   .steps__content-column:last-child .step-item__header {
@@ -3598,6 +3598,10 @@ body {
 
   .works {
     padding: 0 0 50px 0;
+  }
+
+  .image-text__box {
+    width: 36.5%;
   }
 
   .works__image-text-1 {
