@@ -607,6 +607,7 @@ body {
   max-width: 470px;
   font-size: 18px;
   line-height: 1.25;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
 }
 
 .major__text a {
@@ -704,7 +705,7 @@ body {
 
 .franchise__text-desc {
   margin: 0px 0px 35px 0px;
-  font-family: 'Montserrat','Arial',sans-serif;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
   font-size: 18px;
   color: #4a4848;
   line-height: 1.25;
@@ -868,7 +869,7 @@ body {
 .desc-franchise p {
   margin: 0px 0px 35px 0px;
   font-size: 20px;
-  font-family: 'Montserrat','Arial',sans-serif;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
   color: #4a4848;
   line-height: 1.25;
 }
@@ -1495,7 +1496,7 @@ body {
   font-size: 0;
   color: #4a4848;
   font-size: 20px;
-  font-family: 'Montserrat','Arial', sans-serif;
+  font-family: 'Montserrat-Light','Arial', sans-serif;
   letter-spacing: 0.1px;
   line-height: 1.8;
 }
@@ -3534,13 +3535,16 @@ body {
     font-size: 30px;
   }
 
+  .bg-decor-1 {
+    display: none;
+  }
+
   .bg-decor-2 {
-    top: 38%;
-    transform: translate(-50%, 0%) rotate(20deg);
+    display: none;
   }
 
   .bg-decor-3 {
-    top: 78%;
+    display: none;
   }
 
   .major__content {
@@ -3602,7 +3606,7 @@ body {
   }
 
   .franchise {
-    padding: 20px 0;
+    padding: 20px 0 85px 0;
   }
 
   .properties__row:nth-child(2) {
@@ -3654,6 +3658,7 @@ body {
 
   .works {
     padding: 0 0 50px 0;
+    background-color: #fff;
   }
 
   .image-text__box {
@@ -3688,7 +3693,7 @@ body {
   }
 
   .steps {
-    padding: 10px 0px 60px 0px;
+    padding: 40px 0px 60px 0px;
   }
 
   .item-payvar {
@@ -3715,7 +3720,8 @@ body {
   }
 
   .partners {
-    padding: 0px 0 30px 0;
+    padding: 40px 0 30px 0;
+    background-color: #fff;
   }
 
   .popup-table > .cell {
@@ -4030,10 +4036,6 @@ body {
 }
 
 @media (max-width: 500px) {
-  .bg-decor-2 {
-    top: 41%;
-  }
-
   .works__image_2 {
     margin: 0 0 0 10px;
   }
@@ -4272,10 +4274,6 @@ body {
     padding: 0px 0px 0px 0px;
   }
 
-  .bg-decor-2 {
-    top: 42%;
-  }
-
   .major__link {
     height: 40px;
     line-height: 40px;
@@ -4298,7 +4296,7 @@ body {
   }
 
   .steps__content-column {
-    margin: 30px 0px 0px;
+    margin: 0px 0px 0px;
   }
 
   .step-item__footer {
