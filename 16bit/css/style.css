@@ -395,11 +395,12 @@ h6 {
 .list-menu__link {
   font-size: 16px;
   color: #00bcc5;
+  text-decoration: underline;
 }
 
 .list-menu__link:hover,
 .list-menu__link:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footer-bottom {
@@ -4165,7 +4166,7 @@ body {
 
 @media (max-width: 670px) {
   .footer__image {
-    top: -100%;
+    top: -115px;
   }
 
   .footer-middle__menu {
@@ -4180,6 +4181,22 @@ body {
 
   .footer-middle__menu-column {
     margin: 20px 0px 0 0;
+  }
+
+  .footer-middle {
+    background-color: #082841;
+  }
+
+  .footer-bottom__column:last-child {
+    display: none;
+  }
+
+  .footer-bottom__column {
+    display: none;
+  }
+
+  .footer-bottom {
+    padding: 0px;
   }
 
   .pay-item .slick-slider .slick-arrow {
@@ -4226,13 +4243,17 @@ body {
 
 @media (max-width: 500px) {
   .footer__image {
-    top: -95%;
-    width: 200px;
-    right: -20px;
+    top: -81px;
+    width: 250px;
+    right: -85px;
   }
 
-  .footer-middle {
-    padding: 15px 30px;
+  .footer-top__container {
+    align-items: center;
+  }
+
+  .footer-top {
+    padding: 20px 15px;
   }
 
   .works__image_2 {
@@ -4470,19 +4491,11 @@ body {
   }
 
   .footer__image {
-    display: none;
+    top: -53px;
   }
 
-  .footer-top__container {
-    align-items: center;
-  }
-
-  .footer-middle__menu {
-    align-items: center;
-  }
-
-  .list-menu li {
-    text-align: center;
+  .list-menu__link {
+    font-size: 12px;
   }
 
   .footer-bottom__container {
