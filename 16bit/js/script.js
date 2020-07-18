@@ -93,13 +93,18 @@ $(document).ready(function () {
                 {
                     breakpoint: 768,
                     settings: {
-                        centerMode: false,
+                        centerMode: true,
                     }
                 }, {
                     breakpoint: 670,
                     settings: {
-                        centerMode: false,
+                        // centerMode: false,
                         arrow: false,
+                    }
+                }, {
+                    breakpoint: 425,
+                    settings: {
+                        centerMode: false,
                     }
                 }
             ]
