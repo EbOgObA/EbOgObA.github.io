@@ -1185,6 +1185,7 @@ body {
   font-size: 18px;
   color: #109800;
   border-radius: 10px;
+  order: 3;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   box-shadow: #70c666 0 0px 0px 2px inset;
 }
@@ -3954,10 +3955,6 @@ body {
     margin: 0px 0px 10px 0px;
     order: 2;
   }
-
-  .step-item__btn {
-    order: 4;
-  }
 }
 
 @media (max-width: 700px) {
@@ -4291,7 +4288,7 @@ body {
   }
 
   .steps__content-column:last-child {
-    margin: 25px 0px 0px;
+    margin: 60px 0px 0px;
   }
 
   .steps__content-column {
