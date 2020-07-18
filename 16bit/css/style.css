@@ -2122,6 +2122,9 @@ body {
   margin: 0px 0px 0px 15px;
   color: #1d2f47;
   font-size: 24px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .copy-btn {
@@ -2162,31 +2165,32 @@ body {
   width: 100%;
   margin: 0px 0px 0px 35px;
   padding: 24px 0;
-  background-color: #70c666;
+  background-color: rgba(16, 158, 0, 0.1);
   border-radius: 5px;
-  color: #fff;
+  color: #109800;
   font-size: 18px;
   text-align: center;
   line-height: 1.1;
   text-transform: uppercase;
   font-family: 'Montserrat','Arial',sans-serif;
-  -webkit-transition: -webkit-box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  transition: -webkit-box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out;
-  -o-transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -webkit-box-shadow: #70c666 0 0px 0px 2px inset;
+          box-shadow: #70c666 0 0px 0px 2px inset;
 }
 
 .btn-continue:hover,
 .btn-continue:focus {
-  -webkit-box-shadow: 0 0 10px #70c666;
-          box-shadow: 0 0 10px #70c666;
+  color: #fff;
+  -webkit-box-shadow: #70c666 0 80px 0px 2px inset;
+          box-shadow: #70c666 0 80px 0px 2px inset;
 }
 
 .btn-continue:active {
-  -webkit-transform: scale(0.98);
-      -ms-transform: scale(0.98);
-          transform: scale(0.98);
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .payment {
