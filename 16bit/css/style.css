@@ -802,6 +802,14 @@ body {
   letter-spacing: 1px;
 }
 
+.textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.textarea::-moz-placeholder {
+  color: #fff;
+}
+
 .input {
   width: 100%;
   border-radius: 5px;
@@ -814,6 +822,14 @@ body {
 
 .input.err {
   border: 1px solid red;
+}
+
+.input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.input::-moz-placeholder {
+  color: #fff;
 }
 
 .item-franchise {
@@ -979,8 +995,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 45%;
-  background-image: linear-gradient(180deg, #e8ecf2 0, rgba(135, 206, 235, 0.2) 15%, rgba(135, 206, 235, 0.7) 30%, #d7dce8 100%);
+}
+
+.works__image-sky img {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .works__image_2 {
@@ -1674,7 +1695,7 @@ body {
   padding: 33px 50px;
   background-color: #fff;
   color: #999999;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat','Arial',sans-serif;
   font-size: 24px;
 }
 
@@ -2095,7 +2116,8 @@ body {
 }
 
 .payment__copyright {
-  margin: 65px 0px 0px 0px;
+  margin: 65px auto 0px auto;
+  max-width: 180px;
   display: flex;
   font-size: 0;
   flex-direction: column;
@@ -2104,7 +2126,7 @@ body {
 }
 
 .payment__copyright-top {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 10px 41px;
   font-size: 18px;
   color: #aeb1b8;
 }
@@ -2128,9 +2150,9 @@ body {
 .payment__copyright-bottom a::after {
   content: "";
   position: absolute;
-  width: 135px;
+  width: 126px;
   height: 1px;
-  bottom: -2px;
+  bottom: -4px;
   left: 50%;
   transform: translate(-50%, 0px);
   background-color: #282c34;
@@ -2370,7 +2392,6 @@ body {
 }
 
 .eos-info .eos-value {
-  display: inline-block;
   text-align: left;
   font-size: 24px;
   color: #6dc1c9;
@@ -2378,6 +2399,7 @@ body {
   padding: 2px 0;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: transparent;
 }
 
 .eos-info__copy-btn {
@@ -3085,19 +3107,19 @@ body {
   display: block;
   margin: 53px auto 0;
   padding: 18.1px 20px;
-  color: #30D5C8;
+  color: #8efb5b;
   font-size: 24px;
   text-transform: uppercase;
   background-color: #fff;
-  border-radius: 15px;
+  border-radius: 10px;
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  box-shadow: #30D5C8 0 0px 0px 2px inset;
+  box-shadow: #8efb5b  0 0px 0px 2px inset;
 }
 
 .recepient__btn:hover,
 .recepient__btn:focus {
   color: #fff;
-  box-shadow: #30D5C8 0 88px 0px 2px inset;
+  box-shadow: #8efb5b  0 88px 0px 2px inset;
 }
 
 .recepient__btn:active {
@@ -3752,7 +3774,7 @@ body {
 
   .works {
     padding: 0 0 50px 0;
-    background-color: #d7dce8;
+    background-color: #f3f6ff;
   }
 
   .image-text__box {
@@ -3811,7 +3833,7 @@ body {
 
   .partners {
     padding: 40px 0 30px 0;
-    background-color: #d7dce8;
+    background-color: #f3f6ff;
   }
 
   .popup-table > .cell {
