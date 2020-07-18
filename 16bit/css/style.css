@@ -1101,7 +1101,9 @@ body {
 }
 
 .steps__content-column:last-child .step-item__body img {
-  width: 100%;
+  display: inline-block;
+  margin: 0 auto;
+  width: 81%;
 }
 
 .steps__content-column:last-child .step-item__header {
@@ -3936,6 +3938,10 @@ body {
 @media (max-width: 708px) {
   .steps__content-column:first-child {
     margin: 0 48px 60px;
+  }
+
+  .steps__content-column:last-child .step-item__body img {
+    width: 100%;
   }
 
   .steps__content-column:last-child {
