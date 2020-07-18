@@ -546,7 +546,7 @@ body {
 
 .bg-decor-3 {
   position: absolute;
-  top: 6390px;
+  top: 6280px;
   left: 50%;
   transform: translate(-50%, 0%);
 }
@@ -891,7 +891,6 @@ body {
   font-family: 'Montserrat','Arial',sans-serif;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1.3px;
 }
 
 .card__header_green {
@@ -1258,6 +1257,7 @@ body {
 
 .item-choose__label_gray .check__box {
   left: 15px;
+  border: 2px solid #93999b;
 }
 
 .item-choose__input {
@@ -1389,7 +1389,7 @@ body {
 
 .currency-pay__item .check__box {
   top: 25px;
-  left: 15px;
+  left: 10px;
 }
 
 .currency-pay__item-top {
@@ -1484,7 +1484,6 @@ body {
 
 .partners__title {
   margin: 0px 0px 58px -50px;
-  letter-spacing: 2px;
 }
 
 .partners__content {
@@ -3083,7 +3082,7 @@ body {
   }
 
   .bg-decor-3 {
-    top: 7200px;
+    top: 71.8%;
   }
 
   .major__title {
@@ -3125,7 +3124,7 @@ body {
   }
 
   .desc-franchise {
-    padding: 30px 10px 0px 10px;
+    padding: 30px 20px 0px 20px;
     margin: 0px 0px 0px 0px;
   }
 
@@ -3460,7 +3459,7 @@ body {
 
   .partners__content {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 30px;
     font-size: 16px;
   }
 
@@ -3532,8 +3531,13 @@ body {
     font-size: 30px;
   }
 
+  .bg-decor-2 {
+    top: 38%;
+    transform: translate(-50%, 0%) rotate(20deg);
+  }
+
   .bg-decor-3 {
-    top: 8150px;
+    top: 78%;
   }
 
   .major__content {
@@ -3617,7 +3621,7 @@ body {
   }
 
   .desc-franchise__subtitle {
-    font-size: 28px;
+    font-size: 24px;
     margin: 0px 0px 35px 0px;
   }
 
@@ -3694,7 +3698,7 @@ body {
   }
 
   .partners__content {
-    padding: 0 0px;
+    padding: 0 20px;
   }
 
   .partners__key {
@@ -3930,7 +3934,11 @@ body {
 
 @media (max-width: 708px) {
   .steps__content-column:first-child {
-    margin: 0 48px 20px;
+    margin: 0 48px 60px;
+  }
+
+  .steps__content-column:last-child {
+    margin: 60px 48px 0px;
   }
 
   .steps__content-column:last-child .step-item__footer {
@@ -4019,6 +4027,10 @@ body {
 }
 
 @media (max-width: 500px) {
+  .bg-decor-2 {
+    top: 41%;
+  }
+
   .works__image_2 {
     margin: 0 0 0 10px;
   }
@@ -4257,6 +4269,10 @@ body {
     padding: 0px 0px 0px 0px;
   }
 
+  .bg-decor-2 {
+    top: 42%;
+  }
+
   .major__link {
     height: 40px;
     line-height: 40px;
@@ -4271,7 +4287,7 @@ body {
   }
 
   .steps__content-column:first-child {
-    margin: 0px;
+    margin: 0 0px 60px;
   }
 
   .steps__content-column:last-child {
