@@ -750,6 +750,10 @@ body {
   font-family: 'Montserrat-Light','Arial',sans-serif;
 }
 
+.major__text span {
+  display: block;
+}
+
 .major__text a {
   color: #69bbc3;
 }

@@ -73,6 +73,17 @@ $(document).ready(function () {
     // findVideos();
     // =======================================================================================================================
 
+    // ANCHORS
+    $(".anchors").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top - 100;
+        $('body,html').animate({ scrollTop: top }, 1500);
+    });
+
+    // =======================================================================================================================
+
+
     //SLIDERS
     if ($('.pay-item__slider').length > 0) {
         $('.pay-item__slider').slick({
