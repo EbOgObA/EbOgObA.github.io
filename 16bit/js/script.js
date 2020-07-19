@@ -243,7 +243,7 @@ $(document).ready(function () {
 
         history.pushState('', '', window.location.href.split('#')[0]);
     }
-    $('.popup-close,.popup__close,.btn-cancel').click(function (event) {
+    $('.popup-close,.popup__close,.popup-message__btn-cancel').click(function (event) {
         popupClose();
         return false;
     });

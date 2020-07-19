@@ -15,23 +15,73 @@
         <img class="bg-decor-2" src="img/bg-decor-1.png" alt="#">
         <img class="bg-decor-3" src="img/bg-decor-2.png" alt="#">
 
-        <!-- POPUP -->
+
+
+        <!-- POPUP LOGIN -->
+        <div class="popup popup-login">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste">paste <img
+                                                src="img/copy-icon.png" alt="#"></button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- POPUP MESSAGE -->
         <div class="popup popup-message">
             <div class="popup-table table">
                 <div class="cell">
-                    <div class="popup__content">
+                    <div class="popup__content popup-message__content">
                         <div class="popup-close"></div>
                         <div class="popup__title">
                             YOUR ACCOUNT DETAILS
                         </div>
-                        <div class="popup__header">
+                        <div class="popup-message__header">
                             Name EOS: <span class="notranslate">miamibeach</span>
                         </div>
-                        <div class="popup__keys">
-                            <div class="popup__keys-header">
+                        <div class="popup-message__keys">
+                            <div class="popup-message__keys-header">
                                 KEY <span></span>
                             </div>
-                            <div class="popup__keys-body body-keys">
+                            <div class="popup-message__keys-body body-keys">
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">owner</div>
                                     <p class="body-keys__item-subtitle">
@@ -54,17 +104,17 @@
                                         alt="Copy"></button>
                             </div>
                         </div>
-                        <div class="popup__account-info">
-                            <p class="popup__account-info-title">Link to your account:</p>
-                            <div class="popup__account-info-link">
+                        <div class="popup-message__account-info">
+                            <p class="popup-message__account-info-title">Link to your account:</p>
+                            <div class="popup-message__account-info-link">
                                 <a href="#">https://pac.16bit.game/miamibeach</a>
                                 <button class="copy-btn">copy all</button>
                             </div>
                         </div>
-                        <div class="popup__warning">
+                        <div class="popup-message__warning">
                             <img src="img/warning.png" alt="warning">warning
                         </div>
-                        <div class="popup__info">
+                        <div class="popup-message__info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt</p>
                             <label>
@@ -74,9 +124,9 @@
                                 incididunt
                             </label>
                         </div>
-                        <div class="popup__buttons">
-                            <button class="btn-cancel button">CANCEL</button>
-                            <a href="payment.html" class="btn-continue button">continue</a>
+                        <div class="popup-message__buttons">
+                            <button class="popup-message__btn-cancel">CANCEL</button>
+                            <a href="payment.html" class="popup-message__btn-continue">continue</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +210,7 @@
                     </select>
                     <div id="google_translate_element2"></div>
                 </div>
-                <a href="#message" class="header__login-btn pl">
+                <a href="#login" class="header__login-btn pl">
                     <span>
                         <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
                             <defs>
@@ -259,7 +309,7 @@
                                     please email us, write few words about yourself and how you're going to develop the
                                     project.</p>
                             </div>
-                            <form class="franchise__form form-franchise">
+                            <form action="#" class="franchise__form form-franchise">
                                 <div class="form-franchise__row">
                                     <textarea class="textarea input req message" name="Message"
                                         placeholder="Message..."></textarea>
@@ -301,7 +351,7 @@
                                 <p class="card__item-value property__value">3 years</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn" href="payment.html">buy now</a>
+                                <a class="card__footer-btn pl" href="#message">buy now</a>
                             </div>
                         </div>
                     </div>
@@ -335,7 +385,7 @@
                                 <p class="card__item-value property__value">2 years</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn" href="payment.html">buy now</a>
+                                <a class="card__footer-btn pl" href="#message">buy now</a>
                             </div>
                         </div>
                     </div>
@@ -370,7 +420,7 @@
                                 <p class="card__item-value property__value">1 year</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn" href="payment.html">buy now</a>
+                                <a class="card__footer-btn pl" href="#message">buy now</a>
                             </div>
                         </div>
                     </div>
@@ -444,7 +494,7 @@
                                     <div class="step-item__choose-item item-choose">
                                         <label class="item-choose__label item-choose__label_aqua">
                                             <input class="item-choose__input" name="franchise" type="radio"
-                                                form="steps-form" checked>
+                                                form="steps-form">
                                             <span class="check__box"></span>
                                             DEALER
                                         </label>
@@ -457,7 +507,7 @@
                                     <div class="step-item__choose-item item-choose">
                                         <label class="item-choose__label item-choose__label_orange">
                                             <input class="item-choose__input" name="franchise" type="radio"
-                                                form="steps-form" checked>
+                                                form="steps-form">
                                             <span class="check__box"></span>
                                             SUB DEALER
                                         </label>
@@ -489,6 +539,10 @@
                                                 <span class="currency-pay__item-desc">Instant payment</span>
                                                 <img src="img/icon-EOS.png" alt="EOS">
                                             </span>
+                                        </label>
+                                        <label class="currency-pay__item">
+                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form">
+                                            <span class="check__box"></span>
                                             <span class="currency-pay__item-bot">
                                                 <span class="currency-pay__name">OTHER CRYPTO</span>
                                                 <span class="currency-pay__item-desc">20 minutes</span>
@@ -498,8 +552,7 @@
                                     </div>
                                     <div class="currency-pay currency-pay_card">
                                         <label class="item-choose__label item-choose__label_gray">
-                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form"
-                                                checked>
+                                            <input class="item-choose__input" name="pay" type="radio" form="steps-form">
                                             <span class="check__box"></span>
                                             <img src="img/icon-pay.png" alt="Pay">
                                             <span class="item-choose__label-text">CREDIT CARD</span>
@@ -524,7 +577,7 @@
                                 <div class="step-item__body">
                                     <img src="img/mac2.png" alt="#">
                                 </div>
-                                <a href="payment.html" class="step-item__btn">START BUSINESS</a>
+                                <a href="#message" class="step-item__btn pl">START BUSINESS</a>
                                 <div class="step-item__footer">
                                     Get your own online business <br> in just a few minutes
                                 </div>
@@ -604,7 +657,7 @@
                 <div class="container footer-bottom__container">
                     <img class="footer__image" src="img/tel2.png" alt="#">
                     <div class="footer-bottom__column">
-                        <a href="#" title="16Bit.game"><img src="img/logo.png" alt="Logo"></a>
+                        <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"></a>
                     </div>
                     <div class="footer-bottom__column">
                         <a class="footer-bottom__mail-link notranslate" href="mailto:info@email.ru"><img

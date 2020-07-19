@@ -13,23 +13,71 @@
     <div class="wrapper">
 
 
-        <!-- POPUP -->
+        <!-- POPUP LOGIN -->
+        <div class="popup popup-login">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            LOGIN
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste">paste <img
+                                                src="img/copy-icon.png" alt="#"></button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- POPUP MESSAGE -->
         <div class="popup popup-message">
             <div class="popup-table table">
                 <div class="cell">
-                    <div class="popup__content">
+                    <div class="popup__content popup-message__content">
                         <div class="popup-close"></div>
                         <div class="popup__title">
                             YOUR ACCOUNT DETAILS
                         </div>
-                        <div class="popup__header">
+                        <div class="popup-message__header">
                             Name EOS: <span class="notranslate">miamibeach</span>
                         </div>
-                        <div class="popup__keys">
-                            <div class="popup__keys-header">
+                        <div class="popup-message__keys">
+                            <div class="popup-message__keys-header">
                                 KEY <span></span>
                             </div>
-                            <div class="popup__keys-body body-keys">
+                            <div class="popup-message__keys-body body-keys">
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">owner</div>
                                     <p class="body-keys__item-subtitle">
@@ -52,17 +100,17 @@
                                         alt="Copy"></button>
                             </div>
                         </div>
-                        <div class="popup__account-info">
-                            <p class="popup__account-info-title">Link to your account:</p>
-                            <div class="popup__account-info-link">
+                        <div class="popup-message__account-info">
+                            <p class="popup-message__account-info-title">Link to your account:</p>
+                            <div class="popup-message__account-info-link">
                                 <a href="#">https://pac.16bit.game/miamibeach</a>
                                 <button class="copy-btn">copy all</button>
                             </div>
                         </div>
-                        <div class="popup__warning">
+                        <div class="popup-message__warning">
                             <img src="img/warning.png" alt="warning">warning
                         </div>
-                        <div class="popup__info">
+                        <div class="popup-message__info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                 incididunt</p>
                             <label>
@@ -72,9 +120,9 @@
                                 incididunt
                             </label>
                         </div>
-                        <div class="popup__buttons">
-                            <button class="btn-cancel button">CANCEL</button>
-                            <button class="btn-continue button">continue</button>
+                        <div class="popup-message__buttons">
+                            <button class="popup-message__btn-cancel">CANCEL</button>
+                            <a href="payment.html" class="popup-message__btn-continue">continue</a>
                         </div>
                     </div>
                 </div>
@@ -158,7 +206,7 @@
                     </select>
                     <div id="google_translate_element2"></div>
                 </div>
-                <a href="#message" class="header__login-btn pl">
+                <a href="#login" class="header__login-btn pl">
                     <span>
                         <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
                             <defs>
