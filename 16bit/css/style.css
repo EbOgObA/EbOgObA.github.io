@@ -6,17 +6,9 @@
 */
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Bold";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,9 +22,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -4779,16 +4779,8 @@ body {
     background-color: #082841;
   }
 
-  .footer-bottom__column:last-child {
-    display: none;
-  }
-
-  .footer-bottom__column {
-    display: none;
-  }
-
   .footer-bottom {
-    padding: 0px;
+    padding: 20px 20px;
   }
 
   .pay-item .slick-slider .slick-arrow {
@@ -5100,6 +5092,7 @@ body {
 
   .footer__image {
     top: -53px;
+    right: -110px;
   }
 
   .footer-middle__menu-list {
@@ -5110,18 +5103,8 @@ body {
     font-size: 12px;
   }
 
-  .footer-bottom__container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
   .footer-bottom__column {
     margin: 0px 0px 0px 0px;
-  }
-
-  .footer-bottom__terms-link {
-    text-align: center;
   }
 
   .works__image_1 {
