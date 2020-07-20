@@ -6,22 +6,6 @@
 */
 
 @font-face {
-  font-family: "Montserrat-Bold";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Black";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Montserrat-Hairline";
   font-display: swap;
   src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
@@ -33,6 +17,22 @@
   font-family: "Montserrat-Light";
   font-display: swap;
   src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -1355,6 +1355,7 @@ body {
 
 .steps__content-column:last-child .step-item__footer {
   min-width: 280px;
+  margin: 0px -45px 10px 0px;
 }
 
 .steps__content-column:last-child::after {
@@ -1374,10 +1375,6 @@ body {
 
 .steps__content-column:nth-child(2)::after {
   right: -40px;
-}
-
-.steps__content-column:last-child .step-item__footer {
-  margin: 0px -45px 0px 0px;
 }
 
 .step-item {
@@ -1410,9 +1407,9 @@ body {
 }
 
 .step-item__body {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1429,9 +1426,9 @@ body {
 
 .step-item__footer {
   margin: 0px -30px 10px 0px;
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   max-width: 290px;
   font-size: 18px;
   font-family: 'Montserrat-Light','Arial',sans-serif;
@@ -4067,17 +4064,17 @@ body {
     margin: 0px 0px 20px 0px;
   }
 
+  .steps__content-column:last-child .step-item__footer {
+    margin: 0px 0px 10px 0px;
+  }
+
   .steps__content-column:last-child {
     padding: 0;
-    margin: 25px 50px 0px;
+    margin: 45px 48px 0px;
   }
 
   .steps__content-column::after {
     display: none;
-  }
-
-  .steps__content-column:last-child .step-item__footer {
-    margin: 0px 0px 10px 0px;
   }
 
   .steps {
@@ -4089,16 +4086,7 @@ body {
   }
 
   .step-item__body {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
     margin: 0px 0px 0px 0px;
-  }
-
-  .step-item__footer {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
   }
 
   .step-item__btn {
@@ -4690,12 +4678,12 @@ body {
     overflow: hidden;
   }
 
-  .steps {
-    padding: 40px 0px 60px 0px;
+  .steps__content-column:first-child {
+    margin: 0 48px 45px;
   }
 
-  .item-payvar {
-    margin: 0px 0px 15px 0px;
+  .steps {
+    padding: 40px 0px 60px 0px;
   }
 
   .partners__image {
@@ -4953,10 +4941,6 @@ body {
 }
 
 @media (max-width: 708px) {
-  .steps__content-column:first-child {
-    margin: 0 48px 60px;
-  }
-
   .steps__content-column:last-child .step-item__body img {
     width: 100%;
   }
@@ -5389,7 +5373,7 @@ body {
   }
 
   .steps__content-column:first-child {
-    margin: 0 0px 60px;
+    margin: 0 0px 45px;
   }
 
   .steps__content-column:last-child {
