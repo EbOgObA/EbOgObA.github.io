@@ -6,17 +6,17 @@
 */
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,9 +30,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -577,6 +577,55 @@ h6 {
   font-size: 48px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.btn-back {
+  position: absolute;
+  padding: 15px 30px;
+  top: 50%;
+  left: 0;
+  transform: translate(0px, -50%);
+  -webkit-transform: translate(0px, -50%);
+  -moz-transform: translate(0px, -50%);
+  -ms-transform: translate(0px, -50%);
+  -o-transform: translate(0px, -50%);
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #2f3d55;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -webkit-box-shadow: #2f3d55 0 0px 0px 1px inset;
+          box-shadow: #2f3d55 0 0px 0px 1px inset;
+}
+
+.btn-back:hover,
+.btn-back:focus {
+  color: #fff;
+  -webkit-box-shadow: #2f3d55 0 80px 0px 2px inset;
+          box-shadow: #2f3d55 0 80px 0px 2px inset;
+}
+
+.btn-back:hover svg,
+.btn-back:focus svg {
+  fill: #fff;
+}
+
+.btn-back svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0px, -50%);
+  -webkit-transform: translate(0px, -50%);
+  -moz-transform: translate(0px, -50%);
+  -ms-transform: translate(0px, -50%);
+  -o-transform: translate(0px, -50%);
+  width: 15px;
 }
 
 .property-price {
@@ -2517,6 +2566,7 @@ body {
 }
 
 .payment__title {
+  position: relative;
   margin: 0px 0px 59px 0px;
 }
 
@@ -2581,6 +2631,7 @@ body {
 }
 
 .payment__tabs-title {
+  position: relative;
   width: 100%;
   margin: 0px 0px 35px 0px;
   text-align: center;
@@ -3944,6 +3995,28 @@ body {
     font-size: 40px;
   }
 
+  .btn-back svg {
+    fill: #fff;
+  }
+
+  .btn-back {
+    top: 10%;
+    color: #fff;
+    -webkit-box-shadow: #fff 0 0px 0px 1px inset;
+            box-shadow: #fff 0 0px 0px 1px inset;
+  }
+
+  .btn-back:hover,
+  .btn-back:focus {
+    -webkit-box-shadow: #3b5582 0 80px 0px 2px inset;
+            box-shadow: #3b5582 0 80px 0px 2px inset;
+  }
+
+  .btn-back:hover svg,
+  .btn-back:focus svg {
+    fill: #fff;
+  }
+
   .bg-decor-3 {
     top: 71.8%;
   }
@@ -4129,6 +4202,10 @@ body {
 
   .payment__warning-text {
     padding: 15px 50px;
+  }
+
+  .payment__tabs-title {
+    padding: 75px 0px 0px 0px;
   }
 
   .payment .tabs__content {
@@ -5360,6 +5437,11 @@ body {
 
   .footer-bottom__mail-link {
     font-size: 14px;
+  }
+
+  .btn-back {
+    width: 100%;
+    display: block;
   }
 
   .works__image_1 {
