@@ -17,6 +17,26 @@
 
 
 
+
+
+        <!-- POPUP THANKS -->
+        <div class="popup popup-thanks popup-message ms_1">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-thanks__content">
+                        <div class="popup-close"></div>
+                        <img class="popup-thanks__image" src="img/thanks-check.svg" alt="Thanks">
+                        <div class="popup-thanks__content-text">
+                            Thank you for your interest to the <a href="#">16Bit.game</a> project, we’ll respond to you
+                            shortly
+                        </div>
+                        <a href="#" class="popup-thanks__button">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- POPUP LOGIN -->
         <div class="popup popup-login">
             <div class="popup-table table">
@@ -66,56 +86,51 @@
         </div>
 
 
-        <!-- POPUP MESSAGE -->
-        <div class="popup popup-message">
+        <!-- POPUP DETAILES -->
+        <div class="popup popup-details">
             <div class="popup-table table">
                 <div class="cell">
-                    <div class="popup__content popup-message__content">
+                    <div class="popup__content popup-details__content">
                         <div class="popup-close"></div>
                         <div class="popup__title">
                             YOUR ACCOUNT DETAILS
                         </div>
-                        <div class="popup-message__header">
+                        <div class="popup-details__header">
                             Name EOS: <span class="notranslate">miamibeach</span>
                         </div>
-                        <div class="popup-message__keys">
-                            <div class="popup-message__keys-header">
+                        <div class="popup-details__keys">
+                            <div class="popup-details__keys-header">
                                 KEYS <span></span>
                             </div>
-                            <div class="popup-message__keys-body body-keys">
+                            <div class="popup-details__keys-body body-keys">
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">owner</div>
                                     <p class="body-keys__item-subtitle">
-                                        <span>Private:</span> <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span>
-                                    </p>
-                                    <p class="body-keys__item-subtitle">
-                                        <span>Public:</span> <span class="key">fPGvANqkQNa5Jwds2iR7gfP</span>
+                                        <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn">copy
+                                            all</button>
                                     </p>
                                 </div>
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">active</div>
                                     <p class="body-keys__item-subtitle">
-                                        <span>Private:</span> <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span>
-                                    </p>
-                                    <p class="body-keys__item-subtitle">
-                                        <span>Public:</span> <span class="key">fPGvANqkQNa5Jwds2iR7gfP</span>
+                                        <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn">copy
+                                            all</button>
                                     </p>
                                 </div>
-                                <button class="body-keys__btn">copy all <img src="img/copy-icon.png"
-                                        alt="Copy"></button>
                             </div>
                         </div>
-                        <div class="popup-message__account-info">
-                            <p class="popup-message__account-info-title">Link to your account:</p>
-                            <div class="popup-message__account-info-link">
+                        <div class="popup-details__account-info">
+                            <p class="popup-details__account-info-title">Link to your account:</p>
+                            <div class="popup-details__account-info-link">
                                 <a href="#">https://pac.16bit.game/miamibeach</a>
                                 <button class="copy-btn">copy all</button>
                             </div>
+                            <button class="body-keys__btn">copy all <img src="img/copy-icon.png" alt="Copy"></button>
                         </div>
-                        <div class="popup-message__warning">
+                        <div class="popup-details__warning">
                             <img src="img/warning.png" alt="warning">warning
                         </div>
-                        <div class="popup-message__info">
+                        <div class="popup-details__info">
                             <p>
                                 <span>Please save your private keys in somewhere!</span>
                                 <span>And remember this way.</span>
@@ -134,9 +149,9 @@
                                 and&nbsp;securely&nbsp;saved&nbsp;my&nbsp;keys
                             </label>
                         </div>
-                        <div class="popup-message__buttons">
-                            <button class="popup-message__btn-cancel">CANCEL</button>
-                            <a href="payment.html" class="popup-message__btn-continue">continue</a>
+                        <div class="popup-details__buttons">
+                            <button class="popup-details__btn-cancel">CANCEL</button>
+                            <a href="payment.html" class="popup-details__btn-continue">continue</a>
                         </div>
                     </div>
                 </div>
@@ -326,7 +341,7 @@
                                     yourself and how you're going to develop the project.
                                 </p>
                             </div>
-                            <form action="#" class="franchise__form form-franchise">
+                            <form action="#" class="franchise__form form-franchise" data-ms="ms_1">
                                 <div class="form-franchise__row">
                                     <textarea class="textarea input req message" name="Message"
                                         placeholder="Message..."></textarea>
@@ -368,7 +383,7 @@
                                 <p class="card__item-value property__value">3 years</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn pl" href="#message">buy now</a>
+                                <a class="card__footer-btn pl" href="#details">buy now</a>
                             </div>
                         </div>
                     </div>
@@ -402,7 +417,7 @@
                                 <p class="card__item-value property__value">2 years</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn pl" href="#message">buy now</a>
+                                <a class="card__footer-btn pl" href="#details">buy now</a>
                             </div>
                         </div>
                     </div>
@@ -437,7 +452,7 @@
                                 <p class="card__item-value property__value">1 year</p>
                             </div>
                             <div class="card__footer">
-                                <a class="card__footer-btn pl" href="#message">buy now</a>
+                                <a class="card__footer-btn pl" href="#details">buy now</a>
                             </div>
                         </div>
                     </div>

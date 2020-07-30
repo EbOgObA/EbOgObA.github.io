@@ -361,7 +361,7 @@ $(document).ready(function () {
 
         history.pushState('', '', window.location.href.split('#')[0]);
     }
-    $('.popup-close,.popup__close,.popup-message__btn-cancel').click(function (event) {
+    $('.popup-close,.popup__close,.popup-details__btn-cancel, .popup-thanks__button').click(function (event) {
         popupClose();
         return false;
     });

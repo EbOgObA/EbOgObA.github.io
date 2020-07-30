@@ -2,24 +2,8 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
-* Browsers: last 5 version
+* Browsers: last 4 version
 */
-
-@font-face {
-  font-family: "Montserrat-Black";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Hairline";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
 
 @font-face {
   font-family: "Montserrat-Bold";
@@ -38,9 +22,25 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Hairline";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -592,11 +592,11 @@ h6 {
   font-size: 16px;
   text-transform: uppercase;
   color: #2f3d55;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -2032,7 +2032,7 @@ body {
   font-family: 'Montserrat','Arial',sans-serif;
 }
 
-.popup-message__header {
+.popup-details__header {
   padding: 33px 50px;
   background-color: #fff;
   color: #999999;
@@ -2040,17 +2040,17 @@ body {
   font-size: 24px;
 }
 
-.popup-message__header span {
+.popup-details__header span {
   display: inline-block;
   margin: 0px 0px 0px 10px;
   color: #1c2f46;
 }
 
-.popup-message__keys {
+.popup-details__keys {
   background-color: #e3e8eb;
 }
 
-.popup-message__keys-header {
+.popup-details__keys-header {
   padding: 26px 50px;
   background-color: #c6d4d9;
   color: #121f37;
@@ -2058,17 +2058,17 @@ body {
   font-family: 'Montserrat-Light','Arial',sans-serif;
 }
 
-.popup-message__account-info {
+.popup-details__account-info {
   padding: 28px 50px;
   background-color: #f0f8fb;
 }
 
-.popup-message__account-info-title {
+.popup-details__account-info-title {
   color: #9a9a9a;
   font-size: 24px;
 }
 
-.popup-message__account-info-link {
+.popup-details__account-info-link {
   display: inline-block;
   margin: 10px 0px 0px 0px;
   display: -webkit-box;
@@ -2085,7 +2085,18 @@ body {
   font-size: 24px;
 }
 
-.popup-message__warning {
+.popup-details__account-info-link .copy-btn {
+  margin: 0px 0px 0px 10px;
+}
+
+.popup-details__account-info-link a {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  padding: 2px 0px;
+}
+
+.popup-details__warning {
   padding: 25px 50px;
   background-color: #c6d4d9;
   font-size: 24px;
@@ -2095,32 +2106,32 @@ body {
   line-height: 1.5;
 }
 
-.popup-message__warning img {
+.popup-details__warning img {
   display: inline-block;
   margin: 0px 25px 0px 0px;
 }
 
-.popup-message__info {
+.popup-details__info {
   padding: 25px 50px;
   background-color: #f0f8fb;
 }
 
-.popup-message__info p {
+.popup-details__info p {
   font-size: 18px;
   color: #63666d;
   line-height: 1.5;
   margin: 0px 0px 10px 0px;
 }
 
-.popup-message__info p span {
+.popup-details__info p span {
   display: block;
 }
 
-.popup-message__info p:nth-child(3) {
+.popup-details__info p:nth-child(3) {
   margin: 0px 0px 20px 0px;
 }
 
-.popup-message__info label {
+.popup-details__info label {
   display: inline-block;
   position: relative;
   padding: 0px 0px 0px 50px;
@@ -2129,7 +2140,7 @@ body {
   cursor: pointer;
 }
 
-.popup-message__info label .check-lic {
+.popup-details__info label .check-lic {
   display: block;
   width: 25px;
   height: 25px;
@@ -2144,18 +2155,18 @@ body {
   border: 2px solid #c6d4d9;
 }
 
-.popup-message__info label .check {
+.popup-details__info label .check {
   display: none;
 }
 
-.popup-message__info label .check:checked + .check-lic {
+.popup-details__info label .check:checked + .check-lic {
   background-image: url("../img/check.png");
   background-position: 4px 5px;
   background-repeat: no-repeat;
   background-size: 15px;
 }
 
-.popup-message__buttons {
+.popup-details__buttons {
   padding: 20px 50px;
   background-color: #f0f8fb;
   border-bottom-left-radius: 10px;
@@ -2212,12 +2223,12 @@ body {
 .body-keys__btn {
   position: relative;
   display: block;
-  margin: 40px auto 20px;
+  margin: 40px auto 0px;
   width: 100%;
   max-width: 300px;
   height: 62px;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: #e3e8eb;
   color: #109800;
   font-size: 18px;
   line-height: 56px;
@@ -2246,7 +2257,7 @@ body {
 }
 
 .body-keys .key {
-  margin: 0px 0px 0px 15px;
+  padding: 3px 0px;
   color: #1d2f47;
   font-size: 24px;
   overflow: hidden;
@@ -2500,7 +2511,7 @@ body {
   background: url("../img/copy-icon.png") 0 0 no-repeat transparent;
 }
 
-.popup-message__btn-cancel {
+.popup-details__btn-cancel {
   width: 100%;
   padding: 24px 0;
   background-color: transparent;
@@ -2517,13 +2528,13 @@ body {
           box-shadow: #c6d4d9 0 0px 0px 2px inset;
 }
 
-.popup-message__btn-cancel:hover,
-.popup-message__btn-cancel:focus {
+.popup-details__btn-cancel:hover,
+.popup-details__btn-cancel:focus {
   -webkit-box-shadow: #c6d4d9 0 80px 0px 2px inset;
           box-shadow: #c6d4d9 0 80px 0px 2px inset;
 }
 
-.popup-message__btn-continue {
+.popup-details__btn-continue {
   width: 100%;
   margin: 0px 0px 0px 35px;
   padding: 24px 0;
@@ -2542,17 +2553,78 @@ body {
           box-shadow: #70c666 0 0px 0px 2px inset;
 }
 
-.popup-message__btn-continue:hover,
-.popup-message__btn-continue:focus {
+.popup-details__btn-continue:hover,
+.popup-details__btn-continue:focus {
   color: #fff;
   -webkit-box-shadow: #70c666 0 80px 0px 2px inset;
           box-shadow: #70c666 0 80px 0px 2px inset;
 }
 
-.popup-message__btn-continue:active {
+.popup-details__btn-continue:active {
   -webkit-transform: scale(0.95);
       -ms-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.popup-thanks__content {
+  max-width: 360px;
+  padding: 55px 45px;
+}
+
+.popup-thanks__content-text {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #63666d;
+}
+
+.popup-thanks__content-text a {
+  color: #3c59b8;
+}
+
+.popup-thanks__content-text a:hover,
+.popup-thanks__content-text a:focus {
+  text-decoration: underline;
+}
+
+.popup-thanks__image {
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 80px;
+}
+
+.popup-thanks__button {
+  display: block;
+  max-width: 230px;
+  margin: 40px auto 0px;
+  padding: 26px 10px;
+  text-align: center;
+  font-family: 'Montserrat-Bold','Arial',sans-serif;
+  text-transform: uppercase;
+  background-color: rgba(105, 186, 194, 0.3);
+  -webkit-box-shadow: #69bac2 0 0px 0px 2px inset;
+          box-shadow: #69bac2 0 0px 0px 2px inset;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #000;
+  -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+}
+
+.popup-thanks__button:hover,
+.popup-thanks__button:focus {
+  color: #fff;
+  -webkit-box-shadow: #69bac2 0 80px 0px 2px inset;
+          box-shadow: #69bac2 0 80px 0px 2px inset;
+}
+
+.popup-thanks__button:active {
+  -webkit-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 .payment {
@@ -4800,62 +4872,70 @@ body {
     font-size: 20px;
   }
 
-  .popup-message__header {
+  .popup-details__header {
     padding: 15px 25px;
     font-size: 16px;
   }
 
-  .popup-message__keys-header {
+  .popup-details__keys-header {
     padding: 15px 25px;
     font-size: 16px;
   }
 
-  .popup-message__account-info {
-    padding: 10px 25px;
+  .popup-details__account-info {
+    padding: 20px 25px;
   }
 
-  .popup-message__account-info-title {
+  .popup-details__account-info-title {
     font-size: 16px;
   }
 
-  .popup-message__account-info-link {
+  .popup-details__account-info-link {
     font-size: 16px;
   }
 
-  .popup-message__warning {
+  .popup-details__warning {
     padding: 10px 25px;
   }
 
-  .popup-message__info p {
+  .popup-details__info p {
     font-size: 14px;
     line-height: 1.2;
   }
 
-  .popup-message__info label .check-lic {
+  .popup-details__info label .check-lic {
     width: 15px;
     height: 15px;
   }
 
-  .popup-message__info label .check:checked + .check-lic {
+  .popup-details__info label .check:checked + .check-lic {
     background-position: 1px 2px;
     background-size: 10px;
   }
 
-  .popup-message__info label {
+  .popup-details__info label {
     padding: 0px 0px 0px 25px;
     font-size: 12px;
   }
 
-  .popup-message__info {
+  .popup-details__info {
     padding: 10px 25px;
   }
 
-  .popup-message__buttons {
+  .popup-details__buttons {
     padding: 5px 25px 20px;
   }
 
   .body-keys__item {
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .body-keys__item:first-child {
+    margin: 0px 0px 13px 0px;
+  }
+
+  .body-keys__item:first-child .body-keys__item-subtitle {
+    margin: 0px 0px 13px 0px;
   }
 
   .body-keys__item-title {
@@ -4866,10 +4946,6 @@ body {
   .body-keys__item-subtitle {
     font-size: 14px;
     margin: 0px 0px 5px 0px;
-  }
-
-  .body-keys__item-subtitle:last-child {
-    margin: 0px 0px 13px 0px;
   }
 
   .body-keys__btn img {
@@ -4888,7 +4964,7 @@ body {
   }
 
   .body-keys .key {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .body-keys {
@@ -4899,12 +4975,21 @@ body {
     padding: 17px 16px 17px 16px;
   }
 
-  .popup-message__btn-cancel {
+  .copy-btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20px;
+            flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    background: url("../img/copy-icon.png") 0 0/cover no-repeat transparent;
+  }
+
+  .popup-details__btn-cancel {
     padding: 10px 0;
     font-size: 14px;
   }
 
-  .popup-message__btn-continue {
+  .popup-details__btn-continue {
     padding: 10px 0;
     font-size: 14px;
   }
@@ -5149,6 +5234,9 @@ body {
   .popup-close {
     top: -25px;
     right: 50%;
+    -webkit-transform: translate(50%, 0px);
+        -ms-transform: translate(50%, 0px);
+            transform: translate(50%, 0px);
   }
 }
 
@@ -5505,22 +5593,12 @@ body {
     max-width: 100%;
   }
 
-  .popup-message__account-info {
+  .popup-details__account-info {
     padding: 10px;
   }
 
-  .popup-message__account-info-link {
+  .popup-details__account-info-link {
     font-size: 14px;
-  }
-
-  .body-keys__item-subtitle {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
 
   .body-keys__item-subtitle span {
@@ -5530,7 +5608,7 @@ body {
   }
 
   .body-keys .key {
-    margin: 0px 0px 0px 0px;
+    font-size: 16px;
   }
 
   .body-keys {
@@ -5566,10 +5644,11 @@ body {
   }
 
   .copy-btn {
-    max-width: 15px;
-    height: 15px;
-    background: url("../img/copy-icon.png") 0 0/cover no-repeat transparent;
     margin: 0px 0px 0px 5px;
+  }
+
+  .popup-thanks__content {
+    padding: 55px 20px;
   }
 
   .payment__warning-title span {
