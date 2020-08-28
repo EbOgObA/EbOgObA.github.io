@@ -6,17 +6,9 @@
 */
 
 @font-face {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Light";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,6 +22,14 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Light";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
@@ -38,9 +38,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Bold";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -629,27 +629,26 @@ h6 {
 }
 
 .property-price {
-  margin: 0px 0px 6px 0px;
+  margin: 0px 0px 5px 0px;
   text-align: center;
   font-family: 'Montserrat-Light','Arial',sans-serif;
-  font-size: 21px;
+  font-size: 18px;
   color: #5d5d5d;
 }
 
 .property-price-value {
-  margin: 0px -10px 0px 0px;
   text-align: center;
-  font-size: 48px;
+  font-size: 40px;
   font-family: 'Montserrat','Arial',sans-serif;
   color: #4a4848;
 }
 
 .property-price-value span {
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .property__name {
-  margin: 0px 0px 8px 0px;
+  margin: 0px 0px 5px 0px;
   text-align: center;
   font-family: 'Montserrat-Light','Arial',sans-serif;
   font-weight: 300;
@@ -659,7 +658,7 @@ h6 {
 
 .property__value {
   text-align: center;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Montserrat','Arial',sans-serif;
   color: #4a4848;
   letter-spacing: 1px;
@@ -1141,9 +1140,9 @@ body {
 }
 
 .card__header {
-  height: 101px;
-  line-height: 101px;
-  font-size: 30px;
+  padding: 25px 0px;
+  font-size: 26px;
+  line-height: 26px;
   font-family: 'Montserrat','Arial',sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -1165,11 +1164,11 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  padding: 21px 0 20px 0;
+  padding: 20px 0;
 }
 
 .card__item_price {
-  padding: 35px 0;
+  padding: 20px 0;
 }
 
 .card__item:nth-child(even) {
@@ -1181,7 +1180,7 @@ body {
 }
 
 .card__footer {
-  padding: 52px 55px 55px 50px;
+  padding: 35px 50px;
   background-color: #e8ecf2;
 }
 
@@ -1225,15 +1224,15 @@ body {
 }
 
 .works__image {
-  padding: 300px 0 0 0px;
+  padding: 150px 0 0 0px;
   margin: 0px 0px 80px 0px;
 }
 
 .works__image_1 {
   position: absolute;
-  max-width: 30%;
+  max-width: 20%;
   top: 5px;
-  left: 0px;
+  left: 150px;
 }
 
 .works__image-sky {
@@ -1256,7 +1255,7 @@ body {
 .works__image_2 {
   display: block;
   margin: 0 auto;
-  width: 60%;
+  width: 35%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1315,18 +1314,18 @@ body {
 }
 
 .works__image-text-1 {
-  top: 95px;
-  left: 0;
+  top: 55px;
+  right: 250px;
 }
 
 .works__image-text-2 {
-  top: 230px;
-  left: 0;
+  top: 130px;
+  right: 180px;
 }
 
 .works__image-text-3 {
-  top: 365px;
-  left: 0;
+  top: 210px;
+  right: 220px;
 }
 
 .works__image-text-4 {
@@ -4156,7 +4155,10 @@ body {
   }
 
   .works__image_2 {
-    margin: 0 0 0 75px;
+    margin: 0 auto;
+    -webkit-transform: translate(-40%);
+        -ms-transform: translate(-40%);
+            transform: translate(-40%);
   }
 
   .works__image {
