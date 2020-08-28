@@ -725,7 +725,7 @@ body {
 }
 
 .major {
-  padding: 90px 20px 100px 20px;
+  padding: 60px 20px 100px 20px;
   margin: 80px 0px 0px 0px;
 }
 
@@ -760,13 +760,8 @@ body {
 }
 
 .major__content-column:first-child {
-  margin: 97px 0px 0px 0px;
   position: relative;
   z-index: 4;
-}
-
-.major__content-column:last-child {
-  margin: 0px -30px 0px 0px;
 }
 
 .major__title {
@@ -844,17 +839,19 @@ body {
 }
 
 .major__bg-image {
-  margin: 0px 0px 0px -55px;
+  padding: 15px 0px 0px 0px;
 }
 
 .major__bg-image img {
-  width: 100%;
+  display: block;
+  margin: 0px 0px 0px auto;
+  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .franchise {
-  padding: 34px 0 40px 0;
+  padding: 34px 0 55px 0;
 }
 
 .franchise__container {
@@ -1128,7 +1125,7 @@ body {
 .card {
   position: relative;
   z-index: 5;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 27.5px 0px 0px;
   -webkit-box-shadow: 30px 30px 150px -50px #000;
           box-shadow: 30px 30px 150px -50px #000;
   border-radius: 10px;
@@ -1216,7 +1213,7 @@ body {
 }
 
 .works {
-  padding: 0 0 75px 0;
+  padding: 0 0 125px 0;
 }
 
 .works__container {
@@ -1224,7 +1221,7 @@ body {
 }
 
 .works__image {
-  padding: 150px 0 0 0px;
+  padding: 135px 0 0 0px;
   margin: 0px 0px 80px 0px;
 }
 
@@ -1340,7 +1337,7 @@ body {
 }
 
 .steps {
-  padding: 75px 0px;
+  padding: 25px 0px 75px;
 }
 
 .steps__title {
@@ -1806,17 +1803,17 @@ body {
 }
 
 .partners {
-  padding: 95px 0 75px 0;
+  padding: 50px 0px 75px;
 }
 
 .partners__image {
   width: 100%;
-  margin: 0px 0px 100px -50px;
+  margin: 0px 0px 75px 0px;
   text-align: center;
 }
 
 .partners__image img {
-  width: 81%;
+  width: 55%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -4701,6 +4698,11 @@ body {
     margin: 35px auto 45px auto;
   }
 
+  .major__bg-image img {
+    margin: 0px auto;
+    width: 50%;
+  }
+
   .major {
     padding: 70px 0px 25px 0px;
     margin: 60px 0px 0px 0px;
@@ -5229,6 +5231,11 @@ body {
 }
 
 @media (max-width: 525px) {
+  .major__bg-image img {
+    margin: 0px auto;
+    width: 80%;
+  }
+
   .popup-table > .cell {
     padding: 40px 10px;
   }
