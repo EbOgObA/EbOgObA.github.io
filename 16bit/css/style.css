@@ -6,9 +6,9 @@
 */
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -22,17 +22,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -41,6 +33,14 @@
   font-family: "Montserrat-Light";
   font-display: swap;
   src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -167,7 +167,7 @@ h6 {
   left: 0;
   z-index: 90;
   width: 100%;
-  height: 80px;
+  padding: 5px 0px;
   background-color: #1c2f47;
   -webkit-box-shadow: 0 0px 10px #000;
           box-shadow: 0 0px 10px #000;
@@ -176,7 +176,7 @@ h6 {
 .header__container {
   height: 100%;
   padding: 0 20px;
-  max-width: 1210px;
+  max-width: 1030px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,14 +202,14 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
 }
 
 .header__logo a img {
-  width: 90px;
+  width: 75px;
   margin: 12px 0px 4px 0px;
 }
 
@@ -249,19 +249,17 @@ h6 {
 }
 
 .header__login-btn {
-  padding: 0px 40px 0px 20px;
+  padding: 15px 40px 15px 20px;
   position: relative;
   display: inline-block;
   min-width: 100px;
-  height: 53px;
   background-color: transparent;
   border-radius: 5px;
   font-family: 'Montserrat-Bold','Arial',sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  line-height: 51px;
   letter-spacing: 1.5px;
   white-space: nowrap;
   -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -288,8 +286,8 @@ h6 {
   padding: 0px 5px 0px 0px;
   top: 50%;
   right: 10px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -726,7 +724,7 @@ body {
 
 .major {
   padding: 60px 20px 100px 20px;
-  margin: 80px 0px 0px 0px;
+  margin: 53px 0px 0px 0px;
 }
 
 .major__container {
@@ -2076,7 +2074,7 @@ body {
 }
 
 .popup-details__content {
-  max-width: 450px;
+  max-width: 370px;
 }
 
 .popup-details__header {
@@ -2571,17 +2569,30 @@ body {
           transform: scale(0.98);
 }
 
+.popup-business .popup-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .popup-business__content {
   background-color: #283349;
-  padding: 30px 20px;
-  width: 470px;
+  padding: 25px 20px;
+  width: 300px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 470px;
           flex: 0 0 470px;
 }
 
 .popup-business-title {
-  font-size: 30px;
+  font-size: 18px;
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -2589,8 +2600,8 @@ body {
 
 .business-img {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 125px;
+  height: 125px;
   margin: 20px auto 20px auto;
   border-radius: 50%;
   border: 10px solid #323b52;
@@ -2604,8 +2615,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 80%;
-  max-height: 70%;
+  max-width: 65%;
+  max-height: 65%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -2631,7 +2642,7 @@ body {
   width: 100%;
   margin: 0px 10px;
   background-color: rgba(105, 186, 194, 0.3);
-  padding: 21px 25px;
+  padding: 14px 25px;
   font-size: 18px;
   border-radius: 10px;
   -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -4322,10 +4333,6 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 50px 0 0 0px;
-  }
-
-  .works__link {
-    margin: 30px 0px 0px 4px;
   }
 
   .works {
