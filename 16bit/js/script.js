@@ -173,17 +173,17 @@ $(document).ready(function () {
         $input.change();
         setBar();
         return false;
-    
     });
+
     // =======================================================================================================================
 
-    $('.popup-details__btn-continue').on('click', function(e){
-        if ($('.check-terms').hasClass('active')) {
-            return true;
-        } else {
-            e.preventDefault();
-        }
-    });
+    // $('.popup-details__btn-continue').on('click', function(e){
+    //     if ($('.check-terms').hasClass('active') || $('.check-terms').) {
+    //         return true;
+    //     } else {
+    //         e.preventDefault();
+    //     }
+    // });
 
     // =======================================================================================================================
 

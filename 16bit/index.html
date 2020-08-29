@@ -85,6 +85,24 @@
             </div>
         </div>
 
+        <!-- POPUP START BUSINESS -->
+        <div class="popup popup-business">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-business__content">
+                        <div class="popup-close"></div>
+                        <div class="popup-business-title">DO YOU HAVE EOS WALLET?</div>
+                        <div class="business-img">
+                            <img src="img/business.png" alt="#">
+                        </div>
+                        <div class="business-btns">
+                            <a href="http://backoffice.16bit.partners" class="business-btn">YES</a>
+                            <a href="#details" class="business-btn pl">NO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- POPUP DETAILES -->
         <div class="popup popup-details">
@@ -92,7 +110,7 @@
                 <div class="cell">
                     <div class="popup__content popup-details__content">
                         <div class="popup-close"></div>
-                        <div class="popup__title">
+                        <div class="popup__title popup-details__title">
                             YOUR ACCOUNT DETAILS
                         </div>
                         <div class="popup-details__header">
@@ -143,16 +161,17 @@
                                 After that period the Admin of the system will be able to restore it.
                             </p>
                             <label>
-                                <input class="check check-terms" type="checkbox">
+                                <input for="checkTermsOfUse" class="check check-terms req" type="checkbox">
                                 <span class="check-lic"></span>
-                                I&nbsp;understood&nbsp;everything&nbsp;right
+                                I&nbsp;understood&nbsp;everything&nbsp;right <br>
                                 and&nbsp;securely&nbsp;saved&nbsp;my&nbsp;keys
                             </label>
                         </div>
                         <div class="popup-details__buttons">
                             <button class="popup-details__btn-cancel">CANCEL</button>
-                            <a href="payment.html" class="popup-details__btn-continue">continue</a>
+                            <button form="checkTermsOfUse" class="popup-details__btn-continue" type="submite">continue</button>
                         </div>
+                        <form id="checkTermsOfUse" action="payment.html"></form>
                     </div>
                 </div>
             </div>
@@ -278,7 +297,7 @@
                                     project.
                                 </span>
                             </p>
-                            <a href="#" class="major__link">See the project</a>
+                            <a href="docs/16Bit.game Project 2020 (ENG).pdf" class="major__link">See the project</a>
                         </div>
                         <div class="major__content-column">
                             <div class="major__bg-image">
@@ -480,18 +499,39 @@
                     <h2 class="title works__title">HOW IT WORKS</h2>
                     <div class="works__content">
                         <div class="works__content-column">
-                            A multi-level global partner program has been implemented for the most effective development
-                            of the project. The tool includes several different payment plans, as well as the status of
-                            the General Partner, who receives his personal domain and the opportunity to develop the
-                            project as his own business.
+                            <p>
+                                In our partner program, everything is harmonious as in nature.
+                                The organicity and reliability of the structure can be shown by the example of a tree under the sun.
+                            </p>
+                            <p>
+                                The sun is a 16Bit.game service, a pristine source of energy without which nothing will grow.
+                            </p>
+                            <p>
+                                The basis: the roots and trunk of the tree are the General Partner, which forms the structure and ensures the stability of the entire system.
+                            </p>
+                            <p>
+                                Branches are dealers who develop the structure.
+                            </p>
+                            <p>
+                                Leafs on branches are referrals, they give additional necessary energy to the system.
+                            </p>
                         </div>
                         <div class="works__content-column">
-                            All invited users from the entire network of the General Partner are assigned to it for
-                            life. The system is fully implemented on smart contracts with infinite penetration, that is,
-                            the General Partner will receive a Commission from absolutely all levels of its structure,
-                            regardless of their number.
+                            <p>
+                                In total, as a result of the joint activities of all participants in the system, fruits are obtained - this is profit.
+                            </p>
+                            <p>
+                                All participants receive a share proportional to their participation in the profit process, according to the terms of the franchise.
+                            </p>
+                            <p>
+                                All partners and dealers can develop their own structure to infinite heights.
+                            </p>
+                            <p>
+                                The franchise is unlimited.
+                            </p>
                         </div>
                     </div>
+                    <a href="docs/16Bit.game%20Project%202020%20(ENG).pdf" target="_blank" class="works__link ">MARKETING PLAN</a>
                 </div>
             </section>
 
@@ -551,7 +591,7 @@
                                     </div>
                                 </div>
                                 <div class="step-item__footer">
-                                    Choose&nbsp;the&nbsp;franchise&nbsp;package that&nbsp;suits&nbsp;you
+                                    Choose the franchise package <br> that suits you
                                 </div>
                             </div>
                         </div>
@@ -609,7 +649,7 @@
                                 <div class="step-item__body">
                                     <img src="img/mac2.png" alt="#">
                                 </div>
-                                <a href="#message" class="step-item__btn pl">START BUSINESS</a>
+                                <a href="#business" class="step-item__btn pl">START BUSINESS</a>
                                 <div class="step-item__footer">
                                     Get your own online business <br> in just a few minutes
                                 </div>
