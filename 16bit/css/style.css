@@ -2080,7 +2080,7 @@ body {
 }
 
 .popup-details__header {
-  padding: 15px 25px;
+  padding: 10px 25px;
   background-color: #fff;
   color: #999999;
   font-family: 'Montserrat','Arial',sans-serif;
@@ -2112,12 +2112,12 @@ body {
 
 .popup-details__account-info-title {
   color: #9a9a9a;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .popup-details__account-info-link {
   display: inline-block;
-  margin: 10px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2129,11 +2129,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #1c2f47;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .popup-details__account-info-link .copy-btn {
   margin: 0px 0px 0px 10px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
 }
 
 .popup-details__account-info-link a {
@@ -2156,24 +2159,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .popup-details__warning img {
   display: inline-block;
   margin: 0px 25px 0px 0px;
+  width: 25px;
 }
 
 .popup-details__info {
-  padding: 15px 25px;
+  padding: 15px 25px 10px;
   background-color: #f0f8fb;
 }
 
 .popup-details__info p {
-  font-size: 14px;
+  font-size: 12px;
   color: #63666d;
   line-height: 1.5;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 .popup-details__info p span {
@@ -2181,7 +2185,7 @@ body {
 }
 
 .popup-details__info p:nth-child(3) {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .popup-details__info label {
@@ -2221,7 +2225,7 @@ body {
 }
 
 .popup-details__buttons {
-  padding: 10px 25px 15px;
+  padding: 5px 25px 15px;
   background-color: #f0f8fb;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -2266,7 +2270,7 @@ body {
 }
 
 .body-keys__item-subtitle {
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 5px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2278,20 +2282,26 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #9a9a9a;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+.body-keys__item-subtitle .copy-btn {
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
 }
 
 .body-keys__btn {
   position: relative;
   display: block;
-  margin: 15px auto 0px;
-  padding: 12px 0px;
+  margin: 15px auto 10px;
+  padding: 14px 20px 14px 0px;
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   border-radius: 10px;
   background-color: #e3e8eb;
   color: #109800;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -2309,6 +2319,8 @@ body {
 
 .body-keys__btn img {
   position: absolute;
+  width: 20px;
+  height: 20px;
   top: 50%;
   right: 25px;
   -webkit-transform: translate(0px, -50%);
