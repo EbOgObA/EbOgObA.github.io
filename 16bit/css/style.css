@@ -14,17 +14,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Bold";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -677,7 +677,7 @@ h6 {
 .is-copy:before {
   content: "";
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
   bottom: -10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -704,6 +704,10 @@ h6 {
   font-size: 12px;
   border-radius: 5px;
   padding: 5px;
+}
+
+.btn-clipboard {
+  position: relative;
 }
 
 a.gflag {
@@ -1976,6 +1980,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 570px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1985,7 +1992,7 @@ body {
   background-color: #fff;
   white-space: nowrap;
   border-radius: 5px;
-  padding: 10px 45px 10px 15px;
+  padding: 10px 15px;
 }
 
 .partners__key span {
@@ -1995,6 +2002,9 @@ body {
   overflow: hidden;
   -o-text-overflow: ellipsis;
      text-overflow: ellipsis;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .partners__key img {
@@ -2423,7 +2433,7 @@ body {
 }
 
 .body-keys .key {
-  padding: 3px 0px;
+  padding: 5px 0px;
   color: #1d2f47;
   overflow: hidden;
   -o-text-overflow: ellipsis;
