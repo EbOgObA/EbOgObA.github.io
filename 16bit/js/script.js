@@ -76,8 +76,14 @@ $(document).ready(function () {
     // ANCHORS
     $(".anchors").on("click", function (event) {
         event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top - 115;
+        var id = $(this).attr('href'), h, top;
+            // top = $(id).offset().top - h;
+        if (window.innerWidth > 768) {
+            h = 80;
+        } else {
+            h = 52;
+        }
+        top = $(id).offset().top - h;
         $('body,html').animate({ scrollTop: top }, 1500);
     });
 
