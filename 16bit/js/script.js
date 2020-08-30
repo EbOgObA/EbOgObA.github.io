@@ -130,6 +130,22 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
+    // CLIPBOARD
+    var clipboard = new ClipboardJS('.btn-clipboard');
+
+    clipboard.on('success', function(e) {
+        $('.btn-clipboard.is-copy').removeClass('is-copy').text('Копировать');
+        
+        $(e.trigger).text('Скопировано');
+        $(e.trigger).addClass('is-copy');
+
+        setTimeout(function() {
+            $('.btn-clipboard').removeClass('is-copy');
+        }, 800);
+    });
+
+    // =======================================================================================================================
+
     // TABS
     (function ($) {
         $(function () {
@@ -183,13 +199,38 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
-    // $('.popup-details__btn-continue').on('click', function(e){
-    //     if ($('.check-terms').hasClass('active') || $('.check-terms').) {
-    //         return true;
-    //     } else {
-    //         e.preventDefault();
-    //     }
-    // });
+    $('.popup-details__btn-continue').on('click', function(e){
+        if ($('.check-terms').hasClass('active')) {
+            return true;
+            // sessionStorage.setItem('check', 'true');
+        } else {
+            $('.check-lic').addClass('err');
+            // sessionStorage.removeItem('check', 'true');
+            e.preventDefault();
+        }
+    });
+    $('.popup-details__info label').on('click', function(e){
+        // if ($('.check-lic').hasClass('err')) {
+            $('.check-lic').removeClass('err');
+        // }
+    });
+
+    // (function($) {
+    //     $(function(){
+    //         var classView = localStorage.getItem('classView');
+    //         !!classView && $('#ajax-box').removeClass().addClass(classView);
+    //         $('button').on('click', function(e) {
+    //             if ($(this).hasClass('grid')) {
+    //                 $('#ajax-box').removeClass('list').addClass('grid');
+    //                 localStorage.setItem('classView', 'grid');
+    //             } else if ($(this).hasClass('list')) {
+    //                 $('#ajax-box').removeClass('grid').addClass('list');
+    //                 localStorage.setItem('classView', 'list');
+    //             }
+    //         });
+    //     })
+    // })(jQuery);
+        
 
     // =======================================================================================================================
 

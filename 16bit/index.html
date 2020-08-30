@@ -58,13 +58,13 @@
                                 <form action="#" class="body-login__first-form form-login">
                                     <div class="form-login__input-box">
                                         <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
-                                            class="input form-login__input req">
+                                            class="input form-login__input req clipboard-results">
                                         <!-- <img class="form-login__input-refresh" src="img/login-refresh.svg"
                                             alt="refresh">
                                         <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#"> -->
                                     </div>
                                     <div class="form-login__buttons buttons-login">
-                                        <button class="button-login button-login_paste">paste
+                                        <button class="button-login button-login_paste" type="button">paste
                                             <!-- <img src="img/copy-icon.png" alt="#"> -->
                                         </button>
                                         <button class="button-login button-login_login" type="submit">login</button>
@@ -124,15 +124,13 @@
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">owner</div>
                                     <p class="body-keys__item-subtitle">
-                                        <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn">copy
-                                            all</button>
+                                        <span id="key1" class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key1">copy all</button>
                                     </p>
                                 </div>
                                 <div class="body-keys__item">
                                     <div class="body-keys__item-title">active</div>
                                     <p class="body-keys__item-subtitle">
-                                        <span class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn">copy
-                                            all</button>
+                                        <span id="key2" class="key">5Jwds2iR7gfPG5Jwds2iR7gf</span><button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key2">copy all</button>
                                     </p>
                                 </div>
                             </div>
@@ -140,13 +138,10 @@
                         <div class="popup-details__account-info">
                             <p class="popup-details__account-info-title">Link to your account:</p>
                             <div class="popup-details__account-info-link">
-                                <a href="#">https://pac.16bit.game/miamibeach</a>
-                                <button class="copy-btn">copy all</button>
+                                <a id="account-link" href="#">https://pac.16bit.game/miamibeach</a>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#account-link">copy all</button>
                             </div>
-                            <!-- <div class="body-keys__btn">
-
-                            </div> -->
-                            <button class="body-keys__btn">copy all <img src="img/copy-icon.png" alt="Copy"></button>
+                            <button class="body-keys__btn">copy all<img src="img/copy-icon.png" alt="Copy"></button>
                         </div>
                         <div class="popup-details__warning">
                             <img src="img/warning.png" alt="warning">warning
@@ -164,7 +159,7 @@
                                 After that period the Admin of the system will be able to restore it.
                             </p>
                             <label>
-                                <input for="checkTermsOfUse" class="check check-terms req" type="checkbox">
+                                <input for="checkTermsOfUse" class="check check-terms" type="checkbox">
                                 <span class="check-lic"></span>
                                 I&nbsp;understood&nbsp;everything&nbsp;right <br>
                                 and&nbsp;securely&nbsp;saved&nbsp;my&nbsp;keys
@@ -363,7 +358,7 @@
                                     yourself and how you're going to develop the project.
                                 </p>
                             </div>
-                            <form action="#" class="franchise__form form-franchise" data-ms="ms_1">
+                            <form action="#thanks" class="franchise__form form-franchise" data-ms="ms_1">
                                 <div class="form-franchise__row">
                                     <textarea class="textarea input req message" name="Message"
                                         placeholder="Message..."></textarea>
@@ -751,7 +746,7 @@
                                 src="img/footer-mail.svg" alt="#">partner@16Bit.game</a>
                     </div>
                     <div class="footer-bottom__column">
-                        <a class="footer-bottom__terms-link" href="#">Terms of use</a>
+                        <!-- <a class="footer-bottom__terms-link" href="#">Terms of use</a> -->
                         <span class="footer-bottom__copyright">
                             2020 &#169;
                             <a class="footer__site-link" href="#">16Bit</a>
@@ -762,11 +757,17 @@
         </footer>
 
     </div>
+    
 
 
 
     <!-- jQuery -->
     <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- Clipboard -->
+    <script src="libs/clipboard.min.js"></script>
+    <!-- <script>
+        var clipboard = new ClipboardJS('.btn-clipboard');
+    </script> -->
     <!-- SCRIPTS -->
     <script src="js/script.js"></script>
 
