@@ -2999,6 +2999,9 @@ body {
 }
 
 .payment .item-choose.active {
+  -webkit-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
   opacity: 1;
 }
 
