@@ -26,8 +26,19 @@
                             <div class="body-login__first-info">
                                 <h3 class="body-login__first-info-title">PARTNERS BACKOFFICE</h3>
                                 <p class="body-login__first-info-text">
-                                    Now you will be redirected to the <a href="#">16Bit.partners</a> backoffice where you can to login with the EOS private key or SCATTER.
+                                    Now you will be redirected to the <a href="#">backoffice.16bit.partners</a> backoffice where you can to login with the EOS private key or&nbsp;SCATTER.
                                 </p>
+                            </div>
+                            <div class="body-login__second-info">
+                                <p class="body-login__second-info-text">
+                                    Please copy key before you will continue.
+                                </p>
+                                <div class="body-login__key">
+                                    Key: <span id="key4">e6eyj56en6wsjwss2w56jwssjrjfge567e5rjfge567e5</span>
+                                    <!-- <img
+                                        src="img/copy-icon.png" alt="Copy" class="btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key3"> -->
+                                        <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key4"></button>
+                                </div>
                             </div>
                         </div>
                         <div class="popup-login__buttons">
@@ -156,6 +167,47 @@
                     </a>
                     <span>PAYMENT</span>
                 </h2>
+                <div class="step-item__body">
+                    <div class="step-item__choose-item item-choose active">
+                        <label class="item-choose__label item-choose__label_green">
+                            <input class="item-choose__input" name="franchise" type="radio"
+                                form="steps-form" checked>
+                            <span class="check__box"></span>
+                            SUPER&nbsp;DEALER
+                        </label>
+                        <div class="item-choose__info">
+                            <div class="item-choose__info-name">3 Years</div>
+                            <div class="item-choose__info-percent">50%</div>
+                            <div class="item-choose__info-price">1500 EOS</div>
+                        </div>
+                    </div>
+                    <div class="step-item__choose-item item-choose">
+                        <label class="item-choose__label item-choose__label_aqua">
+                            <input class="item-choose__input" name="franchise" type="radio"
+                                form="steps-form">
+                            <span class="check__box"></span>
+                            DEALER
+                        </label>
+                        <div class="item-choose__info">
+                            <div class="item-choose__info-name">2 Years</div>
+                            <div class="item-choose__info-percent">45%</div>
+                            <div class="item-choose__info-price">1000 EOS</div>
+                        </div>
+                    </div>
+                    <div class="step-item__choose-item item-choose">
+                        <label class="item-choose__label item-choose__label_orange">
+                            <input class="item-choose__input" name="franchise" type="radio"
+                                form="steps-form">
+                            <span class="check__box"></span>
+                            SUB&nbsp;DEALER
+                        </label>
+                        <div class="item-choose__info">
+                            <div class="item-choose__info-name">1 Year</div>
+                            <div class="item-choose__info-percent">40%</div>
+                            <div class="item-choose__info-price">500 EOS</div>
+                        </div>
+                    </div>
+                </div>
                 <div class="payment__warning">
                     <div class="payment__warning-title">
                         <img src="img/warning.png" alt="#">
@@ -189,7 +241,103 @@
 
                     </div>
                 </div>
-                
+                <div class="payment__content">
+                    <div class="payment__content-column payment-item">
+                        <div class="payment-item__title">Pay by EOS</div>
+                        <div class="payment-item__info-keys">
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Adress:</span><span class="red"> *</span>
+                                <span id="key6" class="payment__keys-info-value" data-value="popcornmaker">popcornmaker</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key6"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Memo:</span><span class="red"> *</span>
+                                <span id="key7" class="payment__keys-info-value" data-value="popcornmaker">fgfhuevjfjddhiih</span>
+                                <button class="copy-btn btn-clipboard" data-clipboard-action="copy" data-clipboard-target="#key7"></button>
+                            </div>
+                            <div class="payment-item__info-keys-row payment__keys-info">
+                                <span>Amount:</span>
+                                <span id="key6" class="payment__keys-info-value" data-value="popcornmaker">100 EOS</span>
+                            </div>
+                            <button class="payment-item__info-keys-copy">COPY INVOICE <img src="img/copy-icon.png" alt="#"></button>
+                        </div>
+                        <div class="payment-item__video">
+                            <p>
+                                If you don`t have EOS, you can copy the invoice and send it to a friend who has EOS. <br>
+                                Or you can buy EOS at a variety of exchange offices.
+                            </p>
+                            <div class="payment-item__video-box video video_enabled">
+                                <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
+                                    <img class="video__media" src="img/video-img.png" alt="#">
+                                </a>
+                                <button class="video__button" aria-label="Play">
+                                    <svg width="68" height="48" viewBox="0 0 68 48">
+                                        <path class="video__button-shape"
+                                            d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                        </path>
+                                        <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="payment-item__provider">
+                            <h3 class="payment-item__provider-title">list of EOS exchanges</h3>
+                            <p class="payment-item__provider-text">Information provided by our partner</p>
+                            <a class="payment-item__provider-img" href="#"><img src="img/best-change.png" alt="BestChange"></a>
+                            <a class="payment-item__provider-link" href="#">See EOS exchangers</a>
+                        </div>
+                    </div>
+                    <div class="payment__content-column">
+                        <div class="payment-item__title payment-item__title_light">Pay by payeer</div>
+                        <div class="payment-item__payeer">
+                            <div class="payment-item__payeer-row">
+                                <a href="#"><img src="img/payeer.png" alt="Payeer"></a>
+                            </div>
+                            <div class="payment-item__payeer-row">
+                                <div class="payment-item__payeer-column">
+                                    <a href="#"><img src="img/Visa_Inc._logo.svg" alt="Visa"></a>
+                                </div>
+                                <div class="payment-item__payeer-column">
+                                    <a href="#"><img src="img/mastercard-logo.svg" alt="mastercard"></a>
+                                </div>
+                            </div>
+                            <div class="payment-item__payeer-row">
+                                <a href="#"><img src="img/crypto-icons.png" alt="Crypto"></a>
+                            </div>
+                        </div>
+                        <div class="payment-item__howtopay">
+                            <h3 class="payment-item__howtopay-title">
+                                How to pay
+                            </h3>
+                            <div class="payment-item__howtopay-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro possimus mollitia veniam id quos
+                                    amet eius assumenda 
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                </p>
+                                <div class="payment-item__video-box video video_enabled">
+                                    <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
+                                        <img class="video__media" src="img/video-img.png" alt="#">
+                                    </a>
+                                    <button class="video__button" aria-label="Play">
+                                        <svg width="68" height="48" viewBox="0 0 68 48">
+                                            <path class="video__button-shape"
+                                                d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                            </path>
+                                            <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <p>
+                                    Pay this invoice from the balance of your Payeer wallet
+                                </p>
+                                <a class="payment-item__howtopay-link" href="#">Pay this invoice</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

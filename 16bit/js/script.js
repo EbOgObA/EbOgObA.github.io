@@ -91,42 +91,42 @@ $(document).ready(function () {
 
 
     //SLIDERS
-    if ($('.pay-item__slider').length > 0) {
-        $('.pay-item__slider').slick({
-            //autoplay: true,
-            //infinite: false,
-            dots: true,
-            arrows: true,
-            accessibility: false,
-            slidesToShow: 1,
-            centerMode: true,
-            // autoplaySpeed: 3000,
-            //asNavFor:'',
-            //appendDots:
-            //appendArrows:$('.mainslider-arrows .container'),
-            nextArrow: '<button type="button" class="slick-next"></button>',
-            prevArrow: '<button type="button" class="slick-prev"></button>',
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        centerMode: true,
-                    }
-                }, {
-                    breakpoint: 670,
-                    settings: {
-                        // centerMode: false,
-                        arrow: false,
-                    }
-                }, {
-                    breakpoint: 425,
-                    settings: {
-                        centerMode: false,
-                    }
-                }
-            ]
-        });
-    }
+    // if ($('.pay-item__slider').length > 0) {
+    //     $('.pay-item__slider').slick({
+    //         //autoplay: true,
+    //         //infinite: false,
+    //         dots: true,
+    //         arrows: true,
+    //         accessibility: false,
+    //         slidesToShow: 1,
+    //         centerMode: true,
+    //         // autoplaySpeed: 3000,
+    //         //asNavFor:'',
+    //         //appendDots:
+    //         //appendArrows:$('.mainslider-arrows .container'),
+    //         nextArrow: '<button type="button" class="slick-next"></button>',
+    //         prevArrow: '<button type="button" class="slick-prev"></button>',
+    //         responsive: [
+    //             {
+    //                 breakpoint: 768,
+    //                 settings: {
+    //                     centerMode: true,
+    //                 }
+    //             }, {
+    //                 breakpoint: 670,
+    //                 settings: {
+    //                     // centerMode: false,
+    //                     arrow: false,
+    //                 }
+    //             }, {
+    //                 breakpoint: 425,
+    //                 settings: {
+    //                     centerMode: false,
+    //                 }
+    //             }
+    //         ]
+    //     });
+    // }
 
     // =======================================================================================================================
 
@@ -171,7 +171,11 @@ $(document).ready(function () {
     // })(jQuery);
 
     // =======================================================================================================================
-    
+
+
+    // =======================================================================================================================
+
+
     // RANGE
     // var $counter = $('#counter');
     // var $fill = $('.bar .fill');
@@ -216,12 +220,12 @@ $(document).ready(function () {
         
     // =======================================================================================================================
 
-    $('.form-aut__input-button-refresh').on('click', function() {
-        $(this).addClass('load');
-        setTimeout(function() {
-            $('.form-aut__input-button-refresh').removeClass('load');
-        }, 1000);
-    });
+    // $('.form-aut__input-button-refresh').on('click', function() {
+    //     $(this).addClass('load');
+    //     setTimeout(function() {
+    //         $('.form-aut__input-button-refresh').removeClass('load');
+    //     }, 1000);
+    // });
 
     // =======================================================================================================================
 
