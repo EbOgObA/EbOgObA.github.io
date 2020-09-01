@@ -136,7 +136,7 @@ $(document).ready(function () {
     clipboard.on('success', function(e) {
         $('.btn-clipboard.is-copy').removeClass('is-copy').text('Копировать');
         
-        $(e.trigger).text('Скопировано');
+        // $(e.trigger).text('Скопировано');
         $(e.trigger).addClass('is-copy');
 
         setTimeout(function() {
@@ -620,6 +620,27 @@ $(document).ready(function () {
             menuBody.classList.toggle("active");
         });
     }
+
+    // =======================================================================================================================
+
+    
+    $('.franchise-var').on('click', function() {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        let valFranch = $(this).parent().find('.item-choose__info-price').text();
+        $('.franchise-value').text(valFranch)
+    });
+    // $('.franchise1').on('click', function(){
+    //     $('.franchise1').addClass('active');    
+    //     $('.value-cal').text("1500");
+    // });
+    // $('.franchise2').on('click', function(){
+    //     $('.franchise2').addClass('active');    
+    //     $('.value-cal').text("1000");
+    // });
+    // $('.franchise3').on('click', function(){  
+    //     $('.franchise3').addClass('active');    
+    //     $('.value-cal').text("500");
+    // });
 
     // =======================================================================================================================
 
