@@ -14,6 +14,14 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Light";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat-Hairline";
   font-display: swap;
   src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
@@ -25,14 +33,6 @@
   font-family: "Montserrat-Bold";
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Light";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -2337,8 +2337,9 @@ body {
   margin: 0px 0px 10px 0px;
 }
 
-.popup-details__info label {
+.popup-details__info .check-terms__label {
   display: inline-block;
+  width: 100%;
   position: relative;
   padding: 0px 0px 0px 50px;
   font-size: 12px;
@@ -2347,7 +2348,7 @@ body {
   cursor: pointer;
 }
 
-.popup-details__info label .check-lic {
+.popup-details__info .check-terms__label .check-lic {
   display: block;
   width: 25px;
   height: 25px;
@@ -2362,16 +2363,16 @@ body {
   border: 2px solid #c6d4d9;
 }
 
-.popup-details__info label .check-lic.err {
+.popup-details__info .check-terms__label .check-lic.err {
   border: 2px solid #ff0000;
 }
 
-.popup-details__info label .check {
+.popup-details__info .check-terms__label .check {
   display: none;
 }
 
-.popup-details__info label .check:checked + .check-lic {
-  background-image: url("../img/check.png");
+.popup-details__info .check-terms__label .check:checked + .check-lic {
+  background-image: url("../img/check.png") !important;
   background-position: 3px 5px;
   background-repeat: no-repeat;
   background-size: 15px;
@@ -2996,12 +2997,12 @@ body {
   margin: 0px 25px 15px;
   max-width: 300px;
   opacity: 0.5;
-}
-
-.payment .item-choose.active {
   -webkit-transition: opacity .5s ease-in-out;
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
+}
+
+.payment .item-choose.active {
   opacity: 1;
 }
 
@@ -4852,7 +4853,7 @@ body {
   }
 
   .major__bg-image {
-    margin: 0px -20px;
+    margin: 0px -35px;
   }
 
   .franchise__content-header img {
