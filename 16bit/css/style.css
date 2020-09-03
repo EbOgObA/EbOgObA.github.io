@@ -5302,6 +5302,11 @@ body {
     font-size: 14px;
   }
 
+  .btn-back.active {
+    top: 78px;
+    left: 10px;
+  }
+
   .btn-back {
     max-width: calc(100% - 40px);
     margin: 0px 20px;
