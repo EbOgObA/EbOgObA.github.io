@@ -32,17 +32,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -627,6 +627,7 @@ h6 {
 
 .btn-back {
   position: absolute;
+  z-index: 49;
   padding: 15px 30px;
   top: 50%;
   left: 0;
@@ -643,11 +644,32 @@ h6 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  background-color: #e8ecf2;
+  -webkit-transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -webkit-box-shadow: #2f3d55 0 0px 0px 1px inset;
           box-shadow: #2f3d55 0 0px 0px 1px inset;
+}
+
+.btn-back.active {
+  position: fixed;
+  top: 103px;
+  left: 25px;
+  font-size: 0;
+  padding: 20px;
+}
+
+.btn-back.active svg {
+  width: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
 .btn-back:hover,
@@ -808,6 +830,8 @@ h6 {
   position: absolute;
   opacity: 0;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
   font-weight: 700;
   top: 33px;
   font-size: 15px;
@@ -3222,14 +3246,6 @@ body {
           flex: 1 1 calc(33% - 50px);
   margin: 0px 25px 15px;
   max-width: 300px;
-  opacity: 0.5;
-  -webkit-transition: opacity .5s ease-in-out;
-  -o-transition: opacity .5s ease-in-out;
-  transition: opacity .5s ease-in-out;
-}
-
-.payment .item-choose.active {
-  opacity: 1;
 }
 
 .payment .item-choose:first-child {
@@ -4433,6 +4449,12 @@ body {
 }
 
 @media (max-width: 800px) {
+  .btn-back.active {
+    max-width: 300px;
+    width: auto;
+    margin: 0px;
+  }
+
   .btn-back {
     position: static;
     max-width: 300px;
@@ -4584,8 +4606,8 @@ body {
   }
 
   .text {
-    font-size: 10px;
-    top: 17px;
+    font-size: 9px;
+    top: 19px;
   }
 
   .phone img {
@@ -5123,6 +5145,38 @@ body {
 
   .currency-pay {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .dws {
+    bottom: 35px;
+    right: 35px;
+  }
+
+  .pulse,
+  .bloc,
+  .phone {
+    width: 30px;
+    height: 30px;
+  }
+
+  .phone {
+    padding: 5px 0px;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .phone img {
+    height: 20px;
+  }
+
+  .pulse:hover img {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 

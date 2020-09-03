@@ -394,6 +394,17 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
+    $(window).scroll(function () {
+        var w = $(window).width();
+        if ($(window).scrollTop() > 60) {
+            $('.btn-back').addClass('active');
+        } else {
+            $('.btn-back').removeClass('active');
+        }
+    });
+
+    // =======================================================================================================================
+
     // Dynamic Adapt v.1
     // HTML data-move="where(uniq class name),position(digi),when(breakpoint)"
     // e.x. data-move="item,2,992"
@@ -616,17 +627,17 @@ $(document).ready(function () {
     });
 
     //UP
-    $(window).scroll(function () {
-        var w = $(window).width();
-        if ($(window).scrollTop() > 500) {
-            $('.up').fadeIn(300);
-        } else {
-            $('.up').fadeOut(300);
-        }
-    });
-    $('.up').click(function (event) {
-        $('body,html').animate({ scrollTop: 0 }, 300);
-    });
+    // $(window).scroll(function () {
+    //     var w = $(window).width();
+    //     if ($(window).scrollTop() > 500) {
+    //         $('.up').fadeIn(300);
+    //     } else {
+    //         $('.up').fadeOut(300);
+    //     }
+    // });
+    // $('.up').click(function (event) {
+    //     $('body,html').animate({ scrollTop: 0 }, 300);
+    // });
 
     // $('body').on('click', '.tab__navitem', function (event) {
     //     var eq = $(this).index();
