@@ -171,15 +171,77 @@ $(document).ready(function () {
     // })(jQuery);
 
 
-    (function($) {
-        $(function() {
-            $('.tabs__caption').on('click', '.item-choose:not(.active)', function() {
-                $(this)
-                .addClass('active').siblings().removeClass('active')
-                .closest('.tabs').find('.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-            });
-        });
-    })(jQuery);
+    // (function($) {
+    //     $(function() {
+    //         $('.tabs__caption').on('click', '.item-choose__label:not(.active)', function() {
+    //             $(this)
+    //             .addClass('active').parent().siblings().children().removeClass('active')
+    //             .closest('.tabs').find('.tabs__content').removeClass('active').eq($(this).parent().index()).addClass('active');
+    //         });
+    //     });
+    // })(jQuery);
+
+    // var $tabs = function (target) {
+    //     var
+    //         _elemTabs = (typeof target === 'string' ? document.querySelector(target) : target),
+    //         _eventTabsShow,
+    //     _showTab = function (tabsLinkTarget) {
+    //         var tabsPaneTarget, tabsLinkActive, tabsPaneShow;
+    //         tabsPaneTarget = document.querySelector(tabsLinkTarget.getAttribute('href'));
+    //         tabsLinkActive = tabsLinkTarget.parentElement.querySelector('.tabs__link_active');
+    //         tabsPaneShow = tabsPaneTarget.parentElement.querySelector('.tabs__pane_show');
+    //         // если следующая вкладка равна активной, то завершаем работу
+    //         if (tabsLinkTarget === tabsLinkActive) {
+    //             return;
+    //         }
+    //         // удаляем классы у текущих активных элементов
+    //         if (tabsLinkActive !== null) {
+    //             tabsLinkActive.classList.remove('tabs__link_active');
+    //         }
+    //         if (tabsPaneShow !== null) {
+    //             tabsPaneShow.classList.remove('tabs__pane_show');
+    //         }
+    //         // добавляем классы к элементам (в завимости от выбранной вкладки)
+    //         tabsLinkTarget.classList.add('tabs__link_active');
+    //         tabsPaneTarget.classList.add('tabs__pane_show');
+    //         document.dispatchEvent(_eventTabsShow);
+    //     },
+    //     _switchTabTo = function (tabsLinkIndex) {
+    //         var tabsLinks = _elemTabs.querySelectorAll('.tabs__link');
+    //         if (tabsLinks.length > 0) {
+    //             if (tabsLinkIndex > tabsLinks.length) {
+    //             tabsLinkIndex = tabsLinks.length;
+    //             } else if (tabsLinkIndex < 1) {
+    //             tabsLinkIndex = 1;
+    //             }
+    //             _showTab(tabsLinks[tabsLinkIndex - 1]);
+    //         }
+    //     };
+    
+    //     _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
+    
+    //     _elemTabs.addEventListener('click', function (e) {
+    //         var tabsLinkTarget = e.target;
+    //         // завершаем выполнение функции, если кликнули не по ссылке
+    //         if (!tabsLinkTarget.classList.contains('tabs__link')) {
+    //         return;
+    //         }
+    //         // отменяем стандартное действие
+    //         e.preventDefault();
+    //         _showTab(tabsLinkTarget);
+    //     });
+    
+    //     return {
+    //         showTab: function (target) {
+    //         _showTab(target);
+    //         },
+    //         switchTabTo: function (index) {
+    //         _switchTabTo(index);
+    //         }
+    //     }
+    // };
+    
+    // $tabs('.tabs');
 
     // =======================================================================================================================
 
@@ -557,12 +619,12 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var w = $(window).width();
         if ($(window).scrollTop() > 500) {
-            $('#up').fadeIn(300);
+            $('.up').fadeIn(300);
         } else {
-            $('#up').fadeOut(300);
+            $('.up').fadeOut(300);
         }
     });
-    $('#up').click(function (event) {
+    $('.up').click(function (event) {
         $('body,html').animate({ scrollTop: 0 }, 300);
     });
 
@@ -727,11 +789,11 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     
-    // $('.franchise-var').on('click', function() {
-    //     $(this).parent().addClass('active').siblings().removeClass('active');
-    //     let valFranch = $(this).next().children('.item-choose__info-price').text();
-    //     $('.franchise-value').text(valFranch)
-    // });
+    $('body').on('click','.franchise-var', function() {
+        $(this).parent().addClass('active').siblings().removeClass('active');
+        let valFranch = $(this).next().children('.item-choose__info-price').text();
+        $('.franchise-value').text(valFranch)
+    });
 
     // =======================================================================================================================
 

@@ -32,17 +32,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -763,7 +763,7 @@ h6 {
 
 .dws {
   position: fixed;
-  z-index: 1001;
+  z-index: 99;
   bottom: 100px;
   right: 100px;
   -webkit-transform: translate(50%, 50%);
@@ -809,7 +809,7 @@ h6 {
   opacity: 0;
   text-transform: uppercase;
   font-weight: 700;
-  top: 28px;
+  top: 33px;
   font-size: 15px;
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
@@ -930,11 +930,11 @@ h6 {
 }
 
 .btn__scroll-up {
+  display: none;
   position: fixed;
-  z-index: 1001;
+  z-index: 99;
   top: 103px;
   left: 50px;
-  display: none;
   padding: 10px;
   width: 50px;
   height: 50px;
@@ -4338,7 +4338,6 @@ body {
   }
 
   .payment .item-choose {
-    opacity: 0.75;
     width: 100%;
   }
 
@@ -4566,6 +4565,31 @@ body {
 
   .title {
     font-size: 30px;
+  }
+
+  .dws {
+    bottom: 50px;
+    right: 50px;
+  }
+
+  .pulse,
+  .bloc,
+  .phone {
+    width: 50px;
+    height: 50px;
+  }
+
+  .phone {
+    padding: 10px 0px;
+  }
+
+  .text {
+    font-size: 10px;
+    top: 17px;
+  }
+
+  .phone img {
+    height: 30px;
   }
 
   .bg-decor-1 {
