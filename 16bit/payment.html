@@ -12,6 +12,27 @@
 <body>
     <div class="wrapper">
 
+        <!-- COMMUNICATION BUTTON -->
+        <div class="dws">
+            <div class="pulse">
+                <div class="bloc"></div>
+                <div class="phone"><img src="img/telephone-handle-silhouette.svg"></div>
+                <div class="text">Кнопка связи</div>
+            </div>
+        </div>
+
+        <!-- BUTTON SCROLL UP -->
+        <button class="btn__scroll-up" id="up">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 256 256" style="enable-background:new 0 0 256 256;" xml:space="preserve">
+                <g>
+                    <g>
+                        <polygon points="128,48.907 0,176.907 30.187,207.093 128,109.28 225.813,207.093 256,176.907 		"/>
+                    </g>
+                </g>
+            </svg>
+        </button>
 
         <!-- POPUP FORWARD LOGIN  -->
         <div class="popup popup-login">
@@ -147,7 +168,7 @@
             </div>
         </header>
 
-        <section class="payment">
+        <section class="payment tabs">
             <div class="payment__container-white">
                 <div class="payment__container">
                     <h2 class="title payment__title">
@@ -168,7 +189,7 @@
                         </a>
                         <span>PAYMENT</span>
                     </h2>
-                    <div class="step-item__body">
+                    <div class="step-item__body tabs__caption">
                         <div class="step-item__choose-item item-choose active">
                             <label class="item-choose__label item-choose__label_green franchise-var">
                                 <input class="item-choose__input" name="franchise" type="radio"
@@ -261,7 +282,9 @@
                             </div>
                             <div class="payment-item__info-keys-row payment__keys-info">
                                 <span>Amount:</span>
-                                <span id="key6" class="payment__keys-info-value franchise-value  notranslate" data-value="popcornmaker">100 EOS</span>
+                                <span class="payment__keys-info-value franchise-value notranslate tabs__content active">1500 EOS</span>
+                                <span class="payment__keys-info-value franchise-value notranslate tabs__content">1000 EOS</span>
+                                <span class="payment__keys-info-value franchise-value notranslate tabs__content">500 EOS</span>
                             </div>
                             <button class="payment-item__info-keys-copy btn-clipboard" data-clipboard-action="copy" data-clipboard-target=".private-key">COPY INVOICE <img src="img/copy-icon.png" alt="#"></button>
                             <p class="visually-hidden private-key">

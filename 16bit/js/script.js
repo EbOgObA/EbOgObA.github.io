@@ -150,25 +150,36 @@ $(document).ready(function () {
     // (function ($) {
     //     $(function () {
 
-    //         $('ul.tabs__caption').each(function (i) {
+    //         $('.tabs__caption').each(function (i) {
     //             var storage = localStorage.getItem('tab' + i);
     //             if (storage) {
-    //                 $(this).find('li').removeClass('active').eq(storage).addClass('active')
+    //                 $(this).find('.item-choose').removeClass('active').eq(storage).addClass('active')
     //                     .closest('div.tabs').find('div.tabs__content').removeClass('active').eq(storage).addClass('active');
     //             }
     //         });
 
-    //         $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+    //         $('.tabs__caption').on('click', '.item-choose:not(.active)', function () {
     //             $(this)
     //                 .addClass('active').siblings().removeClass('active')
     //                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-    //             var ulIndex = $('ul.tabs__caption').index($(this).parents('ul.tabs__caption'));
+    //             var ulIndex = $('.tabs__caption').index($(this).parents('.tabs__caption'));
     //             localStorage.removeItem('tab' + ulIndex);
     //             localStorage.setItem('tab' + ulIndex, $(this).index());
     //         });
 
     //     });
     // })(jQuery);
+
+
+    (function($) {
+        $(function() {
+            $('.tabs__caption').on('click', '.item-choose:not(.active)', function() {
+                $(this)
+                .addClass('active').siblings().removeClass('active')
+                .closest('.tabs').find('.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+            });
+        });
+    })(jQuery);
 
     // =======================================================================================================================
 
@@ -222,7 +233,7 @@ $(document).ready(function () {
             // если в localStorage уже есть данные 
             // сохраненые под ключем с именем this.name
             // то считываем их в this.hash
-            let text = localStorage.getItem(this.name);
+            let text = sessionStorage.getItem(this.name);
             if(text)
                 this.hash = JSON.parse(text);
                 // сохраняем ассоциативный массив this.hash в
@@ -253,7 +264,7 @@ $(document).ready(function () {
             const text = JSON.stringify(this.hash);
             // сохраняем строку text в localStorage под
             // именем this.name
-            localStorage.setItem(this.name, text);      
+            sessionStorage.setItem(this.name, text);      
         }
         
     }
@@ -276,23 +287,39 @@ $(document).ready(function () {
         });
     });
 
-
-    $('.check-terms__label').on('click', function(e){
-        $('.check-lic').removeClass('err');
-    });
-    $('.popup-details__btn-continue').on('click', function(e){
-        let state;
+    let state;
+    function sortCheckboxStore() {
         checkbox_store.list.forEach(function(value,key) {
             return state = value.state;
-        });
+        }); 
+    }
+    
+    $('.check-terms__label').on('click', function(e){
+        sortCheckboxStore();
+        $('.check-lic').hasClass('err')?$('.check-lic').removeClass('err'):true;
+        if (state === undefined || checkbox_store.list.length == 0) {
+            sessionStorage.setItem('btnContinue','active');
+            $('#popup-details__btn-continue').addClass('active');
+        } else {
+            sessionStorage.removeItem('btnContinue','active');
+            $('#popup-details__btn-continue').removeClass('active');
+        }
+    });
+    if (sessionStorage.getItem('btnContinue')) {
+        $('#popup-details__btn-continue').addClass('active');
+    } else {
+        sessionStorage.removeItem('btnContinue');
+        $('#popup-details__btn-continue').removeClass('active');
+    }
+    $('.popup-details__btn-continue').on('click', function(e){
+        sortCheckboxStore();
         if (state === undefined || checkbox_store.list.length == 0) {
             e.preventDefault();
             $('.check-lic').addClass('err');
         } else {
             return true;
         }
-    });  
-
+    });
 
     // =======================================================================================================================
 
@@ -527,17 +554,17 @@ $(document).ready(function () {
     });
 
     //UP
-    // $(window).scroll(function () {
-    //     var w = $(window).width();
-    //     if ($(window).scrollTop() > 50) {
-    //         $('#up').fadeIn(300);
-    //     } else {
-    //         $('#up').fadeOut(300);
-    //     }
-    // });
-    // $('#up').click(function (event) {
-    //     $('body,html').animate({ scrollTop: 0 }, 300);
-    // });
+    $(window).scroll(function () {
+        var w = $(window).width();
+        if ($(window).scrollTop() > 500) {
+            $('#up').fadeIn(300);
+        } else {
+            $('#up').fadeOut(300);
+        }
+    });
+    $('#up').click(function (event) {
+        $('body,html').animate({ scrollTop: 0 }, 300);
+    });
 
     // $('body').on('click', '.tab__navitem', function (event) {
     //     var eq = $(this).index();
@@ -700,11 +727,11 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     
-    $('.franchise-var').on('click', function() {
-        $(this).parent().addClass('active').siblings().removeClass('active');
-        let valFranch = $(this).next().children('.item-choose__info-price').text();
-        $('.franchise-value').text(valFranch)
-    });
+    // $('.franchise-var').on('click', function() {
+    //     $(this).parent().addClass('active').siblings().removeClass('active');
+    //     let valFranch = $(this).next().children('.item-choose__info-price').text();
+    //     $('.franchise-value').text(valFranch)
+    // });
 
     // =======================================================================================================================
 
