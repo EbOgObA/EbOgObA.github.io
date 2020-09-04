@@ -5178,12 +5178,12 @@ body {
   .pulse,
   .bloc,
   .phone {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .phone {
-    padding: 5px 0px;
+    padding: 10px 0px;
   }
 
   .text {
