@@ -172,7 +172,7 @@
             <div class="payment__container-white">
                 <div class="payment__container">
                     <h2 class="title payment__title">
-                        <a href="index.html" class="btn-back">
+                        <a href="#" onclick="javascript:history.back(); return false;" class="btn-back">
                             back to franchises
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -249,13 +249,13 @@
                             this is a smart contract account that creates new EOS wallets.
                         </p>
                         <p>
-                            <b>MEMO</b> is&nbsp;<span class="notranslate">your&nbsp;ID</span>, and the smart
+                            <b>MEMO</b> is&nbsp;<span>your&nbsp;ID</span>, and the smart
                             contract
                             will distinguish you from other users and credit the funds to your account.
                         </p>
-                        <p>
-                            !!! Be sure to enter your MEMO on the payment page so your money doesn't dissolve in
-                            space!!!
+                        <p class="red">
+                            Be sure to enter your MEMO on the payment page so your money doesn't dissolve in
+                            space!
                         </p>
                         <p>
                             Please remember that this is a blockchain and all transactions on the network are
@@ -288,16 +288,18 @@
                             </div>
                             <button class="payment-item__info-keys-copy btn-clipboard" data-clipboard-action="copy" data-clipboard-target=".private-key">COPY INVOICE <img src="img/copy-icon.png" alt="#"></button>
                             <p class="visually-hidden private-key">
-                                Your private keys from backoffice.16bit.partners <br>
-                                Owner: <span class="notranslate">5JFVT7qHKaZnKJm5pLLddK42c4Ns</span><br>
-                                Active: <span class="notranslate">ddK42c4NsSGZpsDJEkZB8SdLdMau</span><br>
-                                Link to your virtual office: https://onyx.16Bit.partners/maimibeach
+                                Send: <span class="notranslate franchise-value">1500 EOS</span><br>
+                                to address: <span class="notranslate">popcornmaker</span><br>
+                                MEMO: <span class="notranslate">105674370</span><br>
                             </p>
                         </div>
                         <div class="payment-item__video">
                             <p>
                                 If you don`t have EOS, you can copy the invoice and send it to a friend who has EOS. <br>
                                 Or you can buy EOS at a variety of exchange offices.
+                            </p>
+                            <p>
+                                How to do this, watch the video.
                             </p>
                             <div class="payment-item__video-box video video_enabled">
                                 <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
@@ -317,7 +319,7 @@
                             <h3 class="payment-item__provider-title">list of EOS exchanges</h3>
                             <p class="payment-item__provider-text">Information provided by our partner</p>
                             <a class="payment-item__provider-img" href="#"><img src="img/best-change.png" alt="BestChange"></a>
-                            <a class="payment-item__provider-link" href="https://www.bestchange.ru/tinkoff-to-eos.html">See EOS exchangers</a>
+                            <a class="payment-item__provider-link" href="https://www.bestchange.ru/tinkoff-to-eos.html">See EOS exchanges</a>
                         </div>
                     </div>
                     <div class="payment__content-column">
@@ -344,11 +346,10 @@
                             </h3>
                             <div class="payment-item__howtopay-content">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro possimus mollitia veniam id quos
-                                    amet eius assumenda 
+                                    There are restrictions when paying with a credit card. In this regard, payment can be made in several stages. After the first deposit, your EOS account will be created, activated and replenished. Next, you will be able to log in to the partner's personal account with the keys that you saved and there replenish your EOS account up to the necessary amount to activate the license.
                                 </p>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Payment by cryptocurrency or from the Payeer wallet passes without restrictions.
                                 </p>
                                 <div class="payment-item__video-box video video_enabled">
                                     <a class="video__link" href="https://youtu.be/FJZtLvHtC5E">
@@ -364,7 +365,7 @@
                                     </button>
                                 </div>
                                 <p>
-                                    Pay this invoice from the balance of your Payeer wallet
+                                    Pay this invoice with credit card, cryptocurrencies or from the balance of your Payeer wallet.
                                 </p>
                                 <a class="payment-item__howtopay-link" href="#">Pay this invoice</a>
                             </div>

@@ -3210,6 +3210,10 @@ body {
   margin: 0px 0px 10px 0px;
 }
 
+.payment__warning-text p.red {
+  color: red;
+}
+
 .payment__warning-text b {
   color: #2f364a;
 }
@@ -3310,7 +3314,7 @@ body {
   position: relative;
   padding: 17px 70px;
   font-family: "Montserrat",Arial,sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   color: #fff;
   text-transform: uppercase;
   background-color: #2f3d55;
@@ -3336,6 +3340,17 @@ body {
 }
 
 .payment-item__info-keys {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 30px;
   background-color: #1e293a;
 }
@@ -3421,6 +3436,18 @@ body {
 }
 
 .payment-item__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
   padding: 30px;
   background-color: #2f3d55;
 }
@@ -3472,6 +3499,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
   background-color: #1e293a;
 }
 
@@ -3532,7 +3560,7 @@ body {
 }
 
 .payment-item__payeer {
-  padding: 10px 30px;
+  padding: 5px 30px;
 }
 
 .payment-item__payeer-row {
@@ -3566,19 +3594,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .payment-item__payeer-column img {
   width: 100%;
-  max-width: 200px;
+  max-width: 120px;
 }
 
 .payment-item__howtopay {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 30px 0px;
+  padding: 5px 0px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3593,7 +3621,7 @@ body {
 }
 
 .payment-item__howtopay .payment-item__video-box {
-  margin: 0px 0px 20px;
+  margin: 0px 0px 10px;
 }
 
 .payment-item__howtopay-title {
@@ -3610,7 +3638,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 30px 30px 0px;
+  padding: 10px 30px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3628,7 +3656,7 @@ body {
   font-size: 16px;
   color: #9d9fa3;
   line-height: 1.6;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 10px;
 }
 
 .payment-item__howtopay-link {
@@ -5026,7 +5054,7 @@ body {
   }
 
   .payment-item__payeer {
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
 
   .payment-item__howtopay-content {
