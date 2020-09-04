@@ -3654,6 +3654,7 @@ body {
 
 .payment-item__howtopay-content p {
   font-size: 16px;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
   color: #9d9fa3;
   line-height: 1.6;
   margin: 0px 0px 10px;
