@@ -8,9 +8,9 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -19,14 +19,6 @@
   font-family: "Montserrat-Bold";
   font-display: swap;
   src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Hairline";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -43,6 +35,14 @@
   font-family: "Montserrat";
   font-display: swap;
   src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -629,13 +629,8 @@ h6 {
   position: absolute;
   z-index: 49;
   padding: 15px 30px;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform: translate(0px, -50%);
-  -webkit-transform: translate(0px, -50%);
-  -moz-transform: translate(0px, -50%);
-  -ms-transform: translate(0px, -50%);
-  -o-transform: translate(0px, -50%);
   font-size: 16px;
   text-transform: uppercase;
   color: #2f3d55;
@@ -645,18 +640,18 @@ h6 {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   background-color: #e8ecf2;
-  -webkit-transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -o-transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -webkit-transition: top 0.25s ease-in-out, -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: top 0.25s ease-in-out, -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), top 0.25s ease-in-out;
+  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), top 0.25s ease-in-out;
+  transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), top 0.25s ease-in-out, -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -webkit-box-shadow: #2f3d55 0 0px 0px 1px inset;
           box-shadow: #2f3d55 0 0px 0px 1px inset;
 }
 
 .btn-back.active {
   position: fixed;
-  top: 103px;
+  top: 78px;
   left: 25px;
   font-size: 0;
   padding: 20px;
@@ -4133,6 +4128,11 @@ body {
     max-width: 175px;
   }
 
+  .btn-back.active {
+    left: 15px;
+    top: 68px;
+  }
+
   .dws {
     bottom: 65px;
     right: 65px;
@@ -4448,19 +4448,36 @@ body {
   }
 }
 
+@media (max-width: 970px) {
+  .btn-back.active {
+    left: 40px;
+  }
+}
+
 @media (max-width: 800px) {
   .btn-back.active {
     max-width: 300px;
     width: auto;
     margin: 0px;
+    -webkit-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
   }
 
   .btn-back {
-    position: static;
+    top: -60px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     max-width: 300px;
     width: 100%;
     display: block;
     margin: 0px auto;
+  }
+
+  .payment__container-white {
+    padding: 90px 0px 0px;
   }
 
   .payment {
@@ -4587,6 +4604,10 @@ body {
 
   .title {
     font-size: 30px;
+  }
+
+  .btn-back.active {
+    left: 30px;
   }
 
   .dws {
@@ -5303,13 +5324,12 @@ body {
   }
 
   .btn-back.active {
-    top: 78px;
     left: 10px;
   }
 
   .btn-back {
     max-width: calc(100% - 40px);
-    margin: 0px 20px;
+    margin: 0px;
   }
 
   .major__content-column:first-child {
