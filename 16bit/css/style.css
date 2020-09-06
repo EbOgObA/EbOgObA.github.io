@@ -8,9 +8,9 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -24,9 +24,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -40,9 +40,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -759,6 +759,7 @@ h6 {
   background-color: #1c2f47;
   color: #fff;
   font-size: 12px;
+  font-family: 'Montserrat','Arial',sans-serif;
   text-transform: capitalize;
   border-radius: 5px;
   padding: 5px;
@@ -780,12 +781,28 @@ h6 {
 
 .dws {
   position: fixed;
-  z-index: 99;
+  z-index: 98;
   bottom: 100px;
   right: 100px;
   -webkit-transform: translate(50%, 50%);
       -ms-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
+}
+
+.dws:after {
+  content: "CHAT ME";
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  bottom: -20px;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 16px;
+  font-family: 'Montserrat','Arial',sans-serif;
+  color: #000;
+  white-space: nowrap;
+  text-shadow: 0 0 5px #fff;
 }
 
 .pulse,
@@ -4162,6 +4179,11 @@ body {
     top: 68px;
   }
 
+  .dws:after {
+    font-size: 12px;
+    bottom: -15px;
+  }
+
   .dws {
     bottom: 65px;
     right: 65px;
@@ -5200,7 +5222,7 @@ body {
 
 @media (max-width: 550px) {
   .dws {
-    bottom: 35px;
+    bottom: 45px;
     right: 35px;
   }
 
