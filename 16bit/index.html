@@ -7,6 +7,26 @@
     <title>16BIT</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+        function showPrefferedOptions(oSelect) {
+            var aOptionsValues = [];
+            var aOptions = getSelectedIndexes(oSelect);
+            for (var i = 0; i < aOptions.length; i++) {
+                aOptionsValues.push(aOptions[i].substring(3));
+            }
+            document.querySelector('.header__translate-flag').src = 'img/flags/' + aOptionsValues + '.png';
+        }
+        function getSelectedIndexes(oSelect) {
+            var aSelected = [];
+            for (var i = 0; i < oSelect.options.length; i++) {
+                if (oSelect.options[i].selected) {
+                    aSelected.push(oSelect.options[i].getAttribute('value'));
+                }
+            }
+            
+            return aSelected;
+        }
+    </script>
 </head>
 
 <body>
@@ -218,14 +238,12 @@
                 <div class="header__logo">
                     <a href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"><span class="notranslate">franchising</span></a>
                 </div>
+                
                 <div class="header__translate">
-                    <!-- <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl"
-                        style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="16"
-                            width="16" alt="English" /></a>
-                    <a href="#" onclick="doGTranslate('en|ru');return false;" title="Russian" class="gflag nturl"
-                        style="background-position:-500px -200px;"><img src="//gtranslate.net/flags/blank.png"
-                            height="16" width="16" alt="Russian" /></a> -->
-                    <select class="header__translate-select" id="select-lang" onchange="doGTranslate(this);">
+                    <div class="header__translate-flag-box">
+                        <img src="img/flags/en.png" alt="africaans" class="header__translate-flag">
+                    </div>
+                    <select class="header__translate-select" id="select-lang" onchange="showPrefferedOptions(this);doGTranslate(this);">
                         <!-- <option value="">Select Language</option> -->
                         <option value="en|af">Afrikaans</option>
                         <option value="en|sq">Albanian</option>
