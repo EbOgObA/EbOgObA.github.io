@@ -20,6 +20,151 @@ $(document).ready(function () {
     // });
 
     // =======================================================================================================================
+
+    const control = {
+        next(carousel) {
+    
+            const elLength = carousel.find('.bit_carousel-item').length;
+            const current = carousel.find('.bit_carousel-item.active').first();
+            let prev = current.prev();
+            let next = current.next();
+            if (!prev.length) prev = carousel.find('.bit_carousel-item').last();
+    
+            if (!next.length) next = carousel.find('.bit_carousel-item').first();
+            let double = next.next();
+            if (!double.length) double = carousel.find('.bit_carousel-item').first();
+            let triple = double.next();
+            if (!triple.length) triple = carousel.find('.bit_carousel-item').first();
+    
+            if (current) {
+                current.addClass('prev');
+                current.removeClass('active');
+                current.css('opacity', .4);
+            }
+    
+            if (prev) {
+                prev.css('opacity', 0);
+            }
+    
+            if (next) {
+                next.addClass('active');
+                next.removeClass('next');
+                next.css('opacity', 1);
+            }
+    
+            if (double) {
+                double.addClass('next');
+                double.removeClass('prev');
+                double.css('opacity', .4);
+            }
+            if (elLength > 3 && triple) {
+                triple.addClass('next');
+                triple.removeClass('prev');
+                triple.css('opacity', 0);
+            }
+    
+        },
+        prev(carousel) {
+            const elLength = carousel.find('.bit_carousel-item').length;
+            const current = carousel.find('.bit_carousel-item.active').first();
+            let prev = current.prev();
+            let next = current.next();
+            if (!next.length) next = carousel.find('.bit_carousel-item').first();
+    
+            if (!prev.length) prev = carousel.find('.bit_carousel-item').last();
+            let double = prev.prev();
+            if (!double.length) double = carousel.find('.bit_carousel-item').last();
+            let triple = double.prev();
+            if (!triple.length) triple = carousel.find('.bit_carousel-item').last();
+    
+            if (current) {
+                current.addClass('next');
+                current.removeClass('active');
+                current.css('opacity', .4);
+            }
+    
+            if (next) {
+                next.css('opacity', 0);
+            }
+    
+            if (prev) {
+                prev.addClass('active');
+                prev.removeClass('prev');
+                prev.css('opacity', 1);
+            }
+    
+            if (double) {
+                double.addClass('prev');
+                double.removeClass('next');
+                double.css('opacity', .4);
+            }
+            if (elLength > 3 && triple) {
+                triple.addClass('prev');
+                triple.removeClass('next');
+                triple.css('opacity', 0);
+            }
+        }
+    };
+    
+    function carouselInit(el) {
+        if (!el) return;
+        const carousel = $(el);
+        const dots = [];
+        carousel.find('.bit_carousel-item').each((idx, item) => {
+            const dot = document.createElement('div');
+            dot.classList.add('bit_carousel-dots');
+            if (idx === 0) dot.classList.add('bit_carousel-dots-active');
+            carousel.find('.bit_carousel-dots-wrapper').append(dot);
+            dots.push(dot);
+        });
+        carousel.find('.bit_carousel-item-arrow-prev').on('click', e => {
+            // console.log(carousel);
+            control.prev(carousel);
+            let stop = false;
+            dots.forEach((item, index) => {
+                if (stop) return;
+                const isActive = item.classList.contains('bit_carousel-dots-active');
+                if (isActive) {
+                    const descr = carousel.next().get(0).querySelectorAll('.bit_carousel-description .text');
+                    item.classList.remove('bit_carousel-dots-active');
+                    descr[index].classList.remove('text-active');
+                    if (index === 0) {
+                        dots[dots.length - 1].classList.add('bit_carousel-dots-active');
+                        descr[dots.length - 1].classList.add('text-active');
+                    } else {
+                        dots[index - 1].classList.add('bit_carousel-dots-active');
+                        descr[index - 1].classList.add('text-active');
+                    }
+                    stop = true;
+                }
+            });
+        });
+        carousel.find('.bit_carousel-item-arrow-next').on('click', e => {
+            control.next(carousel);
+            let stop = false;
+            dots.forEach((item, index) => {
+                if (stop) return;
+                const isActive = item.classList.contains('bit_carousel-dots-active');
+                if (isActive) {
+                    const descr = carousel.next().get(0).querySelectorAll('.bit_carousel-description .text');
+                    item.classList.remove('bit_carousel-dots-active');
+                    descr[index].classList.remove('text-active');
+                    if (index === dots.length - 1) {
+                        dots[0].classList.add('bit_carousel-dots-active');
+                        descr[0].classList.add('text-active');
+                    } else {
+                        dots[index + 1].classList.add('bit_carousel-dots-active');
+                        descr[index + 1].classList.add('text-active');
+                    }
+                    stop = true;
+                }
+            });
+        });
+    }
+    carouselInit('.carousel-1');
+    carouselInit('.carousel-2');
+
+    // =======================================================================================================================
     
     // Dynamic Adapt v.1
     // HTML data-move="where(uniq class name),position(digi),when(breakpoint)"
