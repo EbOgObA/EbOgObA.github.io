@@ -193,7 +193,7 @@
             <div class="payment__container-white">
                 <div class="payment__container">
                     <h2 class="title payment__title">
-                        <a href="#" onclick="javascript:history.back(); return false;" class="btn-back">
+                        <a class="btn-back" href="#" onclick="javascript:history.back(); return false;">
                             back to franchises
                             <?xml version="1.0" encoding="iso-8859-1"?>
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -210,6 +210,33 @@
                         </a>
                         <span>PAYMENT</span>
                     </h2>
+                    <div class="payment__coupon">
+                        <form id="coupon-form" class="payment__coupon-form" action="#" onsubmit="return false">
+                            <input class="payment__coupon-input input req" type="text" name="Coupon" placeholder="Enter coupon">
+                            <button class="payment__coupon-sbmt" type="submit">Accept</button>
+                        </form>
+                        <div class="payment__coupon-info">
+                            <div class="payment__coupon-info-row">
+                                <h1 class="payment__coupon-info-title">Coupon information</h1>
+                            </div>
+                            <div class="payment__coupon-info-row payment__coupon-info-stat">
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-value">50%</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-time">1 time</span>
+                                </div>
+                                <div class="payment__coupon-info-col payment__coupon-info-stat-item">
+                                    <span class="payment__coupon-info-date">11.03.2020</span>
+                                </div>
+                            </div>
+                            <div class="payment__coupon-info-row">
+                                <p class="payment__coupon-info-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestiae illo neque? Assumenda provident qui voluptatem consectetur doloribus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="step-item__body tabs__caption">
                         <div class="step-item__choose-item item-choose active">
                             <label class="item-choose__label item-choose__label_green franchise-var active">

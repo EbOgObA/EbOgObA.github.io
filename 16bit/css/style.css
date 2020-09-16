@@ -16,17 +16,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Hairline";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Hairline";
   font-display: swap;
-  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Hairline.woff") format("woff"), url("../fonts/Montserrat-Hairline.woff2") format("woff2"), url("../fonts/Montserrat-Hairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -40,9 +40,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat.woff") format("woff"), url("../fonts/Montserrat.woff2") format("woff2"), url("../fonts/Montserrat.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -1400,7 +1400,7 @@ body {
 }
 
 .input.err {
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }
 
 .input::-webkit-input-placeholder {
@@ -3202,6 +3202,149 @@ body {
   margin: 0px 0px 59px 0px;
 }
 
+.payment__coupon {
+  position: relative;
+  margin: 0px auto 50px;
+  max-width: 300px;
+}
+
+.payment__coupon-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment__coupon-input {
+  padding: 10px;
+  margin: 0px 10px 0px 0px;
+}
+
+.payment__coupon-input::-webkit-input-placeholder {
+  color: #637b9d;
+}
+
+.payment__coupon-input::-moz-placeholder {
+  color: #637b9d;
+}
+
+.payment__coupon-sbmt {
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100px;
+          flex: 1 1 100px;
+  padding: 7.8px 12.35px;
+  border-radius: 5px;
+  background-color: rgba(16, 158, 0, 0.3);
+  font-size: 18px;
+  font-family: 'Montserrat','Arial',sans-serif;
+  color: #109800;
+  text-align: center;
+  -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
+  -webkit-box-shadow: #70c666 0 0px 0px 2px inset;
+          box-shadow: #70c666 0 0px 0px 2px inset;
+}
+
+.payment__coupon-sbmt:hover,
+.payment__coupon-sbmt:focus {
+  color: #fff;
+  -webkit-box-shadow: #70c666 0 80px 0px 2px inset;
+          box-shadow: #70c666 0 80px 0px 2px inset;
+}
+
+.payment__coupon-sbmt:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.payment__coupon-info {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 40;
+  background-color: #294060;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.payment__coupon-info.active {
+  top: 120%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.payment__coupon-info-title {
+  padding: 10px 10px 5px;
+  color: #fff;
+  font-family: 'Montserrat-Light','Arial',sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.payment__coupon-info-stat {
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+.payment__coupon-info-stat-item {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-align: center;
+}
+
+.payment__coupon-info-stat-item:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0%, -50%);
+      -ms-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 1px;
+  height: 80%;
+  background-color: #fff;
+}
+
+.payment__coupon-info-stat-item:last-child:after {
+  display: none;
+}
+
+.payment__coupon-info-text {
+  padding: 0px 10px 10px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 .payment__warning {
   padding: 0;
   margin: 0px 0px 41px 0px;
@@ -4406,6 +4549,10 @@ body {
     margin: 0px 0px 30px 0px;
   }
 
+  .payment__coupon {
+    margin: 0px auto 35px;
+  }
+
   .payment__warning {
     margin: 0px 0px 30px 0px;
   }
@@ -4543,6 +4690,14 @@ body {
 
   .payment__container-white {
     padding: 90px 0px 0px;
+  }
+
+  .payment__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .payment .item-choose:first-child {
+    margin: 0px 0px 15px;
   }
 
   .payment {
@@ -5010,6 +5165,10 @@ body {
     padding: 0 30px;
   }
 
+  .payment__coupon-input {
+    padding: 10px;
+  }
+
   .payment__warning {
     margin: 0px auto 30px auto;
     max-width: 420px;
@@ -5043,10 +5202,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 0px 0px 15px;
-  }
-
-  .payment .item-choose:first-child {
-    margin: 0px 0px 15px;
   }
 
   .payment .item-choose {
@@ -5147,6 +5302,12 @@ body {
     height: 65px;
     max-height: 65px;
     margin: 0px 0px 20px 0px;
+  }
+
+  .payment__coupon-input {
+    padding: 10px;
+    margin: 0px 10px 0px 0px;
+    height: auto;
   }
 
   .form-aut__input {
@@ -5547,6 +5708,15 @@ body {
 
   .payment__container {
     padding: 0 10px;
+  }
+
+  .payment__coupon {
+    max-width: 100%;
+    padding: 0px 20px;
+  }
+
+  .payment__coupon-input {
+    margin: 0px 5px 0px 0px;
   }
 
   .payment__warning-title span {

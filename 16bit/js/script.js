@@ -89,6 +89,20 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
+    // =======================================================================================================================
+    
+    // DELETE AFTER HANDLING COUPON BOX
+    $('.payment__coupon-sbmt').on('click', function() {
+        let couponValue = $('.payment__coupon-input').val();
+        if (couponValue !== "") {
+            $('.payment__coupon-info').addClass('active');
+            setTimeout(function() {
+                $('.payment__coupon-info').removeClass('active');
+            }, 5000);
+        }
+    });
+
+    // =======================================================================================================================
 
     //SLIDERS
     // if ($('.pay-item__slider').length > 0) {
