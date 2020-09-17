@@ -16,9 +16,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -32,9 +32,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -3195,17 +3195,18 @@ body {
 .payment__container-white {
   padding: 50px 0px 0px;
   background-color: #e8ecf2;
+  margin: 0px 0px 35px 0px;
 }
 
 .payment__title {
   position: relative;
-  margin: 0px 0px 59px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .payment__coupon {
   position: relative;
-  margin: 0px auto 50px;
-  max-width: 300px;
+  margin: 0px auto 40px;
+  max-width: 500px;
 }
 
 .payment__coupon-form {
@@ -3224,14 +3225,17 @@ body {
 .payment__coupon-input {
   padding: 10px;
   margin: 0px 10px 0px 0px;
+  font-family: 'Montserrat-Light', sans-serif;
+  color: #fff;
+  line-height: 1.3;
 }
 
 .payment__coupon-input::-webkit-input-placeholder {
-  color: #637b9d;
+  color: #8aaad6;
 }
 
 .payment__coupon-input::-moz-placeholder {
-  color: #637b9d;
+  color: #8aaad6;
 }
 
 .payment__coupon-sbmt {
@@ -3240,13 +3244,15 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100px;
           flex: 1 1 100px;
-  padding: 7.8px 12.35px;
+  padding: 11.2px 12.35px;
   border-radius: 5px;
-  background-color: rgba(16, 158, 0, 0.3);
-  font-size: 18px;
-  font-family: 'Montserrat','Arial',sans-serif;
+  background-color: rgba(16, 158, 0, 0.1);
   color: #109800;
+  font-size: 14px;
   text-align: center;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: 'Montserrat-Medium','Arial',sans-serif;
   -webkit-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -o-transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: all 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -3279,16 +3285,34 @@ body {
   -webkit-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -webkit-box-shadow: 0 0px 10px #000;
+          box-shadow: 0 0px 10px #000;
 }
 
 .payment__coupon-info.active {
   top: 120%;
   visibility: visible;
   opacity: 1;
+  -webkit-box-shadow: 0 5px 10px #000;
+          box-shadow: 0 5px 10px #000;
+}
+
+.payment__coupon-info-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cancel.svg");
+  background-size: 15px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #294060;
+  cursor: pointer;
 }
 
 .payment__coupon-info-title {
-  padding: 10px 10px 5px;
+  padding: 10px;
   color: #fff;
   font-family: 'Montserrat-Light','Arial',sans-serif;
   letter-spacing: 1px;
@@ -3296,7 +3320,7 @@ body {
 }
 
 .payment__coupon-info-stat {
-  margin: 10px 0px;
+  padding: 5px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3308,7 +3332,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 13px;
-  color: #fff;
+  color: #294060;
+  background-color: #a0b0bf;
 }
 
 .payment__coupon-info-stat-item {
@@ -3329,7 +3354,7 @@ body {
           transform: translate(0%, -50%);
   width: 1px;
   height: 80%;
-  background-color: #fff;
+  background-color: #294060;
 }
 
 .payment__coupon-info-stat-item:last-child:after {
@@ -3337,7 +3362,7 @@ body {
 }
 
 .payment__coupon-info-text {
-  padding: 0px 10px 10px;
+  padding: 10px;
   color: #fff;
   font-size: 10px;
   line-height: 1.5;
@@ -3409,12 +3434,10 @@ body {
 }
 
 .payment .step-item__body {
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3422,19 +3445,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0px 100px 15px;
-  margin: 0px 0px 35px 0px;
 }
 
 .payment .item-choose {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 calc(33% - 50px);
           flex: 1 1 calc(33% - 50px);
-  margin: 0px 25px 15px;
-  max-width: 300px;
-}
-
-.payment .item-choose:first-child {
   margin: 0px 20% 15px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .payment .item-choose__label {
@@ -4545,14 +4564,6 @@ body {
     padding: 0px 20px 75px 20px;
   }
 
-  .payment__title {
-    margin: 0px 0px 30px 0px;
-  }
-
-  .payment__coupon {
-    margin: 0px auto 35px;
-  }
-
   .payment__warning {
     margin: 0px 0px 30px 0px;
   }
@@ -4567,10 +4578,6 @@ body {
 
   .payment .item-choose {
     width: 100%;
-  }
-
-  .payment {
-    background-color: #322e47;
   }
 }
 
@@ -5165,8 +5172,17 @@ body {
     padding: 0 30px;
   }
 
+  .payment__coupon {
+    max-width: 420px;
+  }
+
   .payment__coupon-input {
     padding: 10px;
+    font-size: 13px;
+  }
+
+  .payment__coupon-sbmt {
+    padding: 10.8px 12.35px;
   }
 
   .payment__warning {
@@ -5228,6 +5244,10 @@ body {
 
   .payment__content-column {
     margin: 0px 0px 30px;
+  }
+
+  .payment {
+    background-color: #322e47;
   }
 
   .payment {
@@ -5567,7 +5587,7 @@ body {
   }
 
   .btn-back {
-    max-width: calc(100% - 40px);
+    max-width: 100%;
     margin: 0px;
   }
 
@@ -5712,7 +5732,6 @@ body {
 
   .payment__coupon {
     max-width: 100%;
-    padding: 0px 20px;
   }
 
   .payment__coupon-input {
@@ -5724,7 +5743,7 @@ body {
   }
 
   .payment .step-item__body {
-    padding: 0px 20px 15px;
+    padding: 0px 0px 15px;
   }
 
   .payment .item-choose {
