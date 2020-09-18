@@ -166,6 +166,7 @@ $(document).ready(function () {
     carouselInit('.carousel-2');
     carouselInit('.carousel-3');
     carouselInit('.carousel-4');
+    carouselInit('.carousel-5');
 
     // =======================================================================================================================
     
