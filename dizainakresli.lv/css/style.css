@@ -1331,5 +1331,7 @@ h6 {
 
   .item-catalog__text {
     font-size: 21px;
+    width: 100%;
+    text-align: center;
   }
 }
