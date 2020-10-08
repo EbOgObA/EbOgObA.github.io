@@ -2767,7 +2767,6 @@ h6 {
     height: 18px;
     background-color: transparent;
     cursor: pointer;
-    z-index: 6;
   }
 
   .icon-menu span {
@@ -2777,6 +2776,7 @@ h6 {
     top: 8px;
     left: 0px;
     position: absolute;
+    z-index: -1;
     width: 20px;
     height: 2px;
     background-color: #000;
@@ -2795,6 +2795,7 @@ h6 {
   }
 
   .icon-menu.active {
+    z-index: 1;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 23px;
             flex: 0 0 23px;
