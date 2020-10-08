@@ -32,112 +32,143 @@ $(document).ready(function () {
     // =======================================================================================================================
     
     // Dynamic Adapt v.1
-    // HTML data-move="where(uniq class name),position(digi),when(breakpoint)"
-    // e.x. data-move="item,2,992"
-    // Andrikanych Yevhen 2020
-    var move_array = [];
-    var move_objects = document.querySelectorAll("[data-move]");
+// HTML data-da="where(uniq class name),position(digi),when(breakpoint)"
+// e.x. data-da="item,2,992"
+// Andrikanych Yevhen 2020
+// https://www.youtube.com/c/freelancerlifestyle
 
-    if (move_objects.length > 0) {
-        for (var _index10 = 0; _index10 < move_objects.length; _index10++) {
-            var _el6 = move_objects[_index10];
 
-            var data_move = _el6.getAttribute("data-move");
 
-            if (data_move != "" || data_move != null) {
-                _el6.setAttribute("data-move-index", _index10);
+(function () {
+    "use strict";
+	let originalPositions = [];
+	let daElements = document.querySelectorAll('[data-da]');
+	let daElementsArray = [];
+	let daMatchMedia = [];
+	//Заполняем массивы
+	if (daElements.length > 0) {
+		let number = 0;
+		for (let index = 0; index < daElements.length; index++) {
+			const daElement = daElements[index];
+			const daMove = daElement.getAttribute('data-da');
+			if (daMove != '') {
+				const daArray = daMove.split(',');
+				const daPlace = daArray[1] ? daArray[1].trim() : 'last';
+				const daBreakpoint = daArray[2] ? daArray[2].trim() : '767';
+				const daType = daArray[3] === 'min' ? daArray[3].trim() : 'max';
+				const daDestination = document.querySelector('.' + daArray[0].trim())
+				if (daArray.length > 0 && daDestination) {
+					daElement.setAttribute('data-da-index', number);
+					//Заполняем массив первоначальных позиций
+					originalPositions[number] = {
+						"parent": daElement.parentNode,
+						"index": indexInParent(daElement)
+					};
+					//Заполняем массив элементов 
+					daElementsArray[number] = {
+						"element": daElement,
+						"destination": document.querySelector('.' + daArray[0].trim()),
+						"place": daPlace,
+						"breakpoint": daBreakpoint,
+						"type": daType
+					}
+					number++;
+				}
+			}
+		}
+		dynamicAdaptSort(daElementsArray);
 
-                move_array[_index10] = {
-                    parent: _el6.parentNode,
-                    index: index_in_parent(_el6)
-                };
-            }
-        }
-    }
+		//Создаем события в точке брейкпоинта
+		for (let index = 0; index < daElementsArray.length; index++) {
+			const el = daElementsArray[index];
+			const daBreakpoint = el.breakpoint;
+			const daType = el.type;
 
-    function dynamic_adapt() {
-        var w = document.querySelector("body").offsetWidth;
+			daMatchMedia.push(window.matchMedia("(" + daType + "-width: " + daBreakpoint + "px)"));
+			daMatchMedia[index].addListener(dynamicAdapt);
+		}
+	}
+	//Основная функция
+	function dynamicAdapt(e) {
+		for (let index = 0; index < daElementsArray.length; index++) {
+			const el = daElementsArray[index];
+			const daElement = el.element;
+			const daDestination = el.destination;
+			const daPlace = el.place;
+			const daBreakpoint = el.breakpoint;
+			const daClassname = "_dynamic_adapt_" + daBreakpoint;
 
-        if (move_objects.length > 0) {
-            for (var _index11 = 0; _index11 < move_objects.length; _index11++) {
-                var _el7 = move_objects[_index11];
+			if (daMatchMedia[index].matches) {
+				//Перебрасываем элементы
+				if (!daElement.classList.contains(daClassname)) {
+					let actualIndex = indexOfElements(daDestination)[daPlace];
+					if (daPlace === 'first') {
+						actualIndex = indexOfElements(daDestination)[0];
+					} else if (daPlace === 'last') {
+						actualIndex = indexOfElements(daDestination)[indexOfElements(daDestination).length];
+					}
+					daDestination.insertBefore(daElement, daDestination.children[actualIndex]);
+					daElement.classList.add(daClassname);
+				}
+			} else {
+				//Возвращаем на место
+				if (daElement.classList.contains(daClassname)) {
+					dynamicAdaptBack(daElement);
+					daElement.classList.remove(daClassname);
+				}
+			}
+		}
+		//customAdapt();
+	}
 
-                var _data_move = _el7.getAttribute("data-move");
+	//Вызов основной функции
+	dynamicAdapt();
 
-                if (_data_move != "" || _data_move != null) {
-                    var data_array = _data_move.split(",");
-
-                    var data_parent = document.querySelector("." + data_array[0]);
-                    var data_index = data_array[1];
-                    var data_bp = data_array[2];
-
-                    if (w < data_bp) {
-                        if (!_el7.classList.contains("js-move_done_" + data_bp)) {
-                            if (data_index > 0) {
-                                //insertAfter
-                                var actual_index = index_of_elements(data_parent)[data_index];
-                                data_parent.insertBefore(_el7, data_parent.childNodes[actual_index]);
-                            } else {
-                                data_parent.insertBefore(_el7, data_parent.firstChild);
-                            }
-
-                            _el7.classList.add("js-move_done_" + data_bp);
-                        }
-                    } else {
-                        if (_el7.classList.contains("js-move_done_" + data_bp)) {
-                            dynamic_adaptive_back(_el7);
-
-                            _el7.classList.remove("js-move_done_" + data_bp);
-                        }
-                    }
-                }
-            }
-        }
-        custom_adapt(w);
-    }
-
-    function dynamic_adaptive_back(el) {
-        var index_original = el.getAttribute("data-move-index");
-        var move_place = move_array[index_original];
-        var parent_place = move_place["parent"];
-        var index_place = move_place["index"];
-        if (index_place > 0) {
-            //insertAfter
-            var actual_index = index_of_elements(parent_place)[index_place];
-            parent_place.insertBefore(el, parent_place.childNodes[actual_index]);
-        } else {
-            parent_place.insertBefore(el, parent_place.firstChild);
-        }
-    }
-
-    function index_in_parent(node) {
-        var children = node.parentNode.childNodes;
-        var num = 0;
-        for (var _i2 = 0; _i2 < children.length; _i2++) {
-            if (children[_i2] == node) return num;
-            if (children[_i2].nodeType == 1) num++;
-        }
-        return -1;
-    }
-
-    function index_of_elements(parent) {
-        var children = [];
-
-        for (var _i3 = 0; _i3 < parent.childNodes.length; _i3++) {
-            if (parent.childNodes[_i3].nodeType == 1 && parent.childNodes[_i3].getAttribute("data-move") == null) {
-                children.push(_i3);
-            }
-        }
-
-        return children;
-    }
-
-    window.addEventListener("resize", function (event) {
-        dynamic_adapt();
-    });
-    dynamic_adapt();
-
-    function custom_adapt(w) { }
+	//Функция возврата на место
+	function dynamicAdaptBack(el) {
+		const daIndex = el.getAttribute('data-da-index');
+		const originalPlace = originalPositions[daIndex];
+		const parentPlace = originalPlace['parent'];
+		const indexPlace = originalPlace['index'];
+		const actualIndex = indexOfElements(parentPlace, true)[indexPlace];
+		parentPlace.insertBefore(el, parentPlace.children[actualIndex]);
+	}
+	//Функция получения индекса внутри родителя
+	function indexInParent(el) {
+		var children = Array.prototype.slice.call(el.parentNode.children);
+		return children.indexOf(el);
+	}
+	//Функция получения массива индексов элементов внутри родителя 
+	function indexOfElements(parent, back) {
+		const children = parent.children;
+		const childrenArray = [];
+		for (let i = 0; i < children.length; i++) {
+			const childrenElement = children[i];
+			if (back) {
+				childrenArray.push(i);
+			} else {
+				//Исключая перенесенный элемент
+				if (childrenElement.getAttribute('data-da') == null) {
+					childrenArray.push(i);
+				}
+			}
+		}
+		return childrenArray;
+	}
+	//Сортировка объекта
+	function dynamicAdaptSort(arr) {
+		arr.sort(function (a, b) {
+			if (a.breakpoint > b.breakpoint) { return -1 } else { return 1 }
+		});
+		arr.sort(function (a, b) {
+			if (a.place > b.place) { return 1 } else { return -1 }
+		});
+	}
+	//Дополнительные сценарии адаптации
+	function customAdapt() {
+		//const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	}
+}());
     
     // =======================================================================================================================
 
@@ -1609,44 +1640,64 @@ $(document).ready(function () {
 
 // ================================================================================================
 
-    // SLICK Sliders 
-    // $('.header__banner').slick({
-    //     arrows: false,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     infinite: true,
-    //     centerMode: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 autoplay: true,
-    //                 autoplaySpeed: 5000,
-    //                 centerMode: false,
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 autoplay: true,
-    //                 autoplaySpeed: 5000,
-    //                 centerMode: false,
-    //             }
-    //         }
-    //     ]
-    // });
+    
 
-    // $('.banner-partners__container').slick({
-    //     arrows: false,
-    //     sliderToShow: 1,
-    //     slidesToScroll: 1,
-    //     speed: 10000,
-    //     autoplay: true,
-    //     autoplaySpeed: 0,
-    //     cssEase: 'linear',
-    // })
+// ================================================================================================
+    
+    var swiperHeaderBanner = null;
+    var mediaQuerySize = 1024;
+    function bannerSliderInit () {
+        if (!swiperHeaderBanner) {
+            swiperHeaderBanner = new Swiper('.header__banner', {
+                slidesPerView: 8,
+                // centeredSlides: true,
+                speed: 500,
+                loop: true,
+                // speed: 10000,
+                // autoplay: {
+                //     delay: 0,
+                // },
+                disableOnInteraction: false,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        // centeredSlides: true,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    580: {
+                        slidesPerView: 3,
+                        
+                    },
+                    // 768: {
+                    //     slidesPerView: 3,
+                    // }
+                }
+            });
+        }
+    }
+    function bannerSliderDestroy () {
+        if (swiperHeaderBanner) {
+            swiperHeaderBanner.destroy();
+            swiperHeaderBanner = null;
+        }
+    }
+    $(window).on('load resize', function () {
+        // Берём текущую ширину экрана
+        var windowWidth = $(this).innerWidth();
+        
+        // Если ширина экрана меньше или равна mediaQuerySize(1024)
+        if (windowWidth <= mediaQuerySize) {
+            // Инициализировать слайдер если он ещё не был инициализирован
+            bannerSliderInit()
+            $('.nav-header__list-item-link').addClass('spoller')
+        } else {
+            // Уничтожить слайдер если он был инициализирован
+            bannerSliderDestroy()
+            $('.nav-header__list-item-link').removeClass('spoller')
+        }
+    });
 
     const sliderPartner = document.querySelector('.banner-partners__slider');
     let swiperPartner = new Swiper(sliderPartner,{
@@ -1678,40 +1729,10 @@ $(document).ready(function () {
         }
     });
 
-    const sliderHeaderBanner = document.querySelector('.header__banner');
-    let swiperHeaderBanner = new Swiper(sliderHeaderBanner,{
-        slidesPerView: 8,
-        centeredSlides: true,
-        speed: 500,
-        loop: true,
-        speed: 10000,
-        autoplay: {
-            delay: 0,
-        },
-        disableOnInteraction: false,
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-            580: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            }
-        }
-    });
-
     const sliderBestSellers = document.querySelector('.best-sellers__slider');
     let swiperBestSellers = new Swiper(sliderBestSellers,{
         slidesPerView: 5,
-        spaceBetween: 100,
+        spaceBetween: 50,
         centeredSlides: true,
         loop: true,
         navigation: {
@@ -1738,7 +1759,7 @@ $(document).ready(function () {
             1280: {
                 slidesPerView: 5,
                 centeredSlides: true,
-                spaceBetween: 75,
+                spaceBetween: 0,
             }
         }
     });
@@ -1747,7 +1768,7 @@ $(document).ready(function () {
     // sliderShop.forEach((el) => {
     let swiperShop = new Swiper(sliderShop,{
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 42,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -1763,14 +1784,11 @@ $(document).ready(function () {
             425: {
                 slidesPerView: 2,
             },
-            580: {
-                slidesPerView: 2,
-            },
             768: {
                 slidesPerView: 3,
             },
             1024: {
-                slidesPerView: 4,
+                slidesPerView: 4
             },
         }
     });
@@ -1780,7 +1798,7 @@ $(document).ready(function () {
     // sliderShop.forEach((el) => {
     let swiperInspiration = new Swiper(sliderInspiration,{
         slidesPerView: 4,
-        spaceBetween: 20,
+        spaceBetween: 42,
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -1796,14 +1814,11 @@ $(document).ready(function () {
             425: {
                 slidesPerView: 2,
             },
-            580: {
-                slidesPerView: 2,
-            },
             768: {
                 slidesPerView: 3,
             },
             1024: {
-                slidesPerView: 4,
+                slidesPerView: 4
             },
         }
     });
