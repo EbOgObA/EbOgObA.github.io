@@ -168,36 +168,62 @@ $(document).ready(function () {
             });
         });
     }
-    
-    carouselInit('.carousel-1');
-    carouselInit('.carousel-2');
-    carouselInit('.carousel-3');
-    carouselInit('.carousel-4');
-    carouselInit('.carousel-5');
+    const slidersCarousel = document.querySelectorAll('.carousel');
+    slidersCarousel.forEach((el) => {
+        carouselInit(el);
+    });
 
+    // const sliders = document.querySelectorAll('.slider-top');
+    // const slidersThumbs = document.querySelectorAll('.slider-thumbs');
 
-    // const slider = document.querySelectorAll('.swiper-container');
-
-    // let mySwiper = new Swiper(slider,{
-    //     slidesPerView: 3,
-    //     // centeredSlides: true,
-    //     speed: 1000,
-    //     loop: true,
-    //     preloadImages: true,
-    //     lazy: true,
-    //     slideToClickedSlide: true,
-        
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //         type: 'bullets',
-    //         clickable: true,
-    //     },
-    //     navigation: {
-    //         nextEl: '.swiper-button-next',
-    //         prevEl: '.swiper-button-prev',
-    //     },
-    //     // virtualTranslate: true,
+    // sliders.forEach((el) => {
+    //     let sliderThumbs = new Swiper(el,{
+    //         spaceBetween: 10,
+    //         slidesPerView: 1,
+    //         // freeMode: true ,
+    //         watchSlidesVisibility: true,
+    //         watchSlidesProgress: true,
+    //     });
+    //     let sliderTop = new Swiper (el,{
+    //         spaceBetween: 10 ,
+    //         navigation: {
+    //             nextEl: el.querySelector('.swiper-button-next'),
+    //             prevEl: el.querySelector('.swiper-button-prev'),
+    //         },
+    //         thumbs : {
+    //             Swiper: sliderThumbs
+    //         }
+    //     });
     // });
+
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.slider-nav',
+        accessibility: true,
+        centerMode: true,
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        infinite: true,
+        dots: false,
+        arrows: false,
+        centerMode: true,
+        focusOnSelect: true,
+    });
+    // let itemSlideNav = $('.slick-current');
+    // let currentSlideNav = $('.slide-nav .slick-current');
+    // if (currentSlideNav) {
+    //     $(currentSlideNav).next().css({
+    //         'opacity': '.7',
+    //         'transition': 'opacity .2s ease-in-out'
+    //     });
+    // }
 
     // =======================================================================================================================
     
