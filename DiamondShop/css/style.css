@@ -30,6 +30,14 @@
 }
 
 @font-face {
+  font-family: "OpenSans-Bold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "OpenSans-Light";
   font-display: swap;
   src: url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.ttf") format("ttf");
@@ -41,14 +49,6 @@
   font-family: "OpenSans-Regular";
   font-display: swap;
   src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans-Bold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -716,6 +716,7 @@ h6 {
 .menu__subtitle {
   margin: 0px 0px 18px 0px;
   font-size: 16px;
+  font-weight: bold;
   color: #000;
 }
 
@@ -992,20 +993,6 @@ h6 {
   text-align: center;
 }
 
-.ibg {
-  position: relative;
-}
-
-.ibg img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -1171,7 +1158,7 @@ h6 {
 .welcome {
   position: relative;
   padding: 115px 0px 127px;
-  background: url("../img/welcome/Rectangle 4.jpg") 50% 100% no-repeat;
+  background-position: 50% 100%;
   background-size: cover;
 }
 
@@ -1994,7 +1981,6 @@ h6 {
 }
 
 .shop-help__image {
-  min-height: 100%;
   width: 60%;
 }
 
@@ -3262,7 +3248,7 @@ h6 {
 
   .welcome {
     padding: 50px 0px;
-    background: url("../img/welcome/Rectangle 4.jpg") 0% 100% no-repeat;
+    background-position: 0% 100%;
     background-size: auto 100%;
   }
 
