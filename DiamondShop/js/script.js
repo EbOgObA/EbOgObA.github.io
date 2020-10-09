@@ -384,15 +384,14 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // SLIDERS (SWIPER)
-    var swiperHeaderBanner = null;
+    var swiperHeaderstright = null;
     var mediaQuerySize = 1024;
-    function bannerSliderInit () {
-        if (!swiperHeaderBanner) {
-            swiperHeaderBanner = new Swiper('.header__banner', {
-                slidesPerView: 8,
+    function strightSliderInit () {
+        if (!swiperHeaderstright) {
+            swiperHeaderstright = new Swiper('.header__stright', {
+                slidesPerView: 1,
                 speed: 500,
                 loop: true,
-                allowTouchMove: true,
                 autoplay: {
                     delay: 2000,
                 },
@@ -405,17 +404,16 @@ $(document).ready(function () {
                         slidesPerView: 1,
                     },
                     580: {
-                        slidesPerView: 3,
-                        
+                        slidesPerView: 4,
                     },
                 }
             });
         }
     }
-    function bannerSliderDestroy () {
-        if (swiperHeaderBanner) {
-            swiperHeaderBanner.destroy();
-            swiperHeaderBanner = null;
+    function strightSliderDestroy () {
+        if (swiperHeaderstright) {
+            swiperHeaderstright.destroy();
+            swiperHeaderstright = null;
         }
     }
     $(window).on('load resize', function () {
@@ -424,11 +422,11 @@ $(document).ready(function () {
         // Если ширина экрана меньше или равна mediaQuerySize(1024)
         if (windowWidth <= mediaQuerySize) {
             // Инициализировать слайдер если он ещё не был инициализирован
-            bannerSliderInit()
+            strightSliderInit()
             $('.nav-header__list-item-link').addClass('spoller')
         } else {
             // Уничтожить слайдер если он был инициализирован
-            bannerSliderDestroy()
+            strightSliderDestroy()
             $('.nav-header__list-item-link').removeClass('spoller')
         }
     });
