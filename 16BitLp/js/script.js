@@ -125,7 +125,6 @@ $(document).ready(function () {
             dots.push(dot);
         });
         carousel.find('.bit_carousel-item-arrow-prev').on('click', e => {
-            console.log(carousel);
             control.prev(carousel);
             let stop = false;
             dots.forEach((item, index) => {
