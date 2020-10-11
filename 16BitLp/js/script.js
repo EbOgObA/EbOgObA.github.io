@@ -1,12 +1,12 @@
 $(document).ready(function () {
     // WEBP FUNCTION
-    function testWebP(callback) {
-        var webP = new Image();
-        webP.onload = webP.onerror = function () {
-            callback(webP.height == 2);
-        };
-        webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-    }
+    // function testWebP(callback) {
+    //     var webP = new Image();
+    //     webP.onload = webP.onerror = function () {
+    //         callback(webP.height == 2);
+    //     };
+    //     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+    // }
 
     // =======================================================================================================================
 
@@ -16,6 +16,36 @@ $(document).ready(function () {
     //         document.querySelector('body').classList.add('webp');
     //     } else {
     //         document.querySelector('body').classList.add('no-webp');
+    //     }
+    // });
+
+    // =======================================================================================================================
+
+    $('select').niceSelect();
+
+    // $('#lang-select').on('change', () => {
+    //     let selectedOption = document.querySelector('.option.selected').getAttribute('data-value');
+        // console.log(selectedOption);
+        // $('.nice-select > .current::before').css({
+        //     'background' : "url('../img/lang/')" + selectedOption + ".png"
+        // });
+        // let attr = document.querySelector('.option').getAttribute('data-value');
+		// window.location.href = urls[attr];
+    // });
+
+    // const urls = {
+	// 	'RUS': '/ru',
+	// 	'ENG': '/',
+	// 	'CH': '/ch',
+	// 	'ESP': '/es'
+	// };
+
+    // let langSelect = document.querySelector('.nice-select');
+    // document.addEventListener('click', function(e) {
+    //     const target = e.target;
+    //     const select = target == langSelect || langSelect.contains(target);
+    //     if (!select) {
+    //         langSelect.classList.remove("open");
     //     }
     // });
 
@@ -437,11 +467,11 @@ $(document).ready(function () {
     });
 
     //Клик вне области
-    $(document).on('click touchstart', function (e) {
-        if (!$(e.target).is(".select *")) {
-            $('.select').removeClass('active');
-        };
-    });
+    // $(document).on('click touchstart', function (e) {
+    //     if (!$(e.target).is(".select *")) {
+    //         $('.select').removeClass('active');
+    //     };
+    // });
 
     //UP
     // $(window).scroll(function () {
@@ -1427,22 +1457,22 @@ $(document).ready(function () {
         });
 
         //OPTION
-        $.each($('.option.active'), function (index, val) {
-            $(this).find('input').prop('checked', true);
-        });
-        $('.option').click(function (event) {
-            if (!$(this).hasClass('disable')) {
-                var target = $(event.target);
-                if (!target.is("a")) {
-                    if ($(this).hasClass('active') && $(this).hasClass('order')) {
-                        $(this).toggleClass('orderactive');
-                    }
-                    $(this).parents('.options').find('.option').removeClass('active');
-                    $(this).toggleClass('active');
-                    $(this).children('input').prop('checked', true);
-                }
-            }
-        });
+        // $.each($('.option.active'), function (index, val) {
+        //     $(this).find('input').prop('checked', true);
+        // });
+        // $('.option').click(function (event) {
+        //     if (!$(this).hasClass('disable')) {
+        //         var target = $(event.target);
+        //         if (!target.is("a")) {
+        //             if ($(this).hasClass('active') && $(this).hasClass('order')) {
+        //                 $(this).toggleClass('orderactive');
+        //             }
+        //             $(this).parents('.options').find('.option').removeClass('active');
+        //             $(this).toggleClass('active');
+        //             $(this).children('input').prop('checked', true);
+        //         }
+        //     }
+        // });
         //RATING
         $('.rating.edit .star').hover(function () {
             var block = $(this).parents('.rating');
@@ -1651,12 +1681,12 @@ $(document).ready(function () {
         }
         return er;
     }
-    function formLoad() {
-        $('.popup').hide();
-        $('.popup-message-body').hide();
-        $('.popup-message .popup-body').append('<div class="popup-loading"><div class="popup-loading__title">Идет загрузка...</div><div class="popup-loading__icon"></div></div>');
-        $('.popup-message').addClass('active').fadeIn(300);
-    }
+    // function formLoad() {
+    //     $('.popup').hide();
+    //     $('.popup-message-body').hide();
+    //     $('.popup-message .popup-body').append('<div class="popup-loading"><div class="popup-loading__title">Идет загрузка...</div><div class="popup-loading__icon"></div></div>');
+    //     $('.popup-message').addClass('active').fadeIn(300);
+    // }
     function showMessageByClass(ms) {
         $('.popup').hide();
         popupOpen('message.' + ms, '');
@@ -1720,36 +1750,36 @@ $(document).ready(function () {
             //input.parents('.select-block').find('.select-options').hide();
         }
     }
-    function removeFormErrors(form) {
-        form.find('.err').removeClass('err');
-        form.find('.form__error').remove();
-    }
-    function maskclear(n) {
-        if (n.val() == "") {
-            n.inputmask('remove');
-            if (!n.hasClass('l')) {
-                n.val(n.attr('data-value'));
-            }
-            n.removeClass('focus');
-            n.parent().removeClass('focus');
-        }
-    }
-    function searchselectreset() {
-        $.each($('.select[data-type="search"]'), function (index, val) {
-            var block = $(this).parent();
-            var select = $(this).parent().find('select');
-            if ($(this).find('.select-options__value:visible').length == 1) {
-                $(this).addClass('focus');
-                $(this).parents('.select-block').find('select').val($('.select-options__value:visible').data('value'));
-                $(this).find('.select-title__value').val($('.select-options__value:visible').html());
-                $(this).find('.select-title__value').attr('data-value', $('.select-options__value:visible').html());
-            } else if (select.val() == '') {
-                $(this).removeClass('focus');
-                block.find('input.select-title__value').val(select.find('option[selected="selected"]').html());
-                block.find('input.select-title__value').attr('data-value', select.find('option[selected="selected"]').html());
-            }
-        });
-    }
+    // function removeFormErrors(form) {
+    //     form.find('.err').removeClass('err');
+    //     form.find('.form__error').remove();
+    // }
+    // function maskclear(n) {
+    //     if (n.val() == "") {
+    //         n.inputmask('remove');
+    //         if (!n.hasClass('l')) {
+    //             n.val(n.attr('data-value'));
+    //         }
+    //         n.removeClass('focus');
+    //         n.parent().removeClass('focus');
+    //     }
+    // }
+    // function searchselectreset() {
+    //     $.each($('.select[data-type="search"]'), function (index, val) {
+    //         var block = $(this).parent();
+    //         var select = $(this).parent().find('select');
+    //         if ($(this).find('.select-options__value:visible').length == 1) {
+    //             $(this).addClass('focus');
+    //             $(this).parents('.select-block').find('select').val($('.select-options__value:visible').data('value'));
+    //             $(this).find('.select-title__value').val($('.select-options__value:visible').html());
+    //             $(this).find('.select-title__value').attr('data-value', $('.select-options__value:visible').html());
+    //         } else if (select.val() == '') {
+    //             $(this).removeClass('focus');
+    //             block.find('input.select-title__value').val(select.find('option[selected="selected"]').html());
+    //             block.find('input.select-title__value').attr('data-value', select.find('option[selected="selected"]').html());
+    //         }
+    //     });
+    // }
 })
 
 
