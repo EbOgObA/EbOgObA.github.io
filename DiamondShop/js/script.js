@@ -131,26 +131,6 @@ $(document).ready(function () {
             //const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         }
     }());
-    
-    // =======================================================================================================================
-
-    var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
-    if (isMobile.any()) { }
-
-    if (location.hash) {
-        var hsh = location.hash.replace('#', '');
-        if ($('.popup-' + hsh).length > 0) {
-            popupOpen(hsh);
-        } else if ($('div.' + hsh).length > 0) {
-            $('body,html').animate({ scrollTop: $('div.' + hsh).offset().top, }, 500, function () { });
-        }
-    }
-    // $('.wrapper').addClass('loaded');
-
-    var act = "click";
-    if (isMobile.iOS()) {
-        var act = "touchstart";
-    }
 
     // =======================================================================================================================
 
@@ -188,65 +168,92 @@ $(document).ready(function () {
 
     //FORMS
     function forms() {
+        // INPUT
         $('input,textarea').focus(function () {
             if ($(this).val() == $(this).attr('data-value')) {
                 $(this).addClass('focus');
                 $(this).parent().addClass('focus');
-                if ($(this).attr('data-type') == 'pass') {
-                    $(this).attr('type', 'password');
-                };
                 $(this).val('');
             };
             removeError($(this));
         });
-        $('input[data-value], textarea[data-value]').each(function () {
-            if (this.value == '' || this.value == $(this).attr('data-value')) {
-                if ($(this).hasClass('l') && $(this).parent().find('.form__label').length == 0) {
-                    $(this).parent().append('<div class="form__label">' + $(this).attr('data-value') + '</div>');
-                } else {
-                    this.value = $(this).attr('data-value');
-                }
-            }
-            if (this.value != $(this).attr('data-value') && this.value != '') {
-                $(this).addClass('focus');
-                $(this).parent().addClass('focus');
-                if ($(this).hasClass('l') && $(this).parent().find('.form__label').length == 0) {
-                    $(this).parent().append('<div class="form__label">' + $(this).attr('data-value') + '</div>');
-                }
-            }
-
-            $(this).click(function () {
-                if (this.value == $(this).attr('data-value')) {
-                    if ($(this).attr('data-type') == 'pass') {
-                        $(this).attr('type', 'password');
-                    };
-                    this.value = '';
-                };
-            });
-            $(this).blur(function () {
-                if (this.value == '') {
-                    if (!$(this).hasClass('l')) {
-                        this.value = $(this).attr('data-value');
+        // RANGE
+        if ($("#range").length > 0) {
+            $("#range").slider({
+                range: true,
+                min: 100,
+                max: 10000,
+                values: [100, 10000],
+                slide: function (event, ui) {
+                    $('#rangefrom').val(ui.values[0]);
+                    $('#rangeto').val(ui.values[1]);
+                    $(this).find('.ui-slider-handle').eq(0).html('<span>' + ui.values[0] + '</span>');
+                    $(this).find('.ui-slider-handle').eq(1).html('<span>' + ui.values[1] + '</span>');
+                },
+                change: function (event, ui) {
+                    if (ui.values[0] != $("#range").slider("option", "min") || ui.values[1] != $("#range").slider("option", "max")) {
+                        $('#range').addClass('act');
+                    } else {
+                        $('#range').removeClass('act');
                     }
-                    $(this).removeClass('focus');
-                    $(this).parent().removeClass('focus');
-                    if ($(this).attr('data-type') == 'pass') {
-                        $(this).attr('type', 'text');
-                    };
-                };
-                if ($(this).hasClass('vn')) {
-                    formValidate($(this));
                 }
             });
+            $('#rangefrom').val($("#range").slider("values", 0));
+            $('#rangeto').val($("#range").slider("values", 1));
+
+            $("#range").find('.ui-slider-handle').eq(0).html('<span>' + $("#range").slider("option", "min") + '</span>');
+            $("#range").find('.ui-slider-handle').eq(1).html('<span>' + $("#range").slider("option", "max") + '</span>');
+
+            $("#rangefrom").bind("change", function () {
+                if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
+                    $(this).val($("#range").slider("option", "max"));
+                }
+                if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
+                    $(this).val($("#range").slider("option", "min"));
+                }
+                $("#range").slider("values", 0, $(this).val());
+            });
+            $("#rangeto").bind("change", function () {
+                if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
+                    $(this).val($("#range").slider("option", "max"));
+                }
+                if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
+                    $(this).val($("#range").slider("option", "min"));
+                }
+                $("#range").slider("values", 1, $(this).val());
+            });
+            $("#range").find('.ui-slider-handle').eq(0).addClass('left');
+            $("#range").find('.ui-slider-handle').eq(1).addClass('right');
+        }
+        //RATING
+        $('.rating.edit .star').hover(function() {
+            var block=$(this).parents('.rating');
+            block.find('.rating__activeline').css({width:'0%'});
+                var ind=$(this).index()+1;
+                var linew=ind/block.find('.star').length*100;
+            setrating(block,linew);
+        },function() {
+                var block=$(this).parents('.rating');
+            block.find('.star').removeClass('active');
+                var ind=block.find('input').val();
+                var linew=ind/block.find('.star').length*100;
+            setrating(block,linew);
         });
-        $('.form-input__viewpass').click(function (event) {
-            if ($(this).hasClass('active')) {
-                $(this).parent().find('input').attr('type', 'password');
-            } else {
-                $(this).parent().find('input').attr('type', 'text');
-            }
-            $(this).toggleClass('active');
+        $('.rating.edit .star').click(function(event) {
+                var block=$(this).parents('.rating');
+                var re=$(this).index()+1;
+                block.find('input').val(re);
+                var linew=re/block.find('.star').length*100;
+            setrating(block,linew);
         });
+        $.each($('.rating'), function(index, val) {
+                var ind=$(this).find('input').val();
+                var linew=ind/$(this).parent().find('.star').length*100;
+            setrating($(this),linew);
+        });
+        function setrating(th,val) {
+            th.find('.rating__activeline').css({width:val+'%'});
+        }
     }
     forms();
     //VALIDATE FORMS
@@ -259,17 +266,12 @@ $(document).ready(function () {
         });
         if (er == 0) {
             removeFormError(form);
-            if (ms != null && ms != '') {
-                showMessageByClass(ms);
-                return false;
-            }
         } else {
             return false;
         }
     });
     function formValidate(input) {
         var er = 0;
-        var form = input.parents('form');
         if (input.attr('name') == 'email' || input.hasClass('email')) {
             if (input.val() != input.attr('data-value')) {
                 var em = input.val().replace(" ", "");
@@ -281,60 +283,12 @@ $(document).ready(function () {
             } else {
                 removeError(input);
             }
-        } else {
-            if (input.val() == '' || input.val() == input.attr('data-value')) {
-                er++;
-                addError(input);
-            } else {
-                removeError(input);
-            }
-        }
-        if (input.attr('type') == 'checkbox') {
-            if (input.prop('checked') == true) {
-                input.removeClass('err').parent().removeClass('err');
-            } else {
-                er++;
-                input.addClass('err').parent().addClass('err');
-            }
-        }
-        if (input.hasClass('name')) {
-            if (!(/^[А-Яа-яa-zA-Z-]+( [А-Яа-яa-zA-Z-]+)$/.test(input.val()))) {
-                er++;
-                addError(input);
-            }
-        }
-        if (input.hasClass('pass-2')) {
-            if (form.find('.pass-1').val() != form.find('.pass-2').val()) {
-                addError(input);
-            } else {
-                removeError(input);
-            }
         }
         return er;
     }
     function addError(input) {
         input.addClass('err');
         input.parent().addClass('err');
-        input.parent().find('.form__error').remove();
-        if (input.hasClass('email')) {
-            var error = '';
-            if (input.val() == '' || input.val() == input.attr('data-value')) {
-                error = input.data('error');
-            } else {
-                error = input.data('error');
-            }
-            if (error != null) {
-                input.parent().append('<div class="form__error">' + error + '</div>');
-            }
-        } else {
-            if (input.data('error') != null && input.parent().find('.form__error').length == 0) {
-                input.parent().append('<div class="form__error">' + input.data('error') + '</div>');
-            }
-        }
-        if (input.parents('.select-block').length > 0) {
-            input.parents('.select-block').parent().addClass('err');
-            input.parents('.select-block').find('.select').addClass('err');
-        }
     }
     function removeError(input) {
         input.removeClass('err');
@@ -344,43 +298,112 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // BURGER
-    let iconMenu = document.querySelector(".icon-menu");
-    let iconMenu_close = document.querySelector(".menu-mobile-close");
-    let body = document.querySelector("body");
-    let menuMobile = document.querySelector(".menu-mobile");
-    let menuMobileBody = document.querySelector(".menu-mobile__body");
     let toggleMenu = function() {
-        menuMobileBody.classList.toggle('active');
+        $(".menu-mobile__body").toggleClass('active');
     }
 
-    if (iconMenu) {
-        iconMenu.addEventListener("click", function (e) {
+    if ($(".icon-menu")) {
+        $(".icon-menu").on("click", function (e) {
             e.preventDefault();
-            // iconMenu.classList.toggle("active");
-            menuMobile.classList.toggle("active");
-            body.classList.toggle("lock");
+            $(".menu-mobile").toggleClass("active");
+            $("body").toggleClass("lock");
             toggleMenu();
         });
     }
-    document.addEventListener('click', function(e) {
+    
+    $(document).on('click', function(e) {
         const target = e.target;
-        const its_menu = target == menuMobileBody || menuMobileBody.contains(target);
-        const its_btnMenu = target == iconMenu;
-        const menu_is_active = menuMobileBody.classList.contains('active');
-        
-        if (!its_menu && !its_btnMenu && menu_is_active) {
-            // iconMenu.classList.toggle("active");
-            menuMobile.classList.toggle("active");
-            body.classList.toggle("lock");
+        const its_menu = $(".menu-mobile__body").has(target).length === 0 && !$(".menu-mobile__body").is(target);
+        const its_btnMenu = $(".icon-menu").is(target);
+        const menu_is_active = $(".menu-mobile__body").hasClass('active');
+        if (its_menu && !its_btnMenu && menu_is_active) {
+            $(".menu-mobile").toggleClass("active");
+            $("body").toggleClass("lock");
             toggleMenu();
         }
     });
-    iconMenu_close.addEventListener("click", function (e) {
-        menuMobile.classList.toggle("active");
-            body.classList.toggle("lock");
-            toggleMenu();
+
+    // =======================================================================================================================
+
+    // FILTER MENU
+    $(".filter-mobile__buttons-item").on("click", function (e) {
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass('active');
+            if (!$(".filter-menu").hasClass('active')) {
+                $(".filter-menu").addClass('active');
+            }
+            // $("body").addClass("lock");
+        }
+        if ($(this).hasClass('filter-mobile__buttons-item_style')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_style").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_metal')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_metal").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_price')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_price").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        }
     });
 
+    $(document).on('click', function(e) {
+        const target = e.target;
+        const its_filter_menu = $(".filter-menu").has(target).length === 0 && !$(".filter-menu").is(target);
+        const its_filter_menu_close = $(".filter-menu__head-close").is(target);
+        const its_filter_menu_active = $(".filter-menu").hasClass('active');
+        if ((its_filter_menu && its_filter_menu_active) || its_filter_menu_close) {
+            $(".filter-mobile__buttons-item").removeClass("active");
+            $(".filter-menu").removeClass("active");
+            // $("body").removeClass("lock");
+        }
+    });
+    
+    // =======================================================================================================================
+
+    // NICE SELECT
+    $('.sort__select').niceSelect();
+
+    // =======================================================================================================================
+
+    // BUTTON LIKE
+    $('.item-catalog__like').on('click', function(){
+        $(this).toggleClass('active');
+    });
+
+    // =======================================================================================================================
+
+    // GOOD SLIDER
+    if ($(window).innerWidth() >= 580) {
+        $(".item-catalog__thumbs-item").mouseenter(function(ev) {
+            let el = ev.currentTarget;
+            let el_index = $(this).index() + 1;
+            // console.log(el_index);
+            let elSlide  = $(this).parent().prev().find('.item-catalog__image');
+            let elSlide_index;
+            $.each($(elSlide),function(i){
+                if ($(elSlide[i]).index()+1 == el_index) {
+                    // console.log($(elSlide[i]))
+                    $(elSlide[i]).addClass('active').siblings().removeClass('active');
+                }
+            });
+        });
+    }
+    
     // =======================================================================================================================
 
     // SLIDERS (SWIPER)
@@ -404,6 +427,9 @@ $(document).ready(function () {
                         slidesPerView: 1,
                     },
                     580: {
+                        slidesPerView: 3,
+                    },
+                    768: {
                         slidesPerView: 4,
                     },
                 }
@@ -431,7 +457,7 @@ $(document).ready(function () {
         }
     });
 
-    const sliderPartner = document.querySelector('.banner-partners__slider');
+    const sliderPartner = document.querySelector('.stright-partners__slider');
     let swiperPartner = new Swiper(sliderPartner,{
         slidesPerView: 8,
         centeredSlides: true,
@@ -497,35 +523,37 @@ $(document).ready(function () {
         }
     });
 
-    const sliderShop = document.querySelector('.shop__slider-container');
-    let swiperShop = new Swiper(sliderShop,{
-        slidesPerView: 4,
-        spaceBetween: 42,
-        loop: true,
-        allowTouchMove: true,
-
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
+    const sliderShop = document.querySelectorAll('.shop__slider-container');
+    sliderShop.forEach((el) => {
+        let swiperShop = new Swiper(el, {
+            slidesPerView: 4,
+            spaceBetween: 42,
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: el.parentNode.querySelector('.swiper-button-next'),
+                prevEl: el.parentNode.querySelector('.swiper-button-prev'),
             },
-            320: {
-                slidesPerView: 1,
-            },
-            425: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4
-            },
-        }
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                320: {
+                    slidesPerView: 1,
+                },
+                425: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4
+                },
+            }
+        });
     });
+    
 
     const sliderInspiration = document.querySelector('.inspiration__slider-container');
     let swiperInspiration = new Swiper(sliderInspiration,{

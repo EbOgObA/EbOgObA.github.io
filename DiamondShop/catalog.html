@@ -1,0 +1,2741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Shop</title>
+    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="libs/swiper.min.css">
+    <!-- NICE-SELECT -->
+    <!-- <link type="text/css" rel="stylesheet" href="libs/nice-select.css"/> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header__stright">
+                <div class="swiper-wrapper header__stright-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">24/7 CUSTOMER SERVICE</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">LIFETIME WARRANTY</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">FREE INTERNATIONAL SHIPPING</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="header__stright-item">100% MONEY BACK GUARANTEE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__top">
+                <div class="container header__top-container">
+                    <button class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="header__top-column header__top-column_communication" data-da="menu-mobile__body-contact,0,1024">
+                        <div class="header__top-item phone">
+                            <a href="tel:+14123149060" class="header__top-item-link" title="Phone">
+                                <img class="header__top-item-link_img" src="img/header_icons/phone.svg" alt="Phone">
+                                <span class="header__top-item-link_text">+1-412-314-9060</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item chat">
+                            <a href="#" class="header__top-item-link" title="Chat">
+                                <img class="header__top-item-link_img" src="img/header_icons/chat.svg" alt="Chat">
+                            </a>
+                        </div>
+                        <div class="header__top-item envelope">
+                            <a href="#" class="header__top-item-link" title="Email">
+                                <img class="header__top-item-link_img" src="img/header_icons/envelope.svg" alt="Envelope">
+                            </a>
+                        </div>
+                        <div class="header__top-item appointment">
+                            <a href="#" class="header__top-item-link" title="Imac">
+                                <img class="header__top-item-link_img" src="img/header_icons/imac.svg" alt="Imac">
+                                <span class="header__top-item-link_text header__top-item-link_text-gray">virtual appointment</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__top-logo">
+                        <a class="header__top-logo-link" href="#">
+                            <img class="header__top-logo_top" src="img/header_icons/logo_top.svg" alt="logo_top">
+                            <span class="header__top-logo_text">Diamond Shop</span>
+                            <img class="header__top-logo_bot" src="img/header_icons/logo_bot.svg" alt="logo_bot">
+                        </a>
+                    </div>
+                    <div class="header__top-column header__top-column_stat">
+                        <div class="header__top-item login">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/user.svg" alt="User">
+                                <span class="header__top-item-link_text">Login</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item like">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/heart.svg" alt="Heart">
+                                <span class="header__top-item-link_text">Wish list</span>
+                                <span class="header__top-item-link_count">0</span>
+                            </a>
+                        </div>
+                        <div class="header__top-item cart">
+                            <a href="#" class="header__top-item-link">
+                                <img class="header__top-item-link_img" src="img/header_icons/bag.svg" alt="Heart">
+                                <span class="header__top-item-link_text">My cart</span>
+                                <span class="header__top-item-link_count">0</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container header__bottom-container">
+                    <nav class="header__bottom-nav nav-header" data-da="menu-mobile__body-content,0,1024">
+                        <ul class="nav-header__list">
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Engagement rings</span> <span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/menu_icons/image1.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Wedding rings</span><span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/shop/sl3.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-header__list-item">
+                                <a class="nav-header__list-item-link btn-pulse" href="#"><span>Diamonds</span> <span class="spoller-btn"></span></a>
+                                <div class="menu">
+                                    <div class="container menu-container">
+                                        <div class="menu__column">
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle">Design your own engagement ring</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/1.png" alt="1">
+                                                            <span class="menu__sublist-item-link_text">Start With A Setting</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/2.png" alt="2">
+                                                            <span class="menu__sublist-item-link_text">Start With A Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <img class="menu__sublist-item-link_img" src="img/menu_icons/3.png" alt="3">
+                                                            <span class="menu__sublist-item-link_text">Start With A Lab-Created Diamond</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__row">
+                                                <div class="menu__subtitle menu__subtitle">Get inspired by customer's rings</div>
+                                                <ul class="menu__sublist">
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Round Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Princess Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">Cushion Cut Rings</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="menu__sublist-item menu__sublist-item_wi">
+                                                        <a href="#" class="menu__sublist-item-link">
+                                                            <span class="menu__sublist-item-link_text">All Diamond Engagement Rings</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Engagement ring styles</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/4.png" alt="4">
+                                                        <span class="menu__sublist-item-link_text">Solitaire</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/5.png" alt="5">
+                                                        <span class="menu__sublist-item-link_text">Pavé</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/6.png" alt="6">
+                                                        <span class="menu__sublist-item-link_text">Channel-Set</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/7.png" alt="7">
+                                                        <span class="menu__sublist-item-link_text">Side-Stone</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/8.png" alt="8">
+                                                        <span class="menu__sublist-item-link_text">Tension</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/9.png" alt="9">
+                                                        <span class="menu__sublist-item-link_text">Vintage</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/10.png" alt="10">
+                                                        <span class="menu__sublist-item-link_text">Halo</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item menu__sublist-item_sm">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/11.png" alt="11">
+                                                        <span class="menu__sublist-item-link_text">Three-Stone</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column">
+                                            <div class="menu__subtitle">Shop by metal</div>
+                                            <ul class="menu__sublist">
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/12.png" alt="12">
+                                                        <span class="menu__sublist-item-link_text">Rose Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/13.png" alt="13">
+                                                        <span class="menu__sublist-item-link_text">White Gold</span>
+                                                    </a>
+                                                </li>
+                                                <li class="menu__sublist-item">
+                                                    <a href="#" class="menu__sublist-item-link">
+                                                        <img class="menu__sublist-item-link_img" src="img/menu_icons/14.png" alt="14">
+                                                        <span class="menu__sublist-item-link_text">Yellow Gold</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__column menu__column_img">
+                                            <a href="#" title="12121"><img src="img/shop/sl4.jpg" alt="image1"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__bottom-info" data-da="menu-mobile__body-content,1,1024">
+                        <ul class="header__bottom-info-list">
+                            <li class="header__bottom-info-list-item"><a class="header__bottom-info-list-item-link btn-pulse" href="#"><span>Education</span></a></li>
+                            <li class="header__bottom-info-list-item"><a class="header__bottom-info-list-item-link btn-pulse" href="#"><span>Faq</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="header__bottom-search">
+                        <form class="header__bottom-search-form form-search" action="#">
+                            <input class="input form-search__input" type="text" placeholder="Search">
+                            <button class=" form-search__submit"><img src="img/header_icons/search.svg" alt="search"></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="menu-mobile">
+            <div class="menu-mobile__body">
+                <div class="menu-mobile__body-head">
+                    <div class="menu-mobile__body-head-row menu-mobile__body-head-row_menuclose">
+                        <a class="menu-mobile__body-login" href="#">
+                            <span><img src="img/header_icons/user.svg" alt="User"></span>Login / Sign up
+                        </a>
+                        <button class="icon-menu active menu-mobile-close">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                    <div class="menu-mobile__body-head-row">
+                        <div class="menu-mobile__body-search">
+                            <form class="menu-mobile__body-search-form form-search" action="#">
+                                <input class="input form-search__input" type="text" placeholder="Search Diamond Shop">
+                                <button class=" form-search__submit"><img src="img/header_icons/search.svg" alt="search"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-mobile__body-content"></div>
+                <div class="menu-mobile__body-contact">
+                    <div class="menu-mobile__body-contact-title">Contact Us</div>
+                </div>
+                <div class="menu-mobile__body-copyright">
+                    <span>&#169; 2020 Diamond Shop. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BANNER -->
+        <div class="stright">
+            Design your engagement ring your way
+        </div>
+
+        <!-- BREADCRUMB -->
+        <div class="breadcrumbs">
+            <div class="container breadcrumbs__container">
+                <ul class="breadcrumbs__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="current">Engagement Rings</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CATALOG -->
+        <div class="catalog">
+            <div class="container catalog__container">
+                <h1 class="catalog__title title title_md">Engagement Ring Settings</h1>
+                <div class="catalog__subtitle">
+                    Our engagement rings are handcrafted from recycled precious metals and set with Beyond Conflict Free Diamonds™ and vibrant gemstones.
+                </div>
+                <!-- CONSTRUCTOR -->
+                <div class="constructor">
+                    <div class="constructor__column constructor__column_create">
+                        <div class="constructor__column-title">Create Your Ring</div>
+                    </div>
+                    <div class="constructor__column constructor__column_setting done">
+                        <p class="constructor__column-num">1</p>
+                        <div class="constructor__column-title deafault">Choose Setting</div>
+                        <div class="constructor__column-title done">Setting</div>
+                        <div class="constructor__column-text">Waverly - $1 000</div>
+                        <div class="constructor__column-link done">
+                            <a href="#">View</a>
+                            <a href="#">Change</a>
+                        </div>
+                        <img class="constructor__column-img deafault" src="img/catalog/constructor/ring.svg" alt="ring">
+                        <img class="constructor__column-img done" src="img/catalog/constructor/ring-done.png" alt="ring">
+                    </div>
+                    <div class="constructor__column constructor__column_diamond active">
+                        <p class="constructor__column-num">2</p>
+                        <div class="constructor__column-title deafault">Choose Diamond</div>
+                        <div class="constructor__column-title done">Diamond</div>
+                        <div class="constructor__column-text">0.30 carat Round - $810</div>
+                        <div class="constructor__column-link deafault">
+                            <a href="#">Browse Settings</a>
+                        </div>
+                        <div class="constructor__column-link done">
+                            <a href="#">View</a>
+                            <a href="#">Change</a>
+                        </div>
+                        <img class="constructor__column-img deafault" src="img/catalog/constructor/diamond.svg" alt="diamond">
+                        <img class="constructor__column-img done" src="img/catalog/constructor/diamond-done.png" alt="ring">
+                    </div>
+                    <div class="constructor__column constructor__column_complete">
+                        <p class="constructor__column-num">3</p>
+                        <div class="constructor__column-title deafault">Complete Ring</div>
+                        <div class="constructor__column-title done">Complete</div>
+                        <div class="constructor__column-link deafault">
+                            <a href="#">Select Ring Size</a>
+                        </div>
+                        <div class="constructor__column-link done">
+                            <a href="#">Add to cart</a>
+                        </div>
+                        <img class="constructor__column-img" src="img/catalog/constructor/ring-c.svg" alt="ring">
+                    </div>
+                </div>
+                <!-- FILTER -->
+                <div class="filter">
+                    <div class="filter-mobile">
+                        <div class="filter-mobile__buttons">
+                            <div class="filter-mobile__buttons-item filter-mobile__buttons-item_style">
+                                <p class="filter-mobile__buttons-item-title">Style</p>
+                                <p class="filter-mobile__buttons-item-text">All</p>
+                            </div>
+                            <div class="filter-mobile__buttons-item filter-mobile__buttons-item_metal">
+                                <p class="filter-mobile__buttons-item-title">Metal</p>
+                                <p class="filter-mobile__buttons-item-text">All</p>
+                            </div>
+                            <div class="filter-mobile__buttons-item filter-mobile__buttons-item_price">
+                                <p class="filter-mobile__buttons-item-title">Price</p>
+                                <p class="filter-mobile__buttons-item-text">All</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter__row">
+                        <!-- FILTER STYLE -->
+                        <div class="filter__column filter__column_style filter-style" data-da="filter-menu__item_style,1,768">
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/1.png" alt="SOLITAIRE">
+                                </span>
+                                <span class="filter-style__item-text">SOLITAIRE</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/2.png" alt="PAVÉ">
+                                </span>
+                                <span class="filter-style__item-text">PAVÉ</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/3.png" alt="CHANNEL SET">
+                                </span>
+                                <span class="filter-style__item-text">CHANNEL SET</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/4.png" alt="SIDE-STONE">
+                                </span>
+                                <span class="filter-style__item-text">SIDE-STONE</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/5.png" alt="THREE-STONE">
+                                </span>
+                                <span class="filter-style__item-text">THREE-STONE</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/6.png" alt="TENSION">
+                                </span>
+                                <span class="filter-style__item-text">TENSION</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/7.png" alt="HALO">
+                                </span>
+                                <span class="filter-style__item-text">HALO</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/8.png" alt="CHANNEL SET">
+                                </span>
+                                <span class="filter-style__item-text">CHANNEL SET</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/9.png" alt="SIDE-STONE">
+                                </span>
+                                <span class="filter-style__item-text">SIDE-STONE</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/10.png" alt="THREE-STONE">
+                                </span>
+                                <span class="filter-style__item-text">THREE-STONE</span>
+                            </a>
+                            <a class="filter-style__item" href="#">
+                                <span class="filter-style__item-img">
+                                    <img src="img/filter_icons/style/11.png" alt="TENSION">
+                                </span>
+                                <span class="filter-style__item-text">TENSION</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="filter__row filter__row">
+                        <!-- FILTER METAL -->
+                        <div class="filter__column filter__column_metal filter-metal" data-da="filter-menu__item_metal,1,768">
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/1.png" alt="14K WHITE">
+                                </span>
+                                <span class="filter-metal__item-text">14K WHITE</span>
+                            </a>
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/2.png" alt="18K WHITE">
+                                </span>
+                                <span class="filter-metal__item-text">18K WHITE</span>
+                            </a>
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/3.png" alt="14K Yellow">
+                                </span>
+                                <span class="filter-metal__item-text">14K Yellow</span>
+                            </a>
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/4.png" alt="18K Yellow">
+                                </span>
+                                <span class="filter-metal__item-text">18K Yellow</span>
+                            </a>
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/5.png" alt="Platinum">
+                                </span>
+                                <span class="filter-metal__item-text">Platinum</span>
+                            </a>
+                            <a class="filter-metal__item" href="#">
+                                <span class="filter-metal__item-img">
+                                    <img src="img/filter_icons/metal/6.png" alt="Rose Gold">
+                                </span>
+                                <span class="filter-metal__item-text">Rose Gold</span>
+                            </a>
+                        </div>
+                        <!-- FILTER PRICE -->
+                        <div class="filter__column filter__column_price filter-price" data-da="filter-menu__item_price,1,768">
+                            <p class="filter-price__title">Price</p>
+                            <div class="filter-price__item">
+                                <div id="range" class="filter-price__item-range"></div>
+                                <div class="filter-price__item-table table">
+                                    <div class="cell">
+                                        <input type="text" name="form[]" id="rangefrom">
+                                    </div>
+                                    <div class="cell">
+                                        <input type="text" name="form[]" id="rangeto">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SORT -->
+                <div class="sort">
+                    <div class="sort__item">
+                        <span>Sort:</span>
+                        <select id="sort-group" class="sort__select">
+                            <option value="best sellers">Best Sellers</option>
+                            <option value="low to high">Price: Low to High</option>
+                            <option value="high to low">Price: High to Low</option>
+                        </select>
+                    </div>
+                    <div class="sort__item sort__item_result">
+                        Showing 56 Results 
+                    </div>
+                </div>
+                <div class="catalog__content">
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                            <span class="rating">
+                                <span class="rating__line"></span>
+                                <span class="rating__activeline"></span>
+                                <input value="3.7" type="hidden" name="rating">
+                                <span class="stars">
+                                    <span class="star"><i>Ужасно</i></span>
+                                    <span class="star"><i>Плохо</i></span>
+                                    <span class="star"><i>Нормально</i></span>
+                                    <span class="star"><i>Хорошо</i></span>
+                                    <span class="star"><i>Отлично</i></span>
+                                </span>
+                            </span>
+                        </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Lauren Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Emerald 0.94ct And Diamond 18K Gold Ring</span>
+                            <span class="item-catalog__price item-catalog__price_sale">
+                                <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                <span class="item-catalog__price_sale-new">$ 900</span>
+                            </span>
+                            <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">Princess Cut Half Eternity Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price">$ 1 000</span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="catalog__content-item item-catalog">
+                        <span class="item-catalog__like">
+                            <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.03553 1C2.80677 1 1 2.80677 1 5.03553C1 6.10582 1.42517 7.13228 2.18198 7.88909L8.14645 13.8536C8.34171 14.0488 8.65829 14.0488 8.85355 13.8536L14.818 7.88909C15.5748 7.13228 16 6.10582 16 5.03553C16 2.80677 14.1932 1 11.9645 1C10.8942 1 9.86772 1.42517 9.11091 2.18198L8.5 2.79289L7.88909 2.18198C7.13228 1.42517 6.10582 1 5.03553 1Z" stroke="#4A4A4A"/>
+                            </svg>
+                        </span>
+                        <span class="rating-block">
+                                <span class="rating">
+                                    <span class="rating__line"></span>
+                                    <span class="rating__activeline"></span>
+                                    <input value="3.7" type="hidden" name="rating">
+                                    <span class="stars">
+                                        <span class="star"><i>Ужасно</i></span>
+                                        <span class="star"><i>Плохо</i></span>
+                                        <span class="star"><i>Нормально</i></span>
+                                        <span class="star"><i>Хорошо</i></span>
+                                        <span class="star"><i>Отлично</i></span>
+                                    </span>
+                                </span>
+                            </span>
+                        <a class="item-catalog__link" href="#">
+                            <span class="item-catalog__image-box">
+                                <span class="item-catalog__image active">
+                                    <img src="img/catalog/items/1.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/2.png" alt="#">
+                                </span>
+                                <span class="item-catalog__image">
+                                    <img src="img/catalog/items/3.png" alt="#">
+                                </span>
+                                <div class="item-catalog__image-btn360degrees"></div>
+                            </span>
+                            <span class="item-catalog__thumbs">
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/1.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/2.jpg" alt="#">
+                                </div>
+                                <div class="item-catalog__thumbs-item">
+                                    <img src="img/catalog/items/thumbs/3.jpg" alt="#">
+                                </div>
+                            </span>
+                            <span class="item-catalog__description">
+                                <span class="item-catalog__title">5 Stone Chloe Rings 18K Gold Ring</span>
+                                <span class="item-catalog__price item-catalog__price_sale">
+                                    <span class="item-catalog__price_sale-last">$ 1 000</span>
+                                    <span class="item-catalog__price_sale-new">$ 900</span>
+                                </span>
+                                <span class="item-catalog__text">(Setting Price)</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-menu">
+            <div class="filter-menu__head">
+                <button class="filter-menu__head-close">Close</button>
+                <div class="filter-menu__head-draggable"></div>
+                <button class="filter-menu__head-reset">Reset</button>
+            </div>
+            <div class="filter-menu__content">
+                <div class="filter-menu__item filter-menu__item_style">
+                    <div class="filter-menu__item-title">Style</div>
+    
+                </div>
+                <div class="filter-menu__item filter-menu__item_metal">
+                    <div class="filter-menu__item-title">Metal</div>
+    
+                </div>
+                <div class="filter-menu__item filter-menu__item_price">
+                    <div class="filter-menu__item-title">Setting Price</div>
+    
+                </div>
+            </div>
+            <div class="filter-menu__footer">
+                <a class="filter-menu__footer-link" href="#">
+                    <span>VIEW 596</span> Engagement Rings
+                </a>
+            </div>
+        </div>
+        
+        
+
+        <!-- SIGN UP -->
+        <div class="sign-up">
+            <div class="container sign-up__container">
+                <div class="sign-up__title title title_md">Sign up for our email list</div>
+                <div class="sign-up__form-box">
+                    <form class="sign-up__form" action="#">
+                        <input autocomplete="off" type="text" name="form[]" placeholder="Enter Adress" class="sign-up__form-input input req email">
+                        <div class="sign-up__form-buttons">
+                            <button class="sign-up__form-button sign-up__form-button_m" name="Man" type="submit">Man</button>
+                            <button class="sign-up__form-button sign-up__form-button_w" name="Woman" type="submit">Woman</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up__content">
+                    <p class="sign-up__text">
+                        *By signing up you confirm that you have read the Privacy Policy and agree that your email and gender will be collected and used by James Allen for the purposes of sending news, promotions and updates via email. You can withdraw your consent at any time by unsubscribing or contacting us via service@jamesallen.com.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container footer-top__container">
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Experience</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">360° display technology</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Virtual ring sizer</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Refer a friend</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Become an affiliate</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Custom design rings</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Packaging</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Site map</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Our company</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Customer service</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Lifetime warranty</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Financing options</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Free shipping worldwide</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Jewelry insurance</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">1 year free resizing</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Free engraving</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Tax & duty calculator</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">About us</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">About us</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Reviews</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Engagement moments</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">The blog</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Press</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Cities</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Locations</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-top__column">
+                        <div class="footer-top__column-title title title_sm">Policies</div>
+                        <ul class="footer-top__column-list">
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Conflict-free diamonds</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Lifetime upgrade</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Payment options</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Terms of use</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Privacy policy</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Cookies policy</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Accessibility</a>
+                            </li>
+                            <li class="footer-top__column-list-item">
+                                <a href="#" class="footer-top__column-list-item-link">Privacy shield notice</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container footer-bottom__container">
+                    <div class="footer-bottom__column footer-bottom__column_social">
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/1.svg" alt="Facebook"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/2.svg" alt="Twitter"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/3.svg" alt="WhatsApp"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/4.svg" alt="Messanger"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/5.svg" alt="You Tube"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/6.svg" alt="Instagram"></a>
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <a href="#"><img src="img/footer_icons/social/7.svg" alt="Linked In"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom__column  footer-bottom__column_payment">
+                        <ul class="footer-bottom__list">
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/1.svg" alt="Visa">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/2.svg" alt="PayPal">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/3.svg" alt="Amazon">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/4.svg" alt="AMEX">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/5.svg" alt="MasterCard">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/6.svg" alt="Apple Pay">
+                            </li>
+                            <li class="footer-bottom__list-item">
+                                <img src="img/footer_icons/payment/7.svg" alt="Google Pay">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-bottom__column footer-bottom__column_copyright">
+                        © 2020. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="libs/jquery-3.4.1.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="libs/jquery-ui.min.js"></script>
+    <!-- SWIPER-SLIDER -->
+    <script src="libs/swiper.min.js"></script>
+    <!-- NICE-SELECT -->
+    <script src="libs/jquery.nice-select.min.js"></script>
+    <!-- SCRIPTS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
