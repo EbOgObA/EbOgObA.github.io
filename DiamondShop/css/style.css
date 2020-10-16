@@ -5,21 +5,7 @@
 * Browsers: last 4 version
 */
 
-@font-face {
-  font-family: "OpenSans-Bold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "OpenSans-ExtraBold";
-  font-display: swap;
-  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
+@charset "UTF-8";
 
 @font-face {
   font-family: "CormorantGaramond-Light";
@@ -33,6 +19,22 @@
   font-family: "CormorantGaramond-Regular";
   font-display: swap;
   src: url("../fonts/CormorantGaramond-Regular.woff") format("woff"), url("../fonts/CormorantGaramond-Regular.woff2") format("woff2"), url("../fonts/CormorantGaramond-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -573,6 +575,51 @@ h6 {
   vertical-align: middle;
 }
 
+.tabs__content {
+  display: none;
+  /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+  display: block;
+  /* по умолчанию показываем нужный блок */
+}
+
+.check {
+  position: relative;
+  padding-left: 33px;
+  color: #5f5f5f;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.check input {
+  display: none;
+}
+
+.check:before {
+  content: '';
+  left: 0;
+  top: -3px;
+  width: 23px;
+  height: 23px;
+  border: 1px solid #CDD9D8;
+  position: absolute;
+  background-color: #fff;
+}
+
+.check.active:before {
+  background: url("../img/filter_icons/options/check.svg") center no-repeat;
+  background-size: 75%;
+}
+
+.info-btn {
+  margin: 0px 0px 0px 14px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/icons/info.svg") center no-repeat;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   min-width: 43px;
@@ -1092,9 +1139,12 @@ h6 {
   padding: 32px 0px 41px;
   background-color: #fff;
   border-top: 1px solid #cdd9d8;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu__column {
+  max-width: 35%;
   margin: 0px 20px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1106,6 +1156,7 @@ h6 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: hidden;
 }
 
 .menu__column_c .menu__sublist-item {
@@ -1117,6 +1168,7 @@ h6 {
       -ms-flex: 0 0 392px;
           flex: 0 0 392px;
   margin: 0px;
+  text-align: right;
 }
 
 .menu__column_img img {
@@ -2428,8 +2480,6 @@ h6 {
   position: relative;
   display: inline-block;
   margin: 11px;
-  height: 32.5vw;
-  max-height: 383px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 22%;
           flex: 1 1 22%;
@@ -2456,13 +2506,21 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin: 0px 0px 21px 0px;
+  max-height: 270px;
+  overflow: hidden;
+  background-color: #f5f9fc;
 }
 
 .item-catalog__image {
   display: none;
+  width: 100%;
 }
 
 .item-catalog__image.active {
+  display: block;
+}
+
+.item-catalog__image.active .item-catalog__image-btn360degrees {
   display: block;
 }
 
@@ -2515,6 +2573,7 @@ h6 {
 }
 
 .item-catalog__image-btn360degrees {
+  display: none;
   position: absolute;
   left: 16px;
   bottom: 10px;
@@ -2581,12 +2640,31 @@ h6 {
 
 .item-catalog__text {
   display: none;
-  margin: 10px 0px 18px;
-  padding: 0px 10px;
+  padding: 10px 10px 18px;
   color: #4A4A4A;
   font-size: 12px;
   line-height: 1.1;
   text-align: center;
+}
+
+.item-catalog_static .item-catalog__price {
+  margin: 0px 0px 0px;
+}
+
+.item-catalog_hovered .item-catalog__like {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.item-catalog_hovered .item-catalog__image-btn360degrees {
+  opacity: 1;
+  visibility: visible;
+}
+
+.item-catalog_hovered .rating-block {
+  opacity: 1;
+  visibility: visible;
 }
 
 .constructor {
@@ -2826,7 +2904,10 @@ h6 {
 }
 
 .filter__column_style .filter__item {
-  margin: 0px 35px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 5%;
+          flex: 1 1 5%;
+  margin: 0px 2% 0px 0px;
   max-width: 100px;
 }
 
@@ -2892,6 +2973,257 @@ h6 {
   text-align: center;
 }
 
+.filter-diamond {
+  margin: 20px 0px;
+}
+
+.filter-diamond__tabs {
+  margin: 0px 0px 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-diamond__tabs-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  padding: 11px;
+  max-width: 240px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #000000;
+  text-align: center;
+  border: 1px solid #CDD9D8;
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.filter-diamond__tabs-item.active {
+  border: 1px solid #4F71C9;
+  background-color: #4F71C9;
+  color: #fff;
+}
+
+.filter-diamond__tabs-content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px -10.5px;
+}
+
+.filter-diamond__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - 42px);
+          flex: 1 1 calc(50% - 42px);
+  margin: 0px 10.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.filter-diamond__column:last-child {
+  padding: 0px 0px 0px 21px;
+}
+
+.filter-diamond__column:last-child .filter-diamond__row-title {
+  margin: 0px 50px 0px 0px;
+  max-width: 60px;
+}
+
+.filter-diamond__row {
+  margin: 0px 0px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.filter-diamond__row_color {
+  margin: 0px 0px 55px;
+}
+
+.filter-diamond__row_cut {
+  margin: 0px 0px 60px;
+}
+
+.filter-diamond__row_carat {
+  margin: 0px 0px 20px;
+}
+
+.filter-diamond__row-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 68px;
+          flex: 1 0 68px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 68px;
+  margin: 0px 43px 0px 0px;
+  color: #4A4A4A;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.filter-diamond__row-title span {
+  display: inline-block;
+}
+
+.filter-diamond__row-title_center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.filter-diamond__row-title .info-btn {
+  margin: 0px;
+}
+
+.filter-diamond__row-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.filter-diamond__row-content #rangefrom {
+  max-width: 74px;
+}
+
+.filter-diamond__row-content #rangeto {
+  max-width: 90px;
+}
+
+.filter-diamond__row-content .filter-price__item-range {
+  margin: 10px 12px;
+}
+
+.filter-diamond__row-content .filter-price__item-range_m {
+  margin: 10px 12px 20px;
+}
+
+.filter-diamond__options {
+  margin: 13px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-diamond__options-title {
+  margin: 0px 35px 0px 0px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4A4A4A;
+}
+
+.filter-diamond__options-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter-diamond__options-item {
+  margin: 0px 35px 0px 0px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4A4A4A;
+}
+
+.filter-diamond__options-clear {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: right;
+  font-size: 14px;
+  line-height: 1.4;
+  text-decoration: underline;
+  color: #4F71C9;
+}
+
+.filter-diamond__options-clear:hover {
+  text-decoration: none;
+}
+
+.diamond-shape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diamond-shape__item {
+  width: 100%;
+  max-width: 48px;
+  border: 1px solid #CDD9D8;
+  -webkit-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.diamond-shape__item.active {
+  border: 1px solid #4F71C9;
+}
+
+.diamond-shape__item-image {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.diamond-shape__item-image img {
+  width: 100%;
+}
+
 .filter-mobile {
   display: none;
   margin: 0px -20px;
@@ -2911,8 +3243,27 @@ h6 {
           align-items: center;
 }
 
+.filter-mobile__buttons-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0px 0px 10px 0px;
+}
+
+.filter-mobile__buttons-row:last-child {
+  margin: 0px;
+}
+
 .filter-mobile__buttons-item {
-  padding: 5px 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10%;
+          flex: 1 1 10%;
+  max-width: 90px;
+  padding: 5px 10px;
   margin: 0px 10px 0px 0px;
   border: 1px solid #cdd9d8;
   border-radius: 5px;
@@ -2933,7 +3284,7 @@ h6 {
 
 .filter-mobile__buttons-item-title {
   margin: 0px 0px 5px 0px;
-  font-size: 14px;
+  font-size: 12px;
   color: #4a4a4a;
   text-align: center;
 }
@@ -2942,6 +3293,73 @@ h6 {
   text-align: center;
   font-size: 12px;
   color: #afafaf;
+}
+
+.filter-mobile_diamond .filter-mobile__buttons {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px auto;
+  max-width: 300px;
+}
+
+.filter-mobile_diamond .filter-mobile__buttons-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+  margin: 5px;
+  max-width: 30%;
+}
+
+.filter-mobile_wedding .filter-mobile__buttons-item {
+  padding: 10px 10px;
+}
+
+.filter-mobile_wedding .filter-mobile__buttons-item-title {
+  margin: 0px;
+  font-size: 10px;
+}
+
+.diamond-mobile {
+  padding: 0px 0px 10px 0px;
+}
+
+.diamond-mobile__tabs {
+  background-color: #fff;
+  padding: 10px 0px 0px;
+  margin: 0px 0px 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.diamond-mobile__tabs-item {
+  position: relative;
+  padding: 0px 5px 10px;
+  margin: 0px 10px;
+  color: #4a4a4a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.diamond-mobile__tabs-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.diamond-mobile__tabs-item.active::after {
+  opacity: 1;
+  background-color: #4f71c9;
 }
 
 .filter-price {
@@ -3040,7 +3458,122 @@ h6 {
 }
 
 .filter-price__item-range .ui-slider-handle.right {
-  right: 0;
+  right: -12px;
+}
+
+.filter-wedding {
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter-wedding__column {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+}
+
+.filter-wedding__column_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.filter-wedding__column_price .filter-price__title {
+  padding: 0px 10px 0px 0px;
+}
+
+.filter-wedding__column_price-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.filter-wedding__column_price-box .filter-price__item-range {
+  margin: 10px 12px 20px 12px;
+}
+
+.filter-wedding__column-title {
+  margin: 0px 0px 30px 0px;
+  color: #4A4A4A;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.filter-wedding__column-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.filter-wedding__item {
+  margin: 0px 15px 0px 0px;
+  max-width: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-wedding__item.active .filter-wedding__item-image {
+  position: relative;
+  z-index: 1;
+  -webkit-box-shadow: 0px 0px 1px 1px #4F71C9;
+          box-shadow: 0px 0px 1px 1px #4F71C9;
+}
+
+.filter-wedding__item-image {
+  width: 100%;
+  height: 100%;
+  max-height: 59px;
+  margin: 0px 0px 5px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.filter-wedding__item-image img {
+  width: 100%;
+}
+
+.filter-wedding__item-title {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #4A4A4A;
 }
 
 .filter-menu {
@@ -3125,27 +3658,15 @@ h6 {
   overflow-y: auto;
 }
 
-.filter-menu__item_style {
+.filter-menu__content_wf {
+  margin: 0px 0px 10px 0px;
+}
+
+.filter-menu__item {
   display: none;
 }
 
-.filter-menu__item_style.active {
-  display: block;
-}
-
-.filter-menu__item_metal {
-  display: none;
-}
-
-.filter-menu__item_metal.active {
-  display: block;
-}
-
-.filter-menu__item_price {
-  display: none;
-}
-
-.filter-menu__item_price.active {
+.filter-menu__item.active {
   display: block;
 }
 
@@ -3155,6 +3676,10 @@ h6 {
   color: #4A4A4A;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.filter-menu__item-title .info-btn {
+  margin: 0px 0px 0px 5px;
 }
 
 .filter-menu__footer {
@@ -3471,10 +3996,45 @@ h6 {
     display: block;
   }
 
+  .item-catalog_static:hover .item-catalog__link {
+    position: relative;
+  }
+
+  .item-catalog_static:hover .item-catalog__description {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .item-catalog_static:hover .item-catalog__price {
+    margin: 0px 0px 0px;
+  }
+
+  .item-catalog_static:hover .item-catalog__thumbs {
+    display: none;
+  }
+
+  .item-catalog_static:hover .item-catalog__text {
+    display: none;
+  }
+
   .filter__item:hover .filter__item-img,
   .filter__item:focus .filter__item-img {
     position: relative;
     z-index: 2;
+    -webkit-box-shadow: 0px 0px 1px 1px #4F71C9;
+            box-shadow: 0px 0px 1px 1px #4F71C9;
+  }
+
+  .diamond-shape__item:hover {
+    border: 1px solid #4F71C9;
+  }
+
+  .filter-wedding__item:hover .filter-wedding__item-image {
+    position: relative;
+    z-index: 1;
     -webkit-box-shadow: 0px 0px 1px 1px #4F71C9;
             box-shadow: 0px 0px 1px 1px #4F71C9;
   }
@@ -3569,11 +4129,11 @@ h6 {
   }
 
   .nav-header__list-item:first-child {
-    padding: 0px 30px 0px 0px;
+    padding: 0px;
   }
 
   .nav-header__list-item:last-child {
-    padding: 0px 0px 0px 30px;
+    padding: 0px;
   }
 
   .nav-header__list-item {
@@ -3582,6 +4142,24 @@ h6 {
 
   .appointment .header__top-item-link_text {
     display: none;
+  }
+
+  .menu__column_img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 280px;
+            flex: 0 0 280px;
+  }
+
+  .menu__row {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .menu__subtitle {
+    font-size: 14px;
+  }
+
+  .menu__sublist-item-link_text {
+    font-size: 14px;
   }
 
   .best-sellers__container {
@@ -3604,8 +4182,64 @@ h6 {
     width: 100%;
   }
 
+  .filter__column_style .filter__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 8%;
+            flex: 1 1 8%;
+    max-width: 9%;
+    margin: 0%;
+  }
+
   .filter__column_metal .filter__item {
     margin: 0px 10px 0px 0px;
+  }
+
+  .filter__item-text {
+    font-size: 12px;
+  }
+
+  .filter-diamond__tabs {
+    margin: 0px 0px 35px;
+  }
+
+  .filter-diamond__column:last-child .filter-diamond__row-title {
+    margin: 0px 25px 0px 0px;
+  }
+
+  .filter-diamond__row-title {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .filter-diamond__options-title {
+    margin: 0px 15px 0px 0px;
+    font-size: 12px;
+  }
+
+  .filter-diamond__options-item {
+    margin: 0px 15px 0px 0px;
+    font-size: 12px;
+  }
+
+  .filter-diamond__options-item .check {
+    padding-left: 20px;
+  }
+
+  .filter-diamond__options-item .check:before {
+    width: 15px;
+    height: 15px;
+    top: 2px;
+  }
+
+  .filter-diamond__options-clear {
+    font-size: 12px;
+  }
+
+  .filter-wedding__item {
+    max-width: 65px;
+  }
+
+  .filter-wedding__item-title {
+    font-size: 10px;
   }
 }
 
@@ -3901,20 +4535,14 @@ h6 {
 
   .menu__column {
     margin: 0px 0px 30px 0px;
+    max-width: 100%;
+    overflow: visible;
   }
 
   .menu__column_img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
-  }
-
-  .menu__row {
-    margin: 0px 0px 30px 0px;
-  }
-
-  .menu__sublist-item-link_text {
-    font-size: 14px;
   }
 
   .menu-mobile {
@@ -4159,6 +4787,7 @@ h6 {
 
   .filter__column_style .filter__item {
     margin: 0px 0px 5px 0px;
+    min-width: 100px;
   }
 
   .filter__column_metal .filter__item {
@@ -4176,6 +4805,49 @@ h6 {
 
   .filter__item-text {
     font-size: 10px;
+  }
+
+  .diamond-shape {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .filter-wedding__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 20%;
+            flex: 1 1 20%;
+  }
+
+  .filter-wedding__column_price {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .filter-wedding__column_price-box .filter-price__item-range {
+    margin: 20px 12px;
+  }
+
+  .filter-wedding__column-title {
+    font-size: 18px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .filter-wedding__column-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  .filter-wedding__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    max-width: 30%;
+    margin: 0px 10px;
   }
 
   .footer-bottom__container {
@@ -4355,15 +5027,19 @@ h6 {
   }
 
   .item-catalog__image img {
-    width: 85%;
     margin: 10px 10px;
+  }
+
+  .item-catalog .rating-block {
+    top: 10px;
+    left: 10px;
   }
 
   .item-catalog__description {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
-    padding: 0px 10px 0px 0px;
+    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4393,6 +5069,11 @@ h6 {
 
   .item-catalog__text {
     display: block;
+    padding: 0px;
+  }
+
+  .item-catalog_static .item-catalog__price {
+    margin: 0px 0px 10px;
   }
 
   .constructor {
@@ -4434,6 +5115,14 @@ h6 {
     display: none;
   }
 
+  .filter {
+    margin: 38px 0px 20px 0px;
+  }
+
+  .filter__row {
+    margin: 0px;
+  }
+
   .filter__column_style {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4459,6 +5148,53 @@ h6 {
   .filter__item.active .filter__item-img {
     -webkit-box-shadow: none;
             box-shadow: none;
+  }
+
+  .filter-diamond {
+    display: none;
+  }
+
+  .filter-diamond__row-content .filter-price__item-range_m {
+    margin: 20px 12px;
+  }
+
+  .filter-diamond__options {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 290px;
+    margin: 10px auto 0px;
+  }
+
+  .filter-diamond__options-title {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .filter-diamond__options-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .filter-diamond__options-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 30%;
+            flex: 1 1 30%;
+    margin: 0px 0px 5px;
+  }
+
+  .filter-diamond__options-clear {
+    margin: 10px 0px 0px;
+    text-align: center;
+  }
+
+  .diamond-shape {
+    padding: 10px 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .diamond-shape__item {
+    border: none;
   }
 
   .filter-mobile {
@@ -4513,6 +5249,24 @@ h6 {
             order: 2;
   }
 
+  .filter-wedding {
+    display: none;
+  }
+
+  .filter-wedding__column-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .filter-wedding__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+    max-width: 70px;
+  }
+
   .filter-menu {
     display: block;
   }
@@ -4539,13 +5293,6 @@ h6 {
   }
 }
 
-@media (max-width: 768px) and (max-width: 768px) {
-  .item-catalog__text {
-    padding: 0px;
-    margin: 0px;
-  }
-}
-
 @media (max-width: 580px) {
   .title_sm {
     font-size: 20px;
@@ -4553,6 +5300,22 @@ h6 {
 
   .breadcrumbs__list a {
     font-size: 10px;
+  }
+
+  .rating .star {
+    width: 13px;
+    height: 10px;
+  }
+
+  .rating__line {
+    width: 65px;
+    height: 10px;
+    background-size: 65px 100%;
+  }
+
+  .rating__activeline {
+    height: 10px;
+    background-size: 65px 100%;
   }
 
   .container {
@@ -4745,8 +5508,27 @@ h6 {
   }
 
   .item-catalog__image img {
-    width: 100%;
     margin: 0px;
+  }
+
+  .item-catalog__like {
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right: 10px;
+    padding: 0px;
+  }
+
+  .item-catalog__like svg {
+    width: 100%;
+  }
+
+  .item-catalog__price {
+    font-size: 14px;
+  }
+
+  .item-catalog__text {
+    font-size: 10px;
   }
 
   .constructor__column {
@@ -4827,6 +5609,14 @@ h6 {
     display: none;
   }
 
+  .filter-wedding__column-content {
+    padding: 20px;
+  }
+
+  .filter-wedding__item {
+    max-width: 50px;
+  }
+
   .footer-top__column-title {
     font-size: 24px;
   }
@@ -4901,6 +5691,10 @@ h6 {
 
   .item-catalog__title {
     font-size: calc(11px + 3*(100vw/1920));
+  }
+
+  .item-catalog__price {
+    font-size: 12px;
   }
 
   .footer-top__column {

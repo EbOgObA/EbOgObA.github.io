@@ -197,6 +197,27 @@ $(document).ready(function () {
         function setrating(th,val) {
             th.find('.rating__activeline').css({width:val+'%'});
         }
+
+        //CHECK
+        $.each($('.check'), function(index, val) {
+            if($(this).find('input').prop('checked')==true){
+                $(this).addClass('active');
+            }
+        });
+        $('body').off('click','.check',function(event){});
+        $('body').on('click','.check',function(event){
+            if(!$(this).hasClass('disable')){
+                    var target = $(event.target);
+                if (!target.is("a")){
+                        $(this).toggleClass('active');
+                    if($(this).hasClass('active')){
+                        $(this).find('input').prop('checked', true);
+                    }else{
+                        $(this).find('input').prop('checked', false);
+                    }
+                }
+            }
+        });
     }
     forms();
 
@@ -238,8 +259,11 @@ $(document).ready(function () {
                 $(".filter-menu").addClass('active');
             }
             // $("body").addClass("lock");
+        } else {
+            $(this).removeClass('active');
+            $(".filter-menu").removeClass('active');
         }
-        if ($(this).hasClass('filter-mobile__buttons-item_style')) {
+        if ($(this).hasClass('filter-mobile__buttons-item_style') && $(this).hasClass('active')) {
             if ($(".filter-menu").hasClass('active')) {
                 $(".filter-menu").removeClass('active');
             }
@@ -247,7 +271,7 @@ $(document).ready(function () {
                 $(".filter-menu__item_style").addClass('active').siblings().removeClass('active');
                 $(".filter-menu").addClass('active');
             }, 200)
-        } else if ($(this).hasClass('filter-mobile__buttons-item_metal')) {
+        } else if ($(this).hasClass('filter-mobile__buttons-item_metal') && $(this).hasClass('active')) {
             if ($(".filter-menu").hasClass('active')) {
                 $(".filter-menu").removeClass('active');
             }
@@ -255,12 +279,84 @@ $(document).ready(function () {
                 $(".filter-menu__item_metal").addClass('active').siblings().removeClass('active');
                 $(".filter-menu").addClass('active');
             }, 200)
-        } else if ($(this).hasClass('filter-mobile__buttons-item_price')) {
+        } else if ($(this).hasClass('filter-mobile__buttons-item_price') && $(this).hasClass('active')) {
             if ($(".filter-menu").hasClass('active')) {
                 $(".filter-menu").removeClass('active');
             }
             setTimeout(function() {
                 $(".filter-menu__item_price").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_shape') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_shape").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_color') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_color").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_clarity') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_clarity").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_cut') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_cut").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_carat') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_carat").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_price-diamond') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_price-diamond").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_woman') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_woman").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_man') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_man").addClass('active').siblings().removeClass('active');
+                $(".filter-menu").addClass('active');
+            }, 200)
+        } else if ($(this).hasClass('filter-mobile__buttons-item_wedding-price') && $(this).hasClass('active')) {
+            if ($(".filter-menu").hasClass('active')) {
+                $(".filter-menu").removeClass('active');
+            }
+            setTimeout(function() {
+                $(".filter-menu__item_wedding-price").addClass('active').siblings().removeClass('active');
                 $(".filter-menu").addClass('active');
             }, 200)
         }
@@ -292,7 +388,7 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
-    // GOOD SLIDER
+    // CHAMGE GOOD IMAGES
     if ($(window).innerWidth() >= 580) {
         $(".item-catalog__thumbs-item").mouseenter(function(ev) {
             let el = ev.currentTarget;
@@ -308,6 +404,15 @@ $(document).ready(function () {
             });
         });
     }
+
+    // =======================================================================================================================
+
+    // TABS
+    $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+        $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    });
     
     // =======================================================================================================================
 
