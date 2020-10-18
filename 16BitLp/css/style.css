@@ -1091,7 +1091,7 @@ h6 {
 
 .wrapper__decor_line {
   position: absolute;
-  z-index: 5;
+  z-index: 4;
   bottom: -20%;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -2848,7 +2848,7 @@ h6 {
     content: "";
     position: absolute;
     z-index: 0;
-    top: 0;
+    top: 1px;
     left: 50%;
     -webkit-transform-origin: bottom;
         -ms-transform-origin: bottom;
@@ -2859,14 +2859,14 @@ h6 {
     width: 0;
     height: 0;
     border-bottom: 150px solid #123a5a;
-    border-left: 100vw solid transparent;
+    border-left: 102vw solid transparent;
   }
 
   .start:after {
     content: "";
     position: absolute;
     z-index: 0;
-    bottom: 0;
+    bottom: -1px;
     left: 50%;
     -webkit-transform-origin: top;
         -ms-transform-origin: top;
@@ -2875,7 +2875,7 @@ h6 {
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
     border-top: 100px solid #123a5a;
-    border-left: 100vw solid #041828;
+    border-left: 102vw solid #041828;
   }
 
   .start__img img {
