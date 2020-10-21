@@ -377,12 +377,12 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // NICE SELECT
-    $('.sort__select').niceSelect();
+    $('select').niceSelect();
 
     // =======================================================================================================================
 
     // BUTTON LIKE
-    $('.item-catalog__like').on('click', function(){
+    $('.like').on('click', function(){
         $(this).toggleClass('active');
     });
 
@@ -408,12 +408,73 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // TABS
-    $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
-        $(this)
-        .addClass('active').siblings().removeClass('active')
-        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-    
+    // $('.tabs').each(function(){
+    //     let tabs_caption = $(this).find('.tabs__caption');
+    //     $(tabs_caption).on('click', 'li:not(.active)', function() {
+    //         $(this)
+    //         .addClass('active').siblings().removeClass('active')
+    //         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+    //     });
+    // });
+
+    // $('body').on('click', '.tab__navitem', function (event) {
+    //     var eq = $(this).index();
+    //     if ($(this).hasClass('parent')) {
+    //         var eq = $(this).parent().index();
+    //     }
+    //     if (!$(this).hasClass('active')) {
+    //         $(this).closest('.tabs').find('.tab__navitem').removeClass('active');
+    //         $(this).addClass('active');
+    //         $(this).closest('.tabs').find('.tab__item').removeClass('active').eq(eq).addClass('active');
+    //     }
+    // });
+
+    function tabs() {
+        $("div.tab__content").hide();
+        $("div.tab__container div.tab__content:first-child").show();
+        $("ul.tab__nav li:first").addClass("active");
+        
+        $('ul.tab__nav > li').click(function () {
+            if (!($(this).hasClass('active'))) {
+                var thisLi = $(this);
+                var numLi = thisLi.index();
+                thisLi.addClass('active').siblings().removeClass('active');
+                thisLi.parent().next().children('div').hide().eq(numLi).show();
+            }
+        });
+    }
+    tabs();
+        
+        
+
+    // =======================================================================================================================
+
+    // LOWLIGHT CLICK EFFECT
+    // const lowlightBox = document.querySelectorAll('.lowlight-box');
+    // const triggers = document.querySelectorAll('.lowlight');
+    // const lowlight = document.createElement('span');
+    // lowlight.classList.add('highlight');
+    // document.body.append(lowlight);
+
+    // function lowlightLink() {
+    //     const linkCoords = this.getBoundingClientRect();
+    //     console.log(linkCoords);
+
+    //     const coords = {
+    //         width: linkCoords.width,
+    //         height: linkCoords.height,
+    //         top: linkCoords.top + window.scrollY,
+    //         left: linkCoords.left + window.scrollX
+    //     };
+
+    //     lowlight.style.width = `${coords.width}px`;
+    //     lowlight.style.height = `${coords.height}px`;
+    //     lowlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+    // }
+
+    // // triggers.forEach(a => a.addEventListener('mouseenter', lowlightLink));
+    // triggers.forEach(a => a.addEventListener('focus', lowlightLink));
+
     // =======================================================================================================================
 
     // SLIDERS (SWIPER)
@@ -456,7 +517,7 @@ $(document).ready(function () {
         // Берём текущую ширину экрана
         var windowWidth = $(this).innerWidth();
         // Если ширина экрана меньше или равна mediaQuerySize(1024)
-        if (windowWidth <= mediaQuerySize) {
+        if (windowWidth < mediaQuerySize) {
             // Инициализировать слайдер если он ещё не был инициализирован
             strightSliderInit()
             $('.nav-header__list-item-link').addClass('spoller')
@@ -594,6 +655,41 @@ $(document).ready(function () {
         }
     });
 
+    let sliderCardThumbs = document.querySelector('.card-slider__thumbs');
+    let sliderCardGallery = document.querySelector('.card-slider__gallery');
+
+    let swiperCardThumbs = new Swiper(sliderCardThumbs,{
+        slidesPerView: 4,
+        spaceBetween: 22,
+        // freeMode: true,
+        direction: 'horizontal',
+        // watchOverflow: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 10,
+            },
+            580: {
+                direction: 'verical',
+            },
+            1317: {
+                spaceBetween: 22,
+                direction: 'verical',
+            },
+        }
+    });
+    let swiperCardGallery = new Swiper(sliderCardGallery,{
+        slidesPerView: 1,
+        effect: 'fade',
+        thumbs: {
+            swiper: swiperCardThumbs,
+        },
+    });
+
+
     // ================================================================================================
 
     // PULSE BUTTON
@@ -677,5 +773,60 @@ $(document).ready(function () {
             lazyBackgroundData.style.backgroundImage = 'url(' + lazyBackgroundData.dataset.bg + ')';
         });
     }
+
+    // ================================================================================================
+
+    // POPUP
+    $('.pl').click(function (event) {
+        var pl = $(this).attr('href').replace('#', '');
+        var v = $(this).data('ms');
+        popupOpen(pl, v);
+        return false;
+    });
+    function popupOpen(pl, v) {
+        $('.popup').removeClass('active').hide();
+        if (!$('.menu__body').hasClass('active')) {
+            //$('body').data('scroll',$(window).scrollTop());
+        }
+        setTimeout(function () {
+            $('body').addClass('lock');
+        }, 300);
+        history.pushState('', '', '#' + pl);
+        if (v != '' && v != null) {
+            $('.popup-' + pl + ' .popup-video__value').html('<iframe src="https://www.youtube.com/embed/' + v + '?autoplay=1"  allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+        $('.popup-' + pl).fadeIn(300).delay(300).addClass('active');
+
+        if ($('.popup-' + pl).find('.slick-slider').length > 0) {
+            $('.popup-' + pl).find('.slick-slider').slick('setPosition');
+        }
+    }
+    function openPopupById(popup_id) {
+        $('#' + popup_id).fadeIn(300).delay(300).addClass('active');
+    }
+    function popupClose() {
+        $('.popup').removeClass('active').fadeOut(300);
+        if (!$('.menu__body').hasClass('active')) {
+            $('body').removeClass('lock');
+        }
+        $('.popup-video__value').html('');
+
+        history.pushState('', '', window.location.href.split('#')[0]);
+    }
+    $('.popup-close').click(function (event) {
+        popupClose();
+        return false;
+    });
+    $('.popup').click(function (e) {
+        if (!$(e.target).is(".popup>.popup-table>.cell *") || $(e.target).is(".popup-close") || $(e.target).is(".popup__close")) {
+            popupClose();
+            return false;
+        }
+    });
+    $(document).on('keydown', function (e) {
+        if (e.which == 27) {
+            popupClose();
+        }
+    });
 
 })
