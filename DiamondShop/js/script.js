@@ -3,14 +3,14 @@ $(document).ready(function () {
     // DYNAMIC ADAPTIVE
     (function () {
         "use strict";
-        let originalPositions = [];
-        let daElements = document.querySelectorAll('[data-da]');
-        let daElementsArray = [];
-        let daMatchMedia = [];
+        var originalPositions = [];
+        var daElements = document.querySelectorAll('[data-da]');
+        var daElementsArray = [];
+        var daMatchMedia = [];
         //Заполняем массивы
         if (daElements.length > 0) {
-            let number = 0;
-            for (let index = 0; index < daElements.length; index++) {
+            var number = 0;
+            for (var index = 0; index < daElements.length; index++) {
                 const daElement = daElements[index];
                 const daMove = daElement.getAttribute('data-da');
                 if (daMove != '') {
@@ -41,7 +41,7 @@ $(document).ready(function () {
             dynamicAdaptSort(daElementsArray);
 
             //Создаем события в точке брейкпоинта
-            for (let index = 0; index < daElementsArray.length; index++) {
+            for (var index = 0; index < daElementsArray.length; index++) {
                 const el = daElementsArray[index];
                 const daBreakpoint = el.breakpoint;
                 const daType = el.type;
@@ -52,7 +52,7 @@ $(document).ready(function () {
         }
         //Основная функция
         function dynamicAdapt(e) {
-            for (let index = 0; index < daElementsArray.length; index++) {
+            for (var index = 0; index < daElementsArray.length; index++) {
                 const el = daElementsArray[index];
                 const daElement = el.element;
                 const daDestination = el.destination;
@@ -63,7 +63,7 @@ $(document).ready(function () {
                 if (daMatchMedia[index].matches) {
                     //Перебрасываем элементы
                     if (!daElement.classList.contains(daClassname)) {
-                        let actualIndex = indexOfElements(daDestination)[daPlace];
+                        var actualIndex = indexOfElements(daDestination)[daPlace];
                         if (daPlace === 'first') {
                             actualIndex = indexOfElements(daDestination)[0];
                         } else if (daPlace === 'last') {
@@ -104,7 +104,7 @@ $(document).ready(function () {
         function indexOfElements(parent, back) {
             const children = parent.children;
             const childrenArray = [];
-            for (let i = 0; i < children.length; i++) {
+            for (var i = 0; i < children.length; i++) {
                 const childrenElement = children[i];
                 if (back) {
                     childrenArray.push(i);
@@ -224,7 +224,7 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // BURGER
-    let toggleMenu = function() {
+    var toggleMenu = function() {
         $(".menu-mobile__body").toggleClass('active');
     }
 
@@ -391,11 +391,11 @@ $(document).ready(function () {
     // CHAMGE GOOD IMAGES
     if ($(window).innerWidth() >= 580) {
         $(".item-catalog__thumbs-item").mouseenter(function(ev) {
-            let el = ev.currentTarget;
-            let el_index = $(this).index() + 1;
+            var el = ev.currentTarget;
+            var el_index = $(this).index() + 1;
             // console.log(el_index);
-            let elSlide  = $(this).parent().prev().find('.item-catalog__image');
-            let elSlide_index;
+            var elSlide  = $(this).parent().prev().find('.item-catalog__image');
+            var elSlide_index;
             $.each($(elSlide),function(i){
                 if ($(elSlide[i]).index()+1 == el_index) {
                     // console.log($(elSlide[i]))
@@ -408,27 +408,6 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     // TABS
-    // $('.tabs').each(function(){
-    //     let tabs_caption = $(this).find('.tabs__caption');
-    //     $(tabs_caption).on('click', 'li:not(.active)', function() {
-    //         $(this)
-    //         .addClass('active').siblings().removeClass('active')
-    //         .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-    //     });
-    // });
-
-    // $('body').on('click', '.tab__navitem', function (event) {
-    //     var eq = $(this).index();
-    //     if ($(this).hasClass('parent')) {
-    //         var eq = $(this).parent().index();
-    //     }
-    //     if (!$(this).hasClass('active')) {
-    //         $(this).closest('.tabs').find('.tab__navitem').removeClass('active');
-    //         $(this).addClass('active');
-    //         $(this).closest('.tabs').find('.tab__item').removeClass('active').eq(eq).addClass('active');
-    //     }
-    // });
-
     function tabs() {
         $("div.tab__content").hide();
         $("div.tab__container div.tab__content:first-child").show();
@@ -498,8 +477,9 @@ $(document).ready(function () {
         }
     });
 
-    const sliderPartner = document.querySelector('.stright-partners__slider');
-    let swiperPartner = new Swiper(sliderPartner,{
+
+    var sliderPartner = document.querySelector('.stright-partners__slider');
+    var swiperPartner = new Swiper(sliderPartner,{
         slidesPerView: 8,
         centeredSlides: true,
         speed: 500,
@@ -529,44 +509,49 @@ $(document).ready(function () {
         }
     });
 
-    const sliderBestSellers = document.querySelector('.best-sellers__slider');
-    let swiperBestSellers = new Swiper(sliderBestSellers,{
-        slidesPerView: 5,
-        centerSlides: true,
-        loop: true,
-        allowTouchMove: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-            580: {
-                slidesPerView: 2,
-                centeredSlides: false,
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 3,
-                centeredSlides: true,
-                spaceBetween: 25,
-            },
-            1280: {
-                slidesPerView: 5,
-                centeredSlides: true,
-                spaceBetween: 0,
-            }
-        }
-    });
 
-    const sliderShop = document.querySelectorAll('.shop__slider-container');
+    var sliderBestSellers = document.querySelectorAll('.best-sellers__slider');
+    sliderBestSellers.forEach((el) => {
+        var swiperBestSellers = new Swiper(sliderBestSellers,{
+            slidesPerView: 5,
+            centerSlides: true,
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                320: {
+                    slidesPerView: 1,
+                },
+                580: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 3,
+                    centeredSlides: true,
+                    spaceBetween: 25,
+                },
+                1280: {
+                    slidesPerView: 5,
+                    centeredSlides: true,
+                    spaceBetween: 0,
+                }
+            }
+        });
+    });
+    
+
+
+    var sliderShop = document.querySelectorAll('.shop__slider-container');
     sliderShop.forEach((el) => {
-        let swiperShop = new Swiper(el, {
+        var swiperShop = new Swiper(el, {
             slidesPerView: 4,
             spaceBetween: 42,
             loop: true,
@@ -596,39 +581,10 @@ $(document).ready(function () {
     });
     
 
-    const sliderInspiration = document.querySelector('.inspiration__slider-container');
-    let swiperInspiration = new Swiper(sliderInspiration,{
-        slidesPerView: 4,
-        spaceBetween: 42,
-        loop: true,
-        allowTouchMove: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            320: {
-                slidesPerView: 1,
-            },
-            425: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4
-            },
-        }
-    });
 
-    let sliderCardThumbs = document.querySelector('.card-slider__thumbs');
-    let sliderCardGallery = document.querySelector('.card-slider__gallery');
-
-    let swiperCardThumbs = new Swiper(sliderCardThumbs,{
+    var sliderCardThumbs = document.querySelector('.card-slider__thumbs');
+    var sliderCardGallery = document.querySelector('.card-slider__gallery');
+    var swiperCardThumbs = new Swiper(sliderCardThumbs,{
         slidesPerView: 4,
         spaceBetween: 22,
         // freeMode: true,
@@ -656,13 +612,75 @@ $(document).ready(function () {
             },
         }
     });
-    let swiperCardGallery = new Swiper(sliderCardGallery,{
+    var swiperCardGallery = new Swiper(sliderCardGallery,{
         slidesPerView: 1,
         effect: 'fade',
         thumbs: {
             swiper: swiperCardThumbs,
         },
     });
+
+
+    var sliderExplore = document.querySelectorAll('.explore__slider');
+    sliderExplore.forEach((el) => {
+        var swiperExplore = new Swiper(el, {
+            slidesPerView: 5,
+            spaceBetween: 42,
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: el.parentNode.querySelector('.swiper-button-next'),
+                prevEl: el.parentNode.querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                320: {
+                    slidesPerView: 1,
+                },
+                425: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+    });
+
+    var sliderGender = document.querySelectorAll('.gender-slider__box');
+    sliderGender.forEach((el) => {
+        var swiperGender = new Swiper(el, {
+            slidesPerView: 3,
+            spaceBetween: 32,
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1319: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    });
+    
 
 
     // ================================================================================================
