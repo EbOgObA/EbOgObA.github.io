@@ -24,7 +24,6 @@ $(document).ready(function () {
             setupVideo(videos[i]);
         }
     }
-    
     function setupVideo(video) {
         let link = video.querySelector('.video__link');
         let media = video.querySelector('.video__media');
@@ -42,7 +41,6 @@ $(document).ready(function () {
         link.removeAttribute('href');
         video.classList.add('video__enabled');
     }
-    
     function parseMediaURL(media) {
         let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
         let url = media.src;
@@ -50,7 +48,6 @@ $(document).ready(function () {
     
         return match[1];
     }
-    
     function createIframe(id) {
         let iframe = document.createElement('iframe');
     
@@ -61,13 +58,11 @@ $(document).ready(function () {
     
         return iframe;
     }
-    
     function generateURL(id) {
         let query = '?rel=0&showinfo=0&autoplay=1';
     
         return 'https://www.youtube.com/embed/' + id + query;
     }
-    
     findVideos();
 
     // =======================================================================================================================

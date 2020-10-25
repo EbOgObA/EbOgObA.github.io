@@ -744,6 +744,20 @@ h6 {
   line-height: 1.4;
 }
 
+.gallery-top {
+  min-height: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .gallery-top .swiper-slide {
   margin: 0px 0px 10px;
   display: -webkit-box;
@@ -756,27 +770,30 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transform: scale(0.75);
-      -ms-transform: scale(0.75);
-          transform: scale(0.75);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: all .25s ease-in-out;
   -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   opacity: 0;
 }
 
+.gallery-top .swiper-slide img {
+  width: 100%;
+}
+
 .gallery-top .swiper-slide-active {
   position: relative;
   z-index: 2;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 1;
 }
 
 .gallery-top .swiper-slide-active img {
-  width: 270px;
-  max-width: 270px;
+  width: 100%;
 }
 
 .gallery-top .swiper-slide-next,
@@ -786,13 +803,17 @@ h6 {
 
 .gallery-top .swiper-slide-next img,
 .gallery-top .swiper-slide-prev img {
-  width: 294px;
+  width: 100%;
 }
 
 .gallery-top .swiper-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.gallery-top .swiper-container {
+  overflow: hidden;
 }
 
 .swiper-pagination {
@@ -802,7 +823,6 @@ h6 {
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #0f435b;
 }
 
 .swiper-pagination-bullet-active {
@@ -810,7 +830,7 @@ h6 {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 17px;
+  bottom: 20px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -1453,7 +1473,7 @@ h6 {
 
 .section {
   padding: 30px 0px 50px;
-  margin: 0px 0px 60px;
+  margin: 0px 0px 200px;
   position: relative;
 }
 
@@ -1476,8 +1496,8 @@ h6 {
   left: 50%;
 }
 
-.section_3 .slider-for__item_text {
-  margin: 20px 0px 0px 0px;
+.section_3 .section__container-column-content {
+  padding: 0px 0px 0px 20px;
 }
 
 .section__container {
@@ -1505,7 +1525,7 @@ h6 {
 }
 
 .section__container-column-content {
-  padding: 60px 0px 0px 20px;
+  padding: 75px 0px 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1517,6 +1537,10 @@ h6 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.section__container-column-content_ntp {
+  padding: 0px 0px 0px 20px;
 }
 
 .section__text {
