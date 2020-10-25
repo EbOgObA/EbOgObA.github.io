@@ -510,7 +510,7 @@ $(document).ready(function () {
     });
 
 
-    var sliderBestSellers = document.querySelectorAll('.best-sellers__slider');
+    var sliderBestSellers = document.querySelectorAll('.bestsellers__slider');
     sliderBestSellers.forEach((el) => {
         var swiperBestSellers = new Swiper(sliderBestSellers,{
             slidesPerView: 5,
@@ -518,8 +518,8 @@ $(document).ready(function () {
             loop: true,
             allowTouchMove: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: el.querySelector('.swiper-button-next'),
+                prevEl: el.querySelector('.swiper-button-prev'),
             },
             breakpoints: {
                 0: {
