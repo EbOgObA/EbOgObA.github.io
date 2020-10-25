@@ -7,7 +7,7 @@
     <title>16BIT</title>
     <!-- <link rel="preload" href="fonts/Muller-Regular.woff" as="font" type="font/woff" crossorigin> -->
     <!-- SWIPER -->
-    <!-- <link rel="stylesheet" href="libs/swiper.min.css"> -->
+    <link rel="stylesheet" href="libs/swiper.min.css">
     <!-- FANCYBOX -->
     <link rel="stylesheet" href="libs/jquery.fancybox.min.css">
     <!-- NICE-SELECT -->
@@ -21,7 +21,7 @@
     <header class="header">
         <div class="container header__container">
             <div class="header__logo">
-                <a href="">
+                <a href="#">
                     <img src="img/logo.svg" alt="Logo">
                 </a>
             </div>
@@ -115,22 +115,27 @@
         <div class="icon icon_12 dis"></div>
 
         <div class="wrapper__backgound">
-            <!-- <img class="wrapper__backgound-img" src="img/bg-main_v1.png" alt="#"> -->
             <!-- WELCOME SCREEN -->
             <div id="home" class="welcome">
                 <div class="wrapper__decor"></div>
                 <div class="container welcome__container">
-                    <img class="welcome__bg" src="img/Welcome/bg.png" alt="Fly">
                     <div class="welcome__col">
-                        <!-- <div class="welcome__title welcome__title_sm">Hello,</div>
-                        <div class="welcome__title welcome__title_md">Welcome to the</div> -->
                         <div class="welcome__title welcome__title_lg"><span class="neon">Honest</span> <br> Blockchain <br> Game</div>
                     </div>
                     <div class="welcome__col">
-                        <img class="welcome__img welcome__img_1" src="img/Welcome/phone.png" alt="Phone">
-                        <img class="welcome__img welcome__img_2" src="img/Welcome/phone-mobile.png" alt="Phone">
+                        <picture>
+                            <source srcset="img/Welcome/phone.webp" type="image/webp">
+                            <img class="welcome__img welcome__img_1" src="img/Welcome/phone.png" alt="Phone">
+                        </picture>
+                        <picture>
+                            <source srcset="img/Welcome/phone-mobile.webp" type="image/webp">
+                            <img class="welcome__img welcome__img_2" src="img/Welcome/phone-mobile.png" alt="Phone">
+                        </picture>
                     </div>
-                    <img class="wrapper__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="wrapper__decor_line"src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
@@ -138,81 +143,50 @@
             <div id="game" class="section section_1 bg-skew bg-skew_bgc-w">
                 <div class="container section__container">
                     <div class="section__container-column section__container-column-slider slider">
-                        <div class="slider-for">
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary1" href="img/section-1/1.png">
-                                    <img class="slider-for__item_img" src="img/section-1/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    All players take part in determining the winning number, and a unique hash is recorded in each bet.
-                                    The sum of all the hashes of all bets is the winning number, after a simple conversion through the
-                                    open formula of the game “16Bit“.
-                                </p>
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-1" href="img/section-1/1.png">
+                                        <picture>
+                                            <source srcset="img/section-1/1.webp" type="image/webp">
+                                            <img src="img/section-1/1.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-1" href="img/section-1/2.png">
+                                        <picture>
+                                            <source srcset="img/section-1/2.webp" type="image/webp">
+                                            <img src="img/section-1/2.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-1" href="img/section-1/3.png">
+                                        <picture>
+                                            <source srcset="img/section-1/3.webp" type="image/webp">
+                                            <img src="img/section-1/3.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary1" href="img/section-1/2.png">
-                                    <img class="slider-for__item_img" src="img/section-1/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Anyone can ensure the game is fair and check the winning number through the “16Bit” interface.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary1" href="img/section-1/3.png">
-                                    <img class="slider-for__item_img" src="img/section-1/3.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Or on your own, using third-party computing and cryptographic tools, such as a pencil, a sheet of
-                                    paper, a calculator and a knee. For simplicity of calculations, you can use the online tool, ‘Wolfram alpha”
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary2" href="img/section-1/1.png">
-                                    <img class="slider-for__item_img" src="img/section-1/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    All players take part in determining the winning number, and a unique hash is recorded in each bet.
-                                    The sum of all the hashes of all bets is the winning number, after a simple conversion through the
-                                    open formula of the game “16Bit“.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary2" href="img/section-1/2.png">
-                                    <img class="slider-for__item_img" src="img/section-1/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Anyone can ensure the game is fair and check the winning number through the “16Bit” interface.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary2" href="img/section-1/3.png">
-                                    <img class="slider-for__item_img" src="img/section-1/3.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Or on your own, using third-party computing and cryptographic tools, such as a pencil, a sheet of
-                                    paper, a calculator and a knee. For simplicity of calculations, you can use the online tool, ‘Wolfram alpha”
-                                </p>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="slider-nav-box">
-                            <div class="slider-nav">
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    All players take part in determining the winning number, and a unique hash is recorded in each bet.
+                                    The sum of all the hashes of all bets is the winning number, after a simple conversion through the
+                                    open formula of the game “16Bit“.
                                 </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
+                                <div class="swiper-slide">
+                                    Anyone can ensure the game is fair and check the winning number through the “16Bit” interface.
                                 </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
+                                <div class="swiper-slide">
+                                    Or on your own, using third-party computing and cryptographic tools, such as a pencil, a sheet of
+                                    paper, a calculator and a knee. For simplicity of calculations, you can use the online tool, ‘Wolfram alpha”
                                 </div>
                             </div>
                         </div>
@@ -220,8 +194,8 @@
                     <div class="section__container-column section__container-column-content">
                         <div class="section__text">
                             <div class="section__title">
-                                <span class="section__title-row section__title-row_lg neon">Decentralized</span>
-                                <span class="section__title-row section__title-row_md white">100% Provably Fair</span>
+                                <span class="section__title-row section__title-row_lg white">Decentralized</span>
+                                <span class="section__title-row section__title-row_md neon">100% Provably Fair</span>
                                 <span class="section__title-row section__title-row_sm dark-blue">Strongest Algorithm</span>
                             </div>
                             <ul class="section__list">
@@ -229,13 +203,27 @@
                                 <li class="section__list-item">Because the result is maked by all of you</li>
                             </ul>
                         </div>
-                        <div class="video-img"><a href="javascript:void(0);" class="play"></a>
-                            <div class="iframe" style="display: block;">
-                                <iframe id="vid1" width="512" height="288" src="https://www.youtube.com/embed/0C7rUi6-euA?enablejsapi=1" allowfullscreen=""></iframe>
-                            </div>
+                        <div class="video">
+                            <a class="video__link" href="https://www.youtube.com/embed/0C7rUi6-euA?enablejsapi=1">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/0C7rUi6-euA/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/0C7rUi6-euA/maxresdefault.jpg" alt="">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Play video">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="video__button-shape"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                    </path>
+                                    <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <img class="section__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="section__decor_line" src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
@@ -253,144 +241,99 @@
                                 <li class="section__list-item">You store your personal data independently, on your device or in your own head</li>
                             </ul>
                         </div>
-                        <div class="video-img"><a href="javascript:void(0);" class="play"></a>
-                            <div class="iframe" style="display: block;">
-                                <iframe id="vid2" width="512" height="288" src="https://www.youtube.com/embed/ubIrT9FoSbY?enablejsapi=1" allowfullscreen=""></iframe>
-                            </div>
+                        <div class="video">
+                            <a class="video__link" href="https://www.youtube.com/embed/ubIrT9FoSbY?enablejsapi=1">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/ubIrT9FoSbY/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/ubIrT9FoSbY/maxresdefault.jpg" alt="">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Play video">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="video__button-shape"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                    </path>
+                                    <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="section__container-column section__container-column-slider slider">
-                        <div class="slider-for">
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary3" href="img/section-2/1.png">
-                                    <img class="slider-for__item_img" src="img/section-2/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Pin-code allows you to protect your private key as much as possible during the game session
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary3" href="img/section-2/2.png">
-                                    <img class="slider-for__item_img" src="img/section-2/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Logging into the game through all the popular EOS crypto wallets is done in 1 click and in 10
-                                    seconds.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary3" href="img/section-2/3.png">
-                                    <img class="slider-for__item_img" src="img/section-2/3.png" alt="#">
-                                </a>
-                                <div class="slider-for__item_text">
-                                    We provide the opportunity to restore access to your “16Bit” account in all possible ways:
-                                    <ul>
-                                        <li>Private key</li>
-                                        <li>Mnemonic phrase</li>
-                                        <li>QR-Code</li>
-                                        <li>Key File (16Bit Format)</li>
-                                        <li>All the popular EOS crypto wallets</li>
-                                    </ul>
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-2" href="img/section-2/1.png">
+                                        <picture>
+                                            <source srcset="img/section-2/1.webp" type="image/webp">
+                                            <img src="img/section-2/1.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-2" href="img/section-2/2.png">
+                                        <picture>
+                                            <source srcset="img/section-2/2.webp" type="image/webp">
+                                            <img src="img/section-2/2.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-2" href="img/section-2/3.png">
+                                        <picture>
+                                            <source srcset="img/section-2/3.webp" type="image/webp">
+                                            <img src="img/section-2/3.png" alt="">
+                                        </picture>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary4" href="img/section-2/1.png">
-                                    <img class="slider-for__item_img" src="img/section-2/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Pin-code allows you to protect your private key as much as possible during the game session
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary4" href="img/section-2/2.png">
-                                    <img class="slider-for__item_img" src="img/section-2/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Logging into the game through all the popular EOS crypto wallets is done in 1 click and in 10
-                                    seconds.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary4" href="img/section-2/3.png">
-                                    <img class="slider-for__item_img" src="img/section-2/3.png" alt="#">
-                                </a>
-                                <div class="slider-for__item_text">
-                                    We provide the opportunity to restore access to your “16Bit” account in all possible ways:
-                                    <ul>
-                                        <li>Private key</li>
-                                        <li>Mnemonic phrase</li>
-                                        <li>QR-Code</li>
-                                        <li>Key File (16Bit Format)</li>
-                                        <li>All the popular EOS crypto wallets</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="slider-nav-box">
-                            <div class="slider-nav">
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    Pin-code allows you to protect your private key as much as possible during the game session
                                 </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
+                                <div class="swiper-slide">
+                                    Logging into the game through all the popular EOS crypto wallets is done in 1 click and in 10
+                                    seconds.
                                 </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
+                                <div class="swiper-slide">
+                                    We provide the opportunity to restore access to your “16Bit” account in all possible ways:
+                                    <ul>
+                                        <li>Private key</li>
+                                        <li>Mnemonic phrase</li>
+                                        <li>QR-Code</li>
+                                        <li>Key File (16Bit Format)</li>
+                                        <li>All the popular EOS crypto wallets</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <img class="section__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="section__decor_line" src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
             <!-- SECTION 3 -->
             <div id="eos" class="section section_3">
                 <div class="container section__container">
-                    <div class="section__container-column section__container-column-slider slider">
-                        <div class="slider-for">
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary5" href="img/section-3/1.png">
-                                    <img class="slider-for__item_img" src="img/section-3/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    You independently manage your EOS account, to which your winnings are automatically paid.
-                                    Through the interface of “16Bit”, you can easily rent the necessary EOS resources, as well as receive
-                                    resources as a bonus for active participation in the game.
-                                </p>
-                            </div>
+                    <div class="section__container-column section__container-column-slider">
+                        <a data-fancybox="gallary-3" href="img/section-3/1.png">
+                            <picture>
+                                <source srcset="img/section-3/1.webp" type="image/webp">
+                                <img class="slider__image" src="img/section-3/1.png" alt="">
+                            </picture>
+                        </a>
+                        <div class="slider__text">
+                            You independently manage your EOS account, to which your winnings are automatically paid.
+                            Through the interface of “16Bit”, you can easily rent the necessary EOS resources, as well as receive
+                            resources as a bonus for active participation in the game.
                         </div>
-                        <!-- <div class="slider-nav-box">
-                            <div class="slider-nav">
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-1/3.png" alt="#">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="section__container-column section__container-column-content">
                         <div class="section__text">
@@ -402,15 +345,29 @@
                                 <li class="section__list-item">We never touch your money. At all.</li>
                                 <li class="section__list-item">The Public Smart Contract does it automatically and transparently</li>
                             </ul>
-                            <a href="" class="section__link">See the public smart contract</a>
+                            <a href="#" class="section__link">See the public smart contract</a>
                         </div>
-                        <div class="video-img"><a href="javascript:void(0);" class="play"></a>
-                            <div class="iframe" style="display: block;">
-                                <iframe id="vid3" width="512" height="288" src="https://www.youtube.com/embed/GiHGnc0oXKs?enablejsapi=1" allowfullscreen=""></iframe>
-                            </div>
+                        <div class="video">
+                            <a class="video__link" href="https://www.youtube.com/embed/GiHGnc0oXKs?enablejsapi=1">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/GiHGnc0oXKs/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/GiHGnc0oXKs/maxresdefault.jpg" alt="">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Play video">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="video__button-shape"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                    </path>
+                                    <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <img class="section__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="section__decor_line" src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
@@ -429,161 +386,121 @@
                                 <li class="section__list-item">You can try your luck just for fun</li>
                             </ul>
                         </div>
-                        <div class="video-img"><a href="javascript:void(0);" class="play"></a>
-                            <div class="iframe" style="display: block;">
-                                <iframe id="vid4" width="512" height="288" src="https://www.youtube.com/embed/VoIrtfRNN3U?enablejsapi=1" allowfullscreen=""></iframe>
-                            </div>
+                        <div class="video">
+                            <a class="video__link" href="https://www.youtube.com/embed/VoIrtfRNN3U?enablejsapi=1">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/VoIrtfRNN3U/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/VoIrtfRNN3U/maxresdefault.jpg" alt="">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Play video">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="video__button-shape"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                    </path>
+                                    <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                     <div class="section__container-column section__container-column-slider slider">
-                        <div class="slider-for">
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/1.png">
-                                    <img class="slider-for__item_img" src="img/section-4/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/1.png">
+                                        <picture>
+                                            <source srcset="img/section-4/1.webp" type="image/webp">
+                                            <img src="img/section-4/1.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/2.png">
+                                        <picture>
+                                            <source srcset="img/section-4/2.webp" type="image/webp">
+                                            <img src="img/section-4/2.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/3.png">
+                                        <picture>
+                                            <source srcset="img/section-4/3.webp" type="image/webp">
+                                            <img src="img/section-4/3.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/4.png">
+                                        <picture>
+                                            <source srcset="img/section-4/4.webp" type="image/webp">
+                                            <img src="img/section-4/4.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/5.png">
+                                        <picture>
+                                            <source srcset="img/section-4/5.webp" type="image/webp">
+                                            <img src="img/section-4/5.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/6.png">
+                                        <picture>
+                                            <source srcset="img/section-4/6.webp" type="image/webp">
+                                            <img src="img/section-4/6.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-4" href="img/section-4/7.png">
+                                        <picture>
+                                            <source srcset="img/section-4/7.webp" type="image/webp">
+                                            <img src="img/section-4/7.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
                                     Try your luck in a realistic demo game.
                                     Smart contract, rules and chances to win are the same as in a real game!
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/2.png">
-                                    <img class="slider-for__item_img" src="img/section-4/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     Players are invited to place bets on the playing field of 24 cells (16 numbers and 8 letters). If you
                                     win, the bet is multiplied by the corresponding coefficient. There is a draw every minute.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/3.png">
-                                    <img class="slider-for__item_img" src="img/section-4/3.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     The cells are highlighted in different colors, so you can see both your bets and winnings, as well as all
                                     other participants’
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/4.png">
-                                    <img class="slider-for__item_img" src="img/section-4/4.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     x15 – A winning bet on a number from 0 to 15 is multiplied by 15 times
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/5.png">
-                                    <img class="slider-for__item_img" src="img/section-4/5.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     х5 - A bet on sectors ABCDE covers three numbers: in case of a win, the bet is multiplied by 5 times
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/6.png">
-                                    <img class="slider-for__item_img" src="img/section-4/6.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     х3 - A bet on XYZ sectors covers five numbers: in case of a win, the bet is multiplied by 3 times
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary6" href="img/section-4/7.png">
-                                    <img class="slider-for__item_img" src="img/section-4/7.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
+                                </div>
+                                <div class="swiper-slide">
                                     If a cell is not active and it is not possible to bet on it, then the maximum value of the sum of bets
                                     has been reached.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="slider-nav-box">
-                            <div class="slider-nav">
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/3.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/4.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/5.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/6.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-4/7.png" alt="#">
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="bit_carousel_wrapper carousel">
-                            <div class="bit_carousel">
-                                <div class="bit_carousel-item active">
-                                    <img class="bit_carousel-img" src="img/section-4/1.png" alt="Slide 1">
-                                </div>
-                                <div class="bit_carousel-item next">
-                                    <img class="bit_carousel-img" src="img/section-4/2.png" alt="Slide 2">
-                                </div>
-                                <div class="bit_carousel-item next">
-                                    <img class="bit_carousel-img" src="img/section-4/3.png" alt="Slide 3">
-                                </div>
-                                <div class="bit_carousel-item prev">
-                                    <img class="bit_carousel-img" src="img/section-4/4.png" alt="Slide 4">
-                                </div>
-                                <div class="bit_carousel-item prev">
-                                    <img class="bit_carousel-img" src="img/section-4/5.png" alt="Slide 5">
-                                </div>
-                                <div class="bit_carousel-item prev">
-                                    <img class="bit_carousel-img" src="img/section-4/6.png" alt="Slide 6">
-                                </div>
-                                <div class="bit_carousel-item prev">
-                                    <img class="bit_carousel-img" src="img/section-4/7.png" alt="Slide 7">
-                                </div>
-                            </div>
-                            <div class="bit_carousel-item-arrow bit_carousel-item-arrow-prev">
-                                <img class="bit_carousel-item-arrow-img" src="img/arrow-left.svg" alt="Prev">
-                            </div>
-                            <div class="bit_carousel-item-arrow bit_carousel-item-arrow-next">
-                                <img class="bit_carousel-item-arrow-img" src="img/arrow-right.svg" alt="Next">
-                            </div>
-                            <div class="bit_carousel-dots-wrapper"></div>
-                        </div>
-                        <div class="bit_carousel-description">
-                            <div class="text text-active">
-                                Players are invited to place bets on the playing field of 24 cells (16 numbers and 8 letters). If you
-                                win, the bet is multiplied by the corresponding coefficient. There is a draw every minute.
-                            </div>
-                            <div class="text">
-                                The cells are highlighted in different colors, so you can see both your bets and winnings, as well as all
-                                other participants’
-                            </div>
-                            <div class="text">
-                                x15 – A winning bet on a number from 0 to 15 is multiplied by 15 times
-                            </div>
-                            <div class="text">
-                                х5 - A bet on sectors ABCDE covers three numbers: in case of a win, the bet is multiplied by 5 times
-                            </div>
-                            <div class="text">
-                                х3 - A bet on XYZ sectors covers five numbers: in case of a win, the bet is multiplied by 3 times
-                            </div>
-                            <div class="text">
-                                If a cell is not active and it is not possible to bet on it, then the maximum value of the sum of bets
-                                has been reached.
-                            </div>
-                            <div class="text">
-                                Try your luck in a realistic demo game.
-                                Smart contract, rules and chances to win are the same as in a real game!
-                            </div>
-                        </div> -->
                     </div>
-                    <img class="section__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="section__decor_line" src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
@@ -591,122 +508,59 @@
             <div id="affilate" class="section section_5">
                 <div class="container section__container">
                     <div class="section__container-column section__container-column-slider slider">
-                        <div class="slider-for">
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary7" href="img/section-5/1.png">
-                                    <img class="slider-for__item_img" src="img/section-5/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Choose any social network or messenger and invite friends. The invitation to the game already
-                                    contains your referral link.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary7" href="img/section-5/2.png">
-                                    <img class="slider-for__item_img" src="img/section-5/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    We provide precise and detailed statistics in a simple, convenient and intuitive interface.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary7" href="img/section-5/3.png">
-                                    <img class="slider-for__item_img" src="img/section-5/3.png" alt="#">
-                                </a>
-                                <div class="slider-for__item_text">
-                                    We provide a full range of professional advertising materials (animated banners and landing pages),
-                                    presented in four languages, spoken by the whole world.
+                        <div class="swiper-container gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-5" href="img/section-5/1.png">
+                                        <picture>
+                                            <source srcset="img/section-5/1.webp" type="image/webp">
+                                            <img src="img/section-5/1.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-5" href="img/section-5/2.png">
+                                        <picture>
+                                            <source srcset="img/section-5/2.webp" type="image/webp">
+                                            <img src="img/section-5/2.png" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallary-5" href="img/section-5/3.png">
+                                        <picture>
+                                            <source srcset="img/section-5/3.webp" type="image/webp">
+                                            <img src="img/section-5/3.png" alt="">
+                                        </picture>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary8" href="img/section-5/1.png">
-                                    <img class="slider-for__item_img" src="img/section-5/1.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    Choose any social network or messenger and invite friends. The invitation to the game already
-                                    contains your referral link.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary8" href="img/section-5/2.png">
-                                    <img class="slider-for__item_img" src="img/section-5/2.png" alt="#">
-                                </a>
-                                <p class="slider-for__item_text">
-                                    We provide precise and detailed statistics in a simple, convenient and intuitive interface.
-                                </p>
-                            </div>
-                            <div class="slider-for__item">
-                                <a data-fancybox="gallary8" href="img/section-5/3.png">
-                                    <img class="slider-for__item_img" src="img/section-5/3.png" alt="#">
-                                </a>
-                                <div class="slider-for__item_text">
-                                    We provide a full range of professional advertising materials (animated banners and landing pages),
-                                    presented in four languages, spoken by the whole world.
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <div class="swiper-container gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    All players take part in determining the winning number, and a unique hash is recorded in each bet.
+                                    The sum of all the hashes of all bets is the winning number, after a simple conversion through the
+                                    open formula of the game “16Bit“.
+                                </div>
+                                <div class="swiper-slide">
+                                    Anyone can ensure the game is fair and check the winning number through the “16Bit” interface.
+                                </div>
+                                <div class="swiper-slide">
+                                    Or on your own, using third-party computing and cryptographic tools, such as a pencil, a sheet of
+                                    paper, a calculator and a knee. For simplicity of calculations, you can use the online tool, ‘Wolfram alpha”
                                 </div>
                             </div>
                         </div>
-                        <div class="slider-nav-box">
-                            <div class="slider-nav">
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/3.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/1.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/2.png" alt="#">
-                                </div>
-                                <div class="slider-nav__item">
-                                    <img src="img/section-5/3.png" alt="#">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="bit_carousel_wrapper carousel">
-                            <div class="bit_carousel">
-                                
-                                <div class="bit_carousel-item prev">
-                                    <img class="bit_carousel-img" src="img/section-5/1.png" alt="Slide 1">
-                                </div>
-                                <div class="bit_carousel-item active">
-                                    <img class="bit_carousel-img" src="img/section-5/2.png" alt="Slide 3">
-                                </div>
-                                <div class="bit_carousel-item next">
-                                    <img class="bit_carousel-img" src="img/section-5/3.png" alt="Slide 2">
-                                </div>
-                            </div>
-                            <div class="bit_carousel-item-arrow bit_carousel-item-arrow-prev">
-                                <img class="bit_carousel-item-arrow-img" src="img/arrow-left.svg" alt="Prev">
-                            </div>
-                            <div class="bit_carousel-item-arrow bit_carousel-item-arrow-next">
-                                <img class="bit_carousel-item-arrow-img" src="img/arrow-right.svg" alt="Next">
-                            </div>
-                            <div class="bit_carousel-dots-wrapper"></div>
-                        </div>
-                        <div class="bit_carousel-description">
-                            <div class="text text-active">
-                                We provide precise and detailed statistics in a simple, convenient and intuitive interface.
-                            </div>
-                            <div class="text">
-                                We provide a full range of professional advertising materials (animated banners and landing pages),
-                                presented in four languages, spoken by the whole world.
-                            </div>
-                            <div class="text">
-                                Choose any social network or messenger and invite friends. The invitation to the game already
-                                contains your referral link.
-                            </div>
-                        </div> -->
                     </div>
                     <div class="section__container-column section__container-column-content">
                         <div class="section__text">
                             <div class="section__title">
-                                <span class="section__title-row section__title-row_lg white">
-                                    <span class="neon">Affiliate </span>Shares
+                                <span class="section__title-row section__title-row_lg neon">
+                                    <span class="white">Affiliate </span>Shares
                                 </span>
                             </div>
                             <p class="section__text-row">
@@ -714,13 +568,27 @@
                             players.
                             </p>
                         </div>
-                        <div class="video-img"><a href="javascript:void(0);" class="play"></a>
-                            <div class="iframe" style="display: block;">
-                                <iframe id="vid5" width="512" height="288" src="https://www.youtube.com/embed/JB1g5CWilzs?enablejsapi=1" allowfullscreen=""></iframe>
-                            </div>
+                        <div class="video">
+                            <a class="video__link" href="https://www.youtube.com/embed/JB1g5CWilzs?enablejsapi=1">
+                                <picture>
+                                    <source srcset="https://i.ytimg.com/vi_webp/JB1g5CWilzs/maxresdefault.webp" type="image/webp">
+                                    <img class="video__media" src="https://i.ytimg.com/vi/JB1g5CWilzs/maxresdefault.jpg" alt="">
+                                </picture>
+                            </a>
+                            <button class="video__button" aria-label="Play video">
+                                <svg width="68" height="48" viewBox="0 0 68 48">
+                                    <path class="video__button-shape"
+                                        d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z">
+                                    </path>
+                                    <path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <img class="section__decor_line" src="img/line.png" alt="Line">
+                    <picture>
+                        <source srcset="img/line.webp" type="image/webp">
+                        <img class="section__decor_line" src="img/line.png" alt="">
+                    </picture>
                 </div>
             </div>
 
@@ -737,24 +605,28 @@
                         </p>
                     </div>
                     <div class="start__img">
-                        <img src="img/Start/tel1.png" alt="Telephons">
+                        <picture>
+                            <source srcset="img/Start/tel1.webp" type="image/webp">
+                            <img src="img/Start/tel1.png" alt="">
+                        </picture>
                     </div>
                     <a class="start__link" href="https://16bit.game/demo/">START GAME</a>
                 </div>
             </div>
         </div>
         
-        <!-- PROOFS -->
+        <!-- FEATURES -->
         <div id="features" class="proofs">
             <div class="container proofs__container">
                 <div class="proofs__title">
                     <span class="white">Features</span>
                 </div>
                 <div class="proofs__subtitle">This is all about us</div>
+                <!-- MACHING LEARNING -->
                 <div class="proofs__item spollers">
                     <div class="proofs__item-header spoller">
                         <div class="proofs__item-logo">
-                            <img src="img/Proofs/cloud.png" alt="#">
+                            <img src="img/Proofs/machine-learning.svg" alt="">
                         </div>
                         <div class="proofs__item-title-box">
                             <div class="proofs__item-title">Smart Contract Audit</div>
@@ -772,10 +644,11 @@
                         <div class="proofs__item-close spoller-close"></div>
                     </div>
                 </div>
+                <!-- AUTORIZATION -->
                 <div class="proofs__item spollers">
                     <div class="proofs__item-header spoller">
                         <div class="proofs__item-logo">
-                            <img src="img/Proofs/marketing.png" alt="#">
+                            <img src="img/Proofs/authorization.svg" alt="">
                         </div>
                         <div class="proofs__item-title-box">
                             <div class="proofs__item-title">RNG Audit</div>
@@ -791,10 +664,11 @@
                         <div class="proofs__item-close spoller-close"></div>
                     </div>
                 </div>
+                <!-- MARKETING -->
                 <div class="proofs__item spollers">
                     <div class="proofs__item-header spoller">
                         <div class="proofs__item-logo">
-                            <img src="img/Proofs/blockchain.png" alt="#">
+                            <img src="img/Proofs/marketing.svg" alt="#">
                         </div>
                         <div class="proofs__item-title-box">
                             <div class="proofs__item-title">Patented 16Bit Formula</div>
@@ -808,16 +682,143 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
                         </p>
                         <div class="proofs__item-img">
-                            <img src="img/Proofs/1.jpg" alt="#">
-                            <img src="img/Proofs/2.jpg" alt="#">
+                            <picture>
+                                <source srcset="img/Proofs/1.webp" type="image/webp">
+                                <img src="img/Proofs/1.jpg" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="img/Proofs/2.webp" type="image/webp">
+                                <img src="img/Proofs/2.jpg" alt="">
+                            </picture>
                         </div>
                         <div class="proofs__item-close spoller-close"></div>
                     </div>
                 </div>
+                <!-- PAYMENT -->
                 <div class="proofs__item spollers">
                     <div class="proofs__item-header spoller">
                         <div class="proofs__item-logo">
-                            <img src="img/Proofs/security.png" alt="#">
+                            <img src="img/Proofs/payment.svg" alt="#">
+                        </div>
+                        <div class="proofs__item-title-box">
+                            <div class="proofs__item-title">The BEST Design</div>
+                            <div class="proofs__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur.</div>
+                        </div>
+                        <div class="proofs__item-btn"></div>
+                    </div>
+                    <div class="proofs__item-content">
+                        <p class="proofs__item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur. Repellendus dolor deserunt, atque ipsam sit pariatur error? Natus, labore dolor tempore rem aperiam laborum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                        </p>
+                        <div class="proofs__item-img">
+                            <picture>
+                                <source srcset="img/Proofs/1.webp" type="image/webp">
+                                <img src="img/Proofs/1.jpg" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="img/Proofs/2.webp" type="image/webp">
+                                <img src="img/Proofs/2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="proofs__item-close spoller-close"></div>
+                    </div>
+                </div>
+                <!-- DIGITAL VALLET -->
+                <div class="proofs__item spollers">
+                    <div class="proofs__item-header spoller">
+                        <div class="proofs__item-logo">
+                            <img src="img/Proofs/digital-wallet.svg" alt="#">
+                        </div>
+                        <div class="proofs__item-title-box">
+                            <div class="proofs__item-title">The BEST Design</div>
+                            <div class="proofs__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur.</div>
+                        </div>
+                        <div class="proofs__item-btn"></div>
+                    </div>
+                    <div class="proofs__item-content">
+                        <p class="proofs__item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur. Repellendus dolor deserunt, atque ipsam sit pariatur error? Natus, labore dolor tempore rem aperiam laborum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                        </p>
+                        <div class="proofs__item-img">
+                            <picture>
+                                <source srcset="img/Proofs/1.webp" type="image/webp">
+                                <img src="img/Proofs/1.jpg" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="img/Proofs/2.webp" type="image/webp">
+                                <img src="img/Proofs/2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="proofs__item-close spoller-close"></div>
+                    </div>
+                </div>
+                <!-- SMARTPHONE -->
+                <div class="proofs__item spollers">
+                    <div class="proofs__item-header spoller">
+                        <div class="proofs__item-logo">
+                            <img src="img/Proofs/smartphone.svg" alt="#">
+                        </div>
+                        <div class="proofs__item-title-box">
+                            <div class="proofs__item-title">The BEST Design</div>
+                            <div class="proofs__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur.</div>
+                        </div>
+                        <div class="proofs__item-btn"></div>
+                    </div>
+                    <div class="proofs__item-content">
+                        <p class="proofs__item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur. Repellendus dolor deserunt, atque ipsam sit pariatur error? Natus, labore dolor tempore rem aperiam laborum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                        </p>
+                        <div class="proofs__item-img">
+                            <picture>
+                                <source srcset="img/Proofs/1.webp" type="image/webp">
+                                <img src="img/Proofs/1.jpg" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="img/Proofs/2.webp" type="image/webp">
+                                <img src="img/Proofs/2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="proofs__item-close spoller-close"></div>
+                    </div>
+                </div>
+                <!-- VECTOR DISIGN -->
+                <div class="proofs__item spollers">
+                    <div class="proofs__item-header spoller">
+                        <div class="proofs__item-logo">
+                            <img src="img/Proofs/vector-design.svg" alt="#">
+                        </div>
+                        <div class="proofs__item-title-box">
+                            <div class="proofs__item-title">The BEST Design</div>
+                            <div class="proofs__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur.</div>
+                        </div>
+                        <div class="proofs__item-btn"></div>
+                    </div>
+                    <div class="proofs__item-content">
+                        <p class="proofs__item-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur. Repellendus dolor deserunt, atque ipsam sit pariatur error? Natus, labore dolor tempore rem aperiam laborum!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                        </p>
+                        <div class="proofs__item-img">
+                            <picture>
+                                <source srcset="img/Proofs/1.webp" type="image/webp">
+                                <img src="img/Proofs/1.jpg" alt="">
+                            </picture>
+                            <picture>
+                                <source srcset="img/Proofs/2.webp" type="image/webp">
+                                <img src="img/Proofs/2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="proofs__item-close spoller-close"></div>
+                    </div>
+                </div>
+                <!-- SECURITY -->
+                <div class="proofs__item spollers">
+                    <div class="proofs__item-header spoller">
+                        <div class="proofs__item-logo">
+                            <img src="img/Proofs/security.svg" alt="#">
                         </div>
                         <div class="proofs__item-title-box">
                             <div class="proofs__item-title">Provable Fair Algorithm </div>
@@ -835,13 +836,14 @@
                         <div class="proofs__item-close spoller-close"></div>
                     </div>
                 </div>
+                <!-- BLOCKCHAIN -->
                 <div class="proofs__item spollers">
                     <div class="proofs__item-header spoller">
                         <div class="proofs__item-logo">
-                            <img src="img/Proofs/vector-design.png" alt="#">
+                            <img src="img/Proofs/blockchain.svg" alt="#">
                         </div>
                         <div class="proofs__item-title-box">
-                            <div class="proofs__item-title">The BEST Design</div>
+                            <div class="proofs__item-title">Provable Fair Algorithm </div>
                             <div class="proofs__item-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur.</div>
                         </div>
                         <div class="proofs__item-btn"></div>
@@ -850,11 +852,9 @@
                         <p class="proofs__item-text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iure delectus beatae aperiam officiis aspernatur. Repellendus dolor deserunt, atque ipsam sit pariatur error? Natus, labore dolor tempore rem aperiam laborum!
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quaerat, ipsam est natus, molestiae quos fugit ad repudiandae dolorum soluta, consequuntur unde excepturi asperiores in quisquam similique velit incidunt. Reprehenderit.
                         </p>
-                        <div class="proofs__item-img">
-                            <img src="img/Proofs/1.jpg" alt="#">
-                            <img src="img/Proofs/2.jpg" alt="#">
-                        </div>
                         <div class="proofs__item-close spoller-close"></div>
                     </div>
                 </div>
@@ -1080,7 +1080,7 @@
         <div class="use">
             <div class="container use__container">
                 <div class="use__title">
-                    <span class="neon">Use </span><span class="white">Any</span>
+                    <span class="white">Deposit with </span><span class="neon">Any&nbsp;method</span>
                 </div>
                 <div class="use__content">
                     <div class="use__column  use__column_crypto">
@@ -1122,12 +1122,12 @@
                             </div>
                             
                         </div>
-                        <div class="use__column-text">+ 1500</div>
+                        <!-- <div class="use__column-text">+ 1500</div> -->
                     </div>
                     <div class="use__column use__column_payment">
                         <div class="use__column-title">PAYMENT SYSTEMS</div>
                         <div class="use__column-content use__column-content_payment">
-                            <div class="use__column-content-row">
+                            <div class="use__column-content-row use__column-content-row_m">
                                 <a href="#" class="use__column-content-link">
                                     <img src="img/UseAny/visa.svg" alt="Visa">
                                 </a>
@@ -1135,13 +1135,13 @@
                                     <img src="img/UseAny/mastercard.svg" alt="Mastercard">
                                 </a>
                                 <a href="#" class="use__column-content-link">
-                                    <img src="img/UseAny/paypal1.svg" alt="Paypal">
+                                    <img src="img/UseAny/advcash.svg" alt="Adv Cash">
                                 </a>
                                 <a href="#" class="use__column-content-link">
-                                    <img src="img/UseAny/skrill1.svg" alt="Skrill">
+                                    <img src="img/UseAny/payeer.svg" alt="Payeer">
                                 </a>
                             </div>
-                            <div class="use__column-content-row">
+                            <!-- <div class="use__column-content-row">
                                 <a href="#" class="use__column-content-link">
                                     <img src="img/UseAny/neteller.svg" alt="Neteller">
                                 </a>
@@ -1154,9 +1154,9 @@
                                 <a href="#" class="use__column-content-link">
                                     <img src="img/UseAny/amex-card.svg" alt="Amex">
                                 </a>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="use__column-text">and any other...</div>
+                        <!-- <div class="use__column-text">and any other...</div> -->
                     </div>
                     <div class="use__or"><span>OR</span></div>
                 </div>
@@ -1174,9 +1174,7 @@
                     <div class="footer-top__column">
                         <form action="#" class="footer-top__form">
                             <input autocomplete="off" type="text" name="form[]" placeholder="Enter your email" class="input req email">
-                            <button class="footer-top__form-btn" type="submit">Submit
-                                <!-- <img class="footer-top__form-btn-img" src="img/footer/play.svg" alt="Submit"> -->
-                            </button>
+                            <button class="footer-top__form-btn" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>
@@ -1206,7 +1204,10 @@
             </div>
             <div class="footer-bottom">
                 <div class="container footer-bottom__container">
-                    <img class="footer-bottom__image" src="img/footer/tel2.png" alt="#">
+                    <picture>
+                        <source srcset="img/footer/tel2.webp" type="image/webp">
+                        <img class="footer-bottom__image" src="img/footer/tel2.png" alt="">
+                    </picture>
                     <div class="footer-bottom__column">
                         <a class="footer-bottom__logo" href="#" title="16Bit.game"><img src="img/logo.svg" alt="Logo"></a>
                     </div>
@@ -1239,7 +1240,7 @@
     <!-- FANCYBOX -->
     <script src="libs/jquery.fancybox.min.js"></script>
     <!-- SLICK-SLIDER -->
-    <script src="libs/slick.min.js"></script>
+    <script src="libs/swiper.min.js"></script>
     <!-- SCRIPTS -->
     <script src="js/script.js"></script>
 </body>
