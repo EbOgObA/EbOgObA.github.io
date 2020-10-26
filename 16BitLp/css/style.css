@@ -816,10 +816,6 @@ h6 {
   overflow: hidden;
 }
 
-.swiper-pagination {
-  bottom: 10px;
-}
-
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -830,7 +826,7 @@ h6 {
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 20px;
+  bottom: 7px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
@@ -2373,6 +2369,10 @@ h6 {
   .container {
     max-width: none;
     padding: 0 20px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0px;
   }
 
   .video-img {
