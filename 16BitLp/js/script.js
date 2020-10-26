@@ -78,43 +78,43 @@ $(document).ready(function () {
 
     // =======================================================================================================================
 
+    // // Проверяем, можно ли использовать Webp формат
+    // function canUseWebp() {
+    //     // Создаем элемент canvas
+    //     let elem = document.createElement('canvas');
+    //     // Приводим элемент к булеву типу
+    //     if (!!(elem.getContext && elem.getContext('2d'))) {
+    //         // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
+    //         return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    //     }
+    //     // Иначе Webp не используем
+    //     return false;
+    // }
+    // // Получаем все элементы с дата-атрибутом data-bg
+    // let images = document.querySelectorAll('[data-bg]');
+    // // Проходимся по каждому
+    // for (let i = 0; i < images.length; i++) {
+    //     // Получаем значение каждого дата-атрибута
+    //     let image = images[i].getAttribute('data-bg');
+    //     // Каждому найденному элементу задаем свойство background-image с изображение формата jpg
+    //     images[i].style.backgroundImage = 'url(' + image + ')';
+    // }
 
-    // Проверяем, можно ли использовать Webp формат
-    function canUseWebp() {
-        // Создаем элемент canvas
-        let elem = document.createElement('canvas');
-        // Приводим элемент к булеву типу
-        if (!!(elem.getContext && elem.getContext('2d'))) {
-            // Создаем изображение в формате webp, возвращаем индекс искомого элемента и сразу же проверяем его
-            return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-        }
-        // Иначе Webp не используем
-        return false;
-    }
-    // Получаем все элементы с дата-атрибутом data-bg
-    let images = document.querySelectorAll('[data-bg]');
-    // Проходимся по каждому
-    for (let i = 0; i < images.length; i++) {
-        // Получаем значение каждого дата-атрибута
-        let image = images[i].getAttribute('data-bg');
-        // Каждому найденному элементу задаем свойство background-image с изображение формата jpg
-        images[i].style.backgroundImage = 'url(' + image + ')';
-    }
+    // // Проверяем, является ли браузер посетителя сайта Firefox и получаем его версию
+    // let isitFirefox = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
+    // let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
 
-    // Проверяем, является ли браузер посетителя сайта Firefox и получаем его версию
-    let isitFirefox = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
-    let firefoxVer = isitFirefox ? parseInt(isitFirefox[1]) : 0;
+    // // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
+    // if (canUseWebp() || firefoxVer >= 65) {
+    //     // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
+    //     let imagesWebp = document.querySelectorAll('[data-bg-webp]');
+    //     for (let i = 0; i < imagesWebp.length; i++) {
+    //         let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
+    //         imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
+    //     }
+    // }
 
-    // Если есть поддержка Webp или браузер Firefox версии больше или равно 65
-    if (canUseWebp() || firefoxVer >= 65) {
-        // Делаем все то же самое что и для jpg, но уже для изображений формата Webp
-        let imagesWebp = document.querySelectorAll('[data-bg-webp]');
-        for (let i = 0; i < imagesWebp.length; i++) {
-            let imageWebp = imagesWebp[i].getAttribute('data-bg-webp');
-            imagesWebp[i].style.backgroundImage = 'url(' + imageWebp + ')';
-        }
-    }
-
+    // =======================================================================================================================
 
     // const control = {
     //     next(carousel) {
@@ -773,61 +773,21 @@ $(document).ready(function () {
 })
 
 
-// ================================================================================================
 
-    // LAZY LOAD
-    // var lazyImages = [].slice.call(document.querySelectorAll('img.load-image'));
-    // var lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazy-background'));
-    // var lazyBackgroundsData = [].slice.call(document.querySelectorAll('[data-bg]'));
+const tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+const firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // if ('IntersectionObserver' in window) {
-    //     var lazyImageObserver = new IntersectionObserver(function (entries, observer) {
-    //         entries.forEach(function (entry) {
-    //         if (entry.isIntersecting) {
-    //             var lazyImage = entry.target;
-    //             lazyImage.src = lazyImage.dataset.src;
-    //             //lazyImage.srcset = lazyImage.dataset.srcset;
-    //             lazyImage.classList.remove('lazy');
-    //             lazyImageObserver.unobserve(lazyImage);
-    //         }
-    //         });
-    //     });
-    //     lazyImages.forEach(function (lazyImage) {
-    //         lazyImageObserver.observe(lazyImage);
-    //     });
-    //     var lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
-    //         entries.forEach(function (entry) {
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.add('visible');
-    //             lazyBackgroundObserver.unobserve(entry.target);
-    //         }
-    //         });
-    //     });
-    //     lazyBackgrounds.forEach(function (lazyBackground) {
-    //         lazyBackgroundObserver.observe(lazyBackground);
-    //     });
-    //     var lazyBackgroundDataObserver = new IntersectionObserver(function (entries, observer) {
-    //         entries.forEach(function (entry) {
-    //         if (entry.isIntersecting) {
-    //             var lazyBackgroundData = entry.target;
-    //             lazyBackgroundData.style.backgroundImage = 'url(' + lazyBackgroundData.dataset.bg + ')';
-    //             lazyBackgroundDataObserver.unobserve(lazyBackgroundData);
-    //         }
-    //         });
-    //     });
-    //     lazyBackgroundsData.forEach(function (lazyBackgroundData) {
-    //         lazyBackgroundDataObserver.observe(lazyBackgroundData);
-    //     });
-    // } else {
-    //     // Fallback
-    //     lazyImages.forEach(function (lazyImage) {
-    //         lazyImage.src = lazyImage.dataset.src;
-    //         //lazyImage.srcset = lazyImage.dataset.srcset;
-    //     });
-    //     lazyBackgrounds.forEach(function (lazyBackground) {
-    //         lazyBackground.classList.add('visible');
-    //     });
-    //     lazyBackgroundsData.forEach(function (lazyBackgroundData) {
-    //         lazyBackgroundData.style.backgroundImage = 'url(' + lazyBackgroundData.dataset.bg + ')';
-    //     });
-    // }
+function onYouTubeIframeAPIReady() {
+    const iframes = document.querySelectorAll('iframe');
+    iframes && iframes.forEach(iframe => {
+        iframe.id && new YT.Player(iframe.id, {
+            events: {
+                'onStateChange': function (event) {
+                    event.data === 0 && event.target.stopVideo();
+                }
+            }
+        });
+    })
+}
