@@ -55,17 +55,17 @@
 }
 
 @font-face {
-  font-family: "MullerExtraBoldItalic";
+  font-family: "MullerHairline";
   font-display: swap;
-  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
+  src: url("../fonts/MullerHairline.woff") format("woff"), url("../fonts/MullerHairline.woff2") format("woff2"), url("../fonts/MullerHairline.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerHairline";
+  font-family: "MullerExtraBoldItalic";
   font-display: swap;
-  src: url("../fonts/MullerHairline.woff") format("woff"), url("../fonts/MullerHairline.woff2") format("woff2"), url("../fonts/MullerHairline.ttf") format("ttf");
+  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -79,6 +79,14 @@
 }
 
 @font-face {
+  font-family: "MullerHeavyItalic";
+  font-display: swap;
+  src: url("../fonts/MullerHeavyItalic.woff") format("woff"), url("../fonts/MullerHeavyItalic.woff2") format("woff2"), url("../fonts/MullerHeavyItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "MullerHeavy";
   font-display: swap;
   src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
@@ -87,9 +95,9 @@
 }
 
 @font-face {
-  font-family: "MullerHeavyItalic";
+  font-family: "MullerLight";
   font-display: swap;
-  src: url("../fonts/MullerHeavyItalic.woff") format("woff"), url("../fonts/MullerHeavyItalic.woff2") format("woff2"), url("../fonts/MullerHeavyItalic.ttf") format("ttf");
+  src: url("../fonts/MullerLight.woff") format("woff"), url("../fonts/MullerLight.woff2") format("woff2"), url("../fonts/MullerLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -106,14 +114,6 @@
   font-family: "MullerMedium";
   font-display: swap;
   src: url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerLight";
-  font-display: swap;
-  src: url("../fonts/MullerLight.woff") format("woff"), url("../fonts/MullerLight.woff2") format("woff2"), url("../fonts/MullerLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -151,14 +151,6 @@
 }
 
 @font-face {
-  font-family: "MullerUltraLight";
-  font-display: swap;
-  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "MullerThinItalic";
   font-display: swap;
   src: url("../fonts/MullerThinItalic.woff") format("woff"), url("../fonts/MullerThinItalic.woff2") format("woff2"), url("../fonts/MullerThinItalic.ttf") format("ttf");
@@ -170,6 +162,14 @@
   font-family: "MullerUltraLightItalic";
   font-display: swap;
   src: url("../fonts/MullerUltraLightItalic.woff") format("woff"), url("../fonts/MullerUltraLightItalic.woff2") format("woff2"), url("../fonts/MullerUltraLightItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerUltraLight";
+  font-display: swap;
+  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -1381,6 +1381,11 @@ h6 {
   padding: 0px 0px 0px 20px;
 }
 
+.section_2 .section__container .section__container-column-content,
+.section_4 .section__container .section__container-column-content {
+  padding: 0px 20px 0px 0px;
+}
+
 .section_2 .slider-nav-box,
 .section_4 .slider-nav-box {
   left: 50%;
@@ -2116,6 +2121,11 @@ h6 {
 
   .section_2 .section__container .section__container-column-slider,
   .section_4 .section__container .section__container-column-slider {
+    padding: 0px;
+  }
+
+  .section_2 .section__container .section__container-column-content,
+  .section_4 .section__container .section__container-column-content {
     padding: 0px;
   }
 
