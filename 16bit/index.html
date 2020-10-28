@@ -64,6 +64,52 @@
             </div>
         </div>
 
+        <!-- POPUP PAYMENT -->
+        <div class="popup popup-payment">
+            <div class="popup-table table">
+                <div class="cell">
+                    <div class="popup__content popup-login__content">
+                        <div class="popup-close"></div>
+                        <div class="popup__title">
+                            PAYMENT
+                        </div>
+                        <div class="popup-login__body body-login">
+                            <div class="body-login__first">
+                                <div class="body-login__first-info">
+                                    <h3 class="body-login__first-info-title">Enter your private key</h3>
+                                    <ol>
+                                        <li>Paste your private key</li>
+                                        <li>Press LOGIN</li>
+                                    </ol>
+                                </div>
+                                <form action="#" class="body-login__first-form form-login">
+                                    <div class="form-login__input-box">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Input value"
+                                            class="input form-login__input req clipboard-results">
+                                        <img class="form-login__input-refresh" src="img/login-refresh.svg"
+                                            alt="refresh">
+                                        <img class="form-login__input-warning" src="img/invoice-warning-1.png" alt="#">
+                                    </div>
+                                    <div class="form-login__buttons buttons-login">
+                                        <button class="button-login button-login_paste" type="button">paste</button>
+                                        <button class="button-login button-login_login" type="submit">login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="body-login__or">
+                                <span>or</span>
+                            </div>
+                            <div class="body-login__second">
+                                <a href="#" class="body-login__second-link">
+                                    login with <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- POPUP FORWARD LOGIN  -->
         <div class="popup popup-login">
             <div class="popup-table table">
@@ -309,16 +355,20 @@
                     </select>
                     <div id="google_translate_element2"></div>
                 </div>
-                <a href="#login" class="header__login-btn pl">
+                <a href="#payment" class="header__btn pl">
                     <span>
-                        <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
-                            <defs>
-                                <style>
-                                    .cls-1 {
-                                        fill: #2ea64f;
-                                    }
-                                </style>
-                            </defs>
+                        <svg id="Layer_1" enable-background="new 0 0 512 512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="m512 163v-27c0-30.928-25.072-56-56-56h-400c-30.928 0-56 25.072-56 56v27c0 2.761 2.239 5 5 5h502c2.761 0 5-2.239 5-5z"/>
+                                <path d="m0 205v171c0 30.928 25.072 56 56 56h400c30.928 0 56-25.072 56-56v-171c0-2.761-2.239-5-5-5h-502c-2.761 0-5 2.239-5 5zm128 131c0 8.836-7.164 16-16 16h-16c-8.836 0-16-7.164-16-16v-16c0-8.836 7.164-16 16-16h16c8.836 0 16 7.164 16 16z"/>
+                            </g>
+                        </svg>
+                    </span>
+                    Payment
+                </a>
+                <a href="#login" class="header__btn pl">
+                    <span>
+                        <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 467.93 469">
                             <title>logout</title>
                             <path class="cls-1"
                                 d="M468.27,234.5c0,129.51-105,234.5-234.5,234.5C111.45,469,11.12,375.33.33,255.82h190.8v64a21.31,21.31,0,0,0,36.39,15.07l85.28-85.27a21.3,21.3,0,0,0,0-30.14l-85.28-85.28a21.31,21.31,0,0,0-36.39,15.07v64H.33C11.12,93.67,111.45,0,233.77,0,363.28,0,468.27,105,468.27,234.5Z"
