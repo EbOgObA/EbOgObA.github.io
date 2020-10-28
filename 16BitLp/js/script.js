@@ -260,52 +260,6 @@ $(document).ready(function () {
     //     carouselInit(el);
     // });
 
-    // const sliders = document.querySelectorAll('.slider-top');
-    // const slidersThumbs = document.querySelectorAll('.slider-thumbs');
-
-    // sliders.forEach((el) => {
-    //     let sliderThumbs = new Swiper(el,{
-    //         spaceBetween: 10,
-    //         slidesPerView: 1,
-    //         // freeMode: true ,
-    //         watchSlidesVisibility: true,
-    //         watchSlidesProgress: true,
-    //     });
-    //     let sliderTop = new Swiper (el,{
-    //         spaceBetween: 10 ,
-    //         navigation: {
-    //             nextEl: el.querySelector('.swiper-button-next'),
-    //             prevEl: el.querySelector('.swiper-button-prev'),
-    //         },
-    //         thumbs : {
-    //             Swiper: sliderThumbs
-    //         }
-    //     });
-    // });
-
-
-    // $('.slider-for').slick({
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     arrows: true,
-    //     asNavFor: '.slider-nav',
-    //     centerMode: true,
-    //     accessibility: true,
-    //     // centerMode: true,
-    //     dots: true,
-    // });
-    // $('.slider-nav').slick({
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     asNavFor: '.slider-for',
-    //     fade: true,
-    //     infinite: true,
-    //     dots: false,
-    //     arrows: false,
-    //     centerMode: true,
-    //     focusOnSelect: true,
-    // });
-
     document.querySelectorAll('.slider').forEach(n => {
         const thumbs = new Swiper(n.querySelector('.gallery-thumbs'), {
             slidesPerView: 1,
@@ -461,15 +415,13 @@ $(document).ready(function () {
         $(this).next().show();
     });
     $('body').on('click', '.spoller', function (event) {
-        // if ($(this).hasClass('mob') && !isMobile.any()) {
-        //     return false;
-        // }
-
+        $(this).find('.spoller__link').on('click', function(e) {
+            e.stopPropagation();
+        });
         if ($(this).parents('.one').length > 0) {
             $(this).parents('.one').find('.spoller').not($(this)).removeClass('active').next().slideUp(300);
             $(this).parents('.one').find('.spoller').not($(this)).parent().removeClass('active');
         }
-
         if ($(this).hasClass('closeall') && !$(this).hasClass('active')) {
             $.each($(this).closest('.spollers').find('.spoller'), function (index, val) {
                 $(this).removeClass('active');
@@ -488,7 +440,6 @@ $(document).ready(function () {
         $(this).parent().parent().removeClass('active');
         $(this).parent().slideUp(300);
     });
-
 
     if ($('.t,.tip').length > 0) {
         tip();
