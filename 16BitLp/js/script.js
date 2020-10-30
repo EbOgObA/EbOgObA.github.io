@@ -434,11 +434,13 @@ $(document).ready(function () {
             }
         });
         $(this).parent().toggleClass('active');
+        $(this).parent().find('.spoller-close').toggleClass('active');
         return false;
     });
     $('body').on('click', '.spoller-close', function () {
-        $(this).parent().parent().removeClass('active');
-        $(this).parent().slideUp(300);
+        $(this).parent().removeClass('active').find('.proofs__item-btn').removeClass('active');
+        $(this).prev().slideUp(300);
+        $(this).removeClass('active');
     });
 
     if ($('.t,.tip').length > 0) {

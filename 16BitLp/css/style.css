@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Muller-Light";
-  font-display: swap;
-  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Muller-Regular";
   font-display: swap;
   src: url("../fonts/Muller-Regular.woff") format("woff"), url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.ttf") format("ttf");
@@ -18,6 +10,14 @@
   font-family: "MullerBlackItalic";
   font-display: swap;
   src: url("../fonts/MullerBlackItalic.woff") format("woff"), url("../fonts/MullerBlackItalic.woff2") format("woff2"), url("../fonts/MullerBlackItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muller-Light";
+  font-display: swap;
+  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -47,6 +47,14 @@
 }
 
 @font-face {
+  font-family: "MullerExtraBoldItalic";
+  font-display: swap;
+  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "MullerExtraBold";
   font-display: swap;
   src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
@@ -63,14 +71,6 @@
 }
 
 @font-face {
-  font-family: "MullerExtraBoldItalic";
-  font-display: swap;
-  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "MullerHairlineItalic";
   font-display: swap;
   src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
@@ -79,17 +79,17 @@
 }
 
 @font-face {
-  font-family: "MullerHeavyItalic";
+  font-family: "MullerHeavy";
   font-display: swap;
-  src: url("../fonts/MullerHeavyItalic.woff") format("woff"), url("../fonts/MullerHeavyItalic.woff2") format("woff2"), url("../fonts/MullerHeavyItalic.ttf") format("ttf");
+  src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerHeavy";
+  font-family: "MullerHeavyItalic";
   font-display: swap;
-  src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
+  src: url("../fonts/MullerHeavyItalic.woff") format("woff"), url("../fonts/MullerHeavyItalic.woff2") format("woff2"), url("../fonts/MullerHeavyItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -159,17 +159,17 @@
 }
 
 @font-face {
-  font-family: "MullerUltraLightItalic";
+  font-family: "MullerUltraLight";
   font-display: swap;
-  src: url("../fonts/MullerUltraLightItalic.woff") format("woff"), url("../fonts/MullerUltraLightItalic.woff2") format("woff2"), url("../fonts/MullerUltraLightItalic.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerUltraLight";
+  font-family: "MullerUltraLightItalic";
   font-display: swap;
-  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLightItalic.woff") format("woff"), url("../fonts/MullerUltraLightItalic.woff2") format("woff2"), url("../fonts/MullerUltraLightItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -489,6 +489,10 @@ h6 {
   margin: 0px 30px 0px 0px;
 }
 
+.footer-middle__menu-column_ru:nth-child(2) {
+  margin: 0px 30px 0px 0px;
+}
+
 .footer-middle__menu-title {
   position: relative;
   display: none;
@@ -506,6 +510,15 @@ h6 {
   width: 25px;
   height: 1px;
   background-color: #fff;
+}
+
+.footer-middle__image {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  right: 0px;
+  width: 200px;
+  transform: translate(0%, -50%);
 }
 
 .list-menu {
@@ -535,7 +548,7 @@ h6 {
 
 .footer-bottom {
   position: relative;
-  z-index: 6;
+  z-index: 2;
   background-color: #07182a;
   padding: 50px 0px;
 }
@@ -545,7 +558,7 @@ h6 {
   z-index: 6;
   display: flex;
   font-size: 0;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -580,13 +593,6 @@ h6 {
 
 .footer-bottom__copyright-mobile span {
   display: block;
-}
-
-.footer-bottom__image {
-  position: absolute;
-  top: -350px;
-  right: 0px;
-  width: 250px;
 }
 
 .footer-bottom__column {
@@ -911,7 +917,6 @@ h6 {
 }
 
 .img {
-  margin: 44px 0 0 0;
   border-radius: 27px;
   overflow: hidden;
   position: relative;
@@ -1345,25 +1350,8 @@ h6 {
   position: relative;
   z-index: 6;
   color: #fff;
-}
-
-.welcome__title_sm {
-  margin: 0px 0px 40px;
-  font-size: 1.8em;
-  color: #15354d;
-}
-
-.welcome__title_md {
-  margin: 0px 0px 40px;
-  font-size: 2.2em;
-  font-weight: 300;
-  color: #27455b;
-}
-
-.welcome__title_lg {
-  font-size: 4em;
+  font-size: 80px;
   font-family: 'MullerBold',sans-serif;
-  color: #fff;
 }
 
 .section {
@@ -1383,7 +1371,7 @@ h6 {
 
 .section_2 .section__container .section__container-column-content,
 .section_4 .section__container .section__container-column-content {
-  padding: 0px 20px 0px 0px;
+  padding: 30px 20px 0px 0px;
 }
 
 .section_2 .slider-nav-box,
@@ -1440,7 +1428,7 @@ h6 {
 
 .section__title-row {
   display: block;
-  margin: 0px 0px 20px;
+  margin: 0px 0px 10px;
   font-family: 'MullerBold',sans-serif;
 }
 
@@ -1454,6 +1442,10 @@ h6 {
 
 .section__title-row_lg {
   font-size: 50px;
+}
+
+.section__title-row_ru {
+  font-size: 40px;
 }
 
 .section__list {
@@ -1668,6 +1660,7 @@ h6 {
   font-size: 0;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 
 .proofs__item-logo {
@@ -1697,13 +1690,14 @@ h6 {
 
 .proofs__item-title-box {
   flex: 1 1 auto;
-  padding: 0px 20px 0px 0px;
+  padding: 0px 30px 0px 0px;
 }
 
 .proofs__item-title {
   font-family: 'MullerLight',sans-serif;
   color: #fff;
   font-size: 22px;
+  line-height: 1.25;
   letter-spacing: 1px;
 }
 
@@ -1747,6 +1741,14 @@ h6 {
   display: none;
 }
 
+.proofs__item-text {
+  margin: 0px 0px 10px 0px;
+}
+
+.proofs__item-text:last-child {
+  margin: 0px;
+}
+
 .proofs__item-img {
   margin: 40px 0px 0px;
   width: 100%;
@@ -1775,6 +1777,8 @@ h6 {
 }
 
 .proofs__item-close {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -1791,6 +1795,13 @@ h6 {
   background: url("../img/Features/arrow-top.svg") 50% 50% no-repeat;
   background-size: 14px 7px;
   background-color: #2c3a52;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+}
+
+.proofs__item-close.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
 }
 
 .features {
@@ -2010,6 +2021,7 @@ h6 {
   font-size: 22px;
   font-family: 'Muller-Regular', sans-serif;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .use__column-content {
@@ -2095,6 +2107,10 @@ h6 {
     padding: 0 20px;
   }
 
+  .footer-middle__image {
+    right: 20px;
+  }
+
   .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 0px;
   }
@@ -2104,7 +2120,7 @@ h6 {
   }
 
   .welcome {
-    margin: 0px;
+    margin: 0px 0px 100px;
   }
 
   .welcome__container {
@@ -2166,29 +2182,8 @@ h6 {
     width: 100%;
   }
 
-  .section__title-row_sm {
-    font-size: calc(25px + 5*(100vw/1064));
-  }
-
-  .section__title-row_md {
-    font-size: calc(32px + 2*(100vw/1064));
-  }
-
-  .section__title-row_lg {
-    font-size: calc(40px + 10*(100vw/1064));
-  }
-
-  .section__list {
-    font-size: calc(14px + 4*(100vw/1064));
-  }
-
-  .proofs__item-title {
-    font-size: calc(16px + 8*(100vw/1920));
-  }
-
-  .proofs__item-subtitle,
-  .proofs__item-text {
-    font-size: calc(18px + 2*(100vw/1920));
+  .section__title {
+    margin: 0px 0px 20px;
   }
 
   .use {
@@ -2231,11 +2226,6 @@ h6 {
   .footer-top {
     padding: 35px 0px;
   }
-
-  .footer-bottom__image {
-    top: -400px;
-    right: -10px;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -2245,7 +2235,21 @@ h6 {
     max-width: 350px;
   }
 
+  .footer-middle__menu_ru {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
   .footer-middle__menu-column:nth-child(2) {
+    margin: 0 30px 0 0;
+  }
+
+  .footer-middle__menu-column_ru {
+    margin: 20px 0px 0 0;
+  }
+
+  .footer-middle__menu-column_ru:nth-child(2) {
     margin: 0 30px 0 0;
   }
 
@@ -2265,27 +2269,12 @@ h6 {
   .welcome__col {
     width: 100%;
     margin: 0px 0px 50px;
-    font-size: calc(14px + 6*(100vw/1920));
-  }
-
-  .welcome__title_sm {
-    margin: 0px 0px 20px;
-    color: #fff;
-    text-shadow: 0px 0px 10px #000;
-  }
-
-  .welcome__title_md {
-    margin: 0px 0px 20px;
-    color: #fff;
-    text-shadow: 0px 0px 10px #000;
-  }
-
-  .welcome__title_lg {
-    text-shadow: 0px 0px 10px #000;
   }
 
   .welcome__title {
+    font-size: 70px;
     text-align: center;
+    text-shadow: 0px 0px 10px #000;
   }
 
   .proofs__item-logo {
@@ -2293,6 +2282,15 @@ h6 {
     width: 70px;
     height: 70px;
     margin: 0px 20px 0px 0px;
+  }
+
+  .proofs__item-title {
+    font-size: 20px;
+  }
+
+  .proofs__item-subtitle,
+  .proofs__item-text {
+    font-size: 20px;
   }
 
   .features__item {
@@ -2366,18 +2364,20 @@ h6 {
     justify-content: center;
   }
 
-  .footer-middle__menu-column:nth-child(2) {
-    margin: 0px;
-  }
-
   .footer-middle__menu-column {
     margin: 20px 0px 0 0;
   }
 
-  .footer-bottom__image {
-    top: -384px;
-    right: 0px;
-    width: 210px;
+  .footer-middle__menu-column:nth-child(2) {
+    margin: 0px;
+  }
+
+  .footer-middle__menu-column_ru:nth-child(2) {
+    margin: 0px;
+  }
+
+  .footer-middle__image {
+    width: 170px;
   }
 }
 
@@ -2385,6 +2385,14 @@ h6 {
   body.lock {
     width: 100%;
     overflow: hidden;
+  }
+
+  .footer-middle__menu {
+    max-width: 190px;
+  }
+
+  .list-menu__link {
+    font-size: 16px;
   }
 
   .welcome__col:nth-child(3) {
@@ -2407,19 +2415,56 @@ h6 {
     margin: 0px;
   }
 
-  .proofs__item-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .section__text-row {
+    font-size: 16px;
   }
 
-  .proofs__item-logo {
-    margin: 0px 0px 15px 0px;
+  .section__title-row_sm {
+    font-size: 20px;
+  }
+
+  .section__title-row_md {
+    font-size: 26px;
+  }
+
+  .section__title-row_lg {
+    font-size: 40px;
+  }
+
+  .section__title-row_ru {
+    font-size: 34px;
+  }
+
+  .section__list {
+    font-size: 16px;
+  }
+
+  .start__title {
+    font-size: 40px;
+  }
+
+  .proofs__title {
+    font-size: 40px;
+  }
+
+  .proofs__item-title {
+    font-size: 16px;
+  }
+
+  .proofs__item-subtitle,
+  .proofs__item-text {
+    font-size: 16px;
+  }
+
+  .proofs__item-btn.active {
+    transform: translate(0%, -50%) rotate(180deg);
   }
 
   .proofs__item-btn {
     position: absolute;
-    top: 45px;
-    right: 20px;
+    top: 50%;
+    right: 0px;
+    transform: translate(0%, -50%);
   }
 
   .proofs__item-img picture:first-child {
@@ -2442,6 +2487,14 @@ h6 {
 
   .features__item-content {
     padding: 15px 10px 0px 10px;
+  }
+
+  .use__title {
+    font-size: 40px;
+  }
+
+  .use__column-title {
+    font-size: 16px;
   }
 }
 
@@ -2466,14 +2519,16 @@ h6 {
 @media (max-width: 424.98px) {
   .footer-middle {
     padding: 35px 0px;
+    background: url("../img/footer/footer-middle-bg-1.svg") 28% 22%/40px 40px no-repeat, url("../img/footer/footer-middle-bg-2.svg") 62% 57%/40px 40px no-repeat;
   }
 
   .footer-middle__menu-title {
     display: block;
   }
 
-  .footer-middle {
-    background: url("../img/footer/footer-middle-bg-1.svg") 28% 22%/40px 40px no-repeat, url("../img/footer/footer-middle-bg-2.svg") 62% 57%/40px 40px no-repeat;
+  .footer-middle__image {
+    right: -100px;
+    width: 200px;
   }
 
   .footer-bottom {
@@ -2492,12 +2547,6 @@ h6 {
 
   .footer-bottom__copyright-mobile {
     display: block;
-  }
-
-  .footer-bottom__image {
-    right: -125px;
-    top: -430px;
-    width: 250px;
   }
 
   .wrapper__decor {
@@ -2553,11 +2602,7 @@ h6 {
   }
 
   .welcome__title {
-    text-align: left;
-  }
-
-  .welcome__title_lg {
-    font-size: 3.7em;
+    font-size: 54px;
   }
 
   .welcome {
@@ -2566,6 +2611,10 @@ h6 {
 
   .section__title-row {
     margin: 0px 0px 10px;
+  }
+
+  .section__title-row_ru {
+    font-size: 26px;
   }
 
   .start {
@@ -2599,10 +2648,6 @@ h6 {
     border-left: 102vw solid #041828;
   }
 
-  .start__title {
-    font-size: 40px;
-  }
-
   .start__img img {
     max-width: 100%;
   }
@@ -2619,20 +2664,43 @@ h6 {
     position: relative;
   }
 
-  .proofs__title {
-    font-size: 40px;
+  .proofs__item {
+    padding: 20px 10px;
+  }
+
+  .proofs__item:after {
+    width: calc(100% - 20px);
   }
 
   .proofs__item.active {
-    padding: 20px 20px 35px 20px;
+    padding: 20px 10px 30px 10px;
+  }
+
+  .proofs__item-logo {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0px 15px 0px 0px;
+  }
+
+  .proofs__item-title {
+    font-size: 14px;
+  }
+
+  .proofs__item-subtitle,
+  .proofs__item-text {
+    font-size: 14px;
+  }
+
+  .proofs__item-btn {
+    flex: 0 0 15px;
+    width: 15px;
+    height: 15px;
+    right: 7px;
   }
 
   .features {
     padding: 45px 0px;
-  }
-
-  .use__title {
-    font-size: 40px;
   }
 
   .use__column-content-link {
