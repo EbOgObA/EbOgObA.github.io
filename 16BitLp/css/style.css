@@ -6,17 +6,17 @@
 */
 
 @font-face {
-  font-family: "Muller-Regular";
+  font-family: "Muller-Light";
   font-display: swap;
-  src: url("../fonts/Muller-Regular.woff") format("woff"), url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.ttf") format("ttf");
+  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerBlackItalic";
+  font-family: "Muller-Regular";
   font-display: swap;
-  src: url("../fonts/MullerBlackItalic.woff") format("woff"), url("../fonts/MullerBlackItalic.woff2") format("woff2"), url("../fonts/MullerBlackItalic.ttf") format("ttf");
+  src: url("../fonts/Muller-Regular.woff") format("woff"), url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -30,17 +30,9 @@
 }
 
 @font-face {
-  font-family: "Muller-Light";
+  font-family: "MullerBlackItalic";
   font-display: swap;
-  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerBold";
-  font-display: swap;
-  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
+  src: url("../fonts/MullerBlackItalic.woff") format("woff"), url("../fonts/MullerBlackItalic.woff2") format("woff2"), url("../fonts/MullerBlackItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -54,9 +46,9 @@
 }
 
 @font-face {
-  font-family: "MullerExtraBoldItalic";
+  font-family: "MullerExtraBold";
   font-display: swap;
-  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
+  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -70,17 +62,9 @@
 }
 
 @font-face {
-  font-family: "MullerExtraBold";
+  font-family: "MullerExtraBoldItalic";
   font-display: swap;
-  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerHeavy";
-  font-display: swap;
-  src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
+  src: url("../fonts/MullerExtraBoldItalic.woff") format("woff"), url("../fonts/MullerExtraBoldItalic.woff2") format("woff2"), url("../fonts/MullerExtraBoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -89,6 +73,22 @@
   font-family: "MullerHairlineItalic";
   font-display: swap;
   src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerBold";
+  font-display: swap;
+  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerHeavy";
+  font-display: swap;
+  src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -110,17 +110,17 @@
 }
 
 @font-face {
-  font-family: "MullerLightItalic";
+  font-family: "MullerMedium";
   font-display: swap;
-  src: url("../fonts/MullerLightItalic.woff") format("woff"), url("../fonts/MullerLightItalic.woff2") format("woff2"), url("../fonts/MullerLightItalic.ttf") format("ttf");
+  src: url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerMedium";
+  font-family: "MullerLightItalic";
   font-display: swap;
-  src: url("../fonts/MullerMedium.woff") format("woff"), url("../fonts/MullerMedium.woff2") format("woff2"), url("../fonts/MullerMedium.ttf") format("ttf");
+  src: url("../fonts/MullerLightItalic.woff") format("woff"), url("../fonts/MullerLightItalic.woff2") format("woff2"), url("../fonts/MullerLightItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -166,17 +166,17 @@
 }
 
 @font-face {
-  font-family: "MullerUltraLight";
+  font-family: "MullerUltraLightItalic";
   font-display: swap;
-  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLightItalic.woff") format("woff"), url("../fonts/MullerUltraLightItalic.woff2") format("woff2"), url("../fonts/MullerUltraLightItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerUltraLightItalic";
+  font-family: "MullerUltraLight";
   font-display: swap;
-  src: url("../fonts/MullerUltraLightItalic.woff") format("woff"), url("../fonts/MullerUltraLightItalic.woff2") format("woff2"), url("../fonts/MullerUltraLightItalic.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -335,6 +335,7 @@ h6 {
 
 .header__logo {
   max-width: 70px;
+  margin: 0px 15px 0px 0px;
 }
 
 .header__logo img {
@@ -353,6 +354,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   padding: 14px 15px 10px;
+  margin: 0px 0px 0px 10px;
   position: relative;
   display: inline-block;
   min-width: 100px;
@@ -363,7 +365,6 @@ h6 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  white-space: nowrap;
   -webkit-transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -o-transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -457,8 +458,7 @@ h6 {
   line-height: 1;
 }
 
-.nice-select .current::before {
-  content: '';
+.nice-select .current__flag {
   position: absolute;
   left: 50%;
   top: -35px;
@@ -468,7 +468,6 @@ h6 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-image: url("../img/lang/eng.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -719,6 +718,11 @@ h6 {
           box-shadow: 0 6px 10px rgba(30, 69, 215, 0.75);
 }
 
+.footer-top__form_esp {
+  margin: 0px 0px 0px 20px;
+  max-width: 400px;
+}
+
 .footer-top__form-btn {
   position: absolute;
   top: 0;
@@ -767,6 +771,14 @@ h6 {
 
 .footer-middle__menu-column_ru:nth-child(2) {
   margin: 0px 30px 0px 0px;
+}
+
+.footer-middle__menu-column_esp {
+  margin: 0px 20px;
+}
+
+.footer-middle__menu-column_esp:nth-child(2) {
+  margin: 0px 20px 0px 0px;
 }
 
 .footer-middle__menu-title {
@@ -822,6 +834,7 @@ h6 {
   font-size: 18px;
   color: #00bcc5;
   text-decoration: underline;
+  line-height: 1.2;
 }
 
 .list-menu__link:hover,
@@ -1141,10 +1154,29 @@ h6 {
 }
 
 .gallery-thumbs .swiper-slide ul li {
-  list-style: disc inside;
   font-size: 18px;
   color: #71818e;
   line-height: 1.4;
+  position: relative;
+  padding: 0px 0px 0px 15px;
+}
+
+.gallery-thumbs .swiper-slide ul li:last-child {
+  margin: 0px;
+}
+
+.gallery-thumbs .swiper-slide ul li:before {
+  content: "";
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #71818e;
 }
 
 .video {
@@ -1729,11 +1761,20 @@ h6 {
 }
 
 .welcome__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   z-index: 6;
   color: #fff;
   font-size: 80px;
   font-family: 'MullerBold',sans-serif;
+  line-height: 1.2;
 }
 
 .section {
@@ -1845,6 +1886,10 @@ h6 {
   font-size: 40px;
 }
 
+.section__title-row_esp {
+  font-size: 50px;
+}
+
 .section__list {
   position: relative;
   z-index: 5;
@@ -1866,7 +1911,7 @@ h6 {
 .section__list-item:before {
   content: "";
   position: absolute;
-  top: 0.5em;
+  top: 0.55em;
   left: 0;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
@@ -2786,7 +2831,8 @@ h6 {
     max-width: 350px;
   }
 
-  .footer-middle__menu_ru {
+  .footer-middle__menu_ru,
+  .footer-middle__menu_esp {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2808,6 +2854,14 @@ h6 {
   }
 
   .footer-middle__menu-column_ru:nth-child(2) {
+    margin: 0 30px 0 0;
+  }
+
+  .footer-middle__menu-column_esp {
+    margin: 20px 0px 0 0;
+  }
+
+  .footer-middle__menu-column_esp:nth-child(2) {
     margin: 0 30px 0 0;
   }
 
@@ -2949,6 +3003,10 @@ h6 {
     margin: 0px;
   }
 
+  .footer-middle__menu-column_esp:nth-child(2) {
+    margin: 0px;
+  }
+
   .footer-middle__image {
     width: 170px;
   }
@@ -3006,6 +3064,10 @@ h6 {
 
   .section__title-row_ru {
     font-size: 34px;
+  }
+
+  .section__title-row_esp {
+    font-size: 40px;
   }
 
   .section__list {
@@ -3103,6 +3165,10 @@ h6 {
 }
 
 @media (max-width: 424.98px) {
+  .header__link {
+    font-size: 10px;
+  }
+
   .footer-middle {
     padding: 35px 0px;
     background: url("../img/footer/footer-middle-bg-1.svg") 28% 22%/40px 40px no-repeat, url("../img/footer/footer-middle-bg-2.svg") 62% 57%/40px 40px no-repeat;
@@ -3219,6 +3285,10 @@ h6 {
 
   .section__title-row_ru {
     font-size: 26px;
+  }
+
+  .section__title-row_esp {
+    font-size: 36px;
   }
 
   .start {

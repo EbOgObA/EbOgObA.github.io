@@ -78,18 +78,25 @@ $(document).ready(function () {
 
     // =======================================================================================================================
     
-    var flagsCurrent = $('.nice-select > .current');
-    $(flagsCurrent).on('change', function() {
-        var e = $(this).text();
-        console.log(e);
+    const urls = {
+		'rus': '/ru.html',
+		'eng': '/',
+		'ch': '/ch.html',
+		'esp': '/esp.html',
+	};
+
+    // var langSelect = $('.nice-select');
+    var langCurrent = $('.nice-select .current');
+    var optionLang = $('.nice-select .list .option');
+    var optionLangSelected = $('.nice-select .list .option.selected');
+
+    var attr = $(optionLangSelected).attr('data-value');
+    $(langCurrent).prepend('<img class="current__flag" src="img/lang/' + attr + '.png" />');
+
+    $(optionLang).on('click', function() {
+        var attr = $(this).attr('data-value');
+        location.href = urls[attr];
     });
-    // $('.nice-select .list li').on('click', function() {
-    //     var flag = $('.nice-select .current::before').css('background-image');
-        // var current = $('.nice-select .current').text();
-    //     var ths = $(this).attr('data-value');
-    //     $(flag).css('background-image','url(../img/lang/' + $(ths) + '.png)');
-    //     console.log(ths);
-    // });
 
     // =======================================================================================================================
 
