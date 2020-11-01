@@ -79,10 +79,10 @@ $(document).ready(function () {
     // =======================================================================================================================
     
     const urls = {
-		'rus': '/ru.html',
-		'eng': '/',
-		'ch': '/ch.html',
-		'esp': '/esp.html',
+		'rus': '/16BitLp/ru.html',
+		'eng': '/16BitLp/index.html',
+		'ch': '/16BitLp/ch.html',
+		'esp': '/16BitLp/esp.html',
 	};
 
     // var langSelect = $('.nice-select');
