@@ -6,25 +6,9 @@
 */
 
 @font-face {
-  font-family: "Muller-Light";
-  font-display: swap;
-  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Muller-Regular";
   font-display: swap;
   src: url("../fonts/Muller-Regular.woff") format("woff"), url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerBoldItalic";
-  font-display: swap;
-  src: url("../fonts/MullerBoldItalic.woff") format("woff"), url("../fonts/MullerBoldItalic.woff2") format("woff2"), url("../fonts/MullerBoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -38,14 +22,6 @@
 }
 
 @font-face {
-  font-family: "MullerBold";
-  font-display: swap;
-  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "MullerBlack";
   font-display: swap;
   src: url("../fonts/MullerBlack.woff") format("woff"), url("../fonts/MullerBlack.woff2") format("woff2"), url("../fonts/MullerBlack.ttf") format("ttf");
@@ -54,9 +30,25 @@
 }
 
 @font-face {
-  font-family: "MullerExtraBold";
+  font-family: "Muller-Light";
   font-display: swap;
-  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
+  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerBold";
+  font-display: swap;
+  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerBoldItalic";
+  font-display: swap;
+  src: url("../fonts/MullerBoldItalic.woff") format("woff"), url("../fonts/MullerBoldItalic.woff2") format("woff2"), url("../fonts/MullerBoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -70,14 +62,6 @@
 }
 
 @font-face {
-  font-family: "MullerHairlineItalic";
-  font-display: swap;
-  src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "MullerHairline";
   font-display: swap;
   src: url("../fonts/MullerHairline.woff") format("woff"), url("../fonts/MullerHairline.woff2") format("woff2"), url("../fonts/MullerHairline.ttf") format("ttf");
@@ -86,9 +70,25 @@
 }
 
 @font-face {
+  font-family: "MullerExtraBold";
+  font-display: swap;
+  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "MullerHeavy";
   font-display: swap;
   src: url("../fonts/MullerHeavy.woff") format("woff"), url("../fonts/MullerHeavy.woff2") format("woff2"), url("../fonts/MullerHeavy.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerHairlineItalic";
+  font-display: swap;
+  src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -158,17 +158,17 @@
 }
 
 @font-face {
-  font-family: "MullerUltraLight";
+  font-family: "MullerThinItalic";
   font-display: swap;
-  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
+  src: url("../fonts/MullerThinItalic.woff") format("woff"), url("../fonts/MullerThinItalic.woff2") format("woff2"), url("../fonts/MullerThinItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerThinItalic";
+  font-family: "MullerUltraLight";
   font-display: swap;
-  src: url("../fonts/MullerThinItalic.woff") format("woff"), url("../fonts/MullerThinItalic.woff2") format("woff2"), url("../fonts/MullerThinItalic.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
