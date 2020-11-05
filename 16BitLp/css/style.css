@@ -6,25 +6,9 @@
 */
 
 @font-face {
-  font-family: "Muller-Light";
-  font-display: swap;
-  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Muller-Regular";
   font-display: swap;
   src: url("../fonts/Muller-Regular.woff") format("woff"), url("../fonts/Muller-Regular.woff2") format("woff2"), url("../fonts/Muller-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerBold";
-  font-display: swap;
-  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -38,25 +22,17 @@
 }
 
 @font-face {
+  font-family: "MullerBold";
+  font-display: swap;
+  src: url("../fonts/MullerBold.woff") format("woff"), url("../fonts/MullerBold.woff2") format("woff2"), url("../fonts/MullerBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "MullerBoldItalic";
   font-display: swap;
   src: url("../fonts/MullerBoldItalic.woff") format("woff"), url("../fonts/MullerBoldItalic.woff2") format("woff2"), url("../fonts/MullerBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerBlack";
-  font-display: swap;
-  src: url("../fonts/MullerBlack.woff") format("woff"), url("../fonts/MullerBlack.woff2") format("woff2"), url("../fonts/MullerBlack.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerExtraBold";
-  font-display: swap;
-  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -70,17 +46,25 @@
 }
 
 @font-face {
-  font-family: "MullerHairlineItalic";
+  font-family: "Muller-Light";
   font-display: swap;
-  src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
+  src: url("../fonts/Muller-Light.woff") format("woff"), url("../fonts/Muller-Light.woff2") format("woff2"), url("../fonts/Muller-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerHairline";
+  font-family: "MullerExtraBold";
   font-display: swap;
-  src: url("../fonts/MullerHairline.woff") format("woff"), url("../fonts/MullerHairline.woff2") format("woff2"), url("../fonts/MullerHairline.ttf") format("ttf");
+  src: url("../fonts/MullerExtraBold.woff") format("woff"), url("../fonts/MullerExtraBold.woff2") format("woff2"), url("../fonts/MullerExtraBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerHairlineItalic";
+  font-display: swap;
+  src: url("../fonts/MullerHairlineItalic.woff") format("woff"), url("../fonts/MullerHairlineItalic.woff2") format("woff2"), url("../fonts/MullerHairlineItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -110,9 +94,33 @@
 }
 
 @font-face {
+  font-family: "MullerBlack";
+  font-display: swap;
+  src: url("../fonts/MullerBlack.woff") format("woff"), url("../fonts/MullerBlack.woff2") format("woff2"), url("../fonts/MullerBlack.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerHairline";
+  font-display: swap;
+  src: url("../fonts/MullerHairline.woff") format("woff"), url("../fonts/MullerHairline.woff2") format("woff2"), url("../fonts/MullerHairline.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "MullerLightItalic";
   font-display: swap;
   src: url("../fonts/MullerLightItalic.woff") format("woff"), url("../fonts/MullerLightItalic.woff2") format("woff2"), url("../fonts/MullerLightItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerMediumItalic";
+  font-display: swap;
+  src: url("../fonts/MullerMediumItalic.woff") format("woff"), url("../fonts/MullerMediumItalic.woff2") format("woff2"), url("../fonts/MullerMediumItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -134,17 +142,17 @@
 }
 
 @font-face {
-  font-family: "MullerMediumItalic";
+  font-family: "MullerRegularItalic";
   font-display: swap;
-  src: url("../fonts/MullerMediumItalic.woff") format("woff"), url("../fonts/MullerMediumItalic.woff2") format("woff2"), url("../fonts/MullerMediumItalic.ttf") format("ttf");
+  src: url("../fonts/MullerRegularItalic.woff") format("woff"), url("../fonts/MullerRegularItalic.woff2") format("woff2"), url("../fonts/MullerRegularItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "MullerRegularItalic";
+  font-family: "MullerUltraLight";
   font-display: swap;
-  src: url("../fonts/MullerRegularItalic.woff") format("woff"), url("../fonts/MullerRegularItalic.woff2") format("woff2"), url("../fonts/MullerRegularItalic.ttf") format("ttf");
+  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -177,14 +185,6 @@
   font-family: "Ofontru-Muller";
   font-display: swap;
   src: url("../fonts/Ofontru-Muller.woff") format("woff"), url("../fonts/Ofontru-Muller.woff2") format("woff2"), url("../fonts/Ofontru-Muller.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "MullerUltraLight";
-  font-display: swap;
-  src: url("../fonts/MullerUltraLight.woff") format("woff"), url("../fonts/MullerUltraLight.woff2") format("woff2"), url("../fonts/MullerUltraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -664,11 +664,10 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px auto 0px;
-  background-color: transparent;
   border-radius: 5px;
   font-size: 16px;
   line-height: 1;
-  color: #fff;
+  color: #61f6ff;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -679,16 +678,11 @@ h6 {
   transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -webkit-box-shadow: #4fe4ed 0 0px 0px 3px inset;
           box-shadow: #4fe4ed 0 0px 0px 3px inset;
+  background-color: rgba(79, 228, 237, 0.3);
 }
 
 .footer__site-button:hover,
 .footer__site-button:focus {
-  color: #1c2f47;
-  -webkit-box-shadow: #4fe4ed 0 80px 0px 3px inset;
-          box-shadow: #4fe4ed 0 80px 0px 3px inset;
-}
-
-.footer__site-button.active {
   color: #1c2f47;
   -webkit-box-shadow: #4fe4ed 0 80px 0px 3px inset;
           box-shadow: #4fe4ed 0 80px 0px 3px inset;
@@ -2068,7 +2062,6 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin: 50px auto 0px;
-  background-color: transparent;
   border-radius: 5px;
   font-size: 18px;
   line-height: 1;
@@ -2076,6 +2069,7 @@ h6 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  color: #61f6ff;
   -webkit-transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   transition: -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -o-transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
@@ -2083,16 +2077,11 @@ h6 {
   transition: box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36), -webkit-box-shadow 0.15s cubic-bezier(0.39, 0.5, 0.15, 1.36);
   -webkit-box-shadow: #4fe4ed 0 0px 0px 3px inset;
           box-shadow: #4fe4ed 0 0px 0px 3px inset;
+  background-color: rgba(79, 228, 237, 0.3);
 }
 
 .start__link:hover,
 .start__link:focus {
-  color: #1c2f47;
-  -webkit-box-shadow: #4fe4ed 0 80px 0px 3px inset;
-          box-shadow: #4fe4ed 0 80px 0px 3px inset;
-}
-
-.start__link.active {
   color: #1c2f47;
   -webkit-box-shadow: #4fe4ed 0 80px 0px 3px inset;
           box-shadow: #4fe4ed 0 80px 0px 3px inset;
@@ -3073,6 +3062,9 @@ h6 {
     top: 55%;
     width: 100%;
     text-align: center;
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
   }
 
   .use__or span {
@@ -3089,11 +3081,15 @@ h6 {
   }
 
   .use__column_crypto {
-    margin: 0px 0px 100px;
+    margin: 0px 0px 50px;
   }
 
   .use__column-content {
-    margin: 0px 0px 20px;
+    margin: 0px 0px 50px;
+  }
+
+  .use__column-content_payment {
+    margin: 0px;
   }
 
   .use__column-content-row_m {
@@ -3480,7 +3476,7 @@ h6 {
   }
 
   .start__link_u {
-    padding: 20px 10px 15px;
+    padding: 20px 15px 15px;
     font-size: 14px;
     min-width: 200px;
   }
