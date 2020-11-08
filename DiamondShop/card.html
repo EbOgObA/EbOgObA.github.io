@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diamond Shop</title>
-    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/CormorantGaramond-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Light.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/OpenSans-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Italic.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/PlayfairDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- SWIPER -->
     <link rel="stylesheet" href="libs/swiper.min.css">
     <!-- CSS -->
@@ -67,15 +72,13 @@
                         <div class="header__top-item appointment">
                             <a href="#" class="header__top-item-link" title="Imac">
                                 <img class="header__top-item-link_img" src="img/header_icons/imac.svg" alt="Imac">
-                                <span class="header__top-item-link_text header__top-item-link_text-gray">virtual appointment</span>
+                                <span class="header__top-item-link_text">Virtual appointment</span>
                             </a>
                         </div>
                     </div>
                     <div class="header__top-logo">
                         <a class="header__top-logo-link" href="#">
-                            <img class="header__top-logo_top" src="img/header_icons/logo_top.svg" alt="logo_top">
-                            <span class="header__top-logo_text">Diamond Shop</span>
-                            <img class="header__top-logo_bot" src="img/header_icons/logo_bot.svg" alt="logo_bot">
+                            <img src="img/header_icons/Logo.png" alt="logo_top">
                         </a>
                     </div>
                     <div class="header__top-column header__top-column_stat">
@@ -94,7 +97,7 @@
                         </div>
                         <div class="header__top-item cart">
                             <a href="#" class="header__top-item-link">
-                                <img class="header__top-item-link_img" src="img/header_icons/bag.svg" alt="Heart">
+                                <img class="header__top-item-link_img" src="img/header_icons/cart.svg" alt="Heart">
                                 <span class="header__top-item-link_text">My cart</span>
                                 <span class="header__top-item-link_count">0</span>
                             </a>
@@ -565,7 +568,7 @@
                     <div class="menu-mobile__body-head-row">
                         <div class="menu-mobile__body-search">
                             <form class="menu-mobile__body-search-form form-search" action="#">
-                                <input class="input form-search__input" type="text" placeholder="Search Diamond Shop">
+                                <input class="input form-search__input" type="text" placeholder="Search Dee Dee">
                                 <button class=" form-search__submit"><img src="img/header_icons/search.svg" alt="search"></button>
                             </form>
                         </div>
@@ -582,17 +585,16 @@
         </div>
 
         <!-- BANNER -->
-        <div class="stright">
+        <!-- <div class="stright">
             Design your engagement ring your way
-        </div>
+        </div> -->
 
         <!-- BREADCRUMB -->
         <div class="breadcrumbs">
             <div class="container breadcrumbs__container">
                 <ul class="breadcrumbs__list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="catalog.html">Engagement Rings</a></li>
-                    <li><a href="#" class="current">Waverly</a></li>
+                    <li><a href="catalog.html" class="current">Engagement Rings</a></li>
                 </ul>
             </div>
         </div>
@@ -600,16 +602,13 @@
         <!-- CARD -->
         <div class="card">
             <div class="container card__container">
-                <div class="card__title title ">Round Engagement Rings</div>
-                <div class="subtitle">Our engagement rings are handcrafted from recycled precious metals and set with
-                    Beyond Conflict Free Diamonds™ and vibrant gemstones.</div>
-
+                
                 <!-- CONSTRUCTOR -->
-                <div class="constructor">
+                <!-- <div class="constructor">
                     <div class="constructor__column constructor__column_create">
                         <div class="constructor__column-title">Create Your Ring</div>
                     </div>
-                    <div class="constructor__column constructor__column_setting done">
+                    <div class="constructor__column constructor__column_setting">
                         <p class="constructor__column-num">1</p>
                         <div class="constructor__column-title deafault">Choose Setting</div>
                         <div class="constructor__column-title done">Setting</div>
@@ -621,7 +620,7 @@
                         <img class="constructor__column-img deafault" src="img/catalog/constructor/ring.svg" alt="ring">
                         <img class="constructor__column-img done" src="img/catalog/constructor/ring-done.png" alt="ring">
                     </div>
-                    <div class="constructor__column constructor__column_diamond active">
+                    <div class="constructor__column constructor__column_diamond">
                         <p class="constructor__column-num">2</p>
                         <div class="constructor__column-title deafault">Choose Diamond</div>
                         <div class="constructor__column-title done">Diamond</div>
@@ -648,6 +647,69 @@
                         </div>
                         <img class="constructor__column-img" src="img/catalog/constructor/ring-c.svg" alt="ring">
                     </div>
+                </div> -->
+
+                <div class="constructor">
+                    <div class="constructor__item first constructor__item_create">
+                        <div class="constructor__active"></div>
+                        <span class="constructor__title">Create Your Ring</span>
+                        <span class="constructor__title constructor__title_mob">Create Ring</span>
+                    </div>
+                    <div class="constructor__item constructor__item_set done">
+                        <div class="constructor__active"></div>
+                        <div class="constructor__item-num">1</div>
+                        <div class="constructor__item-content">
+                            <span class="constructor__title constructor__title_sm">Choose Setting</span>
+                            <span class="constructor__title constructor__title_sm  constructor__title_mob">Setting</span>
+                            <div class="constructor__text">Waverly - $1,000</div>
+                            <div class="constructor__link active">
+                                <a href="#">View</a>
+                                <a href="#">Change</a>
+                            </div>
+                        </div>
+                        <div class="constructor__item-image">
+                            <img src="img/catalog/constructor/ring.svg" alt="ring">
+                            <img class="active" src="img/catalog/constructor/ring-c.svg" alt="ring">
+                        </div>
+                    </div>
+                    <div class="constructor__item active">
+                        <div class="constructor__active"></div>
+                        <div class="constructor__item-num">2</div>
+                        <div class="constructor__item-content">
+                            <span class="constructor__title constructor__title_sm">Choose Diamond</span>
+                            <span class="constructor__title constructor__title_sm  constructor__title_mob">Diamond</span>
+                            <div class="constructor__text">0.30 carat Round - $810</div>
+                            <div class="constructor__link">
+                                <a href="#">Browse Settings</a>
+                            </div>
+                            <div class="constructor__link active">
+                                <a href="#">View</a>
+                                <a href="#">Change</a>
+                            </div>
+                        </div>
+                        <div class="constructor__item-image">
+                            <img src="img/catalog/constructor/diamond.svg" alt="diamond">
+                            <img class="active" src="img/catalog/constructor/diamond-done.png" alt="ring">
+                        </div>
+                    </div>
+                    <div class="constructor__item">
+                        <div class="constructor__active"></div>
+                        <div class="constructor__item-num">3</div>
+                        <div class="constructor__item-content">
+                            <span class="constructor__title constructor__title_sm">Complete Ring</span>
+                            <span class="constructor__title constructor__title_sm  constructor__title_mob">Complete</span>
+                            <div class="constructor__link">
+                                <a href="#">Select Ring Size</a>
+                            </div>
+                            <div class="constructor__link active">
+                                <a href="#">View</a>
+                                <a href="#">Change</a>
+                            </div>
+                        </div>
+                        <div class="constructor__item-image">
+                            <img class="" src="img/catalog/constructor/ring-c.svg" alt="ring">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- CARD INFORMATION -->
@@ -655,7 +717,7 @@
                     <div class="card__info-column card-preview">
                         <div class="card-preview__act">
                             <a href="catalog.html" class="card-preview__act-item">
-                                <img src="img/icons/swiper-left-arrow.svg" alt="#">
+                                <img src="img/icons/left-arrow.svg" alt="#">
                                 Back to gallery
                             </a>
                             <a href="#drop" class="card-preview__act-item card-preview__act-item_reverse pl">
@@ -707,19 +769,19 @@
                         <ul class="about-card__prosperity">
                             <li class="about-card__prosperity-item">
                                 <a class="pl" href="#message">
-                                    <img src="img/card/prosperity/1.svg" alt="">
+                                    <img src="img/card/prosperity/Guarantee.svg" alt="">
                                     Risk-free Retail
                                 </a>
                             </li>
                             <li class="about-card__prosperity-item">
                                 <a class="pl" href="#message">
-                                    <img src="img/card/prosperity/2.svg" alt="">
+                                    <img src="img/card/prosperity/Star.svg" alt="">
                                     Only One Available
                                 </a>
                             </li>
                             <li class="about-card__prosperity-item">
                                 <a class="pl" href="#message">
-                                    <img src="img/card/prosperity/3.svg" alt="">
+                                    <img src="img/header_icons/cart.svg" alt="">
                                     In Another User’s Bag
                                 </a>
                             </li>
@@ -770,7 +832,7 @@
                         </div>
                         <div class="about-card__delivery">
                             <img src="img/icons/delivery.svg" alt="#">
-                            <a class="about-card__delivery-item" href="#">Free Shipping,</a>
+                            <a class="about-card__delivery-item" href="#">Free Shipping</a>
                             <a class="about-card__delivery-item" href="#">Hassle-Free Returns</a>
                         </div>
                         <div class="about-card__contacts">
@@ -926,7 +988,8 @@
                 <!-- SHIPMENT -->
                 <div class="card__shipment">
                     <div class="card__shipment-column card__shipment-column_image">
-                        <img class="load-image" data-src="img/card/shipment/1.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" alt="#">
+                        <img class="desk load-image" data-src="img/card/shipment/logo-desk.jpg" src="data:image/gif;base64,R0lGODlhAQAIAoAAAP///wAAACH5BAEAAAEALAAAAAABAAgCAAIUjI+py+0Po5y02ouz3rz7D4biyBUAOw==" alt="#">
+                        <img class="mob load-image" data-src="img/card/shipment/logo.png" src="data:image/gif;base64,R0lGODlhAQAIAoAAAP///wAAACH5BAEAAAEALAAAAAABAAgCAAIUjI+py+0Po5y02ouz3rz7D4biyBUAOw==" alt="#">
                     </div>
                     <div class="card__shipment-column shipment-content">
                         <div class="shipment-content__row">
@@ -1601,7 +1664,7 @@
                                     <span class="rating">
                                         <span class="rating__line"></span>
                                         <span class="rating__activeline" style="width: 74%;"></span>
-                                        <input value="3" type="hidden" name="rating">
+                                        <input value="4" type="hidden" name="rating">
                                         <span class="stars">
                                             <span class="star"><i>Ужасно</i></span>
                                             <span class="star"><i>Плохо</i></span>
@@ -1612,7 +1675,7 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="card__reviews-ttlscore-stats"><span>5.0</span> (111 Reviews)</div>
+                            <div class="card__reviews-ttlscore-stats"><span>4</span> (111 Reviews)</div>
                         </div>
                         <div class="card__reviews-leave">
                             <a href="#">Leave Review</a>
@@ -1640,7 +1703,7 @@
                                 <div class="reviews-item__head-rating">
                                     <span class="rating-block">
                                         <span class="rating">
-                                            <span class="rating__line"></span>
+                                            <span class="rating__line rating__line_white"></span>
                                             <span class="rating__activeline" style="width: 74%;"></span>
                                             <input value="4" type="hidden" name="rating">
                                             <span class="stars">
@@ -1655,7 +1718,7 @@
                                 </div>
                             </div>
                             <div class="reviews-item__content">
-                                <div class="reviews-item__content-title">My Fiance Loves It!</div>
+                                <div class="reviews-item__content-title">My Fiance LOVES IT!</div>
                                 <div class="reviews-item__content-text">
                                     This exceeded my expectations as the ring looks brilliant. I spent a long time researching diamond ratings and classifications. The website made it easy for me and the price was reasonable. The lab created diamond had the same look and quality of a natural ... <a href="#">Read More</a>
                                 </div>
@@ -1672,7 +1735,7 @@
                                 <div class="reviews-item__head-rating">
                                     <span class="rating-block">
                                         <span class="rating">
-                                            <span class="rating__line"></span>
+                                            <span class="rating__line rating__line_white"></span>
                                             <span class="rating__activeline" style="width: 74%;"></span>
                                             <input value="2" type="hidden" name="rating">
                                             <span class="stars">
@@ -1687,7 +1750,7 @@
                                 </div>
                             </div>
                             <div class="reviews-item__content">
-                                <div class="reviews-item__content-title">She Absolutely LOVES IT </div>
+                                <div class="reviews-item__content-title">She Absolutely LOVES IT</div>
                                 <div class="reviews-item__content-text">
                                     We started looking at engagement rings prior to COVID. I am so glad we got to get to a showroom and look at the styles for ourselves! I was leery about choosing a stone online, but couldn't be happier with the quality, clarity, and sparkle of what we
                                 </div>
@@ -1704,7 +1767,7 @@
                                 <div class="reviews-item__head-rating">
                                     <span class="rating-block">
                                         <span class="rating">
-                                            <span class="rating__line"></span>
+                                            <span class="rating__line rating__line_white"></span>
                                             <span class="rating__activeline" style="width: 74%;"></span>
                                             <input value="4.7" type="hidden" name="rating">
                                             <span class="stars">
@@ -1731,318 +1794,317 @@
             </div>
         </div>
 
-        
+    </div>
+    <!-- SIGN UP -->
+    <div class="sign-up lazy-background" data-bg="img/sign-up-bg.jpg">
+        <div class="container sign-up__container">
+            <div class="sign-up__title title ">Sign up for our email list</div>
+            <div class="sign-up__form-box">
+                <form class="sign-up__form" action="#">
+                    <input autocomplete="off" type="text" name="form[]" placeholder="email" class="sign-up__form-input input req email">
+                    <div class="sign-up__form-buttons">
+                        <button class="sign-up__form-button sign-up__form-button_m" name="Man" type="submit">male</button>
+                        <button class="sign-up__form-button sign-up__form-button_w" name="Woman" type="submit">female</button>
+                    </div>
+                </form>
+            </div>
+            <div class="sign-up__content">
+                <p class="sign-up__text">
+                    By signing up you confirm your agreement to our terms and conditions and agree that your email and gender will be collected and used by DeeDee for sending news, promotions and updates via email
+                </p>
+            </div>
+        </div>
+    </div>
 
-        <!-- SIGN UP -->
-        <div class="sign-up">
-            <div class="container sign-up__container">
-                <div class="sign-up__title title ">Sign up for our email list</div>
-                <div class="sign-up__form-box">
-                    <form class="sign-up__form" action="#">
-                        <input autocomplete="off" type="text" name="form[]" placeholder="Enter Adress" class="sign-up__form-input input req email">
-                        <div class="sign-up__form-buttons">
-                            <button class="sign-up__form-button sign-up__form-button_m" name="Man" type="submit">Man</button>
-                            <button class="sign-up__form-button sign-up__form-button_w" name="Woman" type="submit">Woman</button>
-                        </div>
-                    </form>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container footer-top__container">
+                <div class="footer-top__column footer-top__column_logo">
+                    <a href="#">
+                        <img class="footer__logo" src="img/footer_icons/logo.png" alt="Logo">
+                    </a>
                 </div>
-                <div class="sign-up__content">
-                    <p class="sign-up__text">
-                        *By signing up you confirm that you have read the Privacy Policy and agree that your email and gender will be collected and used by James Allen for the purposes of sending news, promotions and updates via email. You can withdraw your consent at any time by unsubscribing or contacting us via service@jamesallen.com.
+                <div class="footer-top__column">
+                    <div class="footer-top__column-title title title_sm">Experience</div>
+                    <ul class="footer-top__column-list">
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">360° display technology</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Virtual ring sizer</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Refer a friend</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Become an affiliate</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Custom design rings</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Packaging</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Site map</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__column">
+                    <div class="footer-top__column-title title title_sm">Our company</div>
+                    <ul class="footer-top__column-list">
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Customer service</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Lifetime warranty</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Financing options</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Free shipping worldwide</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Jewelry insurance</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">1 year free resizing</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Free engraving</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Tax & duty calculator</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__column">
+                    <div class="footer-top__column-title title title_sm">About us</div>
+                    <ul class="footer-top__column-list">
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">About us</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Reviews</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Engagement moments</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">The blog</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Press</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Cities</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Locations</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-top__column">
+                    <div class="footer-top__column-title title title_sm">Policies</div>
+                    <ul class="footer-top__column-list">
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Conflict-free diamonds</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Lifetime upgrade</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Payment options</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Terms of use</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Privacy policy</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Cookies policy</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Accessibility</a>
+                        </li>
+                        <li class="footer-top__column-list-item">
+                            <a href="#" class="footer-top__column-list-item-link">Privacy shield notice</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom__container">
+                <div class="footer-bottom__column footer-bottom__column_social">
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <a href="#"><img src="img/footer_icons/social/6.svg" alt="Facebook"></a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#"><img src="img/footer_icons/social/1.svg" alt="Twitter"></a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#"><img src="img/footer_icons/social/2.svg" alt="WhatsApp"></a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#"><img src="img/footer_icons/social/8.svg" alt="Messanger"></a>
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <a href="#"><img src="img/footer_icons/social/3.svg" alt="You Tube"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-bottom__column  footer-bottom__column_payment">
+                    <ul class="footer-bottom__list">
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/1.svg" alt="Visa">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/2.svg" alt="PayPal">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/3.svg" alt="Amazon">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/4.svg" alt="AMEX">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/5.svg" alt="MasterCard">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/6.svg" alt="Apple Pay">
+                        </li>
+                        <li class="footer-bottom__list-item">
+                            <img src="img/footer_icons/payment/7.svg" alt="Google Pay">
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-bottom__column footer-bottom__column_copyright">
+                    © 2020. All Rights Reserved.
+                </div>
+                <div class="footer-bottom__column footer-bottom__column_copyright">
+                    Deigned by norbert
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- POPUP MESSAGE -->
+    <div class="popup popup-message">
+        <div class="popup-table table">
+            <div class="cell">
+                <div class="popup-content">
+                    <div class="popup-close"></div>
+                    <div class="popup__title">Diamond Shop Guarantee</div>
+                    <div class="popup__subtitle">24/7 Customer Service</div>
+                    <p>
+                        Our ravely-reviewed <a href="#">Customer Service team</a>  of diamond and jewelry experts is here for you 24/7 and offers interactive diamond inspections.
+                    </p>
+                    <div class="popup__subtitle">Lifetime Warranty</div>
+                    <p>
+                        We are committed to ensuring the quality of your purchase; we will repair and maintain your jewelry for a lifetime.
+                    </p>
+                    <div class="popup__subtitle">Free Shipping Worldwide</div>
+                    <p>
+                        Purchase any item and we will ship it to you anywhere for free.
+                    </p>
+                    <div class="popup__subtitle">Hassle-Free Returns with 100% Money Back Guarantee</div>
+                    <p>
+                        If you are not 100% satisfied with your purchase, return it in its original, unworn condition within 30 days, for a 100% refund. No restocking fee. We will pay for the return shipping (U.S. and Canada customers only).
+                    </p>
+                    <div class="popup-content__footer">
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP CERTIFICATE -->
+    <div class="popup popup-igi">
+        <div class="popup-table table">
+            <div class="cell">
+                <div class="popup-content popup-content_center">
+                    <div class="popup-close"></div>
+                    <div class="popup__image">
+                        <img src="img/certificates/igi.png" alt="#">
+                    </div>
+                    <div class="popup__title popup__title_cert">This  Diamond Comes With an IGI Certificate</div>
+                    <div class="popup__text popup__text_cent">
+                        To review a copy of the certificate, please contact our 24/7 Customer Service.
+                    </div>
+                    <div class="popup__phone">
+                        <a href="tel:8778269866">877-826-9866</a>
+                    </div>
+                    <div class="popup__separator">
+                        <span></span>
+                        <div>or</div>
+                        <span></span>
+                    </div>
+                    <div class="popup-content__footer popup-content__footer_chat">
+                        <a href="#">Chat With A Diamond Expert</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP SIZE -->
+    <div class="popup popup-size">
+        <div class="popup-table table">
+            <div class="cell">
+                <div class="popup-content popup-content">
+                    <div class="popup-close"></div>
+                    <div class="popup__title">View Sizes</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem velit, deleniti dolorum pariatur, perferendis, doloremque iusto soluta explicabo enim at recusandae quam! Labore, distinctio maxime itaque cumque repudiandae quod.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit ad dolores debitis voluptatibus voluptatem temporibus? Necessitatibus eos voluptatibus excepturi amet, quos ratione nisi, deserunt ab, at dolores dolor adipisci cumque.
                     </p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="container footer-top__container">
-                    <div class="footer-top__column">
-                        <div class="footer-top__column-title title title_sm">Experience</div>
-                        <ul class="footer-top__column-list">
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">360° display technology</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Virtual ring sizer</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Refer a friend</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Become an affiliate</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Custom design rings</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Packaging</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Site map</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-top__column">
-                        <div class="footer-top__column-title title title_sm">Our company</div>
-                        <ul class="footer-top__column-list">
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Customer service</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Lifetime warranty</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Financing options</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Free shipping worldwide</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Jewelry insurance</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">1 year free resizing</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Free engraving</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Tax & duty calculator</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-top__column">
-                        <div class="footer-top__column-title title title_sm">About us</div>
-                        <ul class="footer-top__column-list">
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">About us</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Reviews</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Engagement moments</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">The blog</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Press</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Cities</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Locations</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Contact us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-top__column">
-                        <div class="footer-top__column-title title title_sm">Policies</div>
-                        <ul class="footer-top__column-list">
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Conflict-free diamonds</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Lifetime upgrade</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Payment options</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Terms of use</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Privacy policy</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Cookies policy</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Accessibility</a>
-                            </li>
-                            <li class="footer-top__column-list-item">
-                                <a href="#" class="footer-top__column-list-item-link">Privacy shield notice</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container footer-bottom__container">
-                    <div class="footer-bottom__column footer-bottom__column_social">
-                        <ul class="footer-bottom__list">
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/1.svg" alt="Facebook"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/2.svg" alt="Twitter"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/3.svg" alt="WhatsApp"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/4.svg" alt="Messanger"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/5.svg" alt="You Tube"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/6.svg" alt="Instagram"></a>
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <a href="#"><img src="img/footer_icons/social/7.svg" alt="Linked In"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-bottom__column  footer-bottom__column_payment">
-                        <ul class="footer-bottom__list">
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/1.svg" alt="Visa">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/2.svg" alt="PayPal">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/3.svg" alt="Amazon">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/4.svg" alt="AMEX">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/5.svg" alt="MasterCard">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/6.svg" alt="Apple Pay">
-                            </li>
-                            <li class="footer-bottom__list-item">
-                                <img src="img/footer_icons/payment/7.svg" alt="Google Pay">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-bottom__column footer-bottom__column_copyright">
-                        © 2020. All Rights Reserved.
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- POPUP MESSAGE -->
-        <div class="popup popup-message">
-            <div class="popup-table table">
-                <div class="cell">
-                    <div class="popup-content">
-                        <div class="popup-close"></div>
-                        <div class="popup__title">Diamond Shop Guarantee</div>
-                        <div class="popup__subtitle">24/7 Customer Service</div>
-                        <p>
-                            Our ravely-reviewed <a href="#">Customer Service team</a>  of diamond and jewelry experts is here for you 24/7 and offers interactive diamond inspections.
-                        </p>
-                        <div class="popup__subtitle">Lifetime Warranty</div>
-                        <p>
-                            We are committed to ensuring the quality of your purchase; we will repair and maintain your jewelry for a lifetime.
-                        </p>
-                        <div class="popup__subtitle">Free Shipping Worldwide</div>
-                        <p>
-                            Purchase any item and we will ship it to you anywhere for free.
-                        </p>
-                        <div class="popup__subtitle">Hassle-Free Returns with 100% Money Back Guarantee</div>
-                        <p>
-                            If you are not 100% satisfied with your purchase, return it in its original, unworn condition within 30 days, for a 100% refund. No restocking fee. We will pay for the return shipping (U.S. and Canada customers only).
-                        </p>
-                        <div class="popup-content__footer">
-                            <a href="#">Learn more</a>
-                        </div>
+    <!-- POPUP DROP -->
+    <div class="popup popup-drop">
+        <div class="popup-table table">
+            <div class="cell">
+                <div class="popup-content popup-content">
+                    <div class="popup-close"></div>
+                    <div class="popup__title popup__title_stnd">DROP A HINT</div>
+                    <div class="popup__text">Don't leave your friends or loved ones guessing what you want. Help them out and drop a hint!</div>
+                    <div class="popup__buttons">
+                        <a class="popup__buttons-item" href="#">
+                            <img src="img/social_icons/facebook.svg" alt="#">
+                            <span>Facebook</span>
+                        </a>
+                        <a class="popup__buttons-item" href="#">
+                            <img src="img/social_icons/twitter.svg" alt="#">
+                            <span>Twitter</span>
+                        </a>
+                        <a class="popup__buttons-item" href="#">
+                            <img src="img/social_icons/pinterest.svg" alt="#">
+                            <span>Pinterest</span>
+                        </a>
+                        <a class="popup__buttons-item" href="#">
+                            <img src="img/social_icons/mail.svg" alt="#">
+                            <span>Mail</span>
+                        </a>
+                        <a class="popup__buttons-item" href="#">
+                            <img src="img/social_icons/CopyLink.svg" alt="#">
+                            <span>Copy Link</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- POPUP CERTIFICATE -->
-        <div class="popup popup-igi">
-            <div class="popup-table table">
-                <div class="cell">
-                    <div class="popup-content popup-content_center">
-                        <div class="popup-close"></div>
-                        <div class="popup__image">
-                            <img src="img/certificates/igi.png" alt="#">
-                        </div>
-                        <div class="popup__title popup__title_cert">This  Diamond Comes With an IGI Certificate</div>
-                        <div class="popup__text popup__text_cent">
-                            To review a copy of the certificate, please contact our 24/7 Customer Service.
-                        </div>
-                        <div class="popup__phone">
-                            <a href="tel:8778269866">877-826-9866</a>
-                        </div>
-                        <div class="popup__separator">
-                            <span></span>
-                            <div>or</div>
-                            <span></span>
-                        </div>
-                        <div class="popup-content__footer popup-content__footer_chat">
-                            <a href="#">Chat With A Diamond Expert</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- POPUP SIZE -->
-        <div class="popup popup-size">
-            <div class="popup-table table">
-                <div class="cell">
-                    <div class="popup-content popup-content">
-                        <div class="popup-close"></div>
-                        <div class="popup__title">View Sizes</div>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quidem velit, deleniti dolorum pariatur, perferendis, doloremque iusto soluta explicabo enim at recusandae quam! Labore, distinctio maxime itaque cumque repudiandae quod.
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit ad dolores debitis voluptatibus voluptatem temporibus? Necessitatibus eos voluptatibus excepturi amet, quos ratione nisi, deserunt ab, at dolores dolor adipisci cumque.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- POPUP DROP -->
-        <div class="popup popup-drop">
-            <div class="popup-table table">
-                <div class="cell">
-                    <div class="popup-content popup-content">
-                        <div class="popup-close"></div>
-                        <div class="popup__title popup__title_stnd">DROP A HINT</div>
-                        <div class="popup__text">Don't leave your friends or loved ones guessing what you want. Help them out and drop a hint!</div>
-                        <div class="popup__buttons">
-                            <a class="popup__buttons-item" href="#">
-                                <img src="img/social_icons/facebook.svg" alt="#">
-                                <span>Facebook</span>
-                            </a>
-                            <a class="popup__buttons-item" href="#">
-                                <img src="img/social_icons/twitter.svg" alt="#">
-                                <span>Twitter</span>
-                            </a>
-                            <a class="popup__buttons-item" href="#">
-                                <img src="img/social_icons/pinterest.svg" alt="#">
-                                <span>Pinterest</span>
-                            </a>
-                            <a class="popup__buttons-item" href="#">
-                                <img src="img/social_icons/mail.svg" alt="#">
-                                <span>Mail</span>
-                            </a>
-                            <a class="popup__buttons-item" href="#">
-                                <img src="img/social_icons/CopyLink.svg" alt="#">
-                                <span>Copy Link</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 

@@ -424,6 +424,15 @@ $(document).ready(function () {
     }
     tabs();
 
+
+    $(window).on('load resize', function () {
+        var windowWidth = $(this).innerWidth();
+        if (windowWidth < 581) {
+            $('.constructor__item_set').addClass('first');
+        } else {
+            $('.constructor__item_set').removeClass('first');
+        }
+    });
     // =======================================================================================================================
 
     // SLIDERS (SWIPER)
@@ -468,12 +477,12 @@ $(document).ready(function () {
         // Если ширина экрана меньше или равна mediaQuerySize(1024)
         if (windowWidth < mediaQuerySize) {
             // Инициализировать слайдер если он ещё не был инициализирован
-            strightSliderInit()
-            $('.nav-header__list-item-link').addClass('spoller')
+            strightSliderInit();
+            $('.nav-header__list-item-link').addClass('spoller');
         } else {
             // Уничтожить слайдер если он был инициализирован
-            strightSliderDestroy()
-            $('.nav-header__list-item-link').removeClass('spoller')
+            strightSliderDestroy();
+            $('.nav-header__list-item-link').removeClass('spoller');
         }
     });
 
@@ -586,7 +595,7 @@ $(document).ready(function () {
     var sliderCardGallery = document.querySelector('.card-slider__gallery');
     var swiperCardThumbs = new Swiper(sliderCardThumbs,{
         slidesPerView: 4,
-        spaceBetween: 22,
+        spaceBetween: 15,
         // freeMode: true,
         direction: 'horizontal',
         // watchOverflow: true,
@@ -599,15 +608,15 @@ $(document).ready(function () {
                 spaceBetween: 10,
             },
             769: {
-                direction: 'verical',
+                direction: 'horizontal',
                 spaceBetween: 10,
             },
-            1024: {
+            1025: {
                 direction: 'verical',
-                spaceBetween: 22,
+                spaceBetween: 15,
             },
-            1317: {
-                spaceBetween: 22,
+            1321: {
+                spaceBetween: 15,
                 direction: 'verical',
             },
         }
