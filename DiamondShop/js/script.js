@@ -594,7 +594,7 @@ $(document).ready(function () {
     var sliderCardThumbs = document.querySelector('.card-slider__thumbs');
     var sliderCardGallery = document.querySelector('.card-slider__gallery');
     var swiperCardThumbs = new Swiper(sliderCardThumbs,{
-        slidesPerView: 4,
+        slidesPerView: 5,
         spaceBetween: 15,
         // freeMode: true,
         direction: 'horizontal',
@@ -619,7 +619,7 @@ $(document).ready(function () {
                 spaceBetween: 15,
                 direction: 'verical',
             },
-        }
+        },
     });
     var swiperCardGallery = new Swiper(sliderCardGallery,{
         slidesPerView: 1,

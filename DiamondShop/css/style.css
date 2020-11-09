@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Montserrat-BlackItalic";
+  font-family: "Montserrat-Black";
   font-display: swap;
-  src: url("../fonts/Montserrat-BlackItalic.woff") format("woff"), url("../fonts/Montserrat-BlackItalic.woff2") format("woff2"), url("../fonts/Montserrat-BlackItalic.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-BoldItalic";
+  font-family: "Montserrat-BlackItalic";
   font-display: swap;
-  src: url("../fonts/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-BoldItalic.ttf") format("ttf");
+  src: url("../fonts/Montserrat-BlackItalic.woff") format("woff"), url("../fonts/Montserrat-BlackItalic.woff2") format("woff2"), url("../fonts/Montserrat-BlackItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -23,9 +23,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Black";
+  font-family: "Montserrat-BoldItalic";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
+  src: url("../fonts/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-BoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -39,25 +39,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-ExtraLightItalic";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLightItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Montserrat-ExtraBoldItalic";
   font-display: swap;
   src: url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Italic";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -71,9 +55,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-LightItalic";
+  font-family: "Montserrat-Italic";
   font-display: swap;
-  src: url("../fonts/Montserrat-LightItalic.woff") format("woff"), url("../fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../fonts/Montserrat-LightItalic.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-ExtraLightItalic";
+  font-display: swap;
+  src: url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLightItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -87,9 +79,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Regular";
+  font-family: "Montserrat-LightItalic";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("ttf");
+  src: url("../fonts/Montserrat-LightItalic.woff") format("woff"), url("../fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../fonts/Montserrat-LightItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -103,6 +103,14 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat-SemiBold";
   font-display: swap;
   src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.ttf") format("ttf");
@@ -111,25 +119,17 @@
 }
 
 @font-face {
+  font-family: "Montserrat-ThinItalic";
+  font-display: swap;
+  src: url("../fonts/Montserrat-ThinItalic.woff") format("woff"), url("../fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../fonts/Montserrat-ThinItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat-SemiBoldItalic";
   font-display: swap;
   src: url("../fonts/Montserrat-SemiBoldItalic.woff") format("woff"), url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-SemiBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Thin";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Thin.woff") format("woff"), url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Medium";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -151,25 +151,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-ThinItalic";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ThinItalic.woff") format("woff"), url("../fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../fonts/Montserrat-ThinItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "PlayfairDisplay-Bold";
   font-display: swap;
   src: url("../fonts/PlayfairDisplay-Bold.woff") format("woff"), url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-ExtraBold";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-ExtraBold.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -191,25 +175,25 @@
 }
 
 @font-face {
+  font-family: "Montserrat-Thin";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Thin.woff") format("woff"), url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-ExtraBold.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "PlayfairDisplay-Medium";
   font-display: swap;
   src: url("../fonts/PlayfairDisplay-Medium.woff") format("woff"), url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Medium.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-Regular";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-MediumItalic";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-MediumItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -223,9 +207,17 @@
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-SemiBold";
+  font-family: "PlayfairDisplay-MediumItalic";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff"), url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.ttf") format("ttf");
+  src: url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-MediumItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -234,6 +226,14 @@
   font-family: "PlayfairDisplay-SemiBoldItalic";
   font-display: swap;
   src: url("../fonts/PlayfairDisplay-SemiBoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-SemiBoldItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-SemiBold";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff"), url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -891,7 +891,7 @@ p {
 .popup__title {
   padding: 0px 30px 0px 0px;
   font-size: 36px;
-  color: #4f71c9;
+  color: #375773;
 }
 
 .popup__title_cert {
@@ -928,7 +928,7 @@ p {
 
 .popup__buttons-item {
   flex: 0 1 30%;
-  width: 32%;
+  min-width: 138px;
   height: 42px;
   border: none;
   background-color: white;
@@ -1008,7 +1008,7 @@ p {
 
 .popup-content__footer a {
   text-decoration: underline;
-  color: #4f71c9;
+  color: #375773;
   cursor: pointer;
   line-height: 1;
   font-size: 12px;
@@ -1261,20 +1261,9 @@ p {
 }
 
 .header__bottom-container {
-  position: relative;
   display: flex;
   justify-content: space-between;
-}
-
-.header__bottom-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 100%;
-  height: 1px;
-  background-color: #000000;
+  border-bottom: 1px solid #000000;
 }
 
 .header__bottom-nav {
@@ -1401,7 +1390,7 @@ p {
 .nav-header__list-item-link:after {
   content: "";
   position: absolute;
-  bottom: 1px;
+  bottom: -1px;
   left: 50%;
   transform: translate(-50%, 0%) scale(0);
   width: 100%;
@@ -1475,7 +1464,7 @@ p {
   top: 100%;
   left: 0;
   width: 100%;
-  padding: 32px 0px 41px;
+  padding: 30px 0px 40px;
   background-color: #fff;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -3392,7 +3381,8 @@ p {
 
 .constructor__item {
   position: relative;
-  flex: 1 1 auto;
+  flex: 1 1 25%;
+  max-width: 25%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -3402,23 +3392,27 @@ p {
 .constructor__item.first {
   justify-content: center;
   padding: 5px;
-  max-width: 315px;
 }
 
 .constructor__item.first.active::before {
   content: "";
   position: absolute;
-  left: 0;
+  top: 50%;
+  left: -2px;
   z-index: 2;
   width: 30%;
   height: 100%;
   background-color: #e5beb6;
-  transform: scale(1.05);
+  transform: translate(0%, -50%) scaleY(1.075) scaleX(1.02);
 }
 
 .constructor__item.first.active .constructor__active {
   width: 80%;
-  transform: translate(-40%, -50%) scale(1.05);
+  transform: translate(-40%, -50%) scaleY(1.075) scaleX(1.02);
+}
+
+.constructor__item:first-child {
+  padding: 5px 50px 5px 5px;
 }
 
 .constructor__item:last-child {
@@ -3436,30 +3430,23 @@ p {
 .constructor__item:last-child.active::before {
   content: "";
   position: absolute;
-  right: 0;
+  top: 50%;
+  right: -3px;
   z-index: 2;
   width: 30%;
   height: 100%;
   background-color: #e5beb6;
-  transform: scale(1.05);
+  transform: translate(0%, -50%) scale(1.075);
 }
 
 .constructor__item:last-child.active .constructor__active {
-  left: 0;
+  left: -3px;
   width: 90%;
-  transform: translate(0%, -50%) scale(1.05);
-}
-
-.constructor__item:last-child.active .constructor__item-image img {
-  display: block;
+  transform: translate(0%, -50%) scaleY(1.075) scaleX(1.02);
 }
 
 .constructor__item:last-child.done {
   padding: 5px 10px 5px 25px;
-}
-
-.constructor__item:last-child.done .constructor__item-image img {
-  display: block;
 }
 
 .constructor__item::after {
@@ -3484,6 +3471,10 @@ p {
   display: block;
 }
 
+.constructor__item.done .constructor__item-image {
+  right: 10px;
+}
+
 .constructor__item.done .constructor__item-image img {
   display: none;
 }
@@ -3496,17 +3487,17 @@ p {
   display: block;
 }
 
-.constructor__item.active {
-  padding: 5px 0px 5px 10px;
-}
-
 .constructor__item.active::after {
   display: none;
 }
 
 .constructor__item.active .constructor__active {
   display: block;
-  transform: translate(-50%, -50%) scale(1.05);
+  transform: translate(-50%, -50%) scaleY(1.075) scaleX(1.02);
+}
+
+.constructor__item.active .constructor__title {
+  font-family: "PlayfairDisplay-BoldItalic",serif;
 }
 
 .constructor__item.active .constructor__link {
@@ -3527,6 +3518,10 @@ p {
   color: #fff;
 }
 
+.constructor__item.active .constructor__item-image {
+  right: 10px;
+}
+
 .constructor__item.active .constructor__item-image img {
   display: none;
 }
@@ -3542,7 +3537,7 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
+  width: 105%;
   height: 100%;
 }
 
@@ -3550,6 +3545,7 @@ p {
 .constructor__active::after {
   content: "";
   position: absolute;
+  z-index: 1;
   left: 0;
   width: 100%;
   height: 50.25%;
@@ -3559,19 +3555,22 @@ p {
 .constructor__active::before {
   top: 0;
   transform: skewX(30deg);
+  box-shadow: -2px 2px 8px 0px #d3bab5;
 }
 
 .constructor__active::after {
   bottom: 0;
   transform: skewX(-30deg);
+  box-shadow: -2px 2px 8px -2px #d3bab5;
 }
 
 .constructor__title {
   position: relative;
   z-index: 3;
+  margin: 0px 0px 5px;
   font-size: 30px;
   font-family: "PlayfairDisplay-Italic",serif;
-  line-height: 1.2;
+  line-height: 1;
   color: #000000;
   white-space: nowrap;
 }
@@ -3609,6 +3608,7 @@ p {
 
 .constructor__link {
   line-height: 1;
+  margin: 0px 0px 5px;
 }
 
 .constructor__link a {
@@ -3617,6 +3617,7 @@ p {
   font-size: 12px;
   font-family: "Montserrat-Medium",serif;
   text-decoration: underline;
+  line-height: 1;
 }
 
 .constructor__link a:hover {
@@ -3635,14 +3636,19 @@ p {
   transform: translate(0%, -50%);
   max-width: 45px;
   min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.constructor__item-image img {
+  display: inline-block;
+  width: 100%;
+  min-width: 20px;
 }
 
 .constructor__item-image .active {
   display: none;
-}
-
-.constructor__item-image img {
-  width: 100%;
 }
 
 .filter {
@@ -4360,7 +4366,7 @@ p {
 }
 
 .card__desc {
-  margin: 0px 0px 50px;
+  margin: 0px 0px 35px;
 }
 
 .card__desc-title,
@@ -4372,10 +4378,11 @@ p {
 }
 
 .card__desc-title {
-  margin: 0px 0px 5px;
+  margin: 0px 0px 10px;
 }
 
 .card__desc-text {
+  margin: 0px 0px 15px;
   font-size: 16px;
   line-height: 1.4;
   color: #313131;
@@ -4410,12 +4417,9 @@ p {
   color: #4a4a4a;
 }
 
-.card__dminfo-item-left {
-  flex: 1 1 36%;
-}
-
+.card__dminfo-item-left,
 .card__dminfo-item-right {
-  flex: 1 1 64%;
+  flex: 1 1 50%;
 }
 
 .card__payments {
@@ -4540,6 +4544,7 @@ p {
 
 .card__shipment-column_image {
   flex: 1 1 38.5%;
+  max-width: 500px;
   display: flex;
   align-items: center;
 }
@@ -4774,7 +4779,7 @@ p {
   margin: 0px 0px 45px;
   font-size: 16px;
   line-height: 1.4;
-  color: #fff;
+  color: #c1c7cd;
   word-break: break-all;
   white-space: pre-wrap;
 }
@@ -4788,7 +4793,7 @@ p {
   margin: 0px 0px 20px;
   font-size: 16px;
   line-height: 1.3;
-  color: #fff;
+  color: #c1c7cd;
 }
 
 .shipment-content__list-item:last-child {
@@ -4808,7 +4813,7 @@ p {
 .shipment-content__note {
   font-size: 16px;
   line-height: 1.4;
-  color: #fff;
+  color: #c1c7cd;
 }
 
 .ladm-content {
@@ -5029,7 +5034,7 @@ p {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 350px;
+  height: 450px;
 }
 
 .card-slider__thumbs .swiper-container {
@@ -5046,11 +5051,13 @@ p {
   max-height: 75px;
   border: 1px solid #f5ece9;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   cursor: pointer;
   transition: border .2s ease-in-out;
+  background-color: #fff;
 }
 
 .card-slider__thumbs .swiper-slide:hover {
@@ -5058,8 +5065,12 @@ p {
 }
 
 .card-slider__thumbs .swiper-slide img {
-  width: 100%;
   max-height: 100%;
+  width: 100%;
+}
+
+.card-slider__thumbs .swiper-slide_text img {
+  max-width: 65px;
 }
 
 .card-slider__thumbs .swiper-slide-thumb-active {
@@ -5208,6 +5219,7 @@ p {
 .about-card__sizes-column a {
   font-size: 12px;
   font-family: "Montserrat-Medium",sans-serif;
+  font-weight: bold;
   line-height: 1.4;
   text-decoration: underline;
   color: #375773;
@@ -5245,7 +5257,7 @@ p {
 }
 
 .about-card__act-column {
-  margin: 0px 13px 0px 0px;
+  margin: 0px 20px 0px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -5256,7 +5268,7 @@ p {
 }
 
 .about-card__act-select {
-  padding: 20px 25px;
+  padding: 22px 30px 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5272,16 +5284,11 @@ p {
 .about-card__act-like {
   width: 65px;
   height: 100%;
-  padding: 5px 10px;
+  padding: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #CDD9D8;
   transition: border .2s ease-in-out;
-}
-
-.about-card__act-like:hover {
-  border: 1px solid  #f5cfcf;
 }
 
 .about-card__act-like svg {
@@ -5296,21 +5303,12 @@ p {
   stroke: #f5cfcf;
 }
 
-.about-card__act-like.active {
-  border: 1px solid  #f5cfcf;
-}
-
 .about-card__act-like.active svg {
   fill: #f5cfcf;
 }
 
 .about-card__act-like.active svg path {
   stroke: #f5cfcf;
-}
-
-.about-card__act-like .pulse {
-  -webkit-animation: pulse 1s ease-out .05s;
-          animation: pulse 1s ease-out .05s;
 }
 
 .about-card__delivery {
@@ -5463,7 +5461,7 @@ p {
   flex: 1 1 calc(20% - 20px);
   margin: 0px 20px 0px 0px;
   text-transform: capitalize;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 22px;
   color: #FFFFFF;
   text-align: left;
@@ -5678,10 +5676,6 @@ p {
   .menu__subtitle {
     pointer-events: none;
   }
-
-  .about-card__act-like .pulse {
-    display: block;
-  }
 }
 
 @media (min-width: 1541px) {
@@ -5728,7 +5722,7 @@ p {
   }
 
   .header__top {
-    padding: 15px 0px 100px;
+    padding: 15px 0px 60px;
   }
 
   .header__top-column_stat .header__top-item {
@@ -5743,8 +5737,8 @@ p {
     margin: 0px 0px 0px 15px;
   }
 
-  .header__bottom-container::after {
-    width: calc(100% - 40px);
+  .header__top-logo {
+    top: 20px;
   }
 
   .header__bottom-info-list-item {
@@ -5899,6 +5893,10 @@ p {
 
   .constructor__item {
     justify-content: space-between;
+  }
+
+  .constructor__item:first-child {
+    padding: 5px 20px 5px 5px;
   }
 
   .constructor__title {
@@ -6655,14 +6653,19 @@ p {
     order: 1;
   }
 
+  .sign-up {
+    background-image: none !important;
+    background-color: #f3dfd8;
+  }
+
   .item-catalog {
     flex: 1 1 30.333%;
     max-width: 30.333%;
     height: auto;
   }
 
-  .constructor__item.active {
-    padding: 5px 5px 5px 20px;
+  .constructor__item {
+    padding: 5px 20px;
   }
 
   .constructor__title {
@@ -6686,7 +6689,7 @@ p {
   }
 
   .constructor__item-image {
-    max-width: 30px;
+    max-width: 25px;
     min-width: 0px;
   }
 
@@ -6842,18 +6845,19 @@ p {
     flex: 1 1 auto;
     order: 2;
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
   }
 
   .card-slider__thumbs .swiper-wrapper {
     flex-direction: row;
+    align-items: stretch;
   }
 
   .card-slider__thumbs .swiper-slide {
     width: auto;
     max-height: 100%;
-    padding-top: 23.33%;
+    padding-top: 18%;
   }
 
   .card-slider__thumbs .swiper-slide img {
@@ -6861,6 +6865,10 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .card-slider__thumbs .swiper-slide_text img {
+    max-width: 100%;
   }
 
   .card-slider__thumbs .swiper-button-prev {
@@ -7180,6 +7188,7 @@ p {
 
   .constructor__title {
     display: none;
+    margin: 0px;
   }
 
   .constructor__title_mob {
@@ -7325,7 +7334,7 @@ p {
   }
 
   .card__desc {
-    margin: 0px 0px 20px;
+    margin: 0px 0px 10px;
   }
 
   .card__desc-title,
@@ -7539,12 +7548,20 @@ p {
     font-size: 16px;
   }
 
+  .about-card__price {
+    margin: 10px 0px 20px;
+  }
+
   .about-card__sizes {
     flex-direction: column;
   }
 
   .about-card__sizes-column {
     margin: 0px;
+  }
+
+  .about-card__sizes-column:last-child {
+    margin: 5px 0px 0px;
   }
 
   .about-card__select {
@@ -7634,6 +7651,13 @@ p {
 
   .header__top-item-link_text {
     display: none;
+  }
+
+  .header__top-logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 
   .icon-menu {
@@ -7889,6 +7913,10 @@ p {
     font-size: 14px;
   }
 
+  .sign-up__text {
+    font-size: 12px;
+  }
+
   .item-catalog__image img {
     margin: 0px;
   }
@@ -7916,6 +7944,7 @@ p {
   .constructor__item {
     padding: 5px 5px 5px 5px;
     justify-content: center;
+    max-width: 33.333%;
   }
 
   .constructor__item_create {
@@ -7926,8 +7955,8 @@ p {
     padding: 5px;
   }
 
-  .constructor__item.active {
-    padding: 5px;
+  .constructor__item::after {
+    right: -22px;
   }
 
   .constructor__title {
