@@ -622,10 +622,7 @@ $(document).ready(function () {
             },
         },
     });
-    console.log(swiperCardThumbs.slides);
-    // swiperCardThumbs.slides
-    // swiperCardThumbs.slides
-    // swiperCardThumbs.slides[1].detachEvents;
+
     var swiperCardGallery = new Swiper(sliderCardGallery,{
         slidesPerView: 1,
         effect: 'fade',
@@ -633,7 +630,6 @@ $(document).ready(function () {
             swiper: swiperCardThumbs,
         },
     });
-
 
 
     var sliderExplore = document.querySelectorAll('.explore__slider');

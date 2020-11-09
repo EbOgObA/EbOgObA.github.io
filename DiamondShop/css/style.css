@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "Montserrat-Bold";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Montserrat-Black";
   font-display: swap;
   src: url("../fonts/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.ttf") format("ttf");
@@ -15,25 +23,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-ExtraBoldItalic";
+  font-family: "Montserrat-BoldItalic";
   font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-Bold";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat-ExtraLight";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.ttf") format("ttf");
+  src: url("../fonts/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-BoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -47,17 +39,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-BoldItalic";
+  font-family: "Montserrat-ExtraBoldItalic";
   font-display: swap;
-  src: url("../fonts/Montserrat-BoldItalic.woff") format("woff"), url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-BoldItalic.ttf") format("ttf");
+  src: url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff"), url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Italic";
+  font-family: "Montserrat-ExtraLight";
   font-display: swap;
-  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.ttf") format("ttf");
+  src: url("../fonts/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -71,17 +63,17 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Light";
+  font-family: "Montserrat-Italic";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Italic.woff") format("woff"), url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat-Medium";
+  font-family: "Montserrat-Light";
   font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -95,9 +87,9 @@
 }
 
 @font-face {
-  font-family: "Montserrat-Regular";
+  font-family: "Montserrat-Medium";
   font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -106,6 +98,14 @@
   font-family: "Montserrat-MediumItalic";
   font-display: swap;
   src: url("../fonts/Montserrat-MediumItalic.woff") format("woff"), url("../fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("../fonts/Montserrat-MediumItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -143,14 +143,6 @@
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-BlackItalic";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-BlackItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-BlackItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-BlackItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "PlayfairDisplay-Black";
   font-display: swap;
   src: url("../fonts/PlayfairDisplay-Black.woff") format("woff"), url("../fonts/PlayfairDisplay-Black.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Black.ttf") format("ttf");
@@ -159,25 +151,9 @@
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-BoldItalic";
+  font-family: "PlayfairDisplay-BlackItalic";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-BoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-ExtraBoldItalic";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-ExtraBoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBoldItalic.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "PlayfairDisplay-ExtraBold";
-  font-display: swap;
-  src: url("../fonts/PlayfairDisplay-ExtraBold.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBold.ttf") format("ttf");
+  src: url("../fonts/PlayfairDisplay-BlackItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-BlackItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-BlackItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -191,17 +167,33 @@
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-Italic";
+  font-family: "PlayfairDisplay-BoldItalic";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Italic.ttf") format("ttf");
+  src: url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-BoldItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-MediumItalic";
+  font-family: "PlayfairDisplay-ExtraBold";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-MediumItalic.ttf") format("ttf");
+  src: url("../fonts/PlayfairDisplay-ExtraBold.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-ExtraBoldItalic";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-ExtraBoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-ExtraBoldItalic.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Italic";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Italic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -215,9 +207,9 @@
 }
 
 @font-face {
-  font-family: "PlayfairDisplay-Regular";
+  font-family: "PlayfairDisplay-MediumItalic";
   font-display: swap;
-  src: url("../fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
+  src: url("../fonts/PlayfairDisplay-MediumItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2"), url("../fonts/PlayfairDisplay-MediumItalic.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -226,6 +218,14 @@
   font-family: "PlayfairDisplay-SemiBold";
   font-display: swap;
   src: url("../fonts/PlayfairDisplay-SemiBold.woff") format("woff"), url("../fonts/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/PlayfairDisplay-SemiBold.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay-Regular";
+  font-display: swap;
+  src: url("../fonts/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -5086,7 +5086,7 @@ p {
   max-height: 100%;
 }
 
-.card-slider__thumbs .swiper-slide_text img {
+.card-slider__thumbs .swiper-slide_size img {
   max-width: 65px;
 }
 
@@ -6881,7 +6881,7 @@ p {
     transform: translate(-50%, -50%);
   }
 
-  .card-slider__thumbs .swiper-slide_text img {
+  .card-slider__thumbs .swiper-slide_size img {
     max-width: 100%;
   }
 
