@@ -590,14 +590,14 @@ $(document).ready(function () {
     });
     
 
-
+    
     var sliderCardThumbs = document.querySelector('.card-slider__thumbs');
     var sliderCardGallery = document.querySelector('.card-slider__gallery');
     var swiperCardThumbs = new Swiper(sliderCardThumbs,{
         slidesPerView: 5,
         spaceBetween: 15,
         // freeMode: true,
-        direction: 'horizontal',
+        direction: 'vartical',
         // watchOverflow: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -605,6 +605,7 @@ $(document).ready(function () {
         },
         breakpoints: {
             0: {
+                direction: 'horizontal',
                 spaceBetween: 10,
             },
             769: {
@@ -621,6 +622,10 @@ $(document).ready(function () {
             },
         },
     });
+    console.log(swiperCardThumbs.slides);
+    // swiperCardThumbs.slides
+    // swiperCardThumbs.slides
+    // swiperCardThumbs.slides[1].detachEvents;
     var swiperCardGallery = new Swiper(sliderCardGallery,{
         slidesPerView: 1,
         effect: 'fade',
@@ -628,6 +633,7 @@ $(document).ready(function () {
             swiper: swiperCardThumbs,
         },
     });
+
 
 
     var sliderExplore = document.querySelectorAll('.explore__slider');
