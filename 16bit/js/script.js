@@ -1287,53 +1287,99 @@ $(document).ready(function () {
             return false;
         });
         //RANGE
-        if ($("#range").length > 0) {
-            $("#range").slider({
-                range: true,
-                min: 0,
-                max: 5000,
-                values: [0, 5000],
-                slide: function (event, ui) {
-                    $('#rangefrom').val(ui.values[0]);
-                    $('#rangeto').val(ui.values[1]);
-                    $(this).find('.ui-slider-handle').eq(0).html('<span>' + ui.values[0] + '</span>');
-                    $(this).find('.ui-slider-handle').eq(1).html('<span>' + ui.values[1] + '</span>');
+        if($("#range").length>0){
+            $("#range" ).slider({
+                animate: "fast",
+                range: "min",
+                min: 1,
+                max: 100,
+                value: 100,
+                slide: function( event, ui ){
+                    $('#rangeto').val(ui.value);
+                    $('.max').html(ui.value + ' EOS');
+                    $('#amount').html(ui.value + ' EOS');
+                    $('#private-key__send-amount').html(ui.value + ' EOS');
                 },
-                change: function (event, ui) {
-                    if (ui.values[0] != $("#range").slider("option", "min") || ui.values[1] != $("#range").slider("option", "max")) {
-                        $('#range').addClass('act');
-                    } else {
-                        $('#range').removeClass('act');
-                    }
-                }
-            });
-            $('#rangefrom').val($("#range").slider("values", 0));
-            $('#rangeto').val($("#range").slider("values", 1));
-
-            $("#range").find('.ui-slider-handle').eq(0).html('<span>' + $("#range").slider("option", "min") + '</span>');
-            $("#range").find('.ui-slider-handle').eq(1).html('<span>' + $("#range").slider("option", "max") + '</span>');
-
-            $("#rangefrom").bind("change", function () {
-                if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
-                    $(this).val($("#range").slider("option", "max"));
-                }
-                if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
-                    $(this).val($("#range").slider("option", "min"));
-                }
-                $("#range").slider("values", 0, $(this).val());
             });
             $("#rangeto").bind("change", function () {
-                if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
+                if ($(this).val() > $("#range").slider("option", "max")) {
                     $(this).val($("#range").slider("option", "max"));
                 }
-                if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
+                if ($(this).val() < $("#range").slider("option", "min")) {
                     $(this).val($("#range").slider("option", "min"));
                 }
-                $("#range").slider("values", 1, $(this).val());
+                $("#range").slider("value", $(this).val());
+                $('.max').html($(this).val() + ' EOS');
+                $('#amount').html($(this).val() + ' EOS');
+                $('#private-key__send-amount').html($(this).val() + ' EOS');
             });
-            $("#range").find('.ui-slider-handle').eq(0).addClass('left');
-            $("#range").find('.ui-slider-handle').eq(1).addClass('right');
         }
+
+        $('.rangeto-change_minus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) - 1;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+        $('.rangeto-change_plus').click(function () {
+            var $input = $(this).parent().find('input');
+            var count = parseInt($input.val()) + 1;
+            $input.val(count);
+            $input.change();
+            return false;
+        });
+
+            //RANGE
+        // if ($("#range").length > 0) {
+        //     $("#range").slider({
+        //         range: true,
+        //         min: 0,
+        //         max: 5000,
+        //         values: [0, 5000],
+        //         slide: function (event, ui) {
+        //             $('#rangefrom').val(ui.values[0]);
+        //             $('#rangeto').val(ui.values[1]);
+        //             $(this).find('.ui-slider-handle').eq(0).html('<span>' + ui.values[0] + '</span>');
+        //             $(this).find('.ui-slider-handle').eq(1).html('<span>' + ui.values[1] + '</span>');
+        //         },
+        //         change: function (event, ui) {
+        //             if (ui.values[0] != $("#range").slider("option", "min") || ui.values[1] != $("#range").slider("option", "max")) {
+        //                 $('#range').addClass('act');
+        //             } else {
+        //                 $('#range').removeClass('act');
+        //             }
+        //         }
+        //     });
+        //     $('#rangefrom').val($("#range").slider("values", 0));
+        //     $('#rangeto').val($("#range").slider("values", 1));
+
+            // $("#range").find('.ui-slider-handle').eq(0).html('<span>' + $("#range").slider("option", "min") + '</span>');
+        //     $("#range").find('.ui-slider-handle').eq(1).html('<span>' + $("#range").slider("option", "max") + '</span>');
+
+        //     $("#rangefrom").bind("change", function () {
+        //         if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
+        //             $(this).val($("#range").slider("option", "max"));
+        //         }
+        //         if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
+        //             $(this).val($("#range").slider("option", "min"));
+        //         }
+        //         $("#range").slider("values", 0, $(this).val());
+        //     });
+        //     $("#rangeto").bind("change", function () {
+        //         if ($(this).val() * 1 > $("#range").slider("option", "max") * 1) {
+        //             $(this).val($("#range").slider("option", "max"));
+        //         }
+        //         if ($(this).val() * 1 < $("#range").slider("option", "min") * 1) {
+        //             $(this).val($("#range").slider("option", "min"));
+        //         }
+        //         $("#range").slider("values", 1, $(this).val());
+        //     });
+        //     $("#range").find('.ui-slider-handle').eq(0).addClass('left');
+        //     $("#range").find('.ui-slider-handle').eq(1).addClass('right');
+        // }
+
+
         //ADDFILES
         $('.form-addfile__input').change(function (e) {
             if ($(this).val() != '') {

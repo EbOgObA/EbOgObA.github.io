@@ -2,7 +2,7 @@
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
 * Autoprefixer: v9.7.6
-* Browsers: last 4 version
+* Browsers: last 10 version
 */
 
 @charset "UTF-8";
@@ -3378,7 +3378,7 @@ body {
 }
 
 .payment {
-  padding: 0px 0px 50px;
+  padding: 50px 0px;
   margin: 53px 0px 0px 0px;
   background-color: #322e47;
 }
@@ -4532,6 +4532,175 @@ body {
           transform: scale(0.98);
 }
 
+.category-params-item-price {
+  margin: 0px 0px 20px;
+}
+
+.category-params-item-price .min,
+.category-params-item-price .max {
+  display: inline-block;
+  width: 50%;
+  font-size: 22px;
+  color: #757d8d;
+  text-transform: uppercase;
+}
+
+.category-params-item-price .max {
+  text-align: right;
+}
+
+.category-params-item-price .max_w {
+  color: #fff;
+}
+
+.category-params-item-price-table {
+  margin-bottom: 25px;
+}
+
+.category-params-item-price-table .cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.category-params-item-price-table .cell input {
+  height: 50px;
+  border: 2px solid #636978;
+  background-color: #2b3954;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+.category-params-item-price-table .cell .rangeto-change {
+  width: 55px;
+  height: 55px;
+  background-color: #1e293a;
+  border: 1px solid #636978;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.category-params-item-price-table .cell .rangeto-change_minus {
+  margin: 0px 10px 0px 0px;
+}
+
+.category-params-item-price-table .cell .rangeto-change_plus {
+  margin: 0px 0px 0px 10px;
+}
+
+.category-params-item-price-range {
+  margin: 0px 0px 15px;
+  background-color: #fff;
+  height: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.category-params-item-price-range .ui-slider-range {
+  background-color: #3d63a1;
+  height: 5px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.category-params-item-price-range .ui-slider-handle {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #552b38;
+  border-radius: 50%;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  top: -12px;
+  margin-left: -15px;
+  cursor: pointer;
+}
+
+.category-params-item-price-range .ui-slider-handle span {
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  width: 50px;
+  text-align: center;
+  font-size: 10px;
+  margin-left: -25px;
+  font-weight: 500;
+  color: #94a6aa;
+}
+
+.form__info {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 0;
+  top: 0;
+  line-height: 60px;
+  text-align: center;
+  color: #888;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.form-range-line {
+  position: relative;
+  height: 5px;
+  border-radius: 0 0 4px 4px;
+  background-color: #e0e0e0;
+  margin: -2px 0px 0px 0px;
+}
+
+.form-range-line .ui-slider-range {
+  background-color: #093454;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+.form-range-line .ui-slider-handle {
+  background: url("../img/icons/range.svg") 0 0 no-repeat;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  margin: -9px 0px 0px -14px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.form-range-line .ui-state-hover {
+  background: url("../img/icons/range_a.svg") 0 0 no-repeat;
+}
+
+.form-range-values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 0px 0px 0px;
+}
+
+.form-range-values__item {
+  font-size: 12px;
+  color: #888;
+}
+
 @media (min-width: 767.98px) {
   .major__bg-image_2 {
     display: none;
@@ -5513,6 +5682,12 @@ body {
   .form-aut__input {
     padding: 17px 16px 17px 16px;
   }
+
+  .form__info {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
 }
 
 @media (max-width: 708px) {
@@ -5783,6 +5958,21 @@ body {
     width: 15px;
     height: 15px;
   }
+
+  .button-aut_paste {
+    padding: 16.8px 0px 16.8px 0px;
+  }
+
+  .category-params-item-price-table .cell input {
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .category-params-item-price-range .ui-slider-handle {
+    width: 22px;
+    height: 22px;
+    top: -9px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -6030,10 +6220,6 @@ body {
   .button-aut_paste img {
     width: 15px;
     right: 20px;
-  }
-
-  .button-aut_paste {
-    padding: 16.8px 0px 16.8px 0px;
   }
 }
 
