@@ -466,6 +466,7 @@ $(document).ready(function () {
         $(this).parent().removeClass('active').find('.proofs__item-btn').removeClass('active');
         $(this).prev().slideUp(300);
         $(this).removeClass('active');
+        $(this).parent().find('.proofs__item-logo').toggleClass('active');
     });
 
     // =======================================================================================================================
