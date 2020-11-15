@@ -96,10 +96,26 @@ $(document).ready(function () {
         let couponValue = $('.payment__coupon-input').val();
         if (couponValue !== "" && !$('.payment__coupon-info').hasClass('active')) {
             $('.payment__coupon-info').addClass('active');
+            $('.payment__coupon-info-btn').removeClass('disabled');
+            $('.payment__coupon-input').addClass('disabled');
+            $(this).addClass('disabled');
         }
     });
     $('.payment__coupon-info-close').on('click', function() {
         $('.payment__coupon-info').removeClass('active');
+    });
+    $('.payment__coupon-input-clear').on('click', function() {
+        $('.payment__coupon-input').val("");
+        $('.payment__coupon-input').removeClass('disabled');
+        $('.payment__coupon-sbmt').removeClass('disabled');
+        $('.payment__coupon-info-btn').addClass('disabled');
+        $('.payment__coupon-info').removeClass('active');
+    });
+    $('.payment__coupon-info-btn').on('click', function() {
+        let couponValue = $('.payment__coupon-input').val();
+        if (couponValue !== "" && !$('.payment__coupon-info').hasClass('active')) {
+            $('.payment__coupon-info').addClass('active');
+        }
     });
 
     // =======================================================================================================================
@@ -1286,13 +1302,15 @@ $(document).ready(function () {
             $(this).parent().find('.quantity__input').val(n);
             return false;
         });
+
+        
         //RANGE
         $("#range" ).slider({
             animate: "fast",
             range: "min",
             min: 1,
-            max: 100,
-            value: 100,
+            max: 2000,
+            value: 2000,
             slide: function( event, ui ){
                 $('#rangeto').val(ui.value);
                 $(this).parent().find('.max__value').html(ui.value);
@@ -1316,8 +1334,8 @@ $(document).ready(function () {
             animate: "fast",
             range: "min",
             min: 1,
-            max: 200,
-            value: 200,
+            max: 2000,
+            value: 2000,
             slide: function( event, ui ){
                 $('#rangeto2').val(ui.value);
                 $(this).parent().parent().find('.max__value').html(ui.value);
@@ -1341,8 +1359,8 @@ $(document).ready(function () {
             animate: "fast",
             range: "min",
             min: 1,
-            max: 100,
-            value: 100,
+            max: 2000,
+            value: 2000,
             slide: function( event, ui ){
                 $('#rangeto3').val(ui.value);
                 $(this).parent().find('.max__value').html(ui.value);
@@ -1377,6 +1395,44 @@ $(document).ready(function () {
             $input.change();
             return false;
         });
+
+        if ($('.payment__container-white').length > 0) {
+            $("#range" ).slider({
+                value: 1500,
+            });
+            $("#range2" ).slider({
+                value: 1500,
+            });
+            $("#range3" ).slider({
+                value: 1500,
+            });
+            $('.item-choose__label').on('click', function() {
+                var valFranchise = $(this).parent().find('.item-choose__info-price').html().replace(" EOS","");
+                // console.log(valFranchise);
+                $('#rangeto, #rangeto2, #rangeto3').val(valFranchise);
+                $("#range" ).slider({
+                    value: valFranchise,
+                    change: function() {
+                        $(this).parent().find('.max__value').html(valFranchise);
+                        $('#private-key__send-amount').html(valFranchise + ' EOS');
+                    }
+                });
+                $("#range2" ).slider({
+                    value: valFranchise,
+                    change: function() {
+                        $(this).parent().parent().find('.max__value').html(valFranchise);
+                    }
+                });
+                $("#range3" ).slider({
+                    value: valFranchise,
+                    change: function() {
+                        $(this).parent().find('.max__value').html(valFranchise);
+                        $('#amount').html(valFranchise + ' EOS');
+                        $('#private-key__send-amount').html(valFranchise + ' EOS');
+                    }
+                });
+            });
+        }
 
             //RANGE
         // if ($("#range").length > 0) {
