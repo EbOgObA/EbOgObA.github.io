@@ -105,42 +105,42 @@ $(document).ready(function () {
     // =======================================================================================================================
 
     //SLIDERS
-    // if ($('.pay-item__slider').length > 0) {
-    //     $('.pay-item__slider').slick({
-    //         //autoplay: true,
-    //         //infinite: false,
-    //         dots: true,
-    //         arrows: true,
-    //         accessibility: false,
-    //         slidesToShow: 1,
-    //         centerMode: true,
-    //         // autoplaySpeed: 3000,
-    //         //asNavFor:'',
-    //         //appendDots:
-    //         //appendArrows:$('.mainslider-arrows .container'),
-    //         nextArrow: '<button type="button" class="slick-next"></button>',
-    //         prevArrow: '<button type="button" class="slick-prev"></button>',
-    //         responsive: [
-    //             {
-    //                 breakpoint: 768,
-    //                 settings: {
-    //                     centerMode: true,
-    //                 }
-    //             }, {
-    //                 breakpoint: 670,
-    //                 settings: {
-    //                     // centerMode: false,
-    //                     arrow: false,
-    //                 }
-    //             }, {
-    //                 breakpoint: 425,
-    //                 settings: {
-    //                     centerMode: false,
-    //                 }
-    //             }
-    //         ]
-    //     });
-    // }
+    if ($('.pay-item__slider').length > 0) {
+        $('.pay-item__slider').slick({
+            //autoplay: true,
+            //infinite: false,
+            dots: true,
+            arrows: true,
+            accessibility: false,
+            slidesToShow: 1,
+            // centerMode: true,
+            // autoplaySpeed: 3000,
+            //asNavFor:'',
+            //appendDots:
+            //appendArrows:$('.mainslider-arrows .container'),
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            // responsive: [
+            //     {
+            //         breakpoint: 768,
+            //         settings: {
+            //             centerMode: true,
+            //         }
+            //     }, {
+            //         breakpoint: 670,
+            //         settings: {
+            //             // centerMode: false,
+            //             arrow: false,
+            //         }
+            //     }, {
+            //         breakpoint: 425,
+            //         settings: {
+            //             centerMode: false,
+            //         }
+            //     }
+            // ]
+        });
+    }
 
     // =======================================================================================================================
 
@@ -1287,33 +1287,81 @@ $(document).ready(function () {
             return false;
         });
         //RANGE
-        if($("#range").length>0){
-            $("#range" ).slider({
-                animate: "fast",
-                range: "min",
-                min: 1,
-                max: 100,
-                value: 100,
-                slide: function( event, ui ){
-                    $('#rangeto').val(ui.value);
-                    $('.max').html(ui.value + ' EOS');
-                    $('#amount').html(ui.value + ' EOS');
-                    $('#private-key__send-amount').html(ui.value + ' EOS');
-                },
-            });
-            $("#rangeto").bind("change", function () {
-                if ($(this).val() > $("#range").slider("option", "max")) {
-                    $(this).val($("#range").slider("option", "max"));
-                }
-                if ($(this).val() < $("#range").slider("option", "min")) {
-                    $(this).val($("#range").slider("option", "min"));
-                }
-                $("#range").slider("value", $(this).val());
-                $('.max').html($(this).val() + ' EOS');
-                $('#amount').html($(this).val() + ' EOS');
-                $('#private-key__send-amount').html($(this).val() + ' EOS');
-            });
-        }
+        $("#range" ).slider({
+            animate: "fast",
+            range: "min",
+            min: 1,
+            max: 100,
+            value: 100,
+            slide: function( event, ui ){
+                $('#rangeto').val(ui.value);
+                $(this).parent().find('.max__value').html(ui.value);
+                // $('#amount').html(ui.value + ' EOS');
+                // $('#private-key__send-amount').html(ui.value + ' EOS');
+            },
+        });
+        $("#rangeto").bind("change", function () {
+            if ($(this).val() > $("#range").slider("option", "max")) {
+                $(this).val($("#range").slider("option", "max"));
+            }
+            if ($(this).val() < $("#range").slider("option", "min")) {
+                $(this).val($("#range").slider("option", "min"));
+            }
+            $("#range").slider("value", $(this).val());
+            $(this).parent().parent().parent().find('.max__value').html($(this).val());
+            // $('#amount').html($(this).val() + ' EOS');
+            // $('#private-key__send-amount').html($(this).val() + ' EOS');
+        });
+        $("#range2" ).slider({
+            animate: "fast",
+            range: "min",
+            min: 1,
+            max: 200,
+            value: 200,
+            slide: function( event, ui ){
+                $('#rangeto2').val(ui.value);
+                $(this).parent().parent().find('.max__value').html(ui.value);
+                // $('#amount').html(ui.value + ' EOS');
+                // $('#private-key__send-amount').html(ui.value + ' EOS');
+            },
+        });
+        $("#rangeto2").bind("change", function () {
+            if ($(this).val() > $("#range2").slider("option", "max")) {
+                $(this).val($("#range2").slider("option", "max"));
+            }
+            if ($(this).val() < $("#range2").slider("option", "min")) {
+                $(this).val($("#range2").slider("option", "min"));
+            }
+            $("#range2").slider("value", $(this).val());
+            $(this).parent().parent().find('.max__value').html($(this).val());
+            // $('#amount').html($(this).val() + ' EOS');
+            // $('#private-key__send-amount').html($(this).val() + ' EOS');
+        });
+        $("#range3" ).slider({
+            animate: "fast",
+            range: "min",
+            min: 1,
+            max: 100,
+            value: 100,
+            slide: function( event, ui ){
+                $('#rangeto3').val(ui.value);
+                $(this).parent().find('.max__value').html(ui.value);
+                $('#amount').html(ui.value + ' EOS');
+                $('#private-key__send-amount').html(ui.value + ' EOS');
+            },
+        });
+        $("#rangeto3").bind("change", function () {
+            if ($(this).val() > $("#range3").slider("option", "max")) {
+                $(this).val($("#range3").slider("option", "max"));
+            }
+            if ($(this).val() < $("#range3").slider("option", "min")) {
+                $(this).val($("#range3").slider("option", "min"));
+            }
+            $("#range3").slider("value", $(this).val());
+            $(this).parent().parent().parent().find('.max__value').html($(this).val());
+            $('#amount').html($(this).val() + ' EOS');
+            $('#private-key__send-amount').html($(this).val() + ' EOS');
+        });
 
         $('.rangeto-change_minus').click(function () {
             var $input = $(this).parent().find('input');
