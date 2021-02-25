@@ -57,6 +57,9 @@
 a:focus, a:active {
 	outline: none;
 }
+a:focus,a:hover,a:active {
+    color: inherit;
+}
 aside, nav, footer, header, section {
 	display: block;
 }
