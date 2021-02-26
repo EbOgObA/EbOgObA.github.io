@@ -539,7 +539,7 @@ body.lock {
 }
 .b-main-articles__item:hover .b-main-articles__item-title,
 .b-main-articles__item:focus .b-main-articles__item-title {
-    text-decoration-line: none;
+    text-decoration: none;
 }
 .b-main-articles__item span {
     display: block;
@@ -559,7 +559,7 @@ body.lock {
     font-weight: 500;
     font-size: 22px;
     line-height: 150%;
-    text-decoration-line: underline;
+    text-decoration: underline;
 }
 .b-main-articles__item-text {
     font-size: 16px;

@@ -28,9 +28,9 @@ document.addEventListener('DOMContentLoaded', function(){
 	// FAVORITE
 	let favorite = document.querySelectorAll('.favorite');
 	favorite.forEach(element => {
-		element.onclick = function() {
-			this.classList.toggle('active');
-		};
+		element.addEventListener('click', () => {
+			element.classList.toggle('active');
+		});
 	});
 
 
