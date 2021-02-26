@@ -5,6 +5,7 @@
     }
 
 
+    /* <HEADER> */
     .header {
         position: relative;
         z-index: 6;
@@ -23,10 +24,15 @@
     .header__buttons a:last-child {
         width: 175px;
     }
+    /* </HEADER> */
+
+
+    /* <MENU> */
     .menu {
         position: absolute;
         max-width: 300px;
         padding: 100px 0px 0px;
+        overflow: visible;
     }
     .menu__buttons {
         display: none;
@@ -37,11 +43,7 @@
     .nav ul li a::before {
         width: calc(100% - 64px);
     }
-
-
-    /* .b-about .row {
-        padding: 0px 16px;
-    } */
+    /* </MENU> */
 
 
     .b-popular__content {
@@ -64,23 +66,33 @@
         padding: 0px 32px;
     }
 
-
+    /* <HEADER> */
     .header__buttons a:first-child {
         width: 150px;
     }
     .header__buttons a:last-child {
         width: 225px;
     }
-    
+    /* </HEADER> */
+
+    /* <FOOTER> */
+    .footer {
+        padding: 25px 0px;
+    }
+    .footer__img img {
+        width: 156px;
+        height: 61px;
+    }
+    .footer ul a {
+        text-align: left;
+    }
+    .footer .row div li {
+        margin: 0px 0px 25px;
+    }
+    /* </FOOTER> */
+
 
     /* <SWIPER> */
-    .swiper-slide a {
-        padding: 22.1% 0% 0%;
-    }
-    .swiper-slide img {
-        width: 100%;
-        height: auto;
-    }
     .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
         margin: 0px 12.5px;
     }
@@ -96,7 +108,7 @@
 
 
     .b-about {
-        padding: 0px 0px 35px;
+        padding: 50px 0px 35px;
     }
     .b-about p {
         margin: 20px 0px 0px;
@@ -129,7 +141,6 @@
         margin: 0px 0px 25px;
     }
     .b-info .title-h1 {
-        font-size: 28px;
         line-height: 1.2;
         margin: 0px 0px 16px;
     }
@@ -158,24 +169,61 @@
         padding: 40px 0px 60px;
     }
 
-    /* <FOOTER> */
-    .footer {
-        padding: 25px 0px;
+
+    .b-placebet {
+        padding: 0px 0px 70px;
     }
-    .footer__img img {
-        width: 156px;
-        height: 61px;
+    .b-placebet .button {
+        bottom: 135px;
     }
-    .footer ul a {
-        text-align: left;
+
+    .b-bet-info {
+        padding: 0px 0px 65px;
     }
-    .footer .row div li {
-        margin: 0px 0px 25px;
+    .b-bet-info p {
+        font-size: 16px;
+        line-height: 24px;
     }
-    /* </FOOTER> */
+    .b-bet-info__buttons {
+        padding: 55px 0px 0px;
+    }
+
+
+    .b-articles {
+        padding: 40px 0px 0px;
+    }
+    .b-articles .title-h1 {
+        margin: 0px 0px 20px;
+    }
+    .b-articles__subtitle {
+        margin: 0px auto 30px;
+        max-width: 525px;
+    }
+    .b-articles__buttons {
+        padding: 15px 0px 75px;
+    }
+    .b-articles__buttons a {
+        margin: 0px 12px;
+    }
+
+
+    .b-article-page {
+        padding: 35px 0px 75px;
+    }
+    .b-article-page__title {
+        margin: 0px 0px 30px;
+    }
+    .b-article-page .title-h2 {
+        font-size: 24px;
+    }
+    .b-article-page .rate img {
+        margin: 0px;
+    }
+
 }
 
 @media (min-width: 992px) {
+    /* <HEADER> */
     .header {
         height: 165px;
     }
@@ -188,6 +236,10 @@
     .header__stars {
         display: flex;
     }
+    /* </HEADER> */
+
+
+    /* <MENU> */
     .menu-icon {
         display: none;
     }
@@ -236,28 +288,60 @@
         background-color: #24BA9D;
         transform: translate(0%,-50%);
     }
-    /* .nav ul li:first-child a::before {
-        display: block;
-    } */
     .nav ul li a:hover:before,
     .nav ul li a:focus:before {
         display: block;
     }
+    /* </MENU> */
 
 
     .b-main-articles__item-text {
         font-size: 18px;
     }
+
+
+    .b-bet-info p {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+
+    .b-article-page__ol a,
+    .b-article-page__ol div,
+    .b-article-page__block p {
+        font-size: 18px;
+    }
 }
 
 @media (min-width: 1200px) {
+    /* <FOOTER> */
+    .footer {
+        padding: 50px 0px 60px;
+    }
+    .footer .row div li {
+        margin: 0px 0px 15px;
+    }
+    .footer ul a {
+        font-size: 22px;
+    }
+    /* </FOOTER> */
+
+
     .page-bg-1 {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.73) 5.52%, #000000 29.48%, #000000 84.69%);
+        background-color: #000;
         background-image: url('../img/page-bg/1.jpg');
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% auto;
         background-position: 50% 0;
     }
+    .page-bg-2 {
+        background-color: #000;
+        background-image: url('../img/page-bg/2.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: 50% 0;
+    }
+
 
     .b-container {
         padding: 0px 50px;
@@ -270,17 +354,9 @@
     }
 
 
-
-    .b-slider .container {
-        padding: 0px 0px 80px;
-    }
-
     .b-about {
-        padding: 0px 0px 50px;
+        padding: 35px 0px 50px;
     }
-    /* .b-about .row {
-        padding: 0px 60px;
-    } */
     .b-about p {
         font-size: 18px;
         margin: 45px 0px 0px;
@@ -312,6 +388,8 @@
     .b-info .title-h2 {
         margin: 0px 0px 45px;
     }
+
+
     .b-main-articles .row {
         margin: 0px -12px;
     }
@@ -329,15 +407,59 @@
     }
 
 
-    /* <FOOTER> */
-    .footer {
-        padding: 50px 0px 60px;
+    .b-placebet {
+        padding: 0px 0px 100px;
     }
-    .footer .row div li {
-        margin: 0px 0px 15px;
+    .b-placebet .button {
+        bottom: 165px;
     }
-    .footer ul a {
-        font-size: 22px;
+
+    .b-bet-info {
+        padding: 0px 0px 75px;
     }
-    /* </FOOTER> */
+    .b-bet-info__buttons {
+        padding: 75px 0px 0px;
+    }
+
+
+    .b-articles {
+        padding: 65px 0px 0px;
+    }
+    .b-articles .title-h1 {
+        margin: 0px 0px 45px;
+    }
+    .b-articles .row div {
+        margin: 0px 0px 25px;
+    }
+    .b-articles__subtitle {
+        margin: 0px auto 35px;
+        max-width: 590px;
+    }
+    .b-articles__subtitle p {
+        font-size: 18px;
+    }
+    .b-articles__buttons {
+        padding: 25px 0px 85px;
+    }
+    .b-articles__buttons a {
+        margin: 0px 0px 0px 23px;
+    }
+
+
+    .b-article-page {
+        padding: 55px 0px 175px;
+    }
+    .b-article-page__title {
+        margin: 0px 0px 25px;
+    }
+    .b-article-page .title-h1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+    .b-article-page .title-h2 {
+        max-width: 830px;
+        margin: 0px auto 30px;
+        font-size: 28px;
+        line-height: 34px;
+    }
 }

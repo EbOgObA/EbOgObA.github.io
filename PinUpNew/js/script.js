@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	let swiperPartner = new Swiper(slider,{
 		slidesPerView: 1,
 		loop: true,
+		autoHeight: true,
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
