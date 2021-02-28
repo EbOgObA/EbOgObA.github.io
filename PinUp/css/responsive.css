@@ -774,6 +774,7 @@
         margin: 0px 0px 30px;
     }
     .b-privacy__block p,
+    .b-privacy__block p *,
     .b-privacy ul li {
         font-size: 18px;
         line-height: 22px;
