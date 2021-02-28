@@ -1,219 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/stylemedia.css">
-    <title>Pin Up</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link href="webfonts/fonts.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <title>Pin Up</title>
+    </head>
+    <body>
 
-    <header class="row align-items-center header">
-        <div class="col col-xl-12 col-xxl-12 container px-3 px-md-4 px-xxl-0">
-            <div class="row align-items-center header__content">
-                <div class="col-auto gx-0 menu-icon">
-                    <button class="icon-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+        <header class="header">
+            
+            <div class="menu order-lg-1">
+                <div class="menu__buttons">
+                    <a href="#" class="button button-green">Вход</a>
+                    <a href="#" class="button button-red">Регистрация</a>
                 </div>
-                <div class="col-auto px-xl-0 px-2 header__logo">
-                    <a href="#"><img src="img/logo.svg" alt="Azerbaycan"></a>
-                </div>
-                <div class="col-auto align-items-end px-2 header__stars">
-                    <img src="img/5stars.svg" alt="stars">
-                </div>
-                <div class="col px-0">
-                    <div class="row flex-nowrap justify-content-end header__acts">
-                        <div class="col-sm-auto enter">
-                            <a href="#">Вход</a>
+                <nav class="nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Kazino</a></li>
+                        <li><a href="bet.html">Bet</a></li>
+                        <li><a href="app.html">App</a></li>
+                        <li><a href="bonus.html">Bonus</a></li>
+                        <li><a href="promo.html">Промокоды</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 header__content">
+                        <div class="menu-icon">
+                            <button class="icon-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
                         </div>
-                        <div class="col-sm-auto px-0 reg">
-                            <a href="#">Регистрация</a>
+                        <div class="header__logo">
+                            <a href="#"><img src="img/logo.svg" alt="Azerbaycan"></a>
+                        </div>
+                        <div class="header__stars">
+                            <img src="img/5stars.svg" alt="stars">
+                        </div>
+                        <div class="header__buttons">
+                            <a href="#" class="button button-green">Вход</a>
+                            <a href="#" class="button button-red">Регистрация</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
+        <div class="menu-overlay"></div>
 
-        <div class="col col-xl-12 col-xxl-12 px-sm-0 px-xxl-0 menu">
-            <nav class="row container-xl align-content-start align-content-xl-center justify-content-xl-around px-xxl-0 menu__body">
-                <div class="col-12 px-4 menu__acts">
-                    <div class="row flex-nowrap justify-content-end">
-                        <div class="col-4 enter">
-                            <a href="#">Вход</a>
-                        </div>
-                        <div class="col-8 px-0 reg">
-                            <a href="#">Регистрация</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3 active">Kazino</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">Bet</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">App</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">Bonus</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">Промокоды</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">Статьи</a>
-                </div>
-                <div class="col-12 col-xl-auto menu__item">
-                    <a href="#" class="p-4 p-xl-3">Контакты</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <div class="page page-bg-1">
-        <div class="container px-0">
+        <div class="page page-bg-1">
             <!-- SLIDER -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                            <img src="img/slider/1.jpg" alt="Casino NIGHTS">
-                        </a>
+            <div class="b-slider">
+                <div class="container container-gray px-0">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <img src="img/slider/1.jpg" alt="Casino NIGHTS">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
 
-        <div class="container px-3 px-md-4 px-xl-0 px-xxl-0">
-            <div class="block pb-4">
-                <div class="title pt-4 pt-md-5 pb-3 pb-md-4  m-0">Pin Up Casino</div>
-                <div class="row mx-0 mx-lg-5">
-                    <div class="col-12 col-sm-6 px-0 pe-sm-4 pe-lg-2 ps-lg-5 text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum lectus nisi, vitae iaculis risus interdum lectus orci. Id suspendisse volutpat consectetur a leo. Nisi sagittis ornare libero mauris eleifend amet.
-                    </div>
-                    <div class="col-12 col-sm-6 px-0 ps-sm-4 ps-lg-2 pe-lg-5 d-none d-sm-block text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum lectus nisi, vitae iaculis risus interdum lectus orci. Id suspendisse volutpat consectetur a leo. Nisi sagittis ornare libero mauris eleifend amet.
-                    </div>
+            <div class="container px-0">
+                <div class="b-breadcrumbs">
+                    <a href="index.html" class="b-breadcrumbs__item">Главная</a>
+                    <a href="index.html" class="b-breadcrumbs__item active">Статьи</a>
                 </div>
-                <div class="title-color my-3">Популярные слоты</div>
-                <!-- <div class="slots row">
-                    <div class="col-6 slots__item">
-                        <div class="slots__item-img">
-
-                        </div>
-                        <div class="slots__item-content">
-                            <div class="slots__item-title">Valentine’s Fortune</div>
-                            <button class="favorite"></button>
-                        </div>
-                    </div>
-                    <div class="col-6 slots__item"></div>
-                    <div class="col-6 slots__item"></div>
-                    <div class="col-6 slots__item"></div>
-                </div> -->
             </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container px-sm-3 px-lg-3">
-            <div class="row m-md-0 justify-content-lg-between">
-                <div class="col-12 col-md-3 col-lg-2 px-4 ps-md-0 ps-lg-0 text-center text-md-start footer__logo">
-                    <a href="#">
-                        <img src="img/logo.svg" alt="Azerbaycan">
-                    </a>
-                </div>
-                <div class="col-12 col-md-1 col-lg-2 px-4 ps-md-1 pe-md-0 ps-lg-5">
-                    <div class="row m-md-0">
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 pt-md-2 text-center text-md-start">Kazino</a>
-                        </div>
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 text-center text-md-start">Bet</a>
-                        </div>
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 text-center text-md-start">App</a>
-                        </div>
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 text-center text-md-start">Bonus</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 col-lg-3 px-4 ps-md-5 pe-lg-0">
-                    <div class="row m-md-0">
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 pt-md-2 text-center text-md-start">Промокоды</a>
-                        </div>
-                        <div class="col-12 px-0">
-                            <a href="#" class="py-3 text-center text-md-start">Статьи</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 col-lg-4 px-4 pe-md-0 px-lg-0">
-                    <div class="row m-md-0">
-                        <div class="col-12 px-0 order-3 order-md-1">
-                            <a href="#" class="py-3 pt-md-2 text-center text-md-start">Политика конфиденциальности</a>
-                        </div>
-                        <div class="col-12 px-0 order-1 order-md-2">
-                            <a href="#" class="py-3 text-center text-md-start">Зеркало Pin Up</a>
-                        </div>
-                        <div class="col-12 px-0 order-2 order-md-3">
-                            <a href="#" class="py-3 text-center text-md-start">Контакты</a>
+            
+            <div class="container container-gray">
+                <div class="b-about">
+                    <div class="b-container">
+                        <div class="title title-h1">Pin Up Casino</div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis faucibus sed purus nunc scelerisque. Arcu scelerisque at sapien, sollicitudin gravida. Lectus eleifend ultricies blandit dui aenean. Id faucibus elit suspendisse aenean nec aliquet eu mauris. Sed platea nulla vel tristique curabitur non amet metus. Diam consectetur vel urna, amet, neque donec id sapien. 
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-6 d-none d-md-block">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis faucibus sed purus nunc scelerisque. Arcu scelerisque at sapien, sollicitudin gravida. Lectus eleifend ultricies blandit dui aenean. Id faucibus elit suspendisse aenean nec aliquet eu mauris. Sed platea nulla vel tristique curabitur non amet metus. Diam consectetur vel urna, amet, neque donec id sapien. 
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="container container-gray px-0">
+                <div class="b-popular">
+                    <div class="title title-h2 title-green">Популярные слоты</div>
+                    <div class="b-popular__content">
+                        <div class="row justify-content-lg-center">
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/1.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/2.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/3.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/4.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/5.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/6.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/7.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/8.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/9.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/10.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/11.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/12.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/13.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/14.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/15.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/16.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/17.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/18.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/19.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Hot Fruits 100</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-auto">
+                                <div class="b-popular__item">
+                                    <a href="#" class="b-popular__item-img">
+                                        <img src="img/popular/20.jpg" alt="">
+                                    </a>
+                                    <div class="b-popular__item-title">
+                                        <a href="#">Valentine’s Fortune</a>
+                                        <button class="favorite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-popular__button">
+                            <a href="#" class="button button-green">Все игры</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container container-gray page-container">
+                <div class="b-info">
+                    <div class="b-container">
+                        <div class="title title-h1">&lt;H2&gt;Lorem ipsum dolor sit amet</div>
+                        <div class="title title-h2 title-green">&lt;H3&gt;Lorem ipsum dolor</div>
+                        <div class="row">
+                            <div class="col-12 col-xl-6">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis elit dignissim enim ut fermentum augue enim turpis risus. Ut ut turpis viverra sollicitudin mi. Ultricies massa, at a pellentesque nisl. Nulla non turpis urna netus condimentum. Natoque sit faucibus mi, at. Posuere sit tincidunt vitae arcu aliquet sem egestas. Fames ac facilisis ullamcorper vitae interdum pellentesque risus. Integer posuere gravida aliquet in vitae eu. Ac netus risus donec varius faucibus nisi. Elit semper in sem ultrices eu tellus nunc. Tempus auctor est aliquam pellentesque non lectus morbi risus id. Porttitor mi, aliquet vitae a faucibus. Leo viverra rhoncus viverra id nunc feugiat nibh tincidunt sollicitudin. Tellus etiam magna facilisis fermentum. Tristique fringilla urna, sapien sit. Mauris, porttitor libero vulputate et. Convallis tortor, nisi, non consequat, phasellus dictum. Donec sit risus interdum suspendisse sodales ac feugiat augue. Lacus, massa ante scelerisque phasellus aliquet. Cursus tincidunt quam at aliquet gravida et. Metus iaculis sed ultricies at mauris. Bibendum vitae, cursus in volutpat augue. 
+                                </p>
+                            </div>
+                            <div class="col-12 col-xl-6 d-none d-md-block">
+                                <img class="d-none d-xl-block" src="img/info/1.jpg" alt="">
+                                <img class="d-none d-md-block d-xl-none" src="img/info/1-1.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-xl-6 d-none d-xl-block">
+                                <img src="img/info/2.jpg" alt="">
+                            </div>
+                            <div class="col-12 col-xl-6">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis elit dignissim enim ut fermentum augue enim turpis risus. Ut ut turpis viverra sollicitudin mi. Ultricies massa, at a pellentesque nisl. Nulla non turpis urna netus condimentum. Natoque sit faucibus mi, at. Posuere sit tincidunt vitae arcu aliquet sem egestas. Fames ac facilisis ullamcorper vitae interdum pellentesque risus. Integer posuere gravida aliquet in vitae eu. Ac netus risus donec varius faucibus nisi. Elit semper in sem ultrices eu tellus nunc. Tempus auctor est aliquam pellentesque non lectus morbi risus id. Porttitor mi, aliquet vitae a faucibus. Leo viverra rhoncus viverra id nunc feugiat nibh tincidunt sollicitudin. Tellus etiam magna facilisis fermentum. Tristique fringilla urna, sapien sit. Mauris, porttitor libero vulputate et. Convallis tortor, nisi, non consequat, phasellus dictum. Donec sit risus interdum suspendisse sodales ac feugiat augue. Lacus, massa ante scelerisque phasellus aliquet. Cursus tincidunt quam at aliquet gravida et. Metus iaculis sed ultricies at mauris. Bibendum vitae, cursus in volutpat augue. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container container-gray page-container">
+                <div class="b-main-articles">
+                    <div class="b-container">
+                        <div class="title title-h2 title-green">Статьи</div>
+                        <div class="row">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="#" class="b-main-articles__item">
+                                    <span class="b-main-articles__item-img">
+                                        <img class="d-none d-md-block" src="img/articles/1.jpg" alt="">
+                                        <img class="d-md-none" src="img/articles/1-1.jpg" alt="">
+                                    </span>
+                                    <span class="b-main-articles__item-content">
+                                        <span class="b-main-articles__item-title">Lorem ipsum dolor </span>
+                                        <span class="b-main-articles__item-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum donec ac mattis imperdiet eu. Dis suspendisse faucibus donec orci aenean ac rhoncus pulvinar.
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="#" class="b-main-articles__item">
+                                    <span class="b-main-articles__item-img">
+                                        <img class="d-none d-md-block" src="img/articles/2.jpg" alt="">
+                                        <img class="d-md-none" src="img/articles/1-1.jpg" alt="">
+                                    </span>
+                                    <span class="b-main-articles__item-content">
+                                        <span class="b-main-articles__item-title">Lorem ipsum dolor </span>
+                                        <span class="b-main-articles__item-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum donec ac mattis imperdiet eu. Dis suspendisse faucibus donec orci aenean ac rhoncus pulvinar.
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                                <a href="#" class="b-main-articles__item">
+                                    <span class="b-main-articles__item-img">
+                                        <img class="d-none d-md-block" src="img/articles/3.jpg" alt="">
+                                        <img class="d-md-none" src="img/articles/1-1.jpg" alt="">
+                                    </span>
+                                    <span class="b-main-articles__item-content">
+                                        <span class="b-main-articles__item-title">Lorem ipsum dolor </span>
+                                        <span class="b-main-articles__item-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum donec ac mattis imperdiet eu. Dis suspendisse faucibus donec orci aenean ac rhoncus pulvinar.
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block d-lg-none">
+                                <a href="#" class="b-main-articles__item">
+                                    <span class="b-main-articles__item-img">
+                                        <img class="d-none d-md-block" src="img/articles/1.jpg" alt="">
+                                        <img class="d-md-none" src="img/articles/1-1.jpg" alt="">
+                                    </span>
+                                    <span class="b-main-articles__item-content">
+                                        <span class="b-main-articles__item-title">Lorem ipsum dolor </span>
+                                        <span class="b-main-articles__item-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rutrum donec ac mattis imperdiet eu. Dis suspendisse faucibus donec orci aenean ac rhoncus pulvinar.
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="b-main-articles__buttons">
+                            <a href="articles.html" class="button button-green">Все статьи</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
-    </footer>
 
-    <div class="cookies">
-        <div class="container px-3 px-xl-2 text-center">
-            <span>
-                This Site (as well as many others) uses Cookies. By using this Site you accept Cookies. Please read <a href="#" class="link">Cookie Policy</a> if you want to know more.
-            </span>
+        <footer class="footer">
+            <div class="container">
+                <div class="row m-md-0 justify-content-lg-between">
+                    <div class="col-12 col-md-3 col-lg-2 px-4 ps-md-0 ps-lg-0 justify-content-xl-start">
+                        <a href="#" class="footer__img">
+                            <img src="img/logo.svg" alt="#">
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-1 col-lg-2 px-4 ps-md-1 pe-md-0 ps-lg-5">
+                        <ul>
+                            <li class="active"><a href="index.html">Kazino</a></li>
+                            <li><a href="bet.html">Bet</a></li>
+                            <li><a href="app.html">App</a></li>
+                            <li><a href="bonus.html">Bonus</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-3 px-4 ps-md-5 pe-lg-0">
+                        <ul>
+                            <li><a href="promo.html">Промокоды</a></li>
+                            <li><a href="articles.html">Статьи</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-5 col-lg-4 px-4 pe-md-0 px-lg-0">
+                        <ul>
+                            <li class="order-3 order-md-1 active"><a href="privacy.html">Политика конфиденциальности</a></li>
+                            <li class="order-1 order-md-2"><a href="mirror.html">Зеркало Pin Up</a></li>
+                            <li class="order-2 order-md-3"><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="cookies">
+            <div class="container px-3 px-xl-2 text-center">
+                <span>
+                    This Site (as well as many others) uses Cookies. By using this Site you accept Cookies. Please read <a href="#" class="link">Cookie Policy</a> if you want to know more.
+                </span>
+            </div>
         </div>
-    </div>
 
 
-    <script src="js/swiper.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
