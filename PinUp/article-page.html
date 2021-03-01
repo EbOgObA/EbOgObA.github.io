@@ -12,6 +12,7 @@
         <title>Article</title>
     </head>
     <body>
+        
         <header class="header">
             
             <div class="menu order-lg-1">
@@ -45,7 +46,20 @@
                             <a href="#"><img src="img/logo.svg" alt="Azerbaycan"></a>
                         </div>
                         <div class="header__stars">
-                            <img src="img/5stars.svg" alt="stars">
+                            <!-- <img src="img/5stars.svg" alt="stars"> -->
+                            <div class="rating">
+                                <div class="rating__body">
+                                    <div class="rating__active"></div>
+                                    <div class="rating__items">
+                                        <input type="radio" class="rating__item" value="1" name="rating">
+                                        <input type="radio" class="rating__item" value="2" name="rating">
+                                        <input type="radio" class="rating__item" value="3" name="rating">
+                                        <input type="radio" class="rating__item" value="4" name="rating">
+                                        <input type="radio" class="rating__item" value="5" name="rating">
+                                    </div>
+                                </div>
+                                <div class="rating__value">5</div>
+                            </div>
                         </div>
                         <div class="header__buttons">
                             <a href="#" class="button button-green">Вход</a>
@@ -62,7 +76,7 @@
             <div class="container px-0 d-none d-xl-block">
                 <div class="b-breadcrumbs">
                     <a href="index.html" class="b-breadcrumbs__item">Главная</a>
-                    <a href="aricles.html" class="b-breadcrumbs__item gray">Статьи</a>
+                    <a href="articles.html" class="b-breadcrumbs__item gray">Статьи</a>
                     <a href="index.html" class="b-breadcrumbs__item active">Статья 1</a>
                 </div>
             </div>
@@ -123,8 +137,21 @@
                                         Как использовать кошелёк Piastrix для пополнения счёта в Pin-up
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4 rate align-items-start align-items-md-end justify-content-between">
-                                    <img src="img/5stars.svg" alt="#">
+                                <div class="col-12 col-md-4 align-items-start align-items-md-end justify-content-between rate">
+                                    <!-- <img src="img/5stars.svg" alt="#"> -->
+                                    <div class="rating">
+                                        <div class="rating__body">
+                                            <div class="rating__active"></div>
+                                            <div class="rating__items">
+                                                <input type="radio" class="rating__item" value="1" name="rating">
+                                                <input type="radio" class="rating__item" value="2" name="rating">
+                                                <input type="radio" class="rating__item" value="3" name="rating">
+                                                <input type="radio" class="rating__item" value="4" name="rating">
+                                                <input type="radio" class="rating__item" value="5" name="rating">
+                                            </div>
+                                        </div>
+                                        <div class="rating__value">4.2</div>
+                                    </div>
                                     <span>16.02.21</span>
                                 </div>
                             </div>

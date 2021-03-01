@@ -142,9 +142,12 @@
         padding: 25px 0px 50px;
     }
     .favorite {
-        top: -5px;
+        top: -8px;
         width: 27px;
-        height: 27px;
+        font-size: 32px;
+    }
+    .favorite::before {
+        font-size: 32px;
     }
 
 
@@ -230,7 +233,7 @@
     .b-article-page .title-h2 {
         font-size: 24px;
     }
-    .b-article-page .rate img {
+    .b-article-page .rate .rating {
         margin: 0px;
     }
 
