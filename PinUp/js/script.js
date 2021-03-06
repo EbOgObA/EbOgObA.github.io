@@ -1,6 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
 	
 
+	//CLOSE COOKIES
+	setTimeout(function() {
+		document.querySelector(".cookies").classList.add("active");
+	}, 1000);
+	const cookiesClose = document.querySelector(".cookies__close");
+	cookiesClose.addEventListener('click', function() {
+		this.parentNode.classList.remove("active");
+	});
+
 	// BURGER
 	let iconMenu = document.querySelector(".icon-menu");
 	let menuBody = document.querySelector(".menu");

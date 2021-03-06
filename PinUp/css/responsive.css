@@ -119,6 +119,15 @@
     .cookies * {
         font-size: 16px;
     }
+    .cookies {
+        padding: 10px 50px;
+    }
+    .cookies__close {
+        top: 15px;
+        right: 15px;
+        width: 15px;
+        height: 15px;
+    }
 
 
     .b-about {
@@ -585,6 +594,15 @@
     }
 
 
+    .cookies {
+        padding: 20px 50px;
+    }
+    .cookies__close {
+        top: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* XL */
