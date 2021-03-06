@@ -53,6 +53,15 @@
     .b-popular__content {
         padding: 40px 32px 0px;
     }
+
+
+    .b-annotation {
+        padding: 50px 30px;
+    }
+    .b-annotation a {
+        padding: 10px 20px;
+        font-size: 24px;
+    }
 }
 
 /* MD */

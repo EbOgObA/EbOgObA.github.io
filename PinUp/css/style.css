@@ -1069,6 +1069,29 @@ a.link:focus {
 }
 
 
+.b-annotation {
+    padding: 50px 10px;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+.b-annotation a {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+.b-annotation a:hover,
+.b-annotation a:focus {
+    color: #24BA9D;
+    letter-spacing: 1px;
+}
+
+
 /* <COOKIES> */
 .cookies {
     /* display: none; */
