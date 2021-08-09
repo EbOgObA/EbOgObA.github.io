@@ -1,0 +1,344 @@
+/* ==================================================================================================== */
+/* </ШРИФТЫ> */
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../webfonts/Poppins-Regular.ttf');
+    src: local('Poppins Regular'), local('Poppins-Regular'), local('Poppins'),
+        url('../webfonts/Poppins-Regular.woff') format('woff'),
+        url('../webfonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('../webfonts/Poppins-Light.ttf');
+    src: local('Poppins Light'), local('Poppins-Light')
+        url('../webfonts/Poppins-Light.woff') format('woff'),
+        url('../webfonts/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('../webfonts/Poppins-SemiBold.ttf');
+    src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
+        url('../webfonts/Poppins-SemiBold.woff') format('woff'),
+        url('../webfonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Italic';
+    src: url('../webfonts/PlayfairDisplay-Italic.ttf');
+    src: local('PlayfairDisplay Italic'), local('PlayfairDisplay-Italic'),
+        url('../webfonts/PlayfairDisplay-Italic.woff') format('woff'),
+        url('../webfonts/PlayfairDisplay-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Bold';
+    src: url('../webfonts/PlayfairDisplay-Bold.ttf');
+    src: local('PlayfairDisplay Bold'), local('PlayfairDisplay-Bold'),
+        url('../webfonts/PlayfairDisplay-Bold.woff') format('woff'),
+        url('../webfonts/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay-Black';
+    src: url('../webfonts/PlayfairDisplay-Black.ttf');
+    src: local('PlayfairDisplay Black'), local('PlayfairDisplay-Black'),
+        url('../webfonts/PlayfairDisplay-Black.woff') format('woff'),
+        url('../webfonts/PlayfairDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+/* </ШРИФТЫ> */
+/* ==================================================================================================== */
+
+
+
+/* ==================================================================================================== */
+/* <ОБНУЛЕНИЕ> */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+a,
+a:hover,
+a:focus,
+a:visited {
+    color: #23242C;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+body {
+	line-height: 1;
+	font-family: 'Poppins-Regular',sans-serif;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+    color: #23242C;
+}
+input,
+button,
+textarea {
+	font-family: 'Poppins-Regular',sans-serif;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited,
+a:hover {
+	text-decoration: none;
+}
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/* </ОБНУЛЕНИЕ> */
+/* ==================================================================================================== */
+
+
+
+/* ==================================================================================================== */
+/* <ОБЩИЕ> */
+body {
+	color: #23242C;
+	font-size: 14px;
+}
+body._lock {
+    overflow: hidden;
+}
+.wrapper {
+    position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.container {
+    max-width: 1170px;
+}
+.page .container {
+    background: url('../img/bg.jpg') 50% 50% / cover no-repeat;
+}
+.title {
+    font-family: "PlayfairDisplay-Bold",sans-serif;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 1.1;
+}
+.pretitle {
+    font-family: "Poppins-Light",sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #967675;
+}
+.link {
+    position: relative;
+}
+.link::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 100%;
+    height: 1px;
+    background-color: #23242C;
+}
+/* </ОБЩИЕ> */
+/* ==================================================================================================== */
+
+.header {
+    position: relative;
+    z-index: 10;
+    padding: 20px 0px;
+    border-bottom: 1px solid #EDEDED;
+    /* height: 80px; */
+}
+.header__top {
+    position: relative;
+}
+.header__bottom {
+    display: none;
+}
+.header__logo {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header__logo::before {
+    display: none;
+}
+.header__logo img {
+    width: 75%;
+    max-width: 300px;
+}
+
+.icon-menu {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: -5px;
+    width: 60px;
+    transform: translate(0%,-50%);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.icon-menu._active {
+    transform: translate(0%,-50%) rotate(45deg);
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.icon-menu .top {
+    stroke-dasharray: 40 160;
+}
+.icon-menu .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+}
+.icon-menu .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+}
+.icon-menu._active .top {
+    stroke-dashoffset: -64px;
+}
+.icon-menu._active .middle {
+    /* stroke-dashoffset: -20px; */
+    transform: rotate(90deg);
+}
+.icon-menu._active .bottom {
+    stroke-dashoffset: -64px;
+}
+
+
+
+.menu__body {
+    padding: 70px 0px 0px;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    /* transform: translate(0%,-100%); */
+    transition: all .5s ease-in-out;
+}
+.menu__body._active {
+    opacity: 1;
+    visibility: visible;
+    /* transform: translate(0%,0%); */
+}
+.menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu__link {
+    padding: 10px 0px;
+    margin: 0px 33px;
+}
+.menu__link a {
+    font-size: 24px;
+    /* transition: all .2s ease-in-out; */
+}
+/* .menu__link a:hover,
+.menu__link a:focus {
+    color: #777777;
+} */
+
+
+
+/* ==================================================================================================== */
+
+.b-main {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/decore-2.png') 80% 50% no-repeat;
+}
+.b-main img {
+    width: 100%;
+}
+
+/* ==================================================================================================== */
