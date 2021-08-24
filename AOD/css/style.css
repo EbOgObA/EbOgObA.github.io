@@ -690,7 +690,8 @@ h6 {
   text-transform: uppercase;
   font-weight: 300;
   background-color: #64c29e;
-  transition: transform .1s linear, opacity .3s ease-in-out;
+  transition: transform .1s linear,
+ opacity .3s ease-in-out;
 }
 
 .subscribe__btn:hover,
