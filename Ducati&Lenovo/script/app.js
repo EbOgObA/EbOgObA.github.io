@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+// NAVIGATION
+  if (window.innerWidth > 768) {
+    document.querySelectorAll('.nav__link').forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let src = btn.dataset.src;
+        // console.log(src);
+        gsap.to(window, {duration: 2, scrollTo:{y:src}});
+        btn.blur();
+      });
+    });
+  }
+
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollToPlugin);
 
