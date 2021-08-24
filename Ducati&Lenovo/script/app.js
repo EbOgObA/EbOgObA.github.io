@@ -70,13 +70,13 @@ document.addEventListener('DOMContentLoaded', function(){
       // acceleratorAnimate();
     }
   }
-  // headerAnimate();
+  headerAnimate();
 
 
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
-    acceleratorAnimate();
+    // acceleratorAnimate();
     gsap.to('.accelerator-img-1', {
       scrollTrigger: {
         trigger: '.accelerator-img-1',

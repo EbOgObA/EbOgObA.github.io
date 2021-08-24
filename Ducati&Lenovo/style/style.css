@@ -1021,7 +1021,7 @@ body.hidden {
   }
 
   .accelerator-moto {
-    top: 25%;
+    top: 10%;
     margin: -10% 0 0;
   }
 
@@ -1163,7 +1163,8 @@ body.hidden {
   }
 
   .accelerator-moto {
-    top: 25%;
+    top: 15%;
+    margin: -15% 0 0;
   }
 
   .accelerator__text {
