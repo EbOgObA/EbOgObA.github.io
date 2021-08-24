@@ -1,0 +1,1629 @@
+
+/* Fonts
+  ========================================================================== */
+@font-face {
+  font-family: 'Lato';
+  src:local('Lato Regular'), local('Lato-Regular'),
+      url('../fonts/latoregular.woff2') format('woff2'),
+      url('../fonts/latoregular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato Medium';
+  src:local('Lato Medium'), local('Lato-Medium'),
+      url('../fonts/latomedium.woff2') format('woff2'),
+      url('../fonts/latomedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato Bold';
+  src:local('Lato Bold'), local('Lato-Bold'),
+      url('../fonts/latobold.woff2') format('woff2'),
+      url('../fonts/latobold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato Black';
+  src:local('Lato Black'), local('Lato-Black'),
+      url('../fonts/latoblack.woff2') format('woff2'),
+      url('../fonts/latoblack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* General Styles
+    ========================================================================== */
+*,*::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 380px;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  /* min-height: 300vh; */
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1720px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.site-container {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.container-inner {
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 0 0 37%;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+}
+
+.section__video {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.section__video-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato Black", sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 130px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.title.title_small {
+  font-size: 70px;
+  line-height: 84px;
+}
+
+.text-transparent {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  color: transparent;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: 'Lato Medium', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.video-btn {
+  display: none;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 42px;
+  font-family: 'Lato Bold';
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #282828;
+  border: 2px solid #FFFFFF;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+
+
+/* User Styles
+    ========================================================================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+/* .header.active {
+  background-image: url('../img/header/header-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.header-left {
+  position: absolute;
+  top: 0;
+  left: -28.5%;
+  height: 100%;
+  width: 79%;
+  transform: skewX(-23.5deg);
+  /* background-color: #E20B21; */
+  background-color: #6E6C6A;
+  overflow: hidden;
+}
+
+.header-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 120px;
+  height: 100%;
+  background-color: #E20B21;
+}
+
+.header-left__overlay {
+  position: absolute;
+  top: 50%;
+  right: -25%;
+  width: 100%;
+  height: 100%;
+  padding: 0 25% 0 0;
+  background-color: #E20B21;
+  transform: translate(0,-50%) skewX(23.5deg);
+}
+
+.header-left__content {
+  position: absolute;
+  top: 50%;
+  /* left: calc(32% + 115px); */
+  right: -215px;
+  width: 100%;
+  /* height: 90%; */
+  height: 100%;
+  transform: translateY(-50%) skewX(23.5deg);
+  /* background-color: #E20B21; */
+}
+
+.logo-ducati {
+  position: absolute;
+  top: 50%;
+  right: 500px;
+  max-width: 510px;
+  transform: translateY(-50%);
+}
+
+.header-right {
+  position: absolute;
+  top: 0;
+  right: -28.5%;
+  height: 100%;
+  width: 78.5%;
+  transform: skewX(-23.5deg);
+  /* background-color: #E20B21; */
+  background-color: #6E6C6A;
+}
+
+.header-right__content {
+  position: absolute;
+  top: 54%;
+  left: -220px;
+  width: 100%;
+  max-width: 1020px;
+  /* height: 440px; */
+  transform: translateY(-50%) skewX(23.5deg);
+}
+
+.logo-lenovo {
+  display: block;
+  /* width: 986px; */
+  max-width: 95%;
+  margin: 0px 0px 5% 5%;
+}
+
+.logo-lenovo__fact {
+  display: block;
+  /* height: 44px; */
+}
+
+.accelerator {
+  position: relative;
+  margin:  0 0 20%;
+  min-height: 1100px;
+}
+
+.accelerator__title {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 224px 0 0;
+  z-index: 2;
+  font-family: "Lato Black", sans-serif;
+  font-weight: 900;
+  font-size: 90px;
+  line-height: 130px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.accelerator__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  margin: 50px 0px 0px;
+  font-family: 'Lato Medium', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 50px;
+  color: #FFFFFF;
+}
+
+.accelerator-moto {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* transform: translateX(-50%); */
+  z-index: 1;
+  pointer-events: none;
+  max-width: 1920px;
+}
+
+.accelerator-img-1 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 42%;
+  width: 380px;
+  transform: translateX(-50%);
+}
+
+.accelerator-img-2 {
+  position: absolute;
+  z-index: -1;
+  top: 734px;
+  left: 23%;
+  width: 316px;
+  transform: translateX(-50%);
+}
+
+.accelerator-img-3 {
+  position: absolute;
+  z-index: -1;
+  top: 790px;
+  right: 0;
+  width: 564px;
+}
+
+.accelerator-img__text {
+  position: relative;
+  bottom: 60px;
+  left: -30px;
+  font-family: 'Lato Black', sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 130px;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFFFFF;
+  color: transparent;
+}
+/* 
+.moment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.moment__content-title {
+  margin: 0 0 20px;
+}
+
+.moment__content-text{
+  max-width: 900px;
+}
+
+.moment__content-img {
+  display: none;
+}
+
+.technology {
+  position: relative;
+  padding: 100px 0;
+  height: auto;
+  min-height: auto;
+}
+
+.technology__container {
+  position: static;
+  height: 100%;
+}
+
+.technology__content {
+  height: 100%;
+  max-width: 671px;
+  margin: 13.9% 0 0;
+}
+
+.technology__title,
+.technology__content {
+  position: relative;
+  z-index: 1;
+}
+
+.technology__text:not(:first-child) {
+  margin: 20px 0 0;
+}
+
+.technology-img-1 {
+  position: absolute;
+  top: 17.5%;
+  left: 0;
+  max-width: 605px;
+  width: 31.5%;
+}
+
+.technology-img-2 {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  max-width: 1000px;
+  width: 52%;
+}
+
+.balance {
+  position: relative;
+  min-height: auto;
+  height: auto;
+  padding: 50px 0 0;
+  overflow: hidden;
+  /* padding: 0 0 20%; */
+}
+
+.balance__container {
+  /* padding: 230px 0 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* .balance__title {
+  margin: 55px 0px 0px;
+} */
+
+.balance__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  /* margin: 55px 0 0; */
+}
+
+.balance__moto {
+  display: block;
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.balance__item {
+  position: absolute;
+  width: 50%;
+  padding: 0 0 40px;
+  overflow: hidden;
+}
+
+.balance__item-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  /* letter-spacing: -0.05em; */
+}
+
+/* .text {
+  
+  font-family: 'Lato Medium', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 50px;
+  color: #FFFFFF;
+} */
+
+.circ {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #E20B21;
+}
+
+.line {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #E20B21;
+  transform: translateY(50%);
+}
+
+.balance__item-1 {
+  bottom: 52.5%;
+  left: 0;
+}
+
+.balance__item-1 .circ {
+  margin: 0 12.5% 0 0;
+  right: 0;
+  bottom: 0;
+}
+
+.balance__item-1 .line {
+  margin: 0 12.5% 0 0;
+  right: 0;
+  bottom: 15px;
+}
+
+.balance__item-2 {
+  bottom: 47.5%;
+  right: 0;
+}
+
+.balance__item-2 .balance__item-text {
+  padding: 0 0 0 40%;
+}
+
+.balance__item-2 .circ {
+  left: 0;
+  bottom: 0;
+  margin: 0 0 0 18%;
+}
+
+.balance__item-2 .line {
+  left: 0;
+  bottom: 15px;
+  margin: 0 0 0 18%;
+}
+
+.balance__item-3 {
+  bottom: 17.5%;
+  left: 0;
+}
+
+.balance__item-3 .circ {
+  right: 0;
+  bottom: 0;
+  margin: 0 30% 0 0;
+}
+
+.balance__item-3 .line {
+  right: 0;
+  bottom: 15px;
+  margin: 0 30% 0 0;
+}
+
+.balance__item-4 {
+  bottom: 7.5%;
+  right: 0;
+}
+
+.balance__item-4 .balance__item-text {
+  padding: 0 0 0 40%;
+}
+
+.balance__item-4 .circ {
+  left: 0;
+  bottom: 0;
+  margin: 0 0 0 30%;
+}
+
+.balance__item-4 .line {
+  left: 0;
+  bottom: 15px;
+  margin: 0 0 0 30%;
+}
+
+
+
+.history {
+  position: relative;
+  height: 400vh;
+}
+
+.history__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.history__title {
+  padding: 100px 0 0;
+}
+
+.slides-container {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 0;
+}
+
+.slides-container__wrapper {
+  position: relative;
+  width: 802px;
+  height: 537px;
+}
+
+.slides-container__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides-container__slide {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.slides-container__slide--active {
+  opacity: 1;
+}
+
+.slides-container__text {
+  position: absolute;
+  left: 15px;
+  bottom: 75px;
+}
+
+.slides-container__slide-title {
+  margin: 0 0 25px;
+  font-family: 'Lato Black', sans-serif;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 54px;
+  color: #FFFFFF;
+}
+
+.slides-container__slide-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+
+.slide-bg {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-bg__inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.index {
+  z-index: 10;
+}
+
+.slide-bg__inner--current {
+  opacity: 1;
+  z-index: 11;
+}
+
+.slide-bg__inner-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slidesbg-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+}
+
+.slidesbg-container__slide {
+  position: relative;
+  height: 100vh;
+}
+
+.slidebg-container__slide-img {
+  position: absolute;
+}
+
+.slidebg-container__slide-img-1 {
+  bottom: -16px;
+  left: 0;
+  width: 769px;
+  height: 512px;
+}
+
+.slidebg-container__slide-img-2 {
+  width: 708px;
+  height: 472px;
+  right: 0;
+  top: 132px;
+}
+
+.slidebg-container__slide-img-3 {
+  width: 693px;
+  height: 462px;
+  left: 0;
+  top: 110px;
+}
+
+.slidebg-container__slide-img-4 {
+  width: 445px;
+  height: 667px;
+  right: 0;
+  bottom: 0;
+}
+
+.slidebg-container__slide-img-5 {
+  width: 722px;
+  height: 481px;
+  left: 0;
+  top: 62px;
+}
+
+.slidebg-container__slide-img-6 {
+  width: 486px;
+  height: 580px;
+  right: 0;
+  bottom: 93px;
+}
+
+.slidebg-container__slide-img-7 {
+  width: 670px;
+  height: 447px;
+  left: 0;
+  bottom: 0;
+}
+
+.slidebg-container__slide-img-8 {
+  width: 486px;
+  height: 324px;
+  right: 0;
+  top: 340px;
+}
+
+
+.quote {
+  padding: 170px 0;
+  height: auto;
+  min-height: auto;
+}
+
+.quote__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.quote__avatar {
+  /* flex: 0 0 400px; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 100%;
+  width: 400px;
+  height: 400px;
+  /* transform: translate(-100%,0); */
+  margin: 0 0 0 -55%;
+}
+
+.quote__avatar:hover .quote__avatar-img,
+.quote__avatar:focus .quote__avatar-img {
+  transform: translate(-50%,-50%) scale(1.1);
+}
+
+.quote__avatar-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: auto;
+  height: 100%;
+  transform: translate(-50%,-50%);
+  object-fit: cover;
+  transition: transform .5s ease-in-out;
+}
+
+.quote__content {
+  position: relative;
+}
+
+.quote__content-title {
+  position: relative;
+  margin: 0 0 90px;
+  font-family: 'Lato Black', sans-serif;
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 66px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.quote__content-title::before,
+.quote__content-title::after {
+  position: absolute;
+  width: 45px;
+  height: 85px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.quote__content-title::before {
+  content: '';
+  top: -30px;
+  left: -30px;
+  transform: translate(-100%);
+  background-image: url('../img/quote-left.svg');
+}
+
+.quote__content-title::after {
+  content: '';
+  bottom: -20%;
+  right: 60px;
+  background-image: url('../img/quote-right.svg');
+  /* transform: translate(100%); */
+}
+
+.quote__content-name {
+  font-family: 'Lato Bold', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #E50006;
+}
+
+.connects__content-img {
+  display: none;
+}
+
+.accessible {
+  padding: 100px 0px;
+  min-height: auto;
+  height: auto;
+}
+.accessible__container {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accessible__moto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* transform: translate(0%, -50%); */
+  width: 65%;
+  max-width: 1160px;
+}
+
+.accessible__content {
+  position: relative;
+  z-index: 1;
+}
+
+.accessible__title {
+  margin: 0 0 50px;
+}
+
+.accessible__text {
+  margin: 0 0 90px;
+}
+
+.info {
+  padding: 100px 0;
+  height: auto;
+  min-height: auto;
+}
+
+.info__container {
+  display: flex;
+  align-items: center;
+}
+
+.info__img-1 {
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 35%;
+  transform: translate(0,50%);
+}
+
+.info__img-2,
+.info__img-3 {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BreakPoint 1800 */
+@media (max-width: 1800px) {
+  
+  .logo-ducati {
+    top: 50%;
+    right: 35%;
+    width: 33%;
+  }
+  
+  .header-right__content {
+    left: -10%;
+    width: 60%;
+  }
+
+}
+
+/* BreakPoint 1460 */
+@media (max-width: 1460px) {
+
+  .btn {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .title,
+  .accelerator__title,
+  .accelerator-img__text {
+    font-size: 60px;
+    line-height: 100px;
+  }
+
+  .title.title_small {
+    font-size: 45px;
+    line-height: 64px;
+  }
+  
+  .header-right__content {
+    left: -5%;
+  }
+
+  .header-left::after {
+    width: 60px;
+  }
+
+  .accelerator {
+    margin: 0 0 20%;
+  }
+
+  .accelerator__title {
+    padding: 150px 0 0;
+  }
+
+  .accelerator-moto {
+    top: 25%;
+    margin: -10% 0 0;
+  }
+
+  .accelerator__text {
+    margin: 10% 0 0;
+  }
+
+  .accelerator-img-1 {
+    width: 250px;
+  }
+
+  .accelerator-img-2 {
+    top: 65%;
+    width: 250px;
+  }
+
+  .accelerator-img-3 {
+    top: 75%;
+    width: 450px;
+  }
+
+  
+  .balance__title {
+    margin: 0 0 75px;
+  }
+
+  .balance__item-text {
+    display: block;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  .balance__item-2 .balance__item-text {
+    padding: 0 0 0 25%;
+  }
+
+  .balance__item-1 {
+    bottom: 50%;
+  }
+
+  .balance__item-2 {
+    bottom: 45%;
+  }
+
+
+
+
+
+
+  .quote {
+    padding: 100px 0;
+  }
+
+  /* .quote__content {
+    padding: 0 0 0 100px;
+  } */
+
+  .quote__content-title {
+    font-size: 40px;
+    line-height: 55px;
+  }
+
+  .quote__avatar {
+    /* flex: 0 0 275px; */
+    width: 275px;
+    height: 275px;
+  }
+
+  .quote__content-title::before,
+  .quote__content-title::after {
+    width: 35px;
+    height: 70px;
+  }
+
+
+
+
+
+  .accessible__text {
+    margin: 0 0 50px;
+  }
+
+}
+
+/* BreakPoint 1024 */
+@media (max-width: 1024px) {
+
+  .btn {
+    padding: 12px 21px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 10px;
+  }
+
+  .title,
+  .accelerator__title,
+  .accelerator-img__text {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .title.title_small {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .text {
+    display: block;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .header-right {
+    right: -30.5%;
+    width: 81%;
+  }
+
+  .header-right__content {
+    left: -2.5%;
+  }
+
+  .header-left {
+    left: -30.5%;
+    width: 81%;
+  }
+
+  .logo-ducati {
+    right: 45%;
+  }
+
+  .accelerator {
+    margin: 0 0 15%;
+  }
+
+  .accelerator__title {
+    padding: 100px 0 0;
+    font-size: 50px;
+    line-height: 75px;
+  }
+
+  .accelerator-moto {
+    top: 25%;
+  }
+
+  .accelerator__text {
+    display: block;
+    margin: 25% 0 0;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .accelerator-img-1 {
+    width: 200px;
+  }
+
+  .accelerator-img-2 {
+    top: 65%;
+    width: 200px;
+  }
+
+  .accelerator-img-3 {
+    top: 75%;
+    width: 300px;
+  }
+
+  .balance {
+    padding: 50px 0;
+  }
+
+  .balance__title {
+    order: 1;
+    margin: 0 0 30px;
+  }
+
+  .balance__moto {
+    width: 100%;
+    margin: 0 0 30px;
+  }
+
+  .balance__item {
+    order: 2;
+    position: relative;
+    padding: 0 0 30px 40px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .balance__item-2 .balance__item-text,
+  .balance__item-4 .balance__item-text {
+    padding: 0;
+  }
+
+  .balance__item .circ {
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+
+  .balance__item .line {
+    bottom: 0;
+    left: 15px;
+    margin: 0;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .balance__item-4 .line {
+    display: none;
+  }
+
+
+
+  .quote__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .quote__content-title {
+    display: block;
+    margin: 0;
+    order: 1;
+  }
+
+  .quote__content-title::before {
+    top: 0;
+    left: 0;
+    transform: translate(0, -100%);
+  }
+
+  .quote__content-title::after {
+    bottom: -50px;
+    right: 0;
+  }
+
+  .quote__content-name {
+    text-align: center;
+    margin: 0 0 100px;
+  }
+
+  .quote__avatar {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    margin: 0 0 20px;
+  }
+
+
+
+  .accessible__title {
+    margin: 0 0 20px;
+  }
+
+  .accessible__text {
+    margin: 0 0 20px;
+  }
+
+}
+
+/* BreakPoint 768 */
+@media (max-width: 768px) {
+
+  .title,
+  .accelerator__title,
+  .accelerator-img__text {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .title {
+    display: block;
+  }
+
+  /* .title.title_small {
+    font-size: 24px;
+    line-height: 30px;
+  } */
+
+  .section {
+    min-height: auto;
+    height: auto;
+  }
+
+  .section__video {
+    padding: 0;
+  }
+
+  .video-container {
+    position: relative;
+  }
+
+  .video {
+    position: relative;
+    z-index: 1;
+  }
+
+  .video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    display: block;
+    width: 72px;
+    height: 72px;
+    border: none;
+    background-image: url('../img/play-button.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .video.active + .video-btn {
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .section__video-content {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 25px;
+  }
+  
+  .header {
+    position: relative;
+    height: 500px;
+  }
+
+  .header__video {
+    display: none;
+  }
+
+  .header-left::after {
+    width: 25px;
+  }
+
+  .header-left__content {
+    right: -100px;
+    width: 80%;
+  }
+
+  .logo-ducati {
+    right: 200px;
+  }
+
+  .accelerator {
+    min-height: auto;
+    margin: 0;
+    padding: 0 0 30%;
+  }
+
+  .accelerator__title {
+    padding: 55px 0 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .accelerator-moto {
+    width: 120%;
+    margin: -10% 0 0;
+    top: 20%;
+  }
+
+  .accelerator__text {
+    margin: 30% 0 0;
+    padding: 5% 0 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .accelerator-img-1 {
+    width: 30%;
+    top: 75%;
+    left: 70%;
+  }
+
+  .accelerator-img-2 {
+    top: 85%;
+    width: 25%;
+  }
+
+  .accelerator-img-3 {
+    width: auto;
+    top: 115%;
+    right: 15%;
+  }
+
+  .accelerator-img-3 img {
+    display: none;
+  }
+
+  .accelerator-img__text {
+    position: static;
+  }
+
+  .moment__content-title {
+    margin: 0 0 30px;
+  }
+
+  .moment__content-text {
+    margin: 0 0 20%;
+  }
+
+  .moment__content-img {
+    position: absolute;
+    right: -25px;
+    bottom: 55px;
+    display: block;
+    width: 40%;
+  }
+
+  .quote {
+    padding: 25px 0 100px;
+  }
+
+  .quote__avatar {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .quote__content-name {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .quote__content-title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .quote__content-title::before,
+  .quote__content-title::after {
+    width: 30px;
+    height: 50px;
+  }
+
+
+  .info {
+    padding: 100px 0 50px;
+  }
+
+  .info__img-1 {
+    display: none;
+  }
+
+  .info__img-2,
+  .info__img-3 {
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .info__img-2 {
+    left: 0;
+    bottom: -50px;
+    width: 224px;
+  }
+
+  .info__img-3 {
+    right: 0;
+    top: -50px;
+    width: 216px;
+  }
+
+  .info__content {
+    margin: 0;
+  }
+
+  .info__title {
+    margin: 0 0 35px;
+  }
+  
+
+
+
+
+  .connects__content-title {
+    margin: 10% 0;
+  }
+
+  .connects__content-img {
+    position: absolute;
+    right: -25px;
+    top: 55px;
+    display: block;
+    width: 40%;
+  }
+
+
+
+
+  .accessible {
+    padding: 40px 0;
+  }
+
+  .accessible__container {
+    flex-direction: column;
+  }
+
+  .accessible__moto {
+    position: static;
+    transform: translate(10%,0);
+    width: 100%;
+  }
+
+  .accessible__content {
+    margin: 0;
+  }
+
+}
+
+/* BreakPoint 575 */
+@media (max-width: 575px) {
+
+  .btn {
+    width: 100%;
+  }
+  
+  .header {
+    position: relative;
+    height: 250px;
+  }
+
+  .header__video {
+    display: none;
+  }
+
+  .header-left__content {
+    right: -100px;
+    width: 95%;
+  }
+
+  .logo-ducati {
+    right: 155px;
+  }
+
+  .accelerator-moto {
+    top: 35%;
+  }
+
+  .accelerator-img-1 {
+    width: 35%;
+  }
+
+  .accelerator__text {
+    padding: 10% 0 0;
+  }
+
+  .moment__content-img {
+    width: 55%;
+  }
+
+  .technology-img-1 {
+    top: 61%;
+    width: 50%;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+
+  .technology-img-2 {
+    position: static;
+    width: 100%;
+  }
+
+  .technology__container {
+    margin: 35px 0 0;
+  }
+
+  .technology__content {
+    margin: 55px 0 0;
+  }
+
+  .technology__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .connects__content-title {
+    max-width: 95%;
+  }
+
+  .connects__content-img {
+    width: 60%;
+  }
+
+  .balance__item-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+}
