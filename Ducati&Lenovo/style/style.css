@@ -920,6 +920,10 @@ body.hidden {
   min-height: auto;
 }
 
+.info__title {
+  margin: 0 0 20px;
+}
+
 .info__container {
   display: flex;
   align-items: center;

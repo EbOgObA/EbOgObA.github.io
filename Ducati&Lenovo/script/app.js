@@ -503,7 +503,7 @@ if (window.innerWidth > 768) {
       y: '+=100%',
       opacity: 0,
     },{
-      y: '-=50%',
+      y: '+50%',
       opacity: 0.5
     })
     .from('.info__title',{
