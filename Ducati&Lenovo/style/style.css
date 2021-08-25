@@ -549,7 +549,7 @@ body.hidden {
   max-width: 1100px;
   margin: 0 auto;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   min-height: 71%;
 }
 
@@ -680,6 +680,7 @@ body.hidden {
 .history {
   position: relative;
   height: 400vh;
+  overflow: hidden;
 }
 
 .history__container {
@@ -689,6 +690,10 @@ body.hidden {
   /* justify-content: space-between; */
   justify-content: center;
   height: 100vh;
+}
+
+.history-mobile-img {
+  display: none;
 }
 
 .history__title {
@@ -1079,11 +1084,39 @@ body.hidden {
   display: none;
 }
 
+.brands-img {
+  position: absolute;
+}
 
+.brands-img-1 {
+  right: 0;
+  bottom: 5%;
+  max-width: 458px;
+  width: 23%;
+}
 
+.brands-img-2,
+.brands-img-3 {
+  display: none;
+}
 
+.sponsor-img {
+  position: absolute;
+}
 
+.sponsor-img-1 {
+  left: 0;
+  bottom: -100px;
+  max-width: 486px;
+  width: 26%;
+}
 
+.sponsor-img-2 {
+  right: 0;
+  top: -170px;
+  max-width: 593px;
+  width: 31%;
+}
 
 
 
@@ -1124,6 +1157,10 @@ body.hidden {
   .accelerator-img__text {
     font-size: 60px;
     line-height: 70px;
+  }
+
+  .accelerator__text {
+    margin: 15% 0 0;
   }
 
 }
@@ -1376,7 +1413,7 @@ body.hidden {
 
   .accelerator__text {
     display: block;
-    margin: 25% 0 0;
+    margin: 15% 0 0;
     font-size: 20px;
     line-height: 32px;
   }
@@ -1794,9 +1831,9 @@ body.hidden {
     width: 40%;
   }
 
-  .quote {
+  /* .quote {
     padding: 25px 0 100px;
-  }
+  } */
 
   .quote__avatar {
     flex: 0 0 200px;
@@ -1904,8 +1941,21 @@ body.hidden {
 /* BreakPoint 575 */
 @media (max-width: 575px) {
 
+  .video {
+    position: absolute;
+  }
+
+  .video-container {
+    padding: 96% 0 0 0;
+  }
+
   .btn {
     width: 100%;
+  }
+
+  .section {
+    min-height: 812px;
+    min-width: 380px;
   }
   
   .header {
@@ -1924,6 +1974,28 @@ body.hidden {
 
   .logo-ducati {
     right: 155px;
+  }
+
+  .accelerator {
+    min-height: 650px;
+  }
+
+  .moment {
+    min-height: 575px;
+  }
+
+  .technology {
+    padding: 20px 0 40px;
+    min-height: 600px;
+  }
+
+  .history-mobile-img {
+    display: block;
+    width: 115%;
+  }
+
+  .slides-container {
+    padding: 30px 0 0;
   }
 
   .accelerator-moto {
@@ -1990,6 +2062,64 @@ body.hidden {
   .slides-container__content {
     width: 100%;
     max-width: 300px;
+  }
+
+  .brands {
+    padding: 100px 0;
+  }
+
+  .brands-img-1 {
+    display: none;
+  }
+
+  .brands-img-2,
+  .brands-img-3 {
+    display: block;
+  }
+
+  .brands-img-2 {
+    right: 0;
+    top: 150px;
+    max-width: 270px;
+    width: 60%;
+  }
+
+  .brands-img-3 {
+    left: 0;
+    bottom: -110px;
+    max-width: 300px;
+    width: 80%;
+  }
+
+  .info {
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 0;
+  }
+
+  .sponsor {
+    padding: 50px 0 150px;
+  }
+
+  .sponsor-img-1 {
+    max-width: none;
+    width: 58%;
+  }
+
+  .sponsor-img-2 {
+    max-width: none;
+    width: 58%;
+    top: 270px;
+    right: -50px;
+  }
+
+  .sponsor .quote__content-title {
+    margin: 120px 0 0;
+  }
+
+  .accessible {
+    display: flex;
+    align-items: center;
   }
 
 }
