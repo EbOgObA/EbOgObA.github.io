@@ -69,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function(){
         delay: 5.5
       });
       setTimeout(() => {
-        document.querySelector('.header__video').classList.add('hide');
+        // document.querySelector('.header__video').classList.add('hide');
+        document.querySelector('.header').classList.remove('active');
         document.body.classList.remove('hidden');
         gsap.to(window, 0.5, {
           scrollTo:{
@@ -77,19 +78,19 @@ document.addEventListener('DOMContentLoaded', function(){
           }
         });
         acceleratorAnimate();
-      }, 5.5*1000);
+      }, 5*1000);
       setTimeout(() => {
         document.querySelector('.header').classList.add('hide');
-      }, 6.5*1000);
+      }, 6*1000);
     } else {
-      // acceleratorAnimate();
+      acceleratorAnimate();
     }
   }
-  headerAnimate();
+  // headerAnimate();
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
-    // acceleratorAnimate();
+    acceleratorAnimate();
     gsap.to('.accelerator-img-1', {
       scrollTrigger: {
         trigger: '.accelerator-img-1',
@@ -150,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function(){
       },{
         scrollTrigger: {
           trigger: '.accelerator-moto',
-          start: 'top top',
+          start: 'bottom center',
           end: 'bottom top',
           scrub: 1,
           // markers: true
@@ -159,9 +160,9 @@ document.addEventListener('DOMContentLoaded', function(){
         duration: 1
       });
     gsap.timeline()
-      .from('.accelerator__text span',{
+      .from('.accelerator__text',{
         scrollTrigger: {
-          trigger: '.accelerator__text span',
+          trigger: '.accelerator__text',
           start: 'top 65%',
           end: 'top 65%',
           toggleActions: 'play none reverse none',
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function(){
         },
         y: '+=100%',
         opacity: 0,
-        stagger: 0.5,
+        // stagger: 0.5,
         duration: 5
       })
       // .to('.accelerator__text',{
@@ -187,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 // VIDEO PARALLAX
 if (window.innerWidth > 768) {
-  gsap.utils.toArray('.section__video').forEach((section, i) => {
+  gsap.utils.toArray('.section__video').forEach((section) => {
     section.bg = section.querySelector(".video");
     // Do the parallax effect on each section
     const video_tl = gsap.timeline()
@@ -207,21 +208,80 @@ if (window.innerWidth > 768) {
     })
 
     section.content = section.querySelector(".section__video-content");
-    const videoContent_tl = gsap.timeline()
-      .from(section.content, {
-        y: `${-innerHeight}px`,
-        ease: "none"
-      })
-      .to(section.content, {
-        y: `${innerHeight}px`,
-      });
-    ScrollTrigger.create({
-      animation: videoContent_tl,
-      trigger: section,
-      start: "top bottom", 
-      end: "bottom top",
-      scrub: true
-    })
+
+    gsap.from('.section__video-title .title__line', {
+      scrollTrigger: {
+        trigger: section,
+        start: "30% center", 
+        end: "30% center",
+        scrub: 1
+      },
+      y: 25,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.25
+    });
+
+    gsap.from('.section__video-content .text', {
+      scrollTrigger: {
+        trigger: section,
+        start: "30% center", 
+        end: "30% center",
+        scrub: 1
+      },
+      y: 25,
+      opacity: 0,
+      duration: 2,
+      delay: 1
+    });
+
+    gsap.to(section.content,{
+      scrollTrigger: {
+        trigger: section,
+        start: "bottom bottom", 
+        end: "bottom top",
+        scrub: 1
+      },
+      y: `${innerHeight}px`,
+      duration: 1
+    });
+
+    // gsap.from(section.title,{
+    //   scrollTrigger: {
+    //     trigger: section,
+    //     start: "center center", 
+    //     end: "center center",
+    //     scrub: 1
+    //   },
+    //   y: '+=100%',
+    //   opacity: 0,
+    //   stagger: 0.25,
+    //   duration: 1
+    // });
+    // const videoContent_tl = gsap.timeline()
+    //   // .from(section.contenttitle, {
+    //   //   scrollTrigger: {
+    //   //     trigger: section,
+    //   //     start: "center center", 
+    //   //     end: "center center",
+    //   //     scrub: true
+    //   //   },
+    //   //   y: '+=100%',
+    //   //   opacity: 0,
+    //   //   stagger: 0.25,
+    //   //   duration: 1
+    //   // })
+    //   .to(section.content, {
+    //     y: `${innerHeight}px`,
+    //     duration: 1
+    //   });
+    // ScrollTrigger.create({
+    //   animation: videoContent_tl,
+    //   trigger: section,
+    //   start: "bottom bottom", 
+    //   end: "bottom top",
+    //   scrub: true
+    // })
   });
 } else {
   let allVideos = document.querySelectorAll('.video-container');
@@ -260,6 +320,18 @@ if (window.innerWidth > 768) {
 
 // TECHNOLOGY
 if (window.innerWidth > 768) {
+  gsap.from('.technology__title .title__line',{
+    scrollTrigger: {
+      trigger: '.technology__title .title__line',
+      start: 'top 80%',
+      end: 'bottom 80%',
+      toggleActions: 'play none reverse'
+    },
+    y: 25,
+    opacity: 0,
+    stagger: 0.25,
+    duration: 1
+  });
   gsap.from('.technology-img-1',{
     scrollTrigger: {
       trigger: '.technology',
@@ -302,152 +374,279 @@ if (window.innerWidth > 768) {
 // BALANCE
 if (window.innerWidth > 1024) {
 
-  gsap.from('.balance__moto',{
+  gsap.from('.balance__title .title__line',{
     scrollTrigger: {
-      trigger: '.balance',
-      start: '10% center',
-      end: '10% center',
-      toggleActions: 'play none reverse none'
+      trigger: '.balance__title .title__line',
+      start: 'top 80%',
+      end: 'bottom 80%',
+      toggleActions: 'play none reverse'
     },
-    y: '+=100%',
+    y: 25,
+    opacity: 0,
+    stagger: 0.25,
     duration: 1
-  })
+  });
 
-  const balanceItems_tl = gsap.timeline()
+  const balanceItem1_tl = gsap.timeline()
+    .from('.balance__moto',{
+      y: '+=100%',
+      opacity: 0,
+      duration: 1
+    })
     .from('.balance__item-1 .circ',{
       scale: 0,
-      duration: 0.25
+      opacity: 0,
+      duration: 0.5
     })
     .from('.balance__item-1 .line',{
       width: 0,
-      duration: 0.25
+      duration: 0.5
     })
-    .from('.balance__item-1 span',{
+    .from('.balance__item-1 .balance__item-text span',{
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
+      stagger: 0.25,
+      duration: 0.5
     })
+
+  const balanceItem2_tl = gsap.timeline()
     .from('.balance__item-2 .circ',{
       scale: 0,
-      duration: 0.25
+      opacity: 0,
+      duration: 0.5
     })
     .from('.balance__item-2 .line',{
       width: 0,
-      duration: 0.25
+      duration: 0.5
     })
-    .from('.balance__item-2 span',{
+    .from('.balance__item-2 .balance__item-text span',{
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
+      stagger: 0.25,
+      duration: 0.5
     })
+
+  const balanceItem3_tl = gsap.timeline()
     .from('.balance__item-3 .circ',{
       scale: 0,
-      duration: 0.25
+      opacity: 0,
+      duration: 0.5
     })
     .from('.balance__item-3 .line',{
       width: 0,
-      duration: 0.25
+      duration: 0.5
     })
-    .from('.balance__item-3 span',{
+    .from('.balance__item-3 .balance__item-text span',{
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
+      stagger: 0.25,
+      duration: 0.5
     })
+
+  const balanceItem4_tl = gsap.timeline()
     .from('.balance__item-4 .circ',{
       scale: 0,
-      duration: 0.25
+      opacity: 0,
+      duration: 0.5
     })
     .from('.balance__item-4 .line',{
       width: 0,
-      duration: 0.25
+      duration: 0.5
     })
-    .from('.balance__item-4 span',{
+    .from('.balance__item-4 .balance__item-text span',{
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
-    });
+      stagger: 0.25,
+      duration: 0.5
+    })
 
   ScrollTrigger.create({
+    animation: balanceItem1_tl,
     trigger: '.balance',
-    animation: balanceItems_tl,
-    start: '10% center',
-    end: '10% center',
-    toggleActions: 'play none reverse none',
-  });
-} else if (window.innerWidth > 768 && window.innerWidth <= 1024) {
-  gsap.from('.balance__moto',{
-    scrollTrigger: {
-      trigger: '.balance',
-      start: '10% center',
-      end: '10% center',
-      toggleActions: 'play none reverse none'
-    },
-    y: '+=100%',
-    duration: 1
+    start: 'top top',
+    end: 'top top',
+    toggleActions: 'play none reverse none'
   })
 
-  const balanceItems_tl = gsap.timeline()
-    .from('.balance__item-1 .circ',{
-      scale: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-1 .line',{
-      height: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-1 span',{
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
-    })
-    .from('.balance__item-2 .circ',{
-      scale: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-2 .line',{
-      height: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-2 span',{
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
-    })
-    .from('.balance__item-3 .circ',{
-      scale: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-3 .line',{
-      height: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-3 span',{
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
-    })
-    .from('.balance__item-4 .circ',{
-      scale: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-4 .line',{
-      height: 0,
-      duration: 0.25
-    })
-    .from('.balance__item-4 span',{
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1
-    });
+  ScrollTrigger.create({
+    animation: balanceItem2_tl,
+    trigger: '.balance',
+    start: '25% top',
+    end: 'top top',
+    toggleActions: 'play none reverse none'
+  })
 
   ScrollTrigger.create({
+    animation: balanceItem3_tl,
     trigger: '.balance',
-    animation: balanceItems_tl,
-    start: '10% center',
-    end: '10% center',
-    toggleActions: 'play none reverse none',
-  });
+    start: '50% top',
+    end: 'top top',
+    toggleActions: 'play none reverse none'
+  })
+
+  ScrollTrigger.create({
+    animation: balanceItem4_tl,
+    trigger: '.balance',
+    start: '75% top',
+    end: 'top top',
+    toggleActions: 'play none reverse none'
+  })
+
+  ScrollTrigger.create({
+    trigger: '.balance__content',
+    start: 'bottom bottom',
+    end: '+=300%',
+    pin: true
+  })
+
+  // gsap.from('.balance__item-1 .circ',{
+  //   scrollTrigger: {
+  //     trigger: '.balance',
+  //     start: 'top bottom',
+  //     end: 'bottom bottom',
+  //     pin: true
+  //   },
+  //   scale: 0,
+  //   opacity: 0,
+  //   duration: 0.5
+  // })
+
+  // const balanceItems_tl = gsap.timeline()
+  //   .from('.balance__moto',{
+  //     y: '+=100%',
+  //     duration: 1
+  //   })
+  //   .from('.balance__item-1 .circ',{
+  //     scale: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-1 .line',{
+  //     width: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-1 span',{
+  //     opacity: 0,
+  //     duration: 0.5,
+  //     stagger: 0.1
+  //   })
+  //   .from('.balance__item-2 .circ',{
+  //     scale: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-2 .line',{
+  //     width: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-2 span',{
+  //     opacity: 0,
+  //     duration: 0.5,
+  //     stagger: 0.1
+  //   })
+  //   .from('.balance__item-3 .circ',{
+  //     scale: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-3 .line',{
+  //     width: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-3 span',{
+  //     opacity: 0,
+  //     duration: 0.5,
+  //     stagger: 0.1
+  //   })
+  //   .from('.balance__item-4 .circ',{
+  //     scale: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-4 .line',{
+  //     width: 0,
+  //     duration: 0.25
+  //   })
+  //   .from('.balance__item-4 span',{
+  //     opacity: 0,
+  //     duration: 0.5,
+  //     stagger: 0.1
+  //   });
+
+  // ScrollTrigger.create({
+  //   trigger: '.balance',
+  //   animation: balanceItems_tl,
+  //   start: '10% center',
+  //   end: '10% center',
+  //   toggleActions: 'play none reverse none',
+  // });
 }
+// else if (window.innerWidth > 768 && window.innerWidth <= 1024) {
+//   gsap.from('.balance__moto',{
+//     scrollTrigger: {
+//       trigger: '.balance',
+//       start: '10% center',
+//       end: '10% center',
+//       toggleActions: 'play none reverse none'
+//     },
+//     y: '+=100%',
+//     duration: 1
+//   })
+
+//   const balanceItems_tl = gsap.timeline()
+//     .from('.balance__item-1 .circ',{
+//       scale: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-1 .line',{
+//       height: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-1 span',{
+//       opacity: 0,
+//       duration: 0.5,
+//       stagger: 0.1
+//     })
+//     .from('.balance__item-2 .circ',{
+//       scale: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-2 .line',{
+//       height: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-2 span',{
+//       opacity: 0,
+//       duration: 0.5,
+//       stagger: 0.1
+//     })
+//     .from('.balance__item-3 .circ',{
+//       scale: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-3 .line',{
+//       height: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-3 span',{
+//       opacity: 0,
+//       duration: 0.5,
+//       stagger: 0.1
+//     })
+//     .from('.balance__item-4 .circ',{
+//       scale: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-4 .line',{
+//       height: 0,
+//       duration: 0.25
+//     })
+//     .from('.balance__item-4 span',{
+//       opacity: 0,
+//       duration: 0.5,
+//       stagger: 0.1
+//     });
+
+//   ScrollTrigger.create({
+//     trigger: '.balance',
+//     animation: balanceItems_tl,
+//     start: '10% center',
+//     end: '10% center',
+//     toggleActions: 'play none reverse none',
+//   });
+// }
 
 // QUOTE
 if (window.innerWidth > 768) {
@@ -483,24 +682,25 @@ if (window.innerWidth > 768) {
     });
   });
 
-  const quoteAvatar = gsap.utils.toArray('.quote__avatar');
-  quoteAvatar.forEach(el => {
-    gsap.from(el,{
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 80%',
-        end: 'top 80%',
-        toggleActions: 'play none reverse none'
-      },
-      opacity: 0,
-      scale: 0,
-      duration: 0.5
-    });
-  });
+  // const quoteAvatar = gsap.utils.toArray('.quote__avatar');
+  // quoteAvatar.forEach(el => {
+  //   gsap.from(el,{
+  //     scrollTrigger: {
+  //       trigger: el,
+  //       start: 'top 80%',
+  //       end: 'top 80%',
+  //       toggleActions: 'play none reverse none'
+  //     },
+  //     opacity: 0,
+  //     scale: 0,
+  //     duration: 0.5
+  //   });
+  // });
 }
 
 // INFO
 if (window.innerWidth > 768) {
+  
 
   const info_tl = gsap.timeline()
     .fromTo('.info__img-1', 1, {
@@ -510,11 +710,13 @@ if (window.innerWidth > 768) {
       y: '+50%',
       opacity: 0.5
     })
-    .from('.info__title',{
-      y: '+=100%',
+    .from('.info__title .title__line',{
+      y: 25,
       opacity: 0,
-      duration: 0.5
+      stagger: 0.25,
+      duration: 1
     })
+    
     .from('.info__text',{
       y: '+=100%',
       opacity: 0,
@@ -535,36 +737,37 @@ if (window.innerWidth > 768) {
 if (window.innerWidth > 768) {
 
   const accessible_tl = gsap.timeline()
-    .from('.accessible__title',{
+    .from('.accessible__title .title__line',{
       y: 50,
       opacity: 0,
+      stagger: 0.25,
       duration: 0.5
     })
     .from('.accessible__text',{
       y: 50,
       opacity: 0,
-      duration: 0.5
+      duration: 0.25
     })
     .from('.accessible .btn',{
       y: 50,
       opacity: 0,
-      duration: 0.5
+      duration: 0.25
     })
   
 
   ScrollTrigger.create({
     animation: accessible_tl,
     trigger: '.accessible',
-    start: 'center bottom',
-    end: 'center bottom',
+    start: 'top 66%',
+    end: 'top 66%',
     toggleActions: 'play none reverse none',
   });
 
   gsap.from('.accessible__moto', {
     scrollTrigger: {
       trigger: '.accessible',
-      start: 'center bottom',
-      end: 'center bottom',
+      start: 'top 66%',
+      end: 'top 66%',
       toggleActions: 'play none reverse none'
     },
     x: '+=50%',
@@ -801,7 +1004,7 @@ if (window.innerWidth > 768) {
     if (window.innerWidth > 1024) {
       ScrollTrigger.create({
         trigger: '.history__container',
-        start: '95% 95%',
+        start: 'top top',
         end: '+=300%',
         pin: true,
         onEnter: () => {sliderFlag = true},
