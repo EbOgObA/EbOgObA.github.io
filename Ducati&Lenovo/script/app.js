@@ -82,11 +82,12 @@ document.addEventListener('DOMContentLoaded', function(){
       setTimeout(() => {
         document.querySelector('.header').classList.add('hide');
       }, 6*1000);
-    } else {
-      acceleratorAnimate();
     }
+    // else {
+    //   acceleratorAnimate();
+    // }
   }
-  headerAnimate();
+  // headerAnimate();
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
@@ -813,16 +814,30 @@ if (window.innerWidth > 768) {
   
 
 // HISTORY
+  gsap.from('.history__title .title__line',{
+    scrollTrigger: {
+      trigger: '.history__title .title__line',
+      start: 'top 80%',
+      end: 'bottom 80%',
+      toggleActions: 'play none reverse'
+    },
+    y: 25,
+    opacity: 0,
+    stagger: 0.25,
+    duration: 1
+  });
+
+
   const helperInput = document.querySelector('#helper-input');
   const bgItems = document.querySelectorAll('.slide-bg__inner-bg');
   const imageSlides = document.querySelectorAll('.slide-bg__inner');
   const slideBg = document.querySelector('.slide-bg');
-  const historySection = document.querySelector('.history');
+  // const historySection = document.querySelector('.history');
 
-  const slideBgImages = document.querySelectorAll('.slidesbg-container__slide');
+  // const slideBgImages = document.querySelectorAll('.slidesbg-container__slide');
 
-  const slidesCount = 4;
-  let slideCounter = 1;
+  // const slidesCount = 4;
+  // let slideCounter = 1;
   const easing = BezierEasing(0.770, 0.125, 0.265, 1.040);
 
   const startComplete = () => {
@@ -835,44 +850,6 @@ if (window.innerWidth > 768) {
   bgItems.forEach(el => { el.style.backgroundImage = `url('${el.dataset.bg}')` });
 
   let sliderFlag = false;
-
-  // Bg Slides
-  // const bgSlides = (direction) => {
-  //   let itemClass = `slide-${slideCounter}`;
-  //   if (direction == 'down') {
-  //     if (slideCounter < slidesCount) {
-  //       mainSection.classList.remove(itemClass);
-  //       slideCounter++;
-
-  //       itemClass = `slide-${slideCounter}`;
-  //       mainSection.classList.add(itemClass);
-  //     }
-  //   } else if (direction == 'up') {
-  //     if (slideCounter > 1) {
-  //       mainSection.classList.remove(itemClass);
-  //       slideCounter--;
-
-  //       itemClass = `slide-${slideCounter}`;
-  //       mainSection.classList.add(itemClass);
-  //     }
-  //   }
-  // };
-
-
-
-  // Bg Slides
-  // const bgSlides = (direction) => {
-  //   if (sliderFlag) {
-  //     let currentSlide = document.querySelector('.slidesbg-container__slide--current');
-  //     let nextSlide;
-  //     direction == 'down' ? nextSlide = currentSlide.nextElementSibling : nextSlide = currentSlide.previousElementSibling;
-      
-  //     if (nextSlide) {
-  //       currentSlide.classList.remove('slidesbg-container__slide--current');
-  //       nextSlide.classList.add('slidesbg-container__slide--current');
-  //     }
-  //   }
-  // };
 
   // Images Slides
   const imagesSlides = (direction) => {
@@ -942,49 +919,6 @@ if (window.innerWidth > 768) {
 
     }
   };
-
-  
-  // let history = document.querySelector('.history');
-  // let historyTop = history.getBoundingClientRect().top;
-  // let historyBottom = history.getBoundingClientRect().bottom;
-
-  // let historyHeight = history.offsetHeight;
-  // let historyContainerHeight = document.querySelector('.history__container').offsetHeight;
-
-
-  // let historyTop = history.offsetTop;
-  // let historyStartHeight = historyHeight/(slidesCount*2);
-  // let historyStartPoint = historyTop+historyStartHeight;
-  // let historyEndPoint = (historyTop+historyHeight)-historyStartHeight;
-
-  // let historyStartPoint = historyTop + historyContainerHeight/2;
-  
-
-
-  // window.addEventListener('scroll', function() {
-  // console.log(historyStartPoint);
-    
-
-    // console.log(window.innerHeight);
-    // let history = document.querySelector('.history__container');
-
-
-
-    
-    // console.log(historyBottom);
-    // let wrapper = document.querySelector('.wrapper');
-    // let slides = document.querySelectorAll('.slide-bg__inner');
-
-    // if (sliderOffset < 0) {
-    //   wrapper.style.paddingRight = window.innerWidth - wrapper.offsetWidth + 'px';
-    //   document.body.classList.add('hidden');
-    // } 
-
-  // });
-
-  
-
-
 
   // Init
   function initSlider() {
