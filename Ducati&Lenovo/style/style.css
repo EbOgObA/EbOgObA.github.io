@@ -268,12 +268,12 @@ body.hidden {
   height: 100%;
 }
 
-.header.active {
+/* .header.active {
   background-image: url('../img/header/header-bg.jpg');
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .header-left {
   position: absolute;

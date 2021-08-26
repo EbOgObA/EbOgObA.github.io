@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function(){
         delay: 5.5
       });
       setTimeout(() => {
-        // document.querySelector('.header__video').classList.add('hide');
-        document.querySelector('.header').classList.remove('active');
+        document.querySelector('.header__video').classList.add('hide');
+        // document.querySelector('.header').classList.remove('active');
         document.body.classList.remove('hidden');
         gsap.to(window, 0.5, {
           scrollTo:{
@@ -78,16 +78,16 @@ document.addEventListener('DOMContentLoaded', function(){
           }
         });
         acceleratorAnimate();
-      }, 5*1000);
+      }, 5.5*1000);
       setTimeout(() => {
         document.querySelector('.header').classList.add('hide');
-      }, 6*1000);
+      }, 6.5*1000);
     }
     // else {
     //   acceleratorAnimate();
     // }
   }
-  // headerAnimate();
+  headerAnimate();
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
