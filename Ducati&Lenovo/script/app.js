@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
     //   acceleratorAnimate();
     // }
   }
-  // headerAnimate();
+  headerAnimate();
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
