@@ -1,0 +1,64 @@
+{
+  "locales": ["en", "ar", "de", "es", "fi", "fr", "he", "it", "ja", "nl", "no", "pl", "pt", "ru", "sv", "tr", "zh"],
+  "substitutes": {
+    "nb": "no",
+    "nn": "no",
+    "be": "ru"
+  },
+  "rtl": ["ar", "he"],
+  "fonts": [{
+    "locales": ["de", "en", "es", "fi", "fr", "it", "nl", "no", "pl", "pt", "sv", "tr"],
+    "font-family": "Open Sans",
+    "subset": "latin-ext",
+    "font-weight-bold": "800",
+    "font-weight-normal": "600",
+    "css": "open-sans_latin-ext.css",
+    "checkString": "The five boxing wizards jump quickly.123!@#$%^&*()-=+",
+    "timeout": 1000
+  }, {
+    "locales": ["ar"],
+    "font-family": "Cairo",
+    "subset": "arabic",
+    "font-weight-bold": "700",
+    "font-weight-normal": "600",
+    "css": "cairo_arabic.css",
+    "checkString": "نصٌّ حكيمٌ لهُ سِرٌّ قاطِعٌ وَذُو شَأنٍ عَظيمٍ مكتوبٌ على ثوبٍ أخضرَ ومُغلفٌ بجلدٍ أزرق ABCdef123!@#$%^&*()-=+",
+    "timeout": 2000
+  }, {
+    "locales": ["he"],
+    "font-family": "Rubik",
+    "subset": "hebrew",
+    "font-weight-bold": "700",
+    "font-weight-normal": "500",
+    "css": "rubik_hebrew.css",
+    "checkString": "דג סקרן שט בים מאוכזב ולפתע מצא חברה ABCdef123!@#$%^&*()-=+",
+    "timeout": 1500
+  }, {
+    "locales": ["ru"],
+    "font-family": "Open Sans",
+    "subset": "cyrillic,cyrillic-ext",
+    "font-weight-bold": "800",
+    "font-weight-normal": "600",
+    "css": "open-sans_cyrillic.css",
+    "checkString": "Я любовался штормом, прекрасным, но пугающим.ABCdef123ё!!@#$%^&*()-=+",
+    "timeout": 1700
+  }, {
+    "locales": ["zh"],
+    "font-family": "Noto Sans SC",
+    "subset": "chinese-simplified",
+    "font-weight-bold": "700",
+    "font-weight-normal": "500",
+    "css": "noto-sans-sc_chinese-simplified.css",
+    "checkString": "船隻离开港口后，就在薄雾的笼罩下航行了三小时。ABCdef123!@#$%^&*()-=+",
+    "timeout": 30000
+  }, {
+    "locales": ["ja"],
+    "font-family": "Noto Sans JP",
+    "subset": "japanese",
+    "font-weight-bold": "700",
+    "font-weight-normal": "500",
+    "css": "noto-sans-jp_japanese.css",
+    "checkString": "日本語漢字ひらがなカタカナ。ABCdef123!@#$%^&*()-=+",
+    "timeout": 30000
+  }]
+}
