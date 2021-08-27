@@ -441,134 +441,6 @@ if (window.innerWidth > 1024) {
   // });
 }
 
-// QUOTE
-if (window.innerWidth > 768) {
-  const titleQuote = gsap.utils.toArray('.quote__content-title');
-  titleQuote.forEach(el => {
-    gsap.from(el,{
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 80%',
-        end: 'top 80%',
-        toggleActions: 'play none reverse none'
-        // scrub: 2/
-      },
-      y: 100,
-      opacity: 0,
-      duration: 1,
-    });
-  });
-
-  const quoteName = gsap.utils.toArray('.quote__content-name');
-  quoteName.forEach(el => {
-    gsap.from(el,{
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 95%',
-        end: 'top 95%',
-        toggleActions: 'play none reverse none'
-        // scrub: 2
-      },
-      y: 100,
-      opacity: 0,
-      duration: 1,
-    });
-  });
-
-  // const quoteAvatar = gsap.utils.toArray('.quote__avatar');
-  // quoteAvatar.forEach(el => {
-  //   gsap.from(el,{
-  //     scrollTrigger: {
-  //       trigger: el,
-  //       start: 'top 80%',
-  //       end: 'top 80%',
-  //       toggleActions: 'play none reverse none'
-  //     },
-  //     opacity: 0,
-  //     scale: 0,
-  //     duration: 0.5
-  //   });
-  // });
-}
-
-// INFO
-if (window.innerWidth > 768) {
-
-  const info_tl = gsap.timeline()
-    .fromTo('.info__img-1', 1, {
-      y: '+=100%',
-      opacity: 0,
-    },{
-      y: '+50%',
-      opacity: 0.5
-    })
-    .from('.info__title .title__line',{
-      y: 25,
-      opacity: 0,
-      stagger: 0.25,
-      duration: 1
-    })
-    
-    .from('.info__text',{
-      y: '+=100%',
-      opacity: 0,
-      duration: 0.5
-    })
-
-  ScrollTrigger.create({
-    animation: info_tl,
-    trigger: '.info',
-    start: 'center bottom',
-    end: 'center bottom',
-    toggleActions: 'play none reverse none',
-    // markers: true
-  });
-}
-
-// ACCESSEBILE
-if (window.innerWidth > 768) {
-
-  const accessible_tl = gsap.timeline()
-    .from('.accessible__title .title__line',{
-      y: 50,
-      opacity: 0,
-      stagger: 0.25,
-      duration: 0.5
-    })
-    .from('.accessible__text',{
-      y: 50,
-      opacity: 0,
-      duration: 0.25
-    })
-    .from('.accessible .btn',{
-      y: 50,
-      opacity: 0,
-      duration: 0.25
-    })
-  
-
-  ScrollTrigger.create({
-    animation: accessible_tl,
-    trigger: '.accessible',
-    start: 'top 66%',
-    end: 'top 66%',
-    toggleActions: 'play none reverse none',
-  });
-
-  gsap.from('.accessible__moto', {
-    scrollTrigger: {
-      trigger: '.accessible',
-      start: 'top 66%',
-      end: 'top 66%',
-      toggleActions: 'play none reverse none'
-    },
-    x: '+=50%',
-    scale: 0.2,
-    opacity: 0,
-    duration: 2
-  });
-}
-
 // HISTORY
 const slidesContainer = document.querySelector('.slides-container');
 const slides = gsap.utils.toArray('.slide');
@@ -1012,8 +884,133 @@ if (window.innerWidth > 768) {
   });
 }
 
+// QUOTE
+if (window.innerWidth > 768) {
+  const titleQuote = gsap.utils.toArray('.quote__content-title');
+  titleQuote.forEach(el => {
+    gsap.from(el,{
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 80%',
+        end: 'top 80%',
+        toggleActions: 'play none reverse none'
+        // scrub: 2/
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1,
+    });
+  });
 
+  const quoteName = gsap.utils.toArray('.quote__content-name');
+  quoteName.forEach(el => {
+    gsap.from(el,{
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 95%',
+        end: 'top 95%',
+        toggleActions: 'play none reverse none'
+        // scrub: 2
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1,
+    });
+  });
 
+  // const quoteAvatar = gsap.utils.toArray('.quote__avatar');
+  // quoteAvatar.forEach(el => {
+  //   gsap.from(el,{
+  //     scrollTrigger: {
+  //       trigger: el,
+  //       start: 'top 80%',
+  //       end: 'top 80%',
+  //       toggleActions: 'play none reverse none'
+  //     },
+  //     opacity: 0,
+  //     scale: 0,
+  //     duration: 0.5
+  //   });
+  // });
+}
+
+// INFO
+if (window.innerWidth > 768) {
+
+  const info_tl = gsap.timeline()
+    .fromTo('.info__img-1', 0.5, {
+      y: '+=100%',
+      opacity: 0,
+    },{
+      y: '+50%',
+      opacity: 0.5
+    })
+    .from('.info__title .title__line',{
+      y: 25,
+      opacity: 0,
+      stagger: 0.25,
+      duration: 0.5
+    })
+    
+    .from('.info__text',{
+      y: '+=100%',
+      opacity: 0,
+      duration: 0.5
+    })
+
+  ScrollTrigger.create({
+    animation: info_tl,
+    trigger: '.info',
+    start: 'center bottom',
+    end: 'center bottom',
+    toggleActions: 'play none reverse none',
+    // markers: true
+  });
+}
+
+// ACCESSEBILE
+if (window.innerWidth > 768) {
+
+  const accessible_tl = gsap.timeline()
+    .from('.accessible__title .title__line',{
+      y: 50,
+      opacity: 0,
+      stagger: 0.25,
+      duration: 0.5
+    })
+    .from('.accessible__text',{
+      y: 50,
+      opacity: 0,
+      duration: 0.25
+    })
+    .from('.accessible .btn',{
+      y: 50,
+      opacity: 0,
+      duration: 0.25
+    })
+  
+
+  ScrollTrigger.create({
+    animation: accessible_tl,
+    trigger: '.accessible',
+    start: 'top 66%',
+    end: 'top 66%',
+    toggleActions: 'play none reverse none',
+  });
+
+  gsap.from('.accessible__moto', {
+    scrollTrigger: {
+      trigger: '.accessible',
+      start: 'top 66%',
+      end: 'top 66%',
+      toggleActions: 'play none reverse none'
+    },
+    x: '+=50%',
+    scale: 0.2,
+    opacity: 0,
+    duration: 2
+  });
+}
 
 
 
