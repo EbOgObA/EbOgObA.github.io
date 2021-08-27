@@ -2548,6 +2548,7 @@ select{
 
 .hero-scroll__wrapper {
   position: relative;
+  top: 0;
 }
 
 .b-main .hero-scroll__wrapper {
@@ -2570,4 +2571,22 @@ select{
 
 .hero-scroll__item:first-child {
   transform: scale(1) !important;
+}
+
+.hero-scroll__media.single {
+  transform: translate(0);
+}
+
+.b-chronicles__container-right {
+  /* overflow: hidden; */
+}
+
+.b-chronicles__container-left {
+  width: 265px;
+  /* position: sticky; */
+  /* top: 190px; */
+  background: #f5f5f5;
+  z-index: 30;
+  /* height: 100vh; */
+  flex-shrink: 0;
 }

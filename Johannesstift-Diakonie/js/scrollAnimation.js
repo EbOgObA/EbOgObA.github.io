@@ -13,16 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
   let heroContentWidth = heroContent.offsetWidth;
   let heroMedia = document.querySelector(".hero-scroll__media");
 
-  let maxWidth = 0;
+  let maxWidthHero = 0;
 
-  const getMaxWidth = () => {
-    maxWidth = 0;
+  const getMaxWidthHero = () => {
+    maxWidthHero = 0;
     // mainItems.forEach((item) => {
     //   maxWidth += item.offsetWidth;
     // });
-    maxWidth = heroContent.offsetWidth + heroMedia.offsetWidth;
+    maxWidthHero = heroContent.offsetWidth + heroMedia.offsetWidth;
   };
-  getMaxWidth();
+  getMaxWidthHero();
 
   function blurHeroContent() {
     let heroContent_tl = gsap.timeline();
@@ -44,11 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
     heroMediaItem.forEach((sct, i) => {
       scaleMediaItem_tl.from(sct,{
         scale: 0.85,
-        stagger: true,
+        // stagger: true,
+        ease: 'none',
         scrollTrigger: {
           trigger: sct,
-          start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/3) * (maxWidth / (maxWidth - window.innerWidth)),
-          end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+          start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/3) * (maxWidthHero / (maxWidthHero - window.innerWidth)),
+          end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth)),
           addClass: {targets: sct, className: "active"},
           scrub: true,
           // markers: true
@@ -56,8 +57,8 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       // ScrollTrigger.create({
       //   trigger: sct,
-      //   start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2) * (maxWidth / (maxWidth - window.innerWidth)),
-      //   end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+      //   start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2) * (maxWidthHero / (maxWidthHero - window.innerWidth)),
+      //   end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth)),
       //   toggleClass: {targets: sct, className: "active"},
       //   scrub: true
       //   markers: true,
@@ -67,19 +68,19 @@ document.addEventListener('DOMContentLoaded', function() {
     return scaleMediaItem_tl;
   }
 
-  function blurMedia() {
-    let blurMedia_tl = gsap.timeline({
+  // function blurMedia() {
+  //   let blurMedia_tl = gsap.timeline({
       
-    });
-    blurMedia_tl
-      .to('.hero-scroll__media', 5, {filter: 'blur(5px)', opacity: 0});
-    return blurMedia_tl;
-  }
+  //   });
+  //   blurMedia_tl
+  //     .to('.hero-scroll__media', 5, {filter: 'blur(5px)', opacity: 0});
+  //   return blurMedia_tl;
+  // }
 
   function heroScroll() {
     let heroScroll_tl = gsap.timeline()
       .to(heroWrapper, {
-        x: () => `-${maxWidth - window.innerWidth/2}`,
+        x: () => `-${maxWidthHero - window.innerWidth/2}`,
         ease: "none",
         scrollTrigger: {
           trigger: hero,
@@ -88,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // start: () => `+=${startScrollHero} center`,
           scrub: true,
           // markers: true,
-          end: () => `+=${maxWidth + window.innerWidth}`,
+          end: () => `+=${maxWidthHero + window.innerWidth}`,
           // invalidateOnRefresh: true
         }
       });
@@ -107,90 +108,72 @@ document.addEventListener('DOMContentLoaded', function() {
     .add(blurHeroContent())
     .add(scaleMediaItem())
     // .add(blurMedia())
-  hero_tl;
 
   let blurMedia_tl = gsap.timeline({
     scrollTrigger: {
       trigger: hero,
-      start: () => `+=${maxWidth + window.innerWidth/2}`,
+      start: () => `+=${maxWidthHero + window.innerWidth/2}`,
       end: 'bottom top',
       // markers: true,
       scrub: true
     }
   }).to('.hero-scroll__media', {filter: 'blur(5px)', opacity: 0});
 
-  
-  
 
-  // let hero_tl = gsap.timeline({
-  //   // scrollTrigger: {
-  //   //   trigger: hero,
-  //   //   start: '50px top',
-  //   //   end: () => `+=${maxWidth + window.innerWidth}`,
-  //   //   // scrub: true
-  //   // }
-  // })
-  //   .to('.hero-scroll__content', {filter: 'blur(5px)', opacity: 0})
-  //   // .to('.hero-scroll__media', 6, {
-  //   //   x: () => `-${maxWidth - window.innerWidth}`,
-  //   //   ease: "none",
-  //   // })
-  //   .from('.hero-scroll__item', {scale: 0.85,stagger: 1,ease: 'none'})
-  //   .to('.hero-scroll__media', {filter: 'blur(5px)', opacity: 0});
+  ScrollTrigger.matchMedia({
+    "(min-width: 991px)": function() {
+      // let hero = document.querySelector(".b-main");
+      // let heroWrapper = document.querySelector(".hero-scroll__wrapper");
+      // let heroContainer = document.querySelector(".hero-scroll__container");
+      // let heroContainerHeight = heroContainer.offsetHeight;
+      // let heroPaddingTop = window.getComputedStyle(hero).getPropertyValue('padding-top');
 
 
+      // let heroContent = document.querySelector(".hero-scroll__content");
+      // let heroContentWidth = heroContent.offsetWidth;
+      // let heroMedia = document.querySelector(".hero-scroll__media");
+
+      let hero2 = document.querySelector(".b-chronicles");
+      let hero2Container = document.querySelector(".b-chronicles__container");
+      let heroWrapper2 = document.querySelector('.second-hero-scroll .hero-scroll__container');
+      let hero2Items= gsap.utils.toArray('.b-chronicles__container-pane');
+
+      let headerHeight = document.querySelector('.b-header').offsetHeight;
+
+      // let heroItemMerginright = window.getComputedStyle(hero).getPropertyValue('padding-top');
+
+      let maxWidthHero2 = 0;
+      // ( +window.getComputedStyle(item).getPropertyValue('margin-right'))
+
+      const getMaxWidthHero2 = () => {
+        maxWidthHero2 = 0;
+        hero2Items.forEach((item) => {
+          maxWidthHero2 += item.offsetWidth;
+        });
+        // maxWidthHero2 = hero2Container.offsetWidth;
+        // ( +window.getComputedStyle(document.querySelector('.b-chronicles__container-pane')).getPropertyValue('margin-right'))
+      };
+      getMaxWidthHero2();
 
 
-
-  // gsap.to(heroContent, {
-  //   x: '-=100%',
-  //   ease: "none",
-  //   opacity: 0,
-  //   filter: 'blur(5px)',
-  //   scrollTrigger: {
-  //     trigger: hero,
-  //     start: '50px top',
-  //     // start: () => `+=${startScrollHero} center`,
-  //     scrub: true,
-  //     // markers: true,
-  //     end: () => `+=${heroContent.offsetHeight}`,
-  //     // invalidateOnRefresh: true
-  //   }
-  // });
-  
-
-
-  
-
-
-
-  // let mainSection = document.querySelector(".b-main");
-  // let mainSectionContainer = document.querySelector(".b-main__container");
-  // let mainContent = document.querySelector(".b-main__content");
-  // let mainItems = document.querySelector(".items-main");
-  // // let mainItems = document.querySelectorAll(".items-main__item");
-  // let maxWidth = 0;
-
-  // const getMaxWidth = () => {
-  //   maxWidth = 0;
-  //   // mainItems.forEach((item) => {
-  //   //   maxWidth += item.offsetWidth;
-  //   // });
-  //   maxWidth = mainContent.offsetWidth + mainItems.offsetWidth;
-  // };
-  // getMaxWidth();
-  // console.log(maxWidth);
-  // gsap.to(mainSectionContainer, {
-  //   x: () => `-${maxWidth - window.innerWidth}`,
-  //   ease: "none",
-  //   scrollTrigger: {
-  //     trigger: mainSection,
-  //     pin: true,
-  //     scrub: true,
-  //     markers: true,
-  //     end: () => `+=${maxWidth}`,
-  //     invalidateOnRefresh: true
-  //   }
-  // });
+      let heroScroll2_tl = gsap.timeline()
+        .to(heroWrapper2, {
+          x: () => `-${maxWidthHero2 - window.innerWidth/2}`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: hero2Container,
+            pin: hero2Container,
+            start: () => `-${headerHeight}px top`,
+            markers: true,
+            // start: () => `+=${startScrollHero} center`,
+            scrub: true,
+            // markers: true,
+            end: () => `+=${maxWidthHero2 + window.innerWidth}`,
+            // invalidateOnRefresh: true
+          }
+        });
+        
+    }
+  })
 
 })
