@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   gsap.registerPlugin(ScrollTrigger);
 
   let hero = document.querySelector(".b-main");
-  let heroWrapper = document.querySelector(".hero-scroll__wrapper");
+  // let heroWrapper = document.querySelector(".hero-scroll__wrapper");
+  let heroWrapper = document.querySelector(".hero-scroll__media");
   let heroContainer = document.querySelector(".hero-scroll__container");
   let heroContainerHeight = heroContainer.offsetHeight;
   let heroPaddingTop = window.getComputedStyle(hero).getPropertyValue('padding-top');
@@ -20,14 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // mainItems.forEach((item) => {
     //   maxWidth += item.offsetWidth;
     // });
-    maxWidthHero = heroContent.offsetWidth + heroMedia.offsetWidth;
+    maxWidthHero = heroMedia.offsetWidth;
+    // heroContent.offsetWidth + .\
   };
   getMaxWidthHero();
 
   function blurHeroContent() {
     let heroContent_tl = gsap.timeline();
     heroContent_tl
-      .to('.hero-scroll__content', 2, {filter: 'blur(5px)', opacity: 0});
+      .to('.hero-scroll__content', 1, {x: 75, filter: 'blur(5px)', opacity: 0});
     return heroContent_tl;
   }
   
@@ -80,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function heroScroll() {
     let heroScroll_tl = gsap.timeline()
       .to(heroWrapper, {
-        x: () => `-${maxWidthHero - window.innerWidth/2}`,
+        x: () => `-${maxWidthHero + window.innerWidth/6}`,
         ease: "none",
         scrollTrigger: {
           trigger: hero,
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
       trigger: hero,
       start: '50px top',
       end: 'bottom top',
-      scrub: 1,
+      scrub: true,
     }
   }).add(heroScroll())
     .add(blurHeroContent())
