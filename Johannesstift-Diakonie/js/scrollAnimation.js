@@ -165,7 +165,8 @@ document.addEventListener('DOMContentLoaded', function() {
           scrollTrigger: {
             trigger: hero2Container,
             pin: hero2Container,
-            start: () => `-${headerHeight}px top`,
+            // start: () => `-${headerHeight}px top`,
+            start: '-98px top',
             markers: true,
             // start: () => `+=${startScrollHero} center`,
             scrub: true,
