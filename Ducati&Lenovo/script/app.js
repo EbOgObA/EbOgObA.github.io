@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
     //   acceleratorAnimate();
     // }
   }
-  headerAnimate();
+  // headerAnimate();
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
@@ -184,139 +184,6 @@ document.addEventListener('DOMContentLoaded', function(){
       //   duration: 5
       //   });
   }
-  
-
-// VIDEO PARALLAX
-if (window.innerWidth > 768) {
-  gsap.utils.toArray('.section__video').forEach((section) => {
-    section.bg = section.querySelector(".video");
-    // Do the parallax effect on each section
-    const video_tl = gsap.timeline()
-      .from(section.bg, {
-        y: `${-innerHeight/2}px`,
-        ease: "none"
-      })
-      .to(section.bg, {
-        y: `${innerHeight/2}px`,
-      });
-    ScrollTrigger.create({
-      animation: video_tl,
-      trigger: section,
-      start: "top bottom", 
-      end: "bottom top",
-      scrub: true
-    })
-
-    section.content = section.querySelector(".section__video-content");
-
-    gsap.from('.section__video-title .title__line', {
-      scrollTrigger: {
-        trigger: section,
-        start: "30% center", 
-        end: "30% center",
-        scrub: 1
-      },
-      y: 25,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.25
-    });
-
-    gsap.from('.section__video-content .text', {
-      scrollTrigger: {
-        trigger: section,
-        start: "30% center", 
-        end: "30% center",
-        scrub: 1
-      },
-      y: 25,
-      opacity: 0,
-      duration: 2,
-      delay: 1
-    });
-
-    gsap.to(section.content,{
-      scrollTrigger: {
-        trigger: section,
-        start: "bottom bottom", 
-        end: "bottom top",
-        scrub: 1
-      },
-      y: `${innerHeight}px`,
-      duration: 1
-    });
-
-    // gsap.from(section.title,{
-    //   scrollTrigger: {
-    //     trigger: section,
-    //     start: "center center", 
-    //     end: "center center",
-    //     scrub: 1
-    //   },
-    //   y: '+=100%',
-    //   opacity: 0,
-    //   stagger: 0.25,
-    //   duration: 1
-    // });
-    // const videoContent_tl = gsap.timeline()
-    //   // .from(section.contenttitle, {
-    //   //   scrollTrigger: {
-    //   //     trigger: section,
-    //   //     start: "center center", 
-    //   //     end: "center center",
-    //   //     scrub: true
-    //   //   },
-    //   //   y: '+=100%',
-    //   //   opacity: 0,
-    //   //   stagger: 0.25,
-    //   //   duration: 1
-    //   // })
-    //   .to(section.content, {
-    //     y: `${innerHeight}px`,
-    //     duration: 1
-    //   });
-    // ScrollTrigger.create({
-    //   animation: videoContent_tl,
-    //   trigger: section,
-    //   start: "bottom bottom", 
-    //   end: "bottom top",
-    //   scrub: true
-    // })
-  });
-} else {
-  let allVideos = document.querySelectorAll('.video-container');
-  allVideos.forEach((el) => {
-    let video = el.querySelector('.video');
-    video.removeAttribute('autoplay');
-    video.removeAttribute('loop');
-
-    const playVideo = () => {
-      video.play()
-    };
-
-    const stopVideo = () => {
-      video.pause()
-    };
-
-    el.onclick = () => {
-      if (video.classList.contains('active')) {
-        stopVideo();
-        video.classList.remove('active');
-      } else {
-        playVideo();
-        video.classList.add('active');
-      }
-    }
-
-    video.ontimeupdate = () => {
-      if (video.ended) {
-        stopVideo();
-        video.currentTime = 0;
-        video.classList.remove('active');
-      }
-    }
-  });
-}
 
 // TECHNOLOGY
 if (window.innerWidth > 768) {
@@ -703,7 +570,6 @@ if (window.innerWidth > 768) {
 }
 
 // HISTORY
-/* Panels */
 const slidesContainer = document.querySelector('.slides-container');
 const slides = gsap.utils.toArray('.slide');
 const slidesTimeline = document.querySelector('.slides-container__timeline');
@@ -713,8 +579,7 @@ const slidesTimeline = document.querySelector('.slides-container__timeline');
 
 let slidesCount = slides.length;
 
-slidesContainer.style.width = slidesCount*100 + '%';
-
+// slidesContainer.style.width = slidesCount*100 + '%';
 
 const bgItems = document.querySelectorAll('.slide-bg__inner-bg');
 const imageSlides = document.querySelectorAll('.slide-bg__inner');
@@ -727,11 +592,9 @@ const startComplete = () => {
 
 const startingTl = gsap.timeline({ defaults: { ease: easing }, onComplete: startComplete });
 
-
 bgItems.forEach(el => { el.style.backgroundImage = `url('${el.dataset.bg}')` });
 
 let sliderFlag = false;
-
 
 // Text Slides
 const textSlides = (direction) => {
@@ -802,8 +665,6 @@ const imagesSlides = (direction) => {
   }
 };
 
-
-
 if (window.innerWidth > 1024) {
   gsap.from('.history__title',{
     scrollTrigger: {
@@ -822,10 +683,9 @@ if (window.innerWidth > 1024) {
     xPercent: -100 * ( slidesCount - 1 ),
     ease: 'none',
     scrollTrigger: {
-      trigger: '.history__container',
-      pin: true,
+      trigger: '.history',
+      pin: '.history__container',
       start: 'top top',
-      end: 'top top',
       scrub: true,
       snap: {
         snapTo: 1 / ( slidesCount - 1 ),
@@ -1023,10 +883,134 @@ if (window.innerWidth > 1024) {
   initSlider();
 }
 
+// VIDEO PARALLAX
+if (window.innerWidth > 768) {
 
+  let video1 = document.querySelector(".moment__video");
+  const video1_tl = gsap.timeline()
+      .from(video1, {
+        y: `${-innerHeight/2}px`,
+        ease: "none"
+      })
+      .to(video1, {
+        y: `${innerHeight/2}px`,
+      });
+    ScrollTrigger.create({
+      animation: video1_tl,
+      trigger: '.moment',
+      start: "top bottom", 
+      end: "bottom top",
+      scrub: true
+    })
+  gsap.from('.moment__content-title .title__line', {
+    scrollTrigger: {
+      trigger: '.moment',
+      start: "30% center", 
+      end: "30% center",
+      scrub: 1
+    },
+    y: 25,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.25
+  });
+  gsap.from('.moment__content-text', {
+    scrollTrigger: {
+      trigger: '.moment',
+      start: "30% center", 
+      end: "30% center",
+      scrub: 1
+    },
+    y: 25,
+    opacity: 0,
+    duration: 2,
+    delay: 1
+  });
+  gsap.to('.moment__content',{
+    scrollTrigger: {
+      trigger: '.moment',
+      start: "bottom bottom", 
+      end: "bottom top",
+      scrub: 1
+    },
+    y: `${innerHeight}px`,
+    duration: 1
+  });
+  
 
+  let video2 = document.querySelector(".connects__video");
+  const video2_tl = gsap.timeline()
+      .from(video2, {
+        y: `${-innerHeight/2}px`,
+        ease: "none"
+      })
+      .to(video2, {
+        y: `${innerHeight/2}px`,
+      });
+    ScrollTrigger.create({
+      animation: video2_tl,
+      trigger: '.connects',
+      start: "top bottom", 
+      end: "bottom top",
+      scrub: true
+    })
+  gsap.from('.connects__content-title .title__line', {
+    scrollTrigger: {
+      trigger: '.connects',
+      start: "30% center", 
+      end: "30% center",
+      scrub: 1
+    },
+    y: 25,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.25
+  });
+  gsap.to('.connects__content',{
+    scrollTrigger: {
+      trigger: '.connects',
+      start: "bottom bottom", 
+      end: "bottom top",
+      scrub: 1
+    },
+    y: `${innerHeight}px`,
+    duration: 1
+  });
 
+} else {
+  let allVideos = document.querySelectorAll('.video-container');
+  allVideos.forEach((el) => {
+    let video = el.querySelector('.video');
+    video.removeAttribute('autoplay');
+    video.removeAttribute('loop');
 
+    const playVideo = () => {
+      video.play()
+    };
+
+    const stopVideo = () => {
+      video.pause()
+    };
+
+    el.onclick = () => {
+      if (video.classList.contains('active')) {
+        stopVideo();
+        video.classList.remove('active');
+      } else {
+        playVideo();
+        video.classList.add('active');
+      }
+    }
+
+    video.ontimeupdate = () => {
+      if (video.ended) {
+        stopVideo();
+        video.currentTime = 0;
+        video.classList.remove('active');
+      }
+    }
+  });
+}
 
 
 
