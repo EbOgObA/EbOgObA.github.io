@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let hero2 = document.querySelector(".b-chronicles");
       let hero2Container = document.querySelector(".b-chronicles__container");
-      let heroWrapper2 = document.querySelector('.second-hero-scroll .hero-scroll__container');
+      let heroWrapper2 = document.querySelector('.second-hero-scroll .hero-scroll__wrapper');
       let hero2Items= gsap.utils.toArray('.b-chronicles__container-pane');
 
       let headerHeight = document.querySelector('.b-header').offsetHeight;
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             trigger: hero2Container,
             pin: hero2Container,
             // start: () => `-${headerHeight}px top`,
-            start: '-98px top',
+            start: '-=98px top',
             markers: true,
             // start: () => `+=${startScrollHero} center`,
             scrub: true,

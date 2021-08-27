@@ -2577,8 +2577,8 @@ select{
   transform: translate(0);
 }
 
-.b-chronicles__container-right {
-  /* overflow: hidden; */
+.second-hero-scroll .hero-scroll__container {
+  overflow: hidden;
 }
 
 .b-chronicles__container-left {
