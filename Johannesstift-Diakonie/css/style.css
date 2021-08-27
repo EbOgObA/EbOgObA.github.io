@@ -2414,9 +2414,9 @@ select{
 .hero-scroll__item {
 	transition: transform 0.2s ease;
 }
-.hero-scroll__item:not(:first-child) {
+/* .hero-scroll__item:not(:first-child) {
 	transform: scale(0.85);
-}
+} */
 
 @media screen and (max-width: 991px) {
 	.hero-scroll__media {
@@ -2566,4 +2566,8 @@ select{
 .hero-scroll__media {
   position: relative;
   transform: translate(0);
+}
+
+.hero-scroll__item:first-child {
+  transform: scale(1) !important;
 }
