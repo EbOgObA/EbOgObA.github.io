@@ -1380,11 +1380,11 @@ select{
 	align-items: flex-start;
 }	
 .b-chronicles__container-pane{
-	margin: 0 64px 0 0;
+	padding-right: 64px;
 	transform: none !important;
 }
 .b-chronicles__container-pane:last-child{
-	margin-right: 0px;
+	padding-right: 0;
 }
 .b-chronicles__item-top{
 	font-weight: 700;

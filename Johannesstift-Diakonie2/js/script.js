@@ -48,14 +48,13 @@ $('.menu-icon').click(function(){
   $('.b-nav , body').toggleClass('active');
   $('.menu-icon').toggleClass('active');
 
-
-$(document).on('click', function(event) {
-  if (!$(event.target).closest(".menu-icon , .b-storys__item-btn , .b-storys__modal").length) {
-    $('.b-nav , body').removeClass('active');
-    $('.menu-icon').removeClass('active');
-  }
-  event.stopPropagation();
-});
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest(".menu-icon , .b-storys__item-btn , .b-storys__modal").length) {
+      $('.b-nav , body').removeClass('active');
+      $('.menu-icon').removeClass('active');
+    }
+    event.stopPropagation();
+  });
 
 }); 
 
