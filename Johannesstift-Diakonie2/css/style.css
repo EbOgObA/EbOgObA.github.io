@@ -1383,9 +1383,9 @@ select{
 	padding-right: 64px;
 	transform: none !important;
 }
-.b-chronicles__container-pane:last-child{
+/* .b-chronicles__container-pane:last-child{
 	padding-right: 0;
-}
+} */
 .b-chronicles__item-top{
 	font-weight: 700;
 	font-size: 32px;
@@ -2659,5 +2659,9 @@ select{
 .b-chronicles__container-right .hero-scroll__media{
 	filter: blur(0px) !important;
 	opacity: 1 !important;
+}
+
+.second-hero-scroll .hero-scroll__container {
+  overflow: hidden;
 }
 
