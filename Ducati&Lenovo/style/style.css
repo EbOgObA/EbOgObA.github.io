@@ -777,6 +777,10 @@ body.hidden {
   color: #E50006;
 }
 
+.connects__content-title br {
+  display: none;
+}
+
 .connects__content-img {
   display: none;
 }
@@ -803,7 +807,7 @@ body.hidden {
 }
 
 .accessible__content {
-  position: relative;
+  /* position: relative; */
   z-index: 1;
 }
 
@@ -823,6 +827,10 @@ body.hidden {
 
 .info__title {
   margin: 0 0 20px;
+}
+
+.info__text p:not(:first-child) {
+  margin: 15px 0 0;
 }
 
 .info__container {
@@ -2070,8 +2078,8 @@ body.hidden {
 
   .accessible__moto {
     position: static;
-    transform: translate(10%,0);
-    width: 100%;
+    /* transform: translate(0,0); */
+    width: 125%;
   }
 
   .accessible__content {
@@ -2136,8 +2144,8 @@ body.hidden {
   }
 
   .technology {
-    padding: 20px 0 40px;
-    min-height: 600px;
+    padding: 20px 0;
+    /* min-height: 600px; */
   }
 
   
@@ -2171,7 +2179,10 @@ body.hidden {
 
   .technology-img-2 {
     position: static;
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
+    height: 95vw;
+    object-fit: cover;
   }
 
   .technology__container {
@@ -2188,11 +2199,15 @@ body.hidden {
   }
 
   .connects {
-    padding: 130px 0 0;
+    padding: 75px 0 0;
   }
 
   .connects__content-title {
     max-width: 95%;
+  }
+
+  .connects__content-title br {
+    display: block;
   }
 
   .connects__content-img {
@@ -2235,7 +2250,7 @@ body.hidden {
 
   .info {
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     padding: 0 0 100px;
   }
 
@@ -2257,7 +2272,7 @@ body.hidden {
   }
 
   .sponsor {
-    padding: 50px 0 150px;
+    padding: 0 0 150px;
   }
 
   .sponsor-img-1 {
@@ -2306,9 +2321,13 @@ body.hidden {
   }
 
   .slides-container__text {
-    padding: 25px 0 0;
+    padding: 15px 0 0;
     justify-content: flex-start;
     height: auto;
+  }
+
+  .slides-container__slide-title {
+    margin: 0 0 5px;
   }
 
   .slides-container__content {
@@ -2320,8 +2339,8 @@ body.hidden {
   .history-mobile-img {
     display: block;
     width: auto;
-    padding: 22.5% 0 0;
-    margin: 0 -25px;
+    padding: 37.5% 0 0;
+    margin: -100px -25px 0;
   }
 
 }
