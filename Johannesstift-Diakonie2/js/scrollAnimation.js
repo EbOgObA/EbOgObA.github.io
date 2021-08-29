@@ -240,7 +240,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let mediaItemCount = 6;
 
-      // let heroWrapper = document.querySelector(".hero-scroll__media");
+      let heroMedia = document.querySelector(".hero-scroll__media");
+      let heroMediaWidth = heroMedia.offsetWidth;
+
+
       let heroContainer = document.querySelector(".hero-scroll__grid");
       // let heroContainerHeight = heroContainer.offsetHeight;
       // let heroPaddingTop = window.getComputedStyle(hero).getPropertyValue('padding-top');
@@ -248,7 +251,6 @@ document.addEventListener('DOMContentLoaded', function() {
       let heroItems = gsap.utils.toArray(".b-main .hero-scroll__item");
       let heroContent = document.querySelector(".hero-scroll__content");
       let heroContentWidth = heroContent.offsetWidth;
-      let heroMedia = document.querySelector(".hero-scroll__media");
 
       let maxWidthHero = 0;
 
@@ -262,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // heroContent.offsetWidth + .\
       };
       getMaxWidthHero();
-      console.log(maxWidthHero);
+      // console.log(maxWidthHero);
 
       function scaleMediaItem() {
         let heroMediaItem = gsap.utils.toArray('.hero-scroll__item');
@@ -274,11 +276,11 @@ document.addEventListener('DOMContentLoaded', function() {
             ease: 'none',
             scrollTrigger: {
               trigger: sct,
-              start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth) * (maxWidthHero / (maxWidthHero - window.innerWidth/2)),
-              end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth)),
+              start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth) * (maxWidthHero / (maxWidthHero - window.innerWidth/8)),
+              end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth/16)),
               // addClass: {targets: sct, className: "active"},
               scrub: true,
-              // markers: true
+              markers: true
             }
           })
           // ScrollTrigger.create({
@@ -297,15 +299,46 @@ document.addEventListener('DOMContentLoaded', function() {
       function heroScroll() {
         let heroScroll_tl = gsap.timeline()
           .to('.b-main .hero-scroll__grid', {
-            x: () => `-${maxWidthHero - window.innerWidth/2}`,
+            x: () => `-${maxWidthHero - heroMediaWidth}`,
             ease: "none",
             scrollTrigger: {
               trigger: ".b-main .hero-scroll__media",
+              pin: '.b-main .hero-scroll__grid',
               start: '-65px top',
               // start: () => `+=${startScrollHero} center`,
-              // end: () => 'bottom top',
+              end: () => `+=${maxWidthHero - heroMediaWidth}`,
               scrub: true,
               // markers: true,
+              // invalidateOnRefresh: true
+            }
+          })
+          .to('.b-main .hero-scroll__grid',{
+            startAt: {x: () => `-${maxWidthHero - heroMediaWidth}`},
+            x: () => `-=${document.querySelector('.b-main .hero-scroll__grid').offsetWidth*2/3}`,
+            scrollTrigger: {
+              trigger: ".b-main .hero-scroll__media",
+              start: () => `+=${maxWidthHero  - heroMediaWidth - 65}`,
+              // start: () => `+=${startScrollHero} center`,
+              scrub: true,
+              // markers: true,
+              // end: 'bottom top',
+              // invalidateOnRefresh: true
+            }
+          })
+          .to('.b-main .hero-scroll__grid', {
+            // startAt: {x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`},
+            // x: () => `-=${heroWrapper.offsetWidth}`,
+            filter: 'blur(5px)',
+            opacity: 0,
+            // ease: "none",
+            // immediateRender: true,
+            scrollTrigger: {
+              trigger: ".b-main .hero-scroll__media",
+              start: () => `+=${maxWidthHero  - heroMediaWidth - 75}`,
+              // start: () => `+=${startScrollHero} center`,
+              scrub: true,
+              // markers: true,
+              // end: 'bottom top',
               // invalidateOnRefresh: true
             }
           });
@@ -315,27 +348,16 @@ document.addEventListener('DOMContentLoaded', function() {
       let hero_tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.b-main .hero-scroll__grid',
-          pin: true,
+          
           start: '-65px top',
-          end:  () => `+=${maxWidthHero}`,
-          markers: true,
+          // end:  () => `+=${maxWidthHero}`,
+          // markers: true,
           scrub: true,
         }
       })
         .add(heroScroll())
         .add(scaleMediaItem());
-        // .add(blurMedia())
 
-
-      let blurMedia_tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.b-main .hero-scroll__grid',
-          start:'top top',
-          end: 'bottom top',
-          // markers: true,
-          scrub: true
-        }
-      }).to('.hero-scroll__media', {filter: 'blur(5px)', opacity: 0});
     }
   });
   
