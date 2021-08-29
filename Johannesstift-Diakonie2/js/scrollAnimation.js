@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function() {
   ScrollTrigger.matchMedia({
     "(min-width: 767px)": function() {
       let hero = document.querySelector(".b-main");
-      // let heroWrapper = document.querySelector(".hero-scroll__wrapper");
-      let heroWrapper = document.querySelector(".hero-scroll__media");
+      let heroWrapper = document.querySelector(".b-main .hero-scroll__wrapper");
+      // let heroWrapper = document.querySelector(".hero-scroll__media");
       let heroContainer = document.querySelector(".hero-scroll__container");
       let heroContainerHeight = heroContainer.offsetHeight;
       let heroPaddingTop = window.getComputedStyle(hero).getPropertyValue('padding-top');
@@ -150,8 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
             ease: 'none',
             scrollTrigger: {
               trigger: sct,
-              start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/3) * (maxWidthHero / (maxWidthHero - window.innerWidth)),
-              end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth)),
+              start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2 - 205) * (maxWidthHero / (maxWidthHero - window.innerWidth/2)),
+              end: () => '+=' + sct.offsetWidth * (maxWidthHero / (maxWidthHero - window.innerWidth/2)),
               addClass: {targets: sct, className: "active"},
               scrub: true,
               // markers: true
@@ -170,19 +170,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return scaleMediaItem_tl;
       }
 
-      // function blurMedia() {
-      //   let blurMedia_tl = gsap.timeline({
-          
-      //   });
-      //   blurMedia_tl
-      //     .to('.hero-scroll__media', 5, {filter: 'blur(5px)', opacity: 0});
-      //   return blurMedia_tl;
-      // }
+      let headerPaddingRight = Number(window.getComputedStyle(document.querySelector('.b-header > .container > .row > div')).getPropertyValue('padding-right').replace('px', ''));
 
       function heroScroll() {
         let heroScroll_tl = gsap.timeline()
-          .to(heroWrapper, {
-            x: () => `-${maxWidthHero + window.innerWidth/6}`,
+          .to(heroMedia, {
+            x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`,
             ease: "none",
             scrollTrigger: {
               trigger: hero,
@@ -191,7 +184,39 @@ document.addEventListener('DOMContentLoaded', function() {
               // start: () => `+=${startScrollHero} center`,
               scrub: true,
               // markers: true,
-              end: () => `+=${maxWidthHero + window.innerWidth}`,
+              end: () => `+=${maxWidthHero}`,
+              // invalidateOnRefresh: true
+            }
+          })
+          .to(heroMedia, {
+            startAt: {x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`},
+            x: () => `-=${heroWrapper.offsetWidth*2/3}`,
+            // ease: "none",
+            // immediateRender: true,
+            scrollTrigger: {
+              trigger: hero,
+              start: () => `+=${maxWidthHero + 55}`,
+              // start: () => `+=${startScrollHero} center`,
+              scrub: true,
+              // markers: true,
+              // end: 'bottom top',
+              // invalidateOnRefresh: true
+            }
+          })
+          .to(heroMedia, {
+            startAt: {x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`},
+            // x: () => `-=${heroWrapper.offsetWidth}`,
+            filter: 'blur(5px)',
+            opacity: 0,
+            // ease: "none",
+            // immediateRender: true,
+            scrollTrigger: {
+              trigger: hero,
+              start: () => `+=${maxWidthHero + 100}`,
+              // start: () => `+=${startScrollHero} center`,
+              scrub: true,
+              // markers: true,
+              // end: 'bottom top',
               // invalidateOnRefresh: true
             }
           });
@@ -209,17 +234,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }).add(heroScroll())
         .add(blurHeroContent())
         .add(scaleMediaItem());
-        // .add(blurMedia())
-
-      let blurMedia_tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: hero,
-          start: () => `+=${maxWidthHero + window.innerWidth/2}`,
-          end: 'bottom top',
-          // markers: true,
-          scrub: true
-        }
-      }).to('.hero-scroll__media', {filter: 'blur(5px)', opacity: 0});
     },
 
     "(max-width: 767px)": function() {
@@ -283,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
       function heroScroll() {
         let heroScroll_tl = gsap.timeline()
           .to('.b-main .hero-scroll__grid', {
-            x: () => `-${maxWidthHero}`,
+            x: () => `-${maxWidthHero - window.innerWidth/2}`,
             ease: "none",
             scrollTrigger: {
               trigger: ".b-main .hero-scroll__media",

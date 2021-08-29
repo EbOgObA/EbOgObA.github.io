@@ -2349,6 +2349,15 @@ select{
 
 
 
+/* .b-header > .container {
+  max-width: 1422px;
+  padding: 0 15px;
+}
+
+.b-header > .container > .row > div {
+  padding: 0;
+} */
+
 
 
 
@@ -2381,7 +2390,12 @@ select{
 
 .b-main .hero-scroll__item{
 	margin: 0 25px 0 0;
+  /* flex: 0 0 67.448%; */
 }
+/* 
+.b-main__block {
+  width: auto;
+} */
 
 .b-main .hero-scroll__content .content-wrapper{
 	padding: 120px 0 0 0;
