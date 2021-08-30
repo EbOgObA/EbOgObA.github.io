@@ -2366,6 +2366,17 @@ select{
 	overflow: hidden;
 }
 
+.b-main > .container {
+  max-width: none;
+  padding: 0 88px;
+}
+
+@media screen and (max-width: 1500px) {
+  .b-main > .container {
+    padding: 0 15px;
+  }
+}
+
 .b-main .hero-scroll__wrapper {
 	display: flex;
 	align-items: center;
@@ -2416,8 +2427,11 @@ select{
 }
 
 .b-main .hero-scroll__item {
-  padding-right: 25px;
   margin: 0;
+}
+
+.b-main .hero-scroll__item:not(:last-child) {
+  padding-right: 25px;
 }
 
 .b-main .hero-scroll__item:first-child {

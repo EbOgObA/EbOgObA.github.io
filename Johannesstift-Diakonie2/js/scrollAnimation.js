@@ -116,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let maxWidthHero = 0;
 
+      let mainContainer = hero.querySelector('.container');
+
       const getMaxWidthHero = () => {
         maxWidthHero = 0;
         // mainItems.forEach((item) => {
@@ -175,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
       function heroScroll() {
         let heroScroll_tl = gsap.timeline()
           .to(heroMedia, {
-            x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`,
+            x: () => `-${maxWidthHero - window.innerWidth + heroContentWidth + 2*headerPaddingRight}`,
             ease: "none",
             scrollTrigger: {
               trigger: hero,
@@ -189,13 +191,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           })
           .to(heroMedia, {
-            startAt: {x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`},
+            startAt: {x: () => `-${maxWidthHero - window.innerWidth + heroContentWidth + 2*headerPaddingRight}`},
             x: () => `-=${heroWrapper.offsetWidth*2/3}`,
             // ease: "none",
             // immediateRender: true,
             scrollTrigger: {
               trigger: hero,
-              start: () => `+=${maxWidthHero + 55}`,
+              start: () => `+=${maxWidthHero + 50}`,
               // start: () => `+=${startScrollHero} center`,
               scrub: true,
               // markers: true,
@@ -204,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           })
           .to(heroMedia, {
-            startAt: {x: () => `-${maxWidthHero - window.innerWidth/2 + headerPaddingRight + 10}`},
+            startAt: {x: () => `-${maxWidthHero - window.innerWidth + heroContentWidth + 2*headerPaddingRight}`},
             // x: () => `-=${heroWrapper.offsetWidth}`,
             filter: 'blur(5px)',
             opacity: 0,

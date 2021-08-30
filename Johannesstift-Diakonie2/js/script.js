@@ -475,7 +475,7 @@ window.onscroll = function() {
 }
 
 $(".b-chronicles__nav ul li a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
-    layout:"vertical",
+  layout:"vertical",
   scrollSpeed: 5,
   offset: 120,
   forceSingleHighlight: true,
@@ -485,7 +485,7 @@ $(".b-chronicles__nav ul li a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScr
 });
 
 
- 
+
 
 
 
