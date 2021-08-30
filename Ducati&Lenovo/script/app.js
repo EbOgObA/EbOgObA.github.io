@@ -569,65 +569,66 @@ if (window.innerWidth > 1024) {
 
   // Start Animation
   const slide1_tl = gsap.timeline()
-    .from('#slide-1 .slide__content-dot', 0.5, {scale: 0})
-    .from('#slide-1 .slides-container__timeline', 2, {width: 0})
-    .from('#slide-2 .slides-container__timeline', 2, {width: 0}, '-=2')
-    .from('#slide-3 .slides-container__timeline', 2, {width: 0}, '-=4')
-    .from('#slide-4 .slides-container__timeline', 2, {width: 0}, '-=6')
-    .from('#slide-1 .slide__content-line', 0.5, {opacity: 0}, '-=1.5')
-    .from('#slide-1 .slide__content-img', 0.25, {y: '+=100%', opacity: 0}, '-=1.25')
-    .from('#slide-1 .slide__content-descr', 0.25, {y: '+=100%', opacity: 0}, '-=1')
+    .from('#slide-1 .slide__content-dot', 0.2, {scale: 0})
+    .from('#slide-1 .slides-container__timeline', 1.25, {width: 0})
+    .from('#slide-2 .slides-container__timeline', 1.25, {width: 0}, '-=1.25')
+    .from('#slide-3 .slides-container__timeline', 1.25, {width: 0}, '-=1.25')
+    .from('#slide-4 .slides-container__timeline', 1.25, {width: 0}, '-=1.25')
+    .from('#slide-1 .slide__content-line', 0.2, {opacity: 0}, '-=1.25')
+    .from('#slide-1 .slide__content-img', 0.2, {y: '+=100%', opacity: 0}, '-=1.05')
+    .from('#slide-1 .slide__content-descr', 0.2, {y: '+=100%', opacity: 0}, '-=0.85')
 
   const slide2_tl = gsap.timeline()
-    .from('#slide-2 .slide__content-dot', 0.5, {scale: 0})
+    .from('#slide-2 .slide__content-dot', 0.2, {scale: 0})
     // .from('#slide-2 .slides-container__timeline', 4, {width: 0})
-    .from('#slide-2 .slide__content-line', 0.5, {opacity: 0})
-    .from('#slide-2 .slide__content-img', 0.25, {y: '+=100%', opacity: 0})
-    .from('#slide-2 .slide__content-descr', 0.25, {y: '+=100%', opacity: 0})
+    .from('#slide-2 .slide__content-line', 0.2, {opacity: 0})
+    .from('#slide-2 .slide__content-img', 0.2, {y: '+=100%', opacity: 0})
+    .from('#slide-2 .slide__content-descr', 0.2, {y: '+=100%', opacity: 0})
 
   const slide3_tl = gsap.timeline()
-    .from('#slide-3 .slide__content-dot', 0.5, {scale: 0})
+    .from('#slide-3 .slide__content-dot', 0.2, {scale: 0})
     // .from('#slide-3 .slides-container__timeline', 4, {width: 0})
-    .from('#slide-3 .slide__content-line', 0.5, {opacity: 0})
-    .from('#slide-3 .slide__content-img', 0.25, {y: '+=100%', opacity: 0})
-    .from('#slide-3 .slide__content-descr', 0.25, {y: '+=100%', opacity: 0})
+    .from('#slide-3 .slide__content-line', 0.2, {opacity: 0})
+    .from('#slide-3 .slide__content-img', 0.2, {y: '+=100%', opacity: 0})
+    .from('#slide-3 .slide__content-descr', 0.2, {y: '+=100%', opacity: 0})
 
   const slide4_tl = gsap.timeline()
-    .from('#slide-4 .slide__content-dot', 0.5, {scale: 0})
+    .from('#slide-4 .slide__content-dot', 0.25, {scale: 0})
     // .from('#slide-4 .slides-container__timeline', 4, {width: 0})
-    .from('#slide-4 .slide__content-line', 0.5, {opacity: 0})
-    .from('#slide-4 .slide__content-img', 0.25, {y: '+=100%', opacity: 0})
-    .from('#slide-4 .slide__content-descr', 0.25, {y: '+=100%', opacity: 0})
+    .from('#slide-4 .slide__content-line', 0.2, {opacity: 0})
+    .from('#slide-4 .slide__content-img', 0.2, {y: '+=100%', opacity: 0})
+    .from('#slide-4 .slide__content-descr', 0.2, {y: '+=100%', opacity: 0})
 
   ScrollTrigger.create({
     trigger: '.history',
     animation: slide1_tl,
     start: '-2.5% top',
     end: '-2.5% top',
+    markers: true,
     toggleActions: 'play none reverse none'
   })
 
   ScrollTrigger.create({
     trigger: '.history',
     animation: slide2_tl,
-    start: '30% bottom',
-    end: '30% bottom',
+    start: '20% top',
+    end: '20% top',
     toggleActions: 'play none reverse none'
   })
 
   ScrollTrigger.create({
     trigger: '.history',
     animation: slide3_tl,
-    start: '60% bottom',
-    end: '60% bottom',
+    start: '40% top',
+    end: '40% top',
     toggleActions: 'play none reverse none'
   })
 
   ScrollTrigger.create({
     trigger: '.history',
     animation: slide4_tl,
-    start: '90% bottom',
-    end: '90% bottom',
+    start: '60% top',
+    end: '60% top',
     toggleActions: 'play none reverse none'
   })
 
