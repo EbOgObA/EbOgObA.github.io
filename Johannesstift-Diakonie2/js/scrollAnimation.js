@@ -394,6 +394,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let chroniclesContainerRightPaddingSide = (chroniclesContainerRightWidth - chroniclesContainerWidth);
       let chroniclesContainerRightPaddingTop = (chroniclesContainerRightHeight - chroniclesContainerHeight)/2;
 
+      let headerHeight = document.querySelector('.b-header').offsetHeight;
       let headerPaddingRight = Number(window.getComputedStyle(document.querySelector('.b-header > .container > .row > div')).getPropertyValue('padding-right').replace('px', ''));
 
       let scrollWidth = window.innerWidth - document.querySelector('.b-container').offsetWidth;
@@ -424,14 +425,57 @@ document.addEventListener('DOMContentLoaded', function() {
             // start: () => `+=${startScrollHero} center`,
             scrub: true,
             // markers: true,
-            end: () => `+=${maxWidthHero2}`,
+            end: () => `+=${maxWidthHero2 - window.innerWidth + chroniclesContainerLeftWidth + headerPaddingRight + scrollWidth}`,
             // invalidateOnRefresh: true
           }
         });
 
 
-      
+      function chroniclesNavigation() {
+        let chroniclesLinks = gsap.utils.toArray('.b-chronicles__nav ul li a'),
+            chroniclesContainer = document.querySelector('.b-chronicles .hero-scroll__grid');
 
+        let chroniclesPaddingTop = Number(window.getComputedStyle(document.querySelector('.b-chronicles')).getPropertyValue('padding-top').replace('px', '')),
+            chroniclesTitleHeight = document.querySelector('.b-chronicles > .container').offsetHeight;
+
+        let chroniclesPanels = gsap.utils.toArray('.b-chronicles__container-pane');
+
+        function offset(el) {
+          var rect = el.getBoundingClientRect(),
+          // scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+          scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          // , left: rect.left + scrollLeft 
+          return rect.top + scrollTop
+        }
+        
+        let i = 0;
+        chroniclesLinks.forEach((link, i) => {
+          
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            let src = link.dataset.src;
+            let panel = document.getElementById(`${src.replace('#','')}`);
+            let panelOffsetLeft = panel.offsetLeft;
+
+            let chroniclesContainerRectTop = chroniclesContainer.getBoundingClientRect().top;
+            let headerHeight = document.querySelector('.b-header').offsetHeight;
+            // console.log(chroniclesContainerRectTop);
+            gsap.to(window, {
+              duration: 0.25,
+              // ease: 'linear',
+              ease: 'circ',
+              scrollTo:{
+                y: `${chroniclesPaddingTop + chroniclesTitleHeight + offset(hero2) + panelOffsetLeft - headerHeight}`
+              }
+            });
+          })
+        })
+        // window.onscroll = () => {
+        //   let scroll = window.pageYOffset;
+        //   console.log(scroll);
+        // }
+      }
+      chroniclesNavigation();
 
 
 
