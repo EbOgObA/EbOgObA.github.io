@@ -474,15 +474,15 @@ window.onscroll = function() {
     }
 }
 
-// $(".b-chronicles__nav ul li a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
-//     layout:"vertical",
-//   scrollSpeed: 5,
-//   offset: 120,
-//   forceSingleHighlight: true,
-//   autoScrollSpeed: true,
-//   pageEndSmoothScroll: true,
-//   highlightSelector:".b-chronicles__nav ul li a"
-// });
+$(".b-chronicles__nav ul li a,a[href='#top'],a[rel='m_PageScroll2id']").mPageScroll2id({
+    layout:"vertical",
+  scrollSpeed: 5,
+  offset: 120,
+  forceSingleHighlight: true,
+  autoScrollSpeed: true,
+  pageEndSmoothScroll: true,
+  highlightSelector:".b-chronicles__nav ul li a"
+});
 
 
  
