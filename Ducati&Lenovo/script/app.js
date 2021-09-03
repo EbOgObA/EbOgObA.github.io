@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // headerAnimate();
 
   if (window.innerWidth > 768) {
-    // headerAnimate();
+    headerAnimate();
   }
 
   function headerAnimate() {
