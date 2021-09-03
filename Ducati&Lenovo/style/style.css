@@ -388,7 +388,7 @@ body.hidden {
   height: 100vh;
   width: 100vw;
   z-index: 999;
-  padding: 60px 110px;
+  padding: 55px 222px;
 }
 
 .header__video {
@@ -409,12 +409,12 @@ body.hidden {
 }
 
 .header__blind_left {
-  left: 2.5%;
+  left: 1%;
   transform: translate(-104.5%,-50%);
 }
 
 .header__blind_right {
-  right: 2.5%;
+  right: 1%;
   transform: translate(104.5%,-50%);
 }
 
@@ -450,10 +450,12 @@ body.hidden {
 .header-left__overlay {
   position: absolute;
   top: 50%;
-  right: -50%;
-  width: calc(100% - 110px);
-  height: calc(100% - 120px);
-  transform: translate(0,-50%) skewX(23.5deg);
+  /* right: -50%; */
+  right: 3.1%;
+  width: calc(100vw - 444px);
+  /* width: calc(100% - 330px); */
+  height: calc(100% - 105px);
+  transform: translate(50%,-50%) skewX(23.5deg);
   background-color: #E20B21;
 }
 
@@ -466,7 +468,7 @@ body.hidden {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1476px;
   height: 100%;
   margin: 0 auto;
   /* background-color: #E20B21; */
@@ -1517,9 +1519,13 @@ body.hidden {
     line-height: 30px;
   }
 
-  .logo-ducati {
-    transform: translate(40px,0);
+  .header-left__overlay {
+    height: calc(100% - 65px);
   }
+
+  /* .logo-ducati {
+    transform: translate(40px,0);
+  } */
   
   /* .header-left__overlay {
     right: -47.5%;

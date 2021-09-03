@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // headerAnimate();
 
   if (window.innerWidth > 768) {
-    headerAnimate();
+    // headerAnimate();
   }
 
   function headerAnimate() {
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function(){
         delay: 1.5
       }, '-=2.5')
       .from('.header-left__overlay', 0.5, {
-        width: '100%',
-        height: '100%'
+        width: '200%',
+        height: '200%'
       })
       .from('.logo-ducati', 1, {
         opacity: 0
