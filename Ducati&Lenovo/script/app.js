@@ -16,77 +16,182 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
 // HEADER
-  function headerAnimate() {
-    if (window.innerWidth > 768) {
+  // function headerAnimate() {
+  //   if (window.innerWidth > 768) {
       
-      document.body.classList.add('hidden');
-      // dur 1s
-      // delay 1s
-      gsap.from('.header-right', 1, {
+  //     document.body.classList.add('hidden');
+  //     // dur 1s
+  //     // delay 1s
+  //     gsap.from('.header-right', 1, {
+  //       x: 474,
+  //       y: "-=100%",
+  //       delay: 1.5
+  //     });
+  //     gsap.from('.header-left', 1, {
+  //       x: -474,
+  //       y: "+=100%",
+  //       delay: 1.5
+  //     });
+  //     // dur 0.5s
+  //     // delay 2s
+  //     gsap.to('.header-left__overlay', 0.5, {
+  //       // x: 115,
+  //       height: '90%',
+  //       width: '86%',
+  //       delay: 2.5
+  //     });
+  //     // dur 1.5s
+  //     // delay 2.5s
+  //     gsap.from('.logo-ducati', 1, {
+  //       opacity: 0,
+  //       delay: 3
+  //     });
+  //     gsap.from('.logo-lenovo', 1, {
+  //       opacity: 0,
+  //       delay: 3
+  //     });
+  //     // dur 0.5s
+  //     // delay 3s
+  //     gsap.from('.logo-lenovo__fact', 0.5, {
+  //       x: "-=100%",
+  //       opacity: 0,
+  //       delay: 3
+  //     });
+  //     gsap.from('.header__blind_left', 0.5, {
+  //       x: "-=100%",
+  //       opacity: 0,
+  //       delay: 3.5
+  //     });
+  //     gsap.from('.header__blind_right', 0.5, {
+  //       x: "+=100%",
+  //       opacity: 0,
+  //       delay: 3.5
+  //     });
+  //     // dur 2s
+  //     // delay 5s
+
+
+  //     // gsap.to('.header-right', 1,{
+  //     //   x: "+=100%",
+  //     //   delay: 6
+  //     // });
+  //     // gsap.to('.header-left', 1,{
+  //     //   x: "-=100%",
+  //     //   delay: 6
+  //     // });
+  //     // gsap.to('.header__blind_left', 0.5, {
+  //     //   x: "-=100%",
+  //     //   delay: 6
+  //     // });
+  //     // gsap.to('.header__blind_right', 0.5, {
+  //     //   x: "+=100%",
+  //     //   delay: 6
+  //     // });
+  //     setTimeout(() => {
+  //       document.querySelector('.header__video').classList.add('hide');
+  //       // document.querySelector('.header').classList.remove('active');
+  //       document.body.classList.remove('hidden');
+  //       gsap.to(window, 0.5, {
+  //         scrollTo:{
+  //           y: document.querySelector('.main')
+  //         }
+  //       });
+  //       acceleratorAnimate();
+  //     }, 6*1000);
+  //     // setTimeout(() => {
+  //     //   document.querySelector('.header').classList.add('hide');
+  //     // }, 7*1000);
+  //   }
+  //   // else {
+  //   //   acceleratorAnimate();
+  //   // }
+  // }
+  // headerAnimate();
+
+  if (window.innerWidth > 768) {
+    headerAnimate();
+  }
+
+  function headerAnimate() {
+    document.body.classList.add('hidden');
+    let headerAnimate = gsap.timeline()
+      .from('.header__bg_left', 1, {
+        x: '-=474px',
+        y: "+=100%",
+        delay: 1.5
+      })
+      .from('.header__bg_right', 1, {
         x: 474,
         y: "-=100%",
         delay: 1.5
+      }, '-=2.5')
+      .from('.header-left__overlay', 0.5, {
+        width: '100%',
+        height: '100%'
+      })
+      .from('.logo-ducati', 1, {
+        opacity: 0
+      })
+      .from('.logo-lenovo', 1, {
+        opacity: 0
+      }, '-=1')
+      .from('.logo-lenovo__fact', 0.5, {
+        x: '-=100%',
+        opacity: 0
+      })
+      .from('.header__blind_left', 0.5, {
+        x: '-=100%',
+        opacity: 0
+      })
+      .from('.header__blind_right', 0.5, {
+        x: '+=100%',
+        opacity: 0
+      }, '-=0.5')
+      .to('.header__bg_left', 1, {
+        x: '-=100%',
+        delay: 2
+      })
+      .to('.header__bg_right', 1, {
+        x: '+=100%',
+        delay: 2
+      }, '-=3')
+      .to('.logo-ducati', 0.5, {
+        x: '-=200%',
+        opacity: 0
+      }, '-=1')
+      .to('.logo-lenovo', 0.5, {
+        x: '+=200%',
+        opacity: 0
+      }, '-=1')
+      .to('.logo-lenovo__fact', 0.5, {
+        x: '+=200%',
+        opacity: 0
+      }, '-=1')
+      .to('.header__blind_left', 0.5, {
+        x: '-=100%',
+        opacity: 0
+      }, '-=1')
+      .to('.header__blind_right', 0.5, {
+        x: '+=100%',
+        opacity: 0
+      }, '-=1')
+
+    setTimeout(() => {
+      document.querySelector('.header__video').classList.add('hide');
+      // document.querySelector('.header').classList.remove('active');
+      document.body.classList.remove('hidden');
+      gsap.to(window, 0.5, {
+        scrollTo:{
+          y: document.querySelector('.main')
+        }
       });
-      gsap.from('.header-left', 1, {
-        x: -474,
-        y: "+=100%",
-        delay: 1.5
-      });
-      // dur 0.5s
-      // delay 2s
-      gsap.to('.header-left__overlay', 0.5, {
-        // x: 115,
-        height: '90%',
-        width: '80%',
-        delay: 2.5
-      });
-      // dur 1.5s
-      // delay 2.5s
-      gsap.from('.logo-ducati', 1, {
-        opacity: 0,
-        delay: 3
-      });
-      gsap.from('.logo-lenovo', 1, {
-        opacity: 0,
-        delay: 3
-      });
-      // dur 0.5s
-      // delay 3s
-      gsap.from('.logo-lenovo__fact', 0.5, {
-        x: "-=100%",
-        opacity: 0,
-        delay: 3
-      });
-      // dur 2s
-      // delay 5s
-      gsap.to('.header-right', 1,{
-        x: "+=100%",
-        delay: 5.5
-      });
-      gsap.to('.header-left', 1,{
-        x: "-=100%",
-        delay: 5.5
-      });
-      setTimeout(() => {
-        document.querySelector('.header__video').classList.add('hide');
-        // document.querySelector('.header').classList.remove('active');
-        document.body.classList.remove('hidden');
-        gsap.to(window, 0.5, {
-          scrollTo:{
-            y: document.querySelector('.main')
-          }
-        });
-        acceleratorAnimate();
-      }, 5.5*1000);
-      setTimeout(() => {
-        document.querySelector('.header').classList.add('hide');
-      }, 6.5*1000);
-    }
-    // else {
-    //   acceleratorAnimate();
-    // }
-  }
-  headerAnimate();
+      acceleratorAnimate();
+    }, 7*1000);
+    setTimeout(() => {
+      document.querySelector('.header').classList.add('hide');
+    }, 8*1000);
+  } 
+
 
 // ACCELERATOR
   if (window.innerWidth > 768) {
@@ -269,9 +374,9 @@ if (window.innerWidth > 1024) {
       width: 0,
       duration: 0.5
     })
-    .from('.balance__item-1 .balance__item-text span',{
+    .from('.balance__item-1 .balance__item-text',{
       opacity: 0,
-      stagger: 0.25,
+      // stagger: 0.25,
       duration: 0.5
     })
 
@@ -285,9 +390,9 @@ if (window.innerWidth > 1024) {
       width: 0,
       duration: 0.5
     })
-    .from('.balance__item-2 .balance__item-text span',{
+    .from('.balance__item-2 .balance__item-text',{
       opacity: 0,
-      stagger: 0.25,
+      // stagger: 0.25,
       duration: 0.5
     })
 
@@ -301,9 +406,9 @@ if (window.innerWidth > 1024) {
       width: 0,
       duration: 0.5
     })
-    .from('.balance__item-3 .balance__item-text span',{
+    .from('.balance__item-3 .balance__item-text',{
       opacity: 0,
-      stagger: 0.25,
+      // stagger: 0.25,
       duration: 0.5
     })
 
@@ -317,9 +422,9 @@ if (window.innerWidth > 1024) {
       width: 0,
       duration: 0.5
     })
-    .from('.balance__item-4 .balance__item-text span',{
+    .from('.balance__item-4 .balance__item-text',{
       opacity: 0,
-      stagger: 0.25,
+      // stagger: 0.25,
       duration: 0.5
     })
 
@@ -599,12 +704,26 @@ if (window.innerWidth > 1024) {
     .from('#slide-4 .slide__content-img', 0.2, {y: '+=100%', opacity: 0})
     .from('#slide-4 .slide__content-descr', 0.2, {y: '+=100%', opacity: 0})
 
+  // ScrollTrigger.create({
+  //   trigger: '.history',
+  //   start: '95% bottom',
+  //   onEnter: () => {
+  //     let scrollWidth = window.innerWidth - document.querySelector('.wrapper').offsetWidth;
+  //     document.querySelector('body').classList.add('hidden');
+  //     document.querySelector('body').style.paddingRight = scrollWidth;
+      
+  //     setTimeout(() => {
+  //       document.querySelector('body').classList.remove('hidden');
+  //       document.querySelector('body').style.paddingRight = 0;
+  //     }, 1000)
+  //   }
+  // })
+
   ScrollTrigger.create({
     trigger: '.history',
     animation: slide1_tl,
     start: '-2.5% top',
     end: '-2.5% top',
-    markers: true,
     toggleActions: 'play none reverse none'
   })
 

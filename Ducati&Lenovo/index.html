@@ -10,24 +10,62 @@
   <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body>
+<body class="hidden">
 
   <div class="wrapper">
-    <header class="header active">
+    <!-- <header class="header hide active">
+      <div class="header__container">
+        <div class="header__blind header__blind_left"></div>
+        <div class="header__blind header__blind_right"></div>
+        <video class="video header__video" autoplay muted playsinline>
+          <source src="video/video-1.mp4">
+        </video>
+        <div class="header-left">
+          <div class="header-left__overlay"></div>
+          <div class="header-left__content">
+            <img class="logo-ducati" src="img/header/logo-ducati.png" alt="Ducati Corse">
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="header-right__content">
+            <img class="logo-lenovo" src="img/header/logo-lenovo.png" alt="Lenovo">
+            <img class="logo-lenovo__fact" src="img/header/fact-t.png" alt="Factory Team">
+          </div>
+        </div>
+      </div>
+    </header> -->
+
+    <header class="header">
+
       <video class="video header__video" autoplay muted playsinline>
         <source src="video/video-1.mp4">
       </video>
-      <div class="header-left">
+
+      
+
+      <div class="header__bg header__bg_left">
         <div class="header-left__overlay"></div>
-        <div class="header-left__content">
-          <img class="logo-ducati" src="img/header/logo-ducati.png" alt="Ducati Corse">
-        </div>
+        <div class="header__bg-border"></div>
       </div>
-      <div class="header-right">
-        <div class="header-right__content">
-          <img class="logo-lenovo" src="img/header/logo-lenovo.png" alt="Lenovo">
-          <img class="logo-lenovo__fact" src="img/header/fact-t.png" alt="Factory Team">
+      <div class="header__bg header__bg_right"></div>
+
+      <div class="header__container">
+
+        <div class="header__blind header__blind_left"></div>
+        <div class="header__blind header__blind_right"></div>
+
+        <div class="header-left">
+          <div class="header-left__content">
+            <img class="logo-ducati" src="img/header/logo-ducati.png" alt="Ducati Corse">
+          </div>
         </div>
+        <div class="header-right">
+          <div class="header-right__content">
+            <img class="logo-lenovo" src="img/header/logo-lenovo.png" alt="Lenovo">
+            <img class="logo-lenovo__fact" src="img/header/fact-t.png" alt="Factory Team">
+          </div>
+        </div>
+
       </div>
     </header>
 
@@ -124,9 +162,7 @@
               <span class="title__line">и поражением</span>
             </h2>
             <p class="text moment__content-text">
-              Это мгновение разделило гонщика Ducati Андреа Дивициозо и его преследователей на Qatar Grand Prix 2019 года. 
-              <!-- <span>Это мгновение разделило гонщика Ducati Андреа Дивициозо и</span>
-              <span>его преследователей на Qatar Grand Prix 2019 года. </span> -->
+              Это мгновение разделило гонщика Ducati и его преследователей на Qatar Grand Prix 2019 года.
             </p>
             <img class="moment__content-img" src="img/moment-img-3.png" alt="#">
           </div>
@@ -144,10 +180,7 @@
             </h2>
             <div class="technology__content">
               <p class="text technology__text">
-                Для победы в гонках MotoGP зачастую недостаточно таланта и идеального подбора шин –  нужны передовые технологии
-                <!-- <span>Для победы в гонках MotoGP зачастую</span>
-                <span>недостаточно таланта и идеального подбора шин – </span>
-                <span>нужны передовые технологии</span> -->
+                Для победы в гонках MotoGP зачастую недостаточно таланта и идеального подбора шин –  нужны передовые технологии.
               </p>
               <p class="text technology__text">
                 Чем выше вычислительная мощность, тем больше реальная скорость на треке. Дело за Lenovo!
@@ -179,7 +212,7 @@
             </div>
             <div class="balance__item balance__item-2">
               <p class="balance__item-text">
-                <span>Несколько секунд на пит&nbsp;-&nbsp;стопе —</span>
+                <span>Несколько секунд на пит-стопе —</span>
                 <span>и информация попадает</span>
                 <span>на ноутбук Lenovo ThinkPad P1</span>
                 <span>инженеров Ducati.</span>

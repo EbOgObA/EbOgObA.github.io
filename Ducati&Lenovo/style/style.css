@@ -265,7 +265,7 @@ body.hidden {
 /* User Styles
     ========================================================================== */
 
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -274,21 +274,39 @@ body.hidden {
   height: 100%;
 }
 
-/* .header.active {
-  background-image: url('../img/header/header-bg.jpg');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+.header__container {
+  position: relative;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header__blind {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  background-color: #000;
+  width: 100vw;
+  height: 100%;
+}
+
+.header__blind_left {
+  left: 1.5%;
+  transform: translate(-97.5%,-50%);
+}
+
+.header__blind_right {
+  right: 1.5%;
+  transform: translate(97.5%,-50%);
+}
 
 .header-left {
   position: absolute;
   top: 0;
-  left: -28.5%;
+  left: -25%;
   height: 100%;
   width: 79%;
   transform: skewX(-23.5deg);
-  /* background-color: #E20B21; */
   background-color: #6E6C6A;
   overflow: hidden;
 }
@@ -318,55 +336,187 @@ body.hidden {
 .header-left__content {
   position: absolute;
   top: 50%;
-  /* left: calc(32% + 115px); */
   right: -215px;
   width: 100%;
-  /* height: 90%; */
   height: 100%;
   transform: translateY(-50%) skewX(23.5deg);
-  /* background-color: #E20B21; */
 }
 
 .logo-ducati {
   position: absolute;
-  top: 50%;
-  right: 500px;
-  max-width: 510px;
+  top: 49%;
+  right: 525px;
+  max-width: 503px;
   transform: translateY(-50%);
 }
 
 .header-right {
   position: absolute;
   top: 0;
-  right: -28.5%;
+  right: -31.8%;
   height: 100%;
   width: 78.5%;
   transform: skewX(-23.5deg);
-  /* background-color: #E20B21; */
   background-color: #6E6C6A;
 }
 
 .header-right__content {
   position: absolute;
-  top: 54%;
-  left: -220px;
+  top: 53.2%;
+  left: -228px;
   width: 100%;
-  max-width: 1020px;
-  /* height: 440px; */
+  max-width: 1023px;
   transform: translateY(-50%) skewX(23.5deg);
 }
 
 .logo-lenovo {
   display: block;
-  /* width: 986px; */
-  max-width: 95%;
-  margin: 0px 0px 5% 5%;
+  max-width: 96%;
+  margin: 0px 0px 70px 5%;
 }
 
 .logo-lenovo__fact {
   display: block;
-  /* height: 44px; */
+  max-height: 44px;
+  margin-left: 10px;
+} */
+
+
+
+.header {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  padding: 60px 110px;
 }
+
+.header__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+}
+
+.header__blind {
+  position: absolute;
+  top: 50%;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+
+.header__blind_left {
+  left: 0;
+  transform: translate(-104.5%,-50%);
+}
+
+.header__blind_right {
+  right: 0;
+  transform: translate(104.5%,-50%);
+}
+
+.header__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100vw;
+  background-color: #6E6C6A;
+  overflow: hidden;
+}
+
+.header__bg_left {
+  transform: translateX(-96.9%) translateY(-50%) skewX(-23.5deg);
+  /* border-right: 110px solid #E20B21; */
+}
+
+.header__bg_right {
+  transform: translateX(2.9%) translateY(-50%) skewX(-23.5deg);
+}
+
+.header__bg-border {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 5.73%;
+  height: 100%;
+  transform: translate(0,-50%);
+  background-color: #E20B21;
+}
+
+.header-left__overlay {
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  width: calc(100% - 110px);
+  height: calc(100% - 120px);
+  transform: translate(0,-50%) skewX(23.5deg);
+  background-color: #E20B21;
+}
+
+.header__container {
+  position: relative;
+  z-index: 1;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1700px;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: #E20B21; */
+}
+
+.header-left {
+  flex: 0 0 40%;
+}
+
+.header-right {
+  flex: 0 0 60%;
+}
+
+.header-left__content,
+.header-right__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-right__content {
+  flex-direction: column;
+}
+
+/* .header__container img {
+  width: 0;
+} */
+
+.logo-ducati {
+  width: 75%;
+  max-width: 510px;
+  transform: translate(20px,0);
+}
+
+.logo-lenovo {
+  width: 95.5%;
+  max-width: 974.1px;
+  margin: 9.314% 0 6.863% auto;
+}
+
+.logo-lenovo__fact {
+  max-height: 45px;
+  max-width: 1020px;
+}
+
+
+
 
 .accelerator {
   position: relative;
@@ -404,7 +554,6 @@ body.hidden {
   position: absolute;
   top: 0;
   right: 0;
-  /* transform: translateX(-50%); */
   z-index: 1;
   pointer-events: none;
   max-width: 1920px;
@@ -1243,16 +1392,17 @@ body.hidden {
     line-height: 30px;
   }
   
-  .logo-ducati {
+  /* .logo-ducati {
     top: 50%;
     right: 35%;
     width: 33%;
   }
   
   .header-right__content {
-    left: -10%;
+    left: -13%;
     width: 60%;
-  }
+  } */
+
 
   .title,
   .accelerator__title,
@@ -1366,14 +1516,36 @@ body.hidden {
     font-size: 20px;
     line-height: 30px;
   }
+
+  /* .header__bg-border {
+    width: 5.74%;
+  } */
+
+  /* .header__blind_left {
+    left: 7.5%;
+  }
+
+  .header__blind_right {
+    right: 7.5%;
+  } */
+
+  /* .logo-ducati {
+    width: 30%;
+    right: 50%;
+    transform: translate(40%, -50%);
+  }
   
   .header-right__content {
-    left: -5%;
+    left: -15%;
+  }
+
+  .logo-lenovo {
+    margin: 0 0 50px 5%;
   }
 
   .header-left::after {
     width: 60px;
-  }
+  } */
 
   .accelerator {
     margin: 0 0 10%;
@@ -1530,7 +1702,7 @@ body.hidden {
     line-height: 30px;
   }
   
-  .header-right {
+  /* .header-right {
     right: -30.5%;
     width: 81%;
   }
@@ -1546,7 +1718,7 @@ body.hidden {
 
   .logo-ducati {
     right: 45%;
-  }
+  } */
 
   .accelerator {
     margin: 0;
@@ -1899,8 +2071,31 @@ body.hidden {
   .container {
     padding: 0 25px;
   }
-  
+
   .header {
+    position: relative;
+    width: 100%;
+    height: 56.58vw;
+    padding: 2.634% 5.265%;
+  }
+
+  .header__video,
+  .header__blind {
+    display: none;
+  }
+
+  .header-left__overlay {
+    width: calc(100% - 10.53%);
+    height: calc(100% - 5.268%);
+    right: 3%;
+    transform: translate(50%,-50%) skewX(23.5deg);
+  }
+
+  .logo-ducati {
+    transform: translate(5px,0);
+  }
+  
+  /* .header {
     position: relative;
     height: 500px;
   }
@@ -1920,7 +2115,7 @@ body.hidden {
 
   .logo-ducati {
     right: 200px;
-  }
+  } */
 
   .accelerator {
     min-height: auto;
@@ -2117,7 +2312,7 @@ body.hidden {
     min-width: 380px;
   }
   
-  .header {
+  /* .header {
     position: relative;
     height: 250px;
   }
@@ -2133,7 +2328,7 @@ body.hidden {
 
   .logo-ducati {
     right: 155px;
-  }
+  } */
 
   .accelerator {
     min-height: 650px;
@@ -2160,6 +2355,10 @@ body.hidden {
 
   .accelerator-img-3 {
     top: 125%;
+  }
+
+  .accelerator__title {
+    padding: 30px 0 0;
   }
 
   .accelerator__text {
