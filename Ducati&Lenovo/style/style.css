@@ -1516,6 +1516,10 @@ body.hidden {
     font-size: 20px;
     line-height: 30px;
   }
+
+  .logo-ducati {
+    transform: translate(40px,0);
+  }
   
   /* .header-left__overlay {
     right: -47.5%;
@@ -1704,6 +1708,10 @@ body.hidden {
     display: block;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  .logo-ducati {
+    transform: translate(20px,0);
   }
   
   /* .header-right {
