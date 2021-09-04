@@ -513,8 +513,10 @@ body.hidden {
 }
 
 .logo-lenovo__fact {
-  max-height: 45px;
-  max-width: 1020px;
+  max-height: 44px;
+  width: 92%;
+  max-width: 815px;
+  margin: 0 auto 0 0;
 }
 
 
