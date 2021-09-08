@@ -1,15 +1,15 @@
-// import './style.css'
-// import * as THREE from 'three'
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-// import * as dat from 'dat.gui'
+import './style.css'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import * as dat from 'dat.gui'
 
 // Loading
 const textureLoader = new THREE.TextureLoader()
 
-const normalTexture = textureLoader.load('../textures/NormalMap.png')
+const normalTexture = textureLoader.load('/textures/NormalMap.png')
 
 // Debug
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
