@@ -134,6 +134,26 @@ window.onload = function () {
     menu.classList.toggle('active');
   })
 
+  // ===================  LOUPES  ===================
+  let loupeItems = document.querySelectorAll('.loupe-item');
+  // let loupeLine = document.querySelectorAll('.loupe-item__line');
+  if (loupeItems) {
+    loupeItems.forEach(item => {
+      let w = item.offsetWidth;
+      item.style.height = w + 'px';
+      
+      let wl = item.querySelector('.loupe-item__line').offsetWidth;
+      item.querySelector('.loupe-item__line').style.transformOrigin = wl + w/2 + 'px center';
+
+      window.addEventListener('resize', () => {
+        let w = item.offsetWidth;
+        item.style.height = w + 'px';
+
+        let wl = item.querySelector('.loupe-item__line').offsetWidth;
+        item.querySelector('.loupe-item__line').style.transformOrigin = wl + w/2 + 'px center';
+      })
+    })
+  }
 
   // ===================  ANIMATION  ===================
   let facial = document.querySelector('.facial');
@@ -547,6 +567,40 @@ window.onload = function () {
   })
 
   // ===================  SLIDERS  ===================
+
+    // ===================  SLIDER LOUPE  ===================
+    let loupeThumb = document.querySelector('.thumbs-loupe');
+    let loupeSlider = document.querySelector('.loupe-slider');
+    if (loupeThumb) {
+      let thumbeLoupe = new Swiper(loupeThumb, {
+        spaceBetween: 0,
+        // initialSlide: 1,
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          }
+        }
+        
+      });
+      var sliderLoupe = new Swiper(loupeSlider, {
+        slidesPerView: 1,
+        thumbs: {
+          swiper: thumbeLoupe,
+        },
+        pagination: {
+          el: '.loupe-slider__pagination',
+          type: 'bullets',
+          // clickable: true
+        },
+      });
+    }
+
 
     // ===================  SLIDER RECOM  ===================
     let recomSliders = document.querySelectorAll('.recom-slider');
