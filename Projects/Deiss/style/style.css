@@ -3167,6 +3167,7 @@ body.lock {
 .filter-slider {
   max-width: 510px;
   margin: 0 auto 43px;
+  transform: translate(11px, 0);
 }
 
 .filter-slider__button {
@@ -4829,6 +4830,7 @@ body.lock {
     /* max-width: 235px; */
     max-width: 100%;
     margin: 0 0 23px;
+    transform: translate(0, 0);
   }
 
   .filter-slider__button {
