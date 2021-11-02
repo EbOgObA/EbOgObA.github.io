@@ -113,12 +113,8 @@
 }());
 
 window.onload = function () {
-  // let scriptGsap = document.querySelector('script[src="js/gsap.min.js"]');
-  // let scriptScrollTrigger = document.querySelector('script[src="js/ScrollTrigger.min.js"]');
 
-  // if (scriptScrollTrigger && scriptGsap) {
-  // }
-
+  // ===================  SELECT  =================== 
   function select() {
     let selectHeader = document.querySelectorAll('.select__header');
     let selectItem = document.querySelectorAll('.select__item');
@@ -147,14 +143,11 @@ window.onload = function () {
   if (selectElements) { select() }
 
 
-
+  // ===================  MENU  ===================
   let body = document.querySelector('body');
   let burger = document.querySelector('.ham');
   let menu = document.querySelector('.menu');
 
-
-
-  // ===================  MENU  ===================
   burger.addEventListener('click', function () {
     if (burger.classList.contains('active') && !burger.classList.contains('back')) {
       burger.classList.add('back');
@@ -168,9 +161,7 @@ window.onload = function () {
   })
 
 
-
   // ===================  SUBSCRIBE FORM  ===================
-
   let subForm = document.querySelector('.subscription__form');
   let subBtn = document.querySelector('.subscription__button');
   let subInput = document.querySelector('.subscription__input');
@@ -202,13 +193,11 @@ window.onload = function () {
   }
 
 
-
   // ===================  RANGE  ===================
   let rangeSliders = document.querySelectorAll('.range');
   if (rangeSliders) {
     range(rangeSliders);
   }
-
   function range(sliders) {
     sliders.forEach(el => {
       let sliderOne = el.querySelector('.range__slider-1');
@@ -251,7 +240,6 @@ window.onload = function () {
     percent2 = (sliderTwo.value / sliderMaxValue) * 100;
     sliderTrack.style.background = `linear-gradient(to right, ${color2} ${percent1}% , ${color1} ${percent1}% , ${color1} ${percent2}%, ${color2} ${percent2}%)`;
   }
-
 
 
   // ===================  POPUP  ===================
@@ -378,7 +366,6 @@ window.onload = function () {
       })
     })
   }
-
 
 
   // ===================  ANIMATION  ===================
@@ -653,6 +640,8 @@ window.onload = function () {
 
 
 
+
+
   // ===================  SLIDERS  ===================
 
   // ===================  SLIDER LOUPE  ===================
@@ -661,7 +650,6 @@ window.onload = function () {
   if (loupeThumb) {
     let thumbeLoupe = new Swiper(loupeThumb, {
       spaceBetween: 0,
-      // initialSlide: 1,
       breakpoints: {
         320: {
           slidesPerView: 2,
@@ -683,7 +671,6 @@ window.onload = function () {
       pagination: {
         el: '.loupe-slider__pagination',
         type: 'bullets',
-        // clickable: true
       },
     });
   }
@@ -758,8 +745,6 @@ window.onload = function () {
 
   // ===================  SLIDER FILTER  ===================
   let filterSliders = document.querySelectorAll('.filter-slider');
-  // let filterPagItems = document.querySelectorAll('.filter-slider__pagination-item');
-  // let filterInp = document.querySelectorAll('.slide-filter__radio');
 
   if (filterSliders) {
     filterSliders.forEach(slider => {
@@ -767,12 +752,10 @@ window.onload = function () {
       if (window.innerWidth < 570) {
         let filterSlider = new Swiper(slider, {
           slidesPerView: 4,
-          // spaceBetween: 18,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
-          // init: false,
         })
       }
 
@@ -781,7 +764,6 @@ window.onload = function () {
           if (!filterSlider) {
             filterSlider = new Swiper(slider, {
               slidesPerView: 4,
-              // spaceBetween: 18,
               navigation: {
                 nextEl: '.filter-slider__button-next',
                 prevEl: '.filter-slider__button-prev',
