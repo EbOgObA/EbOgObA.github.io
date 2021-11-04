@@ -955,6 +955,7 @@ body.ie ._ibg img {
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #ffffff;
   background-color: #ea0042;
   -webkit-box-shadow: 0 4px 0 0 #99002b;
