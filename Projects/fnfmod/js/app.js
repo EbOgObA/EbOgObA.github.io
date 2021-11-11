@@ -21,20 +21,20 @@ sublist.forEach(list => {
     }
   })
   document.addEventListener('keydown', function (e) {
-		if (e.code === 'Escape') {
-			_slideUp(list.querySelector('.sublist__body'), 200);
+    if (e.code === 'Escape') {
+      _slideUp(list.querySelector('.sublist__body'), 200);
       list.classList.remove('_active');
-		}
-	});
+    }
+  });
 })
 
 let searchForm = document.querySelector('.header__form-search');
 let searchInput = document.querySelector('.header__search-input');
-let searchBtnBack = document.querySelector('.header__form-search-btn_back svg');
+let searchBtnBack = document.querySelector('.header__form-search-btn_back');
 let searchBtnClear = document.querySelector('.header__form-search-btn_clear');
 let searchBtnSubmit = document.querySelector('.header__form-search-btn_submit');
 let searchOverlay = document.querySelector('.header__form-search-overlay');
-let searchMobBnt = document.querySelector('.header__search-btn-mob svg');
+let searchMobBnt = document.querySelector('.header__search-btn-mob');
 if (searchForm) {
   searchInput.addEventListener('focus', (e) => {
     searchForm.classList.add('_active');
@@ -53,7 +53,6 @@ if (searchForm) {
       if (unlock) {
         body_lock(100)
       }
-      // searchInput.value = '';
     }
   })
   searchBtnClear.addEventListener('click', (e) => {
@@ -67,7 +66,13 @@ if (searchMobBnt) {
   searchMobBnt.addEventListener('click', () => {
     searchForm.classList.add('_active');
     searchInput.classList.add('_active');
+    searchInput.focus();
+    searchInput.select();
+    // setTimeout(() => {
+
+    // }, 500)
     searchOverlay.classList.add('_active');
+
     if (unlock) {
       body_lock(100)
     }
@@ -79,31 +84,57 @@ let formMessageError = document.querySelector('.message_error');
 let formBtnComment = document.querySelector('.game-comments__form .button');
 let formInputComment = document.querySelector('.game-comments__form-input');
 let formMessageClose = document.querySelectorAll('.message .close');
-if (formBtnComment) {
+
+if (formInputComment) {
   formBtnComment.addEventListener('click', () => {
+    let dataValue = formInputComment.getAttribute('data-value');
+
     if (formInputComment.value == '') {
-      formMessageDone.classList.add('_active');
+      setTimeout(function () {
+        formMessageDone.style.opacity = '1';
+        formMessageDone.style.visibility = 'visible';
+      }, 300)
+
+      setTimeout(function () {
+        formMessageError.style.opacity = '0';
+        formMessageError.style.visibility = 'hidden';
+        formMessageDone.style.opacity = '0';
+        formMessageDone.style.visibility = 'hidden';
+      }, 5e3)
     } else {
-      formMessageError.classList.add('_active');
+      setTimeout(function () {
+        formMessageError.style.opacity = '1';
+        formMessageError.style.visibility = 'visible';
+      }, 300)
+
+      setTimeout(function () {
+        formMessageError.style.opacity = '0';
+        formMessageError.style.visibility = 'hidden';
+        formMessageDone.style.opacity = '0';
+        formMessageDone.style.visibility = 'hidden';
+      }, 5e3)
     }
   })
 
   formMessageClose.forEach(item => {
     item.addEventListener('click', () => {
-      item.parentNode.classList.remove('_active');
+      setTimeout(function () {
+        item.parentNode.style.opacity = '0';
+        item.parentNode.style.visibility = 'hidden';
+      }, 300)
     })
   })
 }
 
 let categoriesSortItems = document.querySelectorAll('.b-categories__sort-item');
 categoriesSortItems.forEach(item => {
-  item.addEventListener('mouseenter', function() {
+  item.addEventListener('mouseenter', function () {
     if (!item.classList.contains('_active')) {
-      item.style = 'background-color: #dcdcdc;'
+      item.style = 'background-color: #C5C5C5;'
       item.parentNode.style = 'background-color: #fff;';
     }
   })
-  item.addEventListener('mouseleave', function() {
+  item.addEventListener('mouseleave', function () {
     if (!item.classList.contains('_active')) {
       item.style = 'background-color: transparent'
     }
@@ -111,11 +142,35 @@ categoriesSortItems.forEach(item => {
   })
 })
 
+let actionBtns = document.querySelectorAll('.b-game__actions-item._popup-link');
+actionBtns.forEach(item => {
+  item.addEventListener('click', () => {
+    let popup = document.querySelector('.popup_review');
+
+    setTimeout(() => {
+      popup.querySelector('.input').focus();
+      popup.querySelector('.input').select();
+    }, 250)
+  })
+})
+
+let feedbackLink = document.querySelectorAll('a[href="#feedback"]');
+feedbackLink.forEach(item => {
+  item.addEventListener('click', () => {
+    let popup = document.querySelector('.popup_feedback');
+
+    setTimeout(() => {
+      popup.querySelector('.input').focus();
+      popup.querySelector('.input').select();
+    }, 250)
+  })
+})
+
 function findVideos() {
   let videos = document.querySelectorAll('.video');
 
   for (let i = 0; i < videos.length; i++) {
-      setupVideo(videos[i]);
+    setupVideo(videos[i]);
   }
 }
 
@@ -126,11 +181,11 @@ function setupVideo(video) {
   let id = parseMediaURL(media);
 
   video.addEventListener('click', () => {
-      let iframe = createIframe(id);
+    let iframe = createIframe(id);
 
-      link.remove();
-      button.remove();
-      video.appendChild(iframe);
+    link.remove();
+    button.remove();
+    video.appendChild(iframe);
   });
 
   link.removeAttribute('href');
@@ -499,7 +554,8 @@ function popup_open(item, video = '') {
 		popup_close('', false);
 	}
 	let curent_popup = document.querySelector('.popup_' + item);
-  curent_popup.querySelector('.input').focus();
+  // curent_popup.querySelector('.input').focus();
+  // curent_popup.querySelector('.input').select();
 
 	if (curent_popup && unlock) {
 		if (video != '' && video != null) {
