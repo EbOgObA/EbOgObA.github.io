@@ -131,6 +131,10 @@ function homeSliderInit() {
     homeSlider = new Swiper('.b-home__slider', {
       slidesPerView: 1,
       // autoHeight: true
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       spaceBetween: 10,
       pagination: {
         el: '.b-home__slider-pagination',
