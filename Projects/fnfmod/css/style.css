@@ -4249,6 +4249,13 @@ body.ie ._ibg img {
   .game-comments__button {
     margin: 30px 0 0;
   }
+
+  .message {
+    bottom: 25px;
+    right: 50%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
 }
 
 @media (max-width: 479.98px) {
@@ -4339,5 +4346,10 @@ body.ie ._ibg img {
 
   .game-descr__video {
     max-width: 300px;
+  }
+
+  .message {
+    width: 100%;
+    max-width: calc(100% - 50px);
   }
 }
