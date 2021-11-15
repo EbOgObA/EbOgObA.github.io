@@ -36,14 +36,21 @@ let searchBtnSubmit = document.querySelector('.header__form-search-btn_submit');
 let searchOverlay = document.querySelector('.header__form-search-overlay');
 let searchMobBnt = document.querySelector('.header__search-btn-mob');
 if (searchForm) {
-  searchInput.addEventListener('focus', (e) => {
+  searchInput.addEventListener('click', (e) => {
     searchForm.classList.add('_active');
     searchInput.classList.add('_active');
     searchOverlay.classList.add('_active');
     if (unlock) {
-      body_lock(100)
+      body_lock_add(100)
     }
   })
+
+  searchBtnClear.addEventListener('click', (e) => {
+    e.preventDefault();
+    searchInput.value = '';
+    searchInput.focus();
+  })
+
   document.addEventListener('click', (e) => {
     let target = e.target;
     if (target == searchBtnBack || target == searchOverlay) {
@@ -54,11 +61,6 @@ if (searchForm) {
         body_lock(100)
       }
     }
-  })
-  searchBtnClear.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchInput.value = '';
-    searchInput.focus();
   })
 }
 
