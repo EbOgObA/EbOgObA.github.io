@@ -128,6 +128,21 @@ if (formInputComment) {
   })
 }
 
+let langs = document.querySelector('.langs');
+let langsList = document.querySelector('.langs-list');
+if (langs) {
+  langs.addEventListener('click', function() {
+
+    if (!this.classList.contains('_active')) {
+      _slideDown(langsList, 200);
+    } else {
+      _slideUp(langsList, 200);
+    }
+
+    this.classList.toggle('_active');
+  })
+}
+
 let categoriesSortItems = document.querySelectorAll('.b-categories__sort-item');
 categoriesSortItems.forEach(item => {
   item.addEventListener('mouseenter', function () {
@@ -175,7 +190,7 @@ if (gameBlock && gameBlock.classList.contains('_only-pc')) {
   let gameBlockBtnHref = gameBlockBtn.getAttribute('href');
   let gameBlockBtnText = gameBlockBtn.textContent;
 
-  if (window.innerWidth < 767.98) {
+  if (window.innerWidth < 899.98) {
     gameBlockBtn.innerHTML = 'play another';
 
 
@@ -195,7 +210,7 @@ if (gameBlock && gameBlock.classList.contains('_only-pc')) {
   }
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 767.98) {
+    if (window.innerWidth < 899.98) {
       gameBlockBtn.innerHTML = 'play another';
 
       gameBlockBtn.addEventListener('click', (e) => {
