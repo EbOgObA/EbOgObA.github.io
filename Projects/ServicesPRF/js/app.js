@@ -705,17 +705,13 @@ document.addEventListener('DOMContentLoaded', function () {
               // if ((e.which < 48 || e.which > 57) && e.which != 8) {console.log(e);}
             // });
 
-
-
             input.classList.add('_mask');
-            Inputmask({
+            Inputmask('[999] [999] [999] [999] [999]',{
               "placeholder": '',
-              regex: "^[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{3} [0-9]{3}$",
-              numericInput: true,
-              inputFormat: "999 999 999 999 999",
-              outputFormat: "999 999 999 999 999",
+              // numericInput: true,
+              // inputFormat: "999 999 999 999 999",
+              // outputFormat: "999 999 999 999 999",
               rightAlign: false,
-              undoOnEscape: false,
               // regex: '/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 "',
               // String(this).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
               clearIncomplete: true,
