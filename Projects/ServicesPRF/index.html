@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Статус малоимущей семьи</title>
+  <title>Главная</title>
 
   <link rel="stylesheet" href="style/style.css">
 </head>
@@ -19,19 +19,19 @@
         <img class="poorfam__image" src="img/family.svg" alt="Калькулятор малоимущей семьи">
         <div class="poorfam__title">Калькулятор малоимущей семьи</div>
         <div class="poorfam__subtitle">Прежде чем запустить расчет, укажите необходимые данные</div>
-        <form action="#" class="poorfam__calc">
+        <form action="#" class="form poorfam__calc">
           <div class="form__line form__line-member">
             <div class="form__line-title">Количество членов семьи</div>
             <input id="num_family" class="input _req _integer2d" type="text" name="family_members"
-              data-value="Введите число" data-error="Заполните поле">
+              data-value="Введите число" data-error="Заполните поле" inputmode="numeric">
           </div>
           <div class="form__line form__line-income">
             <div class="form__line-title">
               Совокупный доход всех членов семьи
               <a class="help" href="#"><img src="img/icons/help-circle.svg" alt=""></a>
             </div>
-            <input id="total_income" class="input _req _digital" type="text" name="total_income"
-              data-value="Сумма за последние 3 месяца" data-error="Заполните поле">
+            <input id="total_income" class="input _req _integer1000" type="text" name="total_income"
+              data-value="Сумма за последние 3 месяца" data-error="Заполните поле" inputmode="numeric">
           </div>
           <div class="form__line">
             <button class="btn" type="submit">Рассчитать</button>
@@ -39,12 +39,291 @@
         </form>
       </div>
 
+      <div class="seniority">
+        <div class="seniority__header">
+          <div class="title">Узнать свой стаж</div>
+        </div>
+        <form id="seniority_calculator" action="#" class="form seniority__calculator">
+          <div class="seniority__calculator-block seniority__exp">
+            <div class="form__row form__row-indelible">
+              <div class="form__column">
+                <div class="text">Стаж на дату</div>
+                <div class="form__line form__date">
+                  <input id="seniority_on_date" class="input _date" type="text" name="begin_stag_date" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="text">Составляет</div>
+                <div class="seniority__count">
+                  <div class="form__line">
+                    <span>лет</span>
+                    <input id="seniority_on_date_years" name="seniority_exp_years" class="input _integer2d"
+                      type="text" data-value="" inputmode="numeric">
+                  </div>
+                  <div class="form__line">
+                    <span>мес</span>
+                    <input id="seniority_on_date_month" name="seniority_exp_month" class="input _month" type="text"
+                      data-value="" inputmode="numeric">
+                  </div>
+                  <div class="form__line">
+                    <span>дн</span>
+                    <input id="seniority_on_date_days" name="seniority_exp_days" class="input _days" type="text"
+                      data-value="" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+              <div class="form__column form__column-btns">
+                <button class="clear__btn" type="button">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path
+                      d="M9.23389 17.2563C13.376 17.2563 16.7339 13.8985 16.7339 9.75635C16.7339 5.61421 13.376 2.25635 9.23389 2.25635C5.09175 2.25635 1.73389 5.61421 1.73389 9.75635C1.73389 13.8985 5.09175 17.2563 9.23389 17.2563Z"
+                      stroke="#C4CFEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.4839 7.50635L6.98389 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.98389 7.50635L11.4839 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="seniority__calculator-block seniority__dates">
+            <div class="form__row form__row-indelible">
+              <div class="form__column">
+                <div class="text">Дата приёма на работу</div>
+                <div class="form__line form__date date_begin">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="text">Дата увольнения</div>
+                <div class="form__line form__date date_end">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column form__column-btns">
+                <button class="current__date" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" fill="white" stroke="#D3DBEC" />
+                    <rect class="check" x="4" y="4" width="10" height="10" rx="5" fill="#D2E558" />
+                  </svg>
+                </button>
+                <button class="clear__btn" type="button">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path
+                      d="M9.23389 17.2563C13.376 17.2563 16.7339 13.8985 16.7339 9.75635C16.7339 5.61421 13.376 2.25635 9.23389 2.25635C5.09175 2.25635 1.73389 5.61421 1.73389 9.75635C1.73389 13.8985 5.09175 17.2563 9.23389 17.2563Z"
+                      stroke="#C4CFEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.4839 7.50635L6.98389 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.98389 7.50635L11.4839 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <div class="text">Дата приёма на работу</div>
+                <div class="form__line form__date date_begin">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="text">Дата увольнения</div>
+                <div class="form__line form__date date_end">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column form__column-btns">
+                <button class="current__date" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" fill="white" stroke="#D3DBEC" />
+                    <rect class="check" x="4" y="4" width="10" height="10" rx="5" fill="#D2E558" />
+                  </svg>
+                </button>
+                <button class="clear__btn" type="button">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path
+                      d="M9.23389 17.2563C13.376 17.2563 16.7339 13.8985 16.7339 9.75635C16.7339 5.61421 13.376 2.25635 9.23389 2.25635C5.09175 2.25635 1.73389 5.61421 1.73389 9.75635C1.73389 13.8985 5.09175 17.2563 9.23389 17.2563Z"
+                      stroke="#C4CFEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.4839 7.50635L6.98389 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.98389 7.50635L11.4839 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <div class="text">Дата приёма на работу</div>
+                <div class="form__line form__date date_begin">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="text">Дата увольнения</div>
+                <div class="form__line form__date date_end">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column form__column-btns">
+                <button class="current__date" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" fill="white" stroke="#D3DBEC" />
+                    <rect class="check" x="4" y="4" width="10" height="10" rx="5" fill="#D2E558" />
+                  </svg>
+                </button>
+                <button class="clear__btn" type="button">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path
+                      d="M9.23389 17.2563C13.376 17.2563 16.7339 13.8985 16.7339 9.75635C16.7339 5.61421 13.376 2.25635 9.23389 2.25635C5.09175 2.25635 1.73389 5.61421 1.73389 9.75635C1.73389 13.8985 5.09175 17.2563 9.23389 17.2563Z"
+                      stroke="#C4CFEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.4839 7.50635L6.98389 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.98389 7.50635L11.4839 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a class="btn__add" href="#">
+              <img src="img/icons/plus-circle.svg" alt="#">
+              Добавить период работы
+            </a>
+          </div>
+          <div class="seniority__calculator-block seniority__additional-dates">
+            <div class="seniority__calculator-subtitle">Дополнительные периоды</div>
+            <div class="form__row form__row-indelible">
+              <div class="form__column">
+                <div class="text">Дата начала периода</div>
+                <div class="form__line form__date date_begin">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="text">Дата окончания периода</div>
+                <div class="form__line form__date date_end">
+                  <input class="input _date" type="text" data-value="Выбрать дату" inputmode="numeric">
+                </div>
+              </div>
+              <div class="form__column form__column-btns">
+                <button class="current__date" type="button">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <rect x="0.5" y="0.5" width="17" height="17" rx="8.5" fill="white" stroke="#D3DBEC" />
+                    <rect class="check" x="4" y="4" width="10" height="10" rx="5" fill="#D2E558" />
+                  </svg>
+                </button>
+                <button class="clear__btn" type="button">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none">
+                    <path
+                      d="M9.23389 17.2563C13.376 17.2563 16.7339 13.8985 16.7339 9.75635C16.7339 5.61421 13.376 2.25635 9.23389 2.25635C5.09175 2.25635 1.73389 5.61421 1.73389 9.75635C1.73389 13.8985 5.09175 17.2563 9.23389 17.2563Z"
+                      stroke="#C4CFEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.4839 7.50635L6.98389 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M6.98389 7.50635L11.4839 12.0063" stroke="#C4CFEA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <a class="btn__add" href="#">
+              <img src="img/icons/plus-circle.svg" alt="#">
+              Добавить период работы
+            </a>
+          </div>
+          <div class="seniority__calculator-block seniority__select">
+            <div class="form__row">
+              <div class="form__column">
+                <div class="text">
+                  Вы проходили воинскую службу?
+                  <a class="help" href="#"><img src="img/icons/help-circle.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="form__line">
+                  <select name="form[]" class="form">
+                    <option value="0" selected="selected">Нет</option>
+                    <option value="1">Да, 1 год, 1 день за 1</option>
+                    <option value="2">Да, 1 год, 1 день за 2</option>
+                    <option value="3">Да, 1.5 года, 1 день за 2</option>
+                    <option value="4">Да, 2 года, 1 день за 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <div class="text">
+                  Вы находились в отпуске по уходу за ребенком?
+                </div>
+              </div>
+              <div class="form__column">
+                <div class="form__line">
+                  <select name="form[]" class="form">
+                    <option value="0" selected="selected">Нет</option>
+                    <option value="1.6">Да, за 1 ребенком</option>
+                    <option value="3">Да, за 2 детьми, в разное время</option>
+                    <option value="4.6">Да, за 3 и более детьми, в разное время</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="seniority__footer">
+          <button class="btn__calc btn" type="submit" form="seniority_calculator">Рассчитать</button>
+          <button class="btn__reset" type="button" form="seniority_calculator">Сбросить</button>
+        </div>
+        <div class="seniority__result">
+          <div class="seniority__result-header">
+            <div class="title">Ваш страховой стаж </div>
+            <div class="result"></div>
+            <div class="download_result">
+              <img src="img/icons/file.svg" alt="#">скачать расчёт
+            </div>
+          </div>
+          <div class="details">
+            <div class="seniority__calculator-subtitle">Детали расчёта</div>
+            <!-- <div class="details__row">
+              <div class="details__col">
+                <div class="details__name">Дата приёма на работу</div>
+                <div class="details__value acceptance">04.07.2013</div>
+              </div>
+              <div class="details__col">
+                <div class="details__name">Дата увольнения</div>
+                <div class="details__value dismissal">04.07.2018</div>
+              </div>
+              <div class="details__col">
+                <div class="details__name">Продолжительность периода</div>
+                <div class="details__value duration">88 лет 12 месяцев 365 дня</div>
+              </div>
+            </div>
+            <div class="details__row">
+              <div class="details__col">
+                <div class="details__name">Дата приёма на работу</div>
+                <div class="details__value acceptance">04.07.2013</div>
+              </div>
+              <div class="details__col">
+                <div class="details__name">Дата увольнения</div>
+                <div class="details__value dismissal">04.07.2018</div>
+              </div>
+              <div class="details__col">
+                <div class="details__name">Продолжительность периода</div>
+                <div class="details__value duration">88 лет 12 месяцев 365 дня</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/libs/jquery-ui.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script src="js/libs/jquery-ui.min.js"></script> -->
   <script src="js/libs/inputmask.min.js"></script>
+  <script src="js/libs/datepicker-full.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 
