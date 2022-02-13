@@ -696,25 +696,34 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           if (input.classList.contains('_integer1000')) {
 
-            input.addEventListener("input", function (e) {
-              let parse = (s)=>[...s.replace(/[^0-9]/g,"")].reduce((a,c,i,l)=>a+=c+((l.length-i)%3==1?" ":"")||a,"");
-              e.target.value = parse(e.target.value);
-            });
-            // input.classList.add('_mask');
-            // Inputmask('', {
-            //   "placeholder": '',
-            //   numericInput: true,
-            //   inputFormat: "999 999 999",
-            //   outputFormat: "999 999 999",
-            //   // rightAlign: false,
-            //   // regex: '/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 "',
-            //   // String(this).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
-            //   clearIncomplete: true,
-            //   clearMaskOnLostFocus: true,
-            //   onincomplete: function () {
-            //     input_clear_mask(input, input_g_value);
-            //   }
-            // }).mask(input);
+            // input.addEventListener("input", function (e) {
+              // let parse = (s) => [...s.replace(/[^0-9]/g, "")].reduce((a, c, i, l) => a += c + ((l.length - i) % 3 == 1 ? " " : "") || a, "");
+              // let rez = parse(e.target.value);
+              // let parse = (s) => String(s).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
+              // e.target.value = parse(e.target.value);
+
+              // if ((e.which < 48 || e.which > 57) && e.which != 8) {console.log(e);}
+            // });
+
+
+
+            input.classList.add('_mask');
+            Inputmask({
+              "placeholder": '',
+              regex: "^[0-9]{3} [0-9]{3} [0-9]{3} [0-9]{3} [0-9]{3}$",
+              numericInput: true,
+              inputFormat: "999 999 999 999 999",
+              outputFormat: "999 999 999 999 999",
+              rightAlign: false,
+              undoOnEscape: false,
+              // regex: '/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 "',
+              // String(this).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
+              clearIncomplete: true,
+              clearMaskOnLostFocus: true,
+              onincomplete: function () {
+                input_clear_mask(input, input_g_value);
+              }
+            }).mask(input);
           }
           if (input.classList.contains('_month')) {
             input.classList.add('_mask');
