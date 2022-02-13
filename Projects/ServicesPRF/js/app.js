@@ -30,9 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       poorfam.insertAdjacentHTML('beforeend', '<div class="poorfam__result poorfam__result_loading loading">Производим расчет</div>');
       setTimeout(function () {
-
         document.querySelector('.poorfam__result_loading').remove();
-        result += +total_income_value / month / +family_members_value;
+        result += Number(total_income_value.replace(/\s/g, '')) / month / Number(family_members_value);
 
         for (let index = 0; index < inputs.length; index++) {
           inputs[index].value = inputs[index].getAttribute('data-value');
@@ -696,30 +695,33 @@ document.addEventListener('DOMContentLoaded', function () {
           }
           if (input.classList.contains('_integer1000')) {
 
-            // input.addEventListener("input", function (e) {
-              // let parse = (s) => [...s.replace(/[^0-9]/g, "")].reduce((a, c, i, l) => a += c + ((l.length - i) % 3 == 1 ? " " : "") || a, "");
-              // let rez = parse(e.target.value);
+            // let parse = (s) => [...s.replace(/[^0-9]/g, "")].reduce((a, c, i, l) => a += c + ((l.length - i) % 3 == 1 ? " " : "") || a, "");
+
+            function prettify(num) {
+              var n = num.toString();
+              n = n.replace(/\s/g, '');
+              return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+            }
+
+            input.addEventListener("input", function (e) {
+              let input = e.target.value;
+              input = input.replace (/\D/g, '');
+              e.target.value = prettify(input);
+
+              // if (input.length > 3) {
+              //   let output = parse(input);
+              //   input += output;
+              //   console.log(output);
+              // }
+
+              // e.target.value = output;
+
+              // return e.target.value = parse('11 005 0501098 04890');
+              // console.log(parse(e.target.value));
+              // console.log(parse(e.target.value));
               // let parse = (s) => String(s).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
-              // e.target.value = parse(e.target.value);
 
-              // if ((e.which < 48 || e.which > 57) && e.which != 8) {console.log(e);}
-            // });
-
-            input.classList.add('_mask');
-            Inputmask('[999] [999] [999] [999] [999]',{
-              "placeholder": '',
-              // numericInput: true,
-              // inputFormat: "999 999 999 999 999",
-              // outputFormat: "999 999 999 999 999",
-              rightAlign: false,
-              // regex: '/(\d)(?=(\d{3})+([^\d]|$))/g, "$1 "',
-              // String(this).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ')
-              clearIncomplete: true,
-              clearMaskOnLostFocus: true,
-              onincomplete: function () {
-                input_clear_mask(input, input_g_value);
-              }
-            }).mask(input);
+            });
           }
           if (input.classList.contains('_month')) {
             input.classList.add('_mask');
