@@ -17,6 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
       zoom: 15
     });
 
+    var myGeoObject = new ymaps.GeoObject({
+      geometry: {
+        type: "Point",
+        coordinates: [48.872185073737896, 2.354223999999991]
+      }
+    });
+
+
     var Placemark = new ymaps.Placemark([48.872185073737896, 2.354223999999991], {}, {
       iconLayout: 'default#image',
       iconImageHref: '../img/location.svg',
@@ -24,6 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
       iconImageOffset: [-14, -40]
     });
 
+
+    myMap.geoObjects.add(myGeoObject);
     myMap.geoObjects.add(Placemark);
 
   }
