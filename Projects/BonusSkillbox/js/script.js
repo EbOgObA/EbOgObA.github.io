@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var Placemark = new ymaps.Placemark([48.872185073737896, 2.354223999999991], {}, {
       iconLayout: 'default#image',
-      iconImageHref: 'img/location.svg',
+      iconImageHref: '../img/location.svg',
       iconImageSize: [28, 40],
       iconImageOffset: [-14, -40]
     });
