@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --vulcan: #12151e;
+  --ebony-clay: #272a38;
+  --ebony-clay: #1c1f2b;
+  --bali-hai: #8c99b2;
+  --azure-radiance: #0089ff;
+  --river-bed: #4b5169;
+  --torch-red: #ff1d25;
+  --tree-poppy: #f7931e;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
