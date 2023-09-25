@@ -1,0 +1,53 @@
+- var checkList = ['XIX век', 'XX век', 'Современность']
+- var galleryList = ['Картина Казимира Малевича - Фигура с розовым лицом','Картина Казимира Малевича - Женщина с граблями', 'Картина Казимира Малевича - Уборка ржи', 'Картина Ивана Клюнкова - Супрематизм', 'Картина Казимира Малевича - Женщина с ведрами', 'Картина Казимира Малевича - Супрематизм']
+- var galleryID = ['1', '2', '3', '4', '5', '6']
+//- - var ariaCheckTitle = ['Девятнадцатый век', 'Двадцатый век', 'Современность']
+
+section.section.gallery#gallery
+  .container.gallery__container
+    .gallery__content 
+      h2.title.title_white.gallery__title Галерея
+      .filter
+        .filter__title Фильтр:
+        form.form.filter__form(aria-label="Форма фильтрации")
+          select(class="sort" name="form")
+            option(value="Живопись" selected) Живопись
+            option(value="Рисунок") Рисунок
+            option(value="Скульптура") Скульптура
+          .checkbox.filter__check
+            ul.checkbox__list 
+              each val, ind in checkList 
+                li.checkbox__item 
+                  label.checkbox__label
+                    input.checkbox__input.visually-hidden(type="checkbox" name="century")
+                    span.checkbox__input-box 
+                    span.checkbox__text #{val}
+    .swiper.gallery__slider 
+      .swiper__nav.gallery__nav 
+        .swiper-button-prev.swiper-button.swiper-button_dark
+        .swiper-pagination.gallery__pagination
+        .swiper-button-next.swiper-button.swiper-button_dark
+      ul.swiper-wrapper.gallery__wrapper
+        - var n = 0 
+        each val, ind in galleryList
+          li.swiper-slide.gallery__slide 
+            - n++
+            a.gallery__link.popup-link(data-id=`${galleryID[ind]}`, href="#painting")
+              picture.gallery__picture 
+                source(srcset="@img/gallery/" + n + "/gallery-d@2x.webp" media="(min-resolution: 1.8dppx) and (min-width: 1024px)")
+                source(srcset="@img/gallery/" + n + "/gallery-d@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 1024px)")
+                source(srcset="@img/gallery/" + n + "/gallery-d@1x.webp" media="(min-width: 1024px)")
+                source(srcset="@img/gallery/" + n + "/gallery-d@1x.jpg" media="(min-width: 1024px)")
+                source(srcset="@img/gallery/" + n + "/gallery-t@2x.webp" media="(min-resolution: 1.8dppx) and (min-width: 768px)")
+                source(srcset="@img/gallery/" + n + "/gallery-t@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 768px)")
+                source(srcset="@img/gallery/" + n + "/gallery-t@1x.webp" media="(min-width: 768px)")
+                source(srcset="@img/gallery/" + n + "/gallery-t@1x.jpg" media="(min-width: 768px)")
+                source(srcset="@img/gallery/" + n + "/gallery-s@2x.webp" media="(min-resolution: 1.8dppx) and (min-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-s@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-s@1x.webp" media="(min-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-s@1x.jpg" media="(min-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-m@2x.webp" media="(min-resolution: 1.8dppx) and (max-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-m@2x.jpg" media="(min-resolution: 1.8dppx) and (max-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-m@1x.webp" media="(max-width: 480px)")
+                source(srcset="@img/gallery/" + n + "/gallery-m@1x.jpg" media="(max-width: 480px)") 
+                img.gallery__img.img(src="@img/gallery/" + n + "/gallery-d@1x.jpg", alt=`${val}`)
