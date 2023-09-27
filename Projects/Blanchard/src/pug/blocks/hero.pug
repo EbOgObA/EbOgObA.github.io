@@ -1,0 +1,32 @@
+section.section.hero
+  .container 
+
+    .hero__content 
+      h1.title.title_white.hero__title Прикоснитесь к&nbsp;прекрасному
+      p.text.hero__descr Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для&nbsp;новых предложений
+      a.link.link_subscribe.hero__btn.goto(href="#contacts") Подписаться на&nbsp;рассылку
+
+    .swiper.hero__slider
+      ul.swiper-wrapper.hero__wrapper
+        - var n = 0 
+        each val in ['Изображение замка', 'Изображение людей', 'Изображение деревьев'] 
+          li.swiper-slide.hero__slide 
+            - n++ 
+            picture.hero__picture 
+              source(srcset="@img/hero/hero" + n + "-d@2x.webp" media="(min-resolution: 1.8dppx) and (min-width: 1024.95px)")
+              source(srcset="@img/hero/hero" + n + "-d@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 1024.95px)")
+              source(srcset="@img/hero/hero" + n + "-d@1x.webp" media="(min-width: 1024.95px)")
+              source(srcset="@img/hero/hero" + n + "-d@1x.jpg" media="(min-width: 1024.95px)")
+              source(srcset="@img/hero/hero" + n + "-t@2x.webp" media="(min-resolution: 1.8dppx)  and (min-width: 768.95px)")
+              source(srcset="@img/hero/hero" + n + "-t@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 768.95px)")
+              source(srcset="@img/hero/hero" + n + "-t@1x.webp" media="(min-width: 768.95px)")
+              source(srcset="@img/hero/hero" + n + "-t@1x.jpg" media="(min-width: 768.95px)")
+              source(srcset="@img/hero/hero" + n + "-s@2x.webp" media="(min-resolution: 1.8dppx) and (min-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-s@2x.jpg" media="(min-resolution: 1.8dppx) and (min-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-s@1x.webp" media="(min-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-s@1x.jpg" media="(min-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-m@2x.webp" media="(min-resolution: 1.8dppx) and (max-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-m@2x.jpg" media="(min-resolution: 1.8dppx) and (max-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-m@1x.webp" media="(max-width: 480.95px)")
+              source(srcset="@img/hero/hero" + n + "-m@1x.jpg" media="(max-width: 480.95px)")
+              img.hero__img.img(src="@img/hero/hero" + n + "-d@1x.jpg", alt=`${val}`)

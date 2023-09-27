@@ -1,0 +1,577 @@
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body {
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: $mineShaft;
+
+  @media (max-width: $md5) {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  &_white {
+    color: $white;
+  }
+}
+
+.subtitle {
+  font-family: "OpenSans-SemiBold";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: $mineShaft;
+}
+
+.section {
+  padding: 80px 0;
+
+  @media (max-width: $md5) {
+    padding: 50px 0;
+  }
+
+  &__descr {
+    max-width: 1080px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 32px;
+  color: $mineShaft;
+
+  @media (max-width: $md5) {
+    font-size: 14px;
+    line-height: 28px;
+  }
+}
+
+.link {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  font-family: "OpenSans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: $white;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  &_bg {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 29px;
+      visibility: hidden;
+      opacity: 0;
+      background-color: $royalPurple;
+      transform: translate(-50%, -50%) scaleX(1.15);
+      transition:
+        visibility 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
+    }
+
+    &:focus:before {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    @media (min-width: $md3) {
+      &:hover {
+        color: $heliotrope;
+      }
+
+      &:hover:focus::before {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      &:active {
+        color: $royalPurple;
+        transition-duration: 0.05s;
+      }
+    }
+
+    &:active {
+      color: $royalPurple;
+      transition-duration: 0.05s;
+    }
+
+    &:focus:active::before {
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: 0.05s;
+    }
+  }
+
+  &_subscribe {
+    padding: 20px 32px;
+    border: 3px solid $amethyst;
+    border-radius: 100px;
+    font-family: "OpenSans-Bold";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: $white;
+    background-color: $amethyst;
+    transition:
+      border 0.2s ease-in-out,
+      background-color 0.2s ease-in-out;
+
+    @media (max-width: $md5) {
+      padding: 10px 16px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &:focus {
+      outline: none;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @media (min-width: $md3) {
+      &:hover {
+        border-color: $bilobaFlower;
+      }
+
+      &:focus:hover::after {
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      border-color: $bilobaFlower;
+      background-color: $royalPurple;
+      transition-duration: 0.05s;
+
+      &:focus::after {
+        opacity: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      right: -7px;
+      bottom: -7px;
+      border: 2px solid $heliotrope;
+      border-radius: 100px;
+      background-color: transparent;
+      opacity: 0;
+      transition: opacity 0.1s ease-in-out;
+    }
+  }
+
+  &_more {
+    z-index: 1;
+    font-size: 16px;
+    line-height: 32px;
+    color: $amethyst;
+    transition: color 0.25s ease-in-out;
+
+    &:focus {
+      color: $white;
+    }
+
+    &:focus:before {
+      opacity: 1;
+    }
+
+    &:focus:after {
+      background-color: $white;
+    }
+
+    @media (min-width: $md3) {
+      &:hover {
+        color: $royalPurple;
+      }
+
+      &:hover:before {
+        opacity: 0;
+      }
+
+      &:hover::after {
+        background-color: $royalPurple;
+      }
+    }
+
+    &:hover:active {
+      color: $mineShaft;
+      transition-duration: 0.1s;
+    }
+
+    &:hover:active:before {
+      opacity: 0;
+    }
+
+    &:hover:active:after {
+      background-color: $mineShaft;
+      transition-duration: 0.1s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -1px;
+      right: -8px;
+      bottom: -2px;
+      left: -8px;
+      opacity: 0;
+      background-color: $amethyst;
+      transform: translateY(3px);
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      bottom: 3px;
+      height: 1px;
+      width: 100%;
+      background-color: $amethyst;
+      transition: background-color 0.25s ease-in-out;
+    }
+  }
+
+  &_addr {
+    font-family: "OpenSans-SemiBold";
+    font-size: 16px;
+    line-height: 32px;
+    color: $amethyst;
+    transition: color 0.25s ease-in-out;
+
+    &:focus {
+      color: $white;
+    }
+
+    &:focus::before {
+      opacity: 1;
+    }
+
+    &:focus:hover::after {
+      opacity: 0;
+    }
+
+    &:focus:active::before {
+      opacity: 0;
+      transition-duration: 0.1s;
+    }
+
+    &:focus:active:hover::after {
+      opacity: 1;
+    }
+
+    @media (min-width: $md3) {
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: $royalPurple;
+      transition-duration: 0.1s;
+    }
+
+    &:active::after {
+      opacity: 1;
+      background-color: $royalPurple;
+      transition-duration: 0.1s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 2px;
+      right: -6px;
+      bottom: 2px;
+      left: -6px;
+      opacity: 0;
+      background-color: $amethyst;
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $amethyst;
+      opacity: 0;
+      transition:
+        opacity 0.25s ease-in-out,
+        background-color 0.25s ease-in-out;
+    }
+  }
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  line-height: 1;
+  font-size: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_submit {
+    position: relative;
+    border: 2px solid $amethyst;
+    border-radius: 100px;
+    font-family: "OpenSans-Bold", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    transition:
+      background-color 0.25s ease-in-out,
+      color 0.25s ease-in-out,
+      border 0.25s ease-in-out;
+
+    &:focus::after {
+      opacity: 1;
+    }
+
+    @media (min-width: $md3) {
+      &:hover {
+        color: $white;
+        background-color: $amethyst;
+      }
+
+      &:hover::after {
+        opacity: 0;
+      }
+    }
+
+    &:active,
+    &:hover:active {
+      border-color: $bilobaFlower;
+      color: $white;
+      background-color: $royalPurple;
+      transition-duration: 0.1s;
+    }
+
+    &:active::after {
+      opacity: 0;
+      transition-duration: 0.1s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      bottom: -7px;
+      left: -7px;
+      border-radius: 100px;
+      border: 2px solid $heliotrope;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid $amethyst;
+  border-radius: 100%;
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    font-size: 12px;
+    color: $black;
+    line-height: 100%;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition:
+      background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
+    &:focus,
+    &:hover {
+      background-color: $bilobaFlower;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $amethyst;
+      transition:
+        background-color 0.05s ease-in-out,
+        color 0.05s ease-in-out;
+    }
+
+    &::after {
+      content: "i";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__cloud {
+    padding: 10px;
+    min-width: 100px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: $white;
+    background-color: $amethyst;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.25s ease-in-out,
+      visibility 0.25s ease-in-out;
+
+    &[data-show] {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &[data-popper-placement^="top"] > .tooltip__arrow {
+      bottom: -4px;
+    }
+
+    &[data-popper-placement^="bottom"] > .tooltip__arrow {
+      top: -4px;
+    }
+
+    &[data-popper-placement^="left"] > .tooltip__arrow {
+      right: -4px;
+    }
+
+    &[data-popper-placement^="right"] > .tooltip__arrow {
+      left: -4px;
+    }
+  }
+
+  &__arrow,
+  &__arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
+
+  &__arrow {
+    visibility: hidden;
+  }
+
+  &__arrow::before {
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
+  }
+}
+
+.logo {
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.nav {
+  display: flex;
+
+  &__list {
+    flex: 1 1 auto;
+    display: flex;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 62px;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    font-family: "OpenSans-SemiBold";
+    font-weight: 600;
+    color: $white;
+    line-height: 1;
+  }
+}
+
+/*! CUSTOM SCROLL */
+.simplebar-track.simplebar-vertical {
+  top: 0;
+  width: 2px;
+  background-color: $black;
+}
+
+.simplebar-scrollbar::before {
+  left: -5px;
+  right: -5px;
+  opacity: 1;
+  background-color: $white;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+  opacity: 1;
+}

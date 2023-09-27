@@ -1,0 +1,115 @@
+.projects {
+  padding-top: 40px;
+
+  @media (max-width: $md5) {
+    padding: 25px 0;
+  }  
+
+  &__descr {
+    margin-bottom: 20px;
+
+    @media (max-width: $md4) {
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: $md5) {
+      margin-bottom: 51px;
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 23px;
+
+    @media (max-width: $md4) {
+      margin-bottom: 28px;
+    }
+
+    @media (max-width: $md5) {
+      margin-bottom: 11px;
+      font-size: 18px;
+    }
+  }
+
+  &__slider-container {
+    position: relative;
+  }
+
+  &__slider {
+    margin: 0 75px;
+    // max-height: 128px;
+    
+    @media (max-width: $md1) {
+      margin: 0 55px;
+    }
+
+    @media (max-width: $md5) {
+      margin: 0 48px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+
+    @media (max-width: $md1) {
+      height: 130px;
+    }
+
+    @media (max-width: $md3) {
+      height: 106px;
+    }
+
+    @media (max-width: $md5) {
+      height: 65px;
+    }
+  }
+
+  &__slide-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $silver;
+    transition: border .25s ease-in-out;
+
+    &:hover .projects__img,
+    &:active .projects__img {
+      filter: grayscale(0);
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $amethyst;
+    }
+
+    &:active,
+    &:active .projects__img {
+      transition-duration: .05s;
+    }
+  }
+
+  &__picture {
+    width: auto;
+    height: 100%;
+  }
+
+  &__img {
+    filter: grayscale(1);
+    object-fit: contain;
+    transition: filter .25s ease-in-out;
+  }
+}

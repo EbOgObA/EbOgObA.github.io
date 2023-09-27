@@ -1,0 +1,36 @@
+@import "vars";
+
+//  <ОБОЛОЧКА>
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: $white;
+  // &._loaded {
+  // }
+}
+//  </ОБОЛОЧКА>
+
+//  <ОСНОВНАЯ СЕТКА>
+.container {
+  width: 100%;
+  max-width: $maxWidthContainer;
+  margin: 0 auto;
+  padding: 0 $sidePaddingContainer;
+  // @media (max-width: $md1) {
+  // 	max-width: 100%;
+  // }
+  // @media (max-width: $md2) {
+  // 	max-width: 750px;
+  // }
+  // @media (max-width: $md4) {
+  // 	padding: 0 32px;
+  // }
+  @media (max-width: $md5) {
+    padding: 0 15px;
+  }
+}
+//  </ОСНОВНАЯ СЕТКА>

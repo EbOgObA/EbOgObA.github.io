@@ -1,0 +1,21 @@
+- pageTitle = 'Главная'
+
+doctype html
+html(lang="ru")
+  include pug/head.pug
+  body.body
+    .wrapper
+      include pug/header.pug
+      main.main
+        include pug/blocks/hero.pug
+        include pug/blocks/about.pug
+        include pug/blocks/gallery.pug
+        include pug/blocks/catalog.pug
+        include pug/blocks/events.pug
+        include pug/blocks/projects.pug
+        include pug/blocks/contacts.pug
+      include pug/footer.pug
+    include pug/popup.pug
+
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU")
+    script(src="js/app.min.js")

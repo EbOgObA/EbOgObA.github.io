@@ -1,0 +1,42 @@
+//!  <Шрифт по умолчанию>
+$fontFamily: "OpenSans", sans-serif;
+$fontSize: 16px;
+//!  </Шрифт по умолчанию>
+
+//! <Основные размеры>
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1700px;
+$sidePaddingContainer: 50px;
+//! </Основные размеры>
+
+//  <Чекпоинт>
+$md1: $maxWidthContainer + $sidePaddingContainer * 2;
+$md2: 1024.95px;
+$md3: 992.95px;
+$md4: 768.95px;
+$md5: 480.95px;
+//  </Чекпоинт>
+
+// <Основные цвета>
+$white: #fff;
+$black: #000;
+$mineShaft: #333;
+$doveGray: #666;
+$dustyGray: #999;
+$bilobaFlower: #d1a9f0;
+$heliotrope: #c283f3;
+$amethyst: #9d5cd0;
+$royalPurple: #7943a4;
+$apple: #30bf39;
+$curiousBlue: #26a5e4;
+$thunderbird: #d11616;
+$silver: #cacaca;
+$gallery: #ececec;
+$white: #fff;
+$purpleOpacity: rgba(194, 131, 243, 0.4);
+$whiteOpacityLight: rgba(255, 255, 255, 0.85);
+$whiteOpacityHard: rgba(255, 255, 255, 0.2);
+$blackOpacityLight: rgba(0, 0, 0, 0.9);
+$blackOpacityHalf: rgba(0, 0, 0, 0.5);
+// </Основные цвета>

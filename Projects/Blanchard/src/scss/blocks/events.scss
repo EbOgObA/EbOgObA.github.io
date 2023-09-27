@@ -1,0 +1,158 @@
+.events {
+  padding-top: 37px;
+  padding-bottom: 40px;
+
+  @media (max-width: $md4) {
+    padding-top: 40px;
+  }
+
+  @media (max-width: $md5) {
+    padding: 25px 0;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__button-prev,
+  &__button-next {
+    position: absolute;
+    z-index: 10;
+    top: 46.5%;
+    width: 50px;
+    height: 50px;
+
+    &.swiper-button-disabled {
+      display: none;
+    }
+
+    &::after {
+      width: 12px;
+      height: 12px;
+    }
+
+    @media (max-width: $md1) {
+      display: none;
+    }
+  }
+
+  &__button-next {
+    right: 0;
+    transform: translate(50%);
+  }
+
+  &__button-prev {
+    left: 0;
+    transform: translate(-50%);
+  }
+
+  &__pagination {
+    display: none;
+    margin-top: 30px;
+
+    @media (max-width: $md1) {
+      display: flex;
+    }
+
+    @media (max-width: $md5) {
+      margin-top: 20px;
+    }
+  }
+}
+
+.events-slider {
+  &__item {
+    height: auto;
+  }
+
+  &__article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item-img {
+    max-height: 300px;
+    min-height: 200px;
+  }
+
+  &__item-content {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 13px 50px 40px;
+    border: 1px solid $silver;
+    border-top-color: transparent;
+
+    @media (max-width: $md1) {
+      padding: 15px 33px 48px;
+    }
+
+    @media (max-width: $md4) {
+      flex: 1 1 483px;
+      padding: 15px 33px 45px;
+    }
+
+    @media (max-width: $md5) {
+      padding: 17px 22px 48px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: $dustyGray;
+
+    @media (max-width: $md1) {
+      align-self: flex-end;
+      align-items: flex-end;
+      margin-bottom: 3px;
+    }
+
+    @media (max-width: $md4) {
+      transform: translateX(15px);
+    }
+
+    @media (max-width: $md5) {
+      margin-bottom: 10px;
+      transform: translateX(6px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    line-height: 33px;
+
+    @media (max-width: $md1) {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: $md4) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    flex: 1 1 100%;
+
+    @media (max-width: $md5) {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  &__link {
+    @media (max-width: $md5) {
+      transform: translateX(7px);
+    }
+  }
+}
