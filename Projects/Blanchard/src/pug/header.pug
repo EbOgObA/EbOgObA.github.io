@@ -9,7 +9,7 @@ header.header
     .container
       a.logo.header__logo(href="#" aria-label="Логотип компании")
         img.logo__img(src="@img/icons/logo.svg" alt="Logo")
-      .menu.header__menu 
+      .menu.header__menu.hide-anim 
         button.icon-menu.burger.btn-reset(aria-label="Открыть меню")
           span.burger__line 
           span.burger__line 
@@ -44,7 +44,7 @@ header.header
                       each style, j in listOfStyles[i]
                         li.bottom-nav__sublist-item 
                           a.nav__link(class="nav__link_" + style, href="#") #{listOfPeople[i][j]}
-          .search
+          .search.hide-anim
             form.form.search__form.header__search-form(action="#" method="GET")
               button.btn-reset.search__btn(type="submit" aria-label="Найти")
                 svg.search__btn-icon(width="30" height="29" viewBox="0 0 30 29" fill="white")

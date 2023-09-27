@@ -24,8 +24,15 @@ export function spollers() {
         //   slideUp(spoller.nextElementSibling, spollerDuration);
         //   spoller.classList.remove('active');
         // }
-        spoller.classList.toggle('active');
-        slideToggle(spoller.nextElementSibling, spollerDuration);
+
+
+        if (spoller.classList.contains('active')) {
+          spoller.classList.remove('active');
+          slideUp(spoller.nextElementSibling, spollerDuration);
+        } else {
+          spoller.classList.add('active');
+          slideDown(spoller.nextElementSibling, spollerDuration);
+        }
       });
     }
   }

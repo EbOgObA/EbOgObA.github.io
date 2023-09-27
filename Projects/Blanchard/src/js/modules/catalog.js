@@ -1,4 +1,4 @@
-import { goto } from "../components/scroll.js";
+import { goto } from '../components/scroll.js';
 
 export function catalog() {
 

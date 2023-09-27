@@ -14,6 +14,8 @@ export function maps() {
       iconImageOffset: [-14, -40]
     });
 
+    myMap.behaviors.disable('scrollZoom');
+
     myMap.geoObjects.add(Placemark);
 
   }
